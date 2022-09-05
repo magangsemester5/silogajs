@@ -1,0 +1,92 @@
+CRITICAL - 2022-08-29 09:27:15 --> Undefined variable: title
+in APPPATH\Views\Template\Layout.php on line 30.
+ 1 APPPATH\Views\Template\Layout.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\Template\\Layout.php', 30, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Template\\Layout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Template/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/V_Barang', [], true)
+ 6 APPPATH\Controllers\C_Barang.php(11): view('Menu/V_Barang')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-29 09:30:33 --> Undefined variable: title
+in APPPATH\Views\Template\Layout.php on line 30.
+ 1 APPPATH\Views\Template\Layout.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\Template\\Layout.php', 30, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Template\\Layout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('Template/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/V_Barang', [], true)
+ 6 APPPATH\Controllers\C_Barang.php(11): view('Menu/V_Barang')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-29 09:37:16 --> Undefined property: App\Controllers\C_Barang::$barang
+in APPPATH\Controllers\C_Barang.php on line 13.
+ 1 APPPATH\Controllers\C_Barang.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\C_Barang::$barang', 'APPPATH\\Controllers\\C_Barang.php', 13, [])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-29 09:41:04 --> Invalid file: Menu/V_Barang.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Menu/V_Barang.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/V_Barang', [], true)
+ 3 APPPATH\Controllers\C_Barang.php(21): view('Menu/V_Barang', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-29 09:41:06 --> Invalid file: Menu/V_Barang.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Menu/V_Barang.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/V_Barang', [], true)
+ 3 APPPATH\Controllers\C_Barang.php(21): view('Menu/V_Barang', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-29 09:42:21 --> Invalid file: Menu/Barang/tambah.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Menu/Barang/tambah.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Barang/tambah', [], true)
+ 3 APPPATH\Controllers\C_Barang.php(28): view('Menu/Barang/tambah', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->tambah()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-29 22:15:34 --> Invalid file: Menu/V_Satuan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Menu/V_Satuan.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/V_Satuan', [], true)
+ 3 APPPATH\Controllers\C_Satuan.php(11): view('Menu/V_Satuan')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Satuan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Satuan))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-29 23:34:46 --> Undefined variable: pesan
+in APPPATH\Controllers\C_Kategori.php on line 40.
+ 1 APPPATH\Controllers\C_Kategori.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pesan', 'APPPATH\\Controllers\\C_Kategori.php', 40, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Kategori->proses_tambah()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kategori))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-29 23:39:59 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 718.
+ 1 SYSTEMPATH\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Controllers\C_Kategori.php(35): CodeIgniter\Model->insert([...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Kategori->proses_tambah()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kategori))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
