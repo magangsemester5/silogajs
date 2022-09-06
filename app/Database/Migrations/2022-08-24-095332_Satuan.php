@@ -9,17 +9,17 @@ class Satuan extends Migration
     public function up()
     {
         $this->forge->addField([
-            'satid' => [
+            'id_satuan' => [
                 'type' => 'int',
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'satnama' => [
+            'nama_satuan' => [
                 'type' => 'varchar',
                 'constraint' => '50'
             ]
         ]);
-        $this->forge->addKey('satid');
+        $this->forge->addKey('id_satuan');
         $this->forge->createTable('satuan');
     }
 

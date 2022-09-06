@@ -9,17 +9,17 @@ class Kategori extends Migration
     public function up()
     {
         $this->forge->addField([
-            'katid' => [
+            'id_kategori' => [
                 'type' => 'int',
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'katnama' => [
+            'nama_kategori' => [
                 'type' => 'varchar',
                 'constraint' => '50'
             ]
         ]);
-        $this->forge->addKey('katid');
+        $this->forge->addPrimaryKey('id_kategori');
         $this->forge->createTable('kategori');
     }
 
