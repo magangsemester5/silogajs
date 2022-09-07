@@ -11,14 +11,16 @@ class Permintaan extends Migration
         $this->forge->addField([
             'id_permintaan' => [
                 'type' => 'int',
+                'constraint' => '12',
                 'unsigned' => TRUE,
-                'auto_increment' => TRUE
+                'auto_increment' => TRUE,
+            ],
+            'id_barang' => [
+                'type' => 'int',
+                'constraint' => '12',
+                'unsigned' => TRUE
             ],
             'no_permintaan' => [
-                'type' => 'varchar',
-                'constraint' => '50'
-            ],
-            'barang_id' => [
                 'type' => 'varchar',
                 'constraint' => '50'
             ],
@@ -31,12 +33,12 @@ class Permintaan extends Migration
                 'constraint' => '50'
             ]
         ]);
- 
+
         $this->forge->addPrimaryKey('id_permintaan');
-        $this->forge->addForeignKey('barang_id', 'barang', 'id_barang');
+        $this->forge->addForeignKey('id_barang', 'barang', 'id_barang');
         $this->forge->createTable('permintaan');
     }
- 
+
     public function down()
     {
         $this->forge->dropTable('permintaan');

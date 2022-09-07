@@ -11,6 +11,7 @@ class User extends Migration
         $this->forge->addField([
             'id' => [
                 'type' => 'int',
+                'constraint' => '12',
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],

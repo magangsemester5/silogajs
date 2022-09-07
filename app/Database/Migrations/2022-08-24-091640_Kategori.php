@@ -11,6 +11,7 @@ class Kategori extends Migration
         $this->forge->addField([
             'id_kategori' => [
                 'type' => 'int',
+                'constraint' => '12',
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],

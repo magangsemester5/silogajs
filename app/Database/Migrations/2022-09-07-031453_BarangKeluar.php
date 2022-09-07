@@ -4,21 +4,23 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class BarangMasuk extends Migration
+class BarangKeluar extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'id_barang_masuk' => [
+            'id_barang_keluar' => [
                 'type' => 'int',
+                'constraint' => '12',
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'nama_material' => [
-                'type' => 'varchar',
-                'constraint' => '50'
+            'id_barang' => [
+                'type' => 'int',
+                'constraint' => '12',
+                'unsigned' => TRUE
             ],
-            'barang_id' => [
+            'nama_material' => [
                 'type' => 'varchar',
                 'constraint' => '50'
             ],
@@ -34,19 +36,19 @@ class BarangMasuk extends Migration
                 'type' => 'varchar',
                 'constraint' => '50'
             ],
-            'foto_pengantaran_paket' => [
+            'foto_pengambilan_paket' => [
                 'type' => 'varchar',
                 'constraint' => '50'
             ]
         ]);
  
-        $this->forge->addPrimaryKey('id_barang_masuk');
-        $this->forge->addForeignKey('barang_id', 'barang', 'id_barang');
-        $this->forge->createTable('barang_masuk');
+        $this->forge->addPrimaryKey('id_barang_keluar');
+        $this->forge->addForeignKey('id_barang', 'barang', 'id_barang');
+        $this->forge->createTable('barang_keluar');
     }
- 
+
     public function down()
     {
-        $this->forge->dropTable('barang_masuk');
+        $this->forge->dropTable('barang_keluar');
     }
 }

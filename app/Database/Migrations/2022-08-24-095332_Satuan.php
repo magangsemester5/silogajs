@@ -11,6 +11,7 @@ class Satuan extends Migration
         $this->forge->addField([
             'id_satuan' => [
                 'type' => 'int',
+                'constraint' => '12',
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
@@ -19,7 +20,7 @@ class Satuan extends Migration
                 'constraint' => '50'
             ]
         ]);
-        $this->forge->addKey('id_satuan');
+        $this->forge->addPrimaryKey('id_satuan');
         $this->forge->createTable('satuan');
     }
 

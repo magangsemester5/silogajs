@@ -11,16 +11,19 @@ class Barang extends Migration
         $this->forge->addField([
             'id_barang' => [
                 'type' => 'int',
+                'constraint' => '12',
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'kategori_id' => [
+            'id_kategori' => [
                 'type' => 'int',
-                'constraint' => '50'
+                'constraint' => '12',
+                'unsigned' => TRUE
             ],
-            'satuan_id' => [
+            'id_satuan' => [
                 'type' => 'int',
-                'constraint' => '50'
+                'constraint' => '12',
+                'unsigned' => TRUE
             ],
             'kode_barang' => [
                 'type' => 'varchar',
@@ -39,9 +42,9 @@ class Barang extends Migration
                 'constraint' => '50'
             ]
         ]);
-        $this->forge->addKey('id_barang');
-        $this->forge->addForeignKey('kategori_id', 'kategori', 'id_kategori');
-        $this->forge->addForeignKey('satuan_id', 'satuan', 'id_satuan');
+        $this->forge->addPrimaryKey('id_barang');
+        $this->forge->addForeignKey('id_kategori', 'kategori', 'id_kategori');
+        $this->forge->addForeignKey('id_satuan', 'satuan', 'id_satuan');
         $this->forge->createTable('barang');
     }
 
