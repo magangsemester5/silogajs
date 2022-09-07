@@ -45,11 +45,13 @@ $routes->get('/C_Kategori/tampil_edit_data/(:num)', 'C_Kategori::tampil_edit_dat
 
 $routes->get('/C_Barang/index', 'C_Barang::index');
 $routes->get('/C_Barang/tambah', 'C_Barang::tambah');
+$routes->post('/C_Barang/proses_tambah', 'C_Barang::proses_tambah');
+$routes->get('/C_Barang/tampil_edit_data/(:segment)', 'C_Barang::tampil_edit_data/$1');
 
 $routes->get('/C_Satuan/index', 'C_Satuan::index');
 $routes->get('/C_Satuan/tambah', 'C_Satuan::tambah');
 
-$routes->resource('C_Kategori');
+// $routes->resource('C_Kategori');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

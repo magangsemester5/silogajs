@@ -7,9 +7,10 @@ use CodeIgniter\Model;
 class M_Satuan extends Model
 {
     protected $table            = 'satuan';
-    protected $foreignKey       = 'satid';
+    protected $primaryKey       = 'id_satuan';
+    protected $returnType       = "object";
     protected $allowedFields    = [
-        'satid , satnama'
+        'id_satuan , nama_satuan'
     ];
 }
 ?>

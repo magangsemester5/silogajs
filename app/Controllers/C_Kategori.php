@@ -30,7 +30,7 @@ class C_Kategori extends BaseController
     public function proses_tambah()
     {
         $data = [
-            'katnama' => $this->request->getVar('katnama')
+            'nama_kategori' => $this->request->getVar('nama_kategori')
         ];
         session()->setFlashdata('status', 'Data Kategori berhasil ditambahkan');
         $this->kategori->insert($data);

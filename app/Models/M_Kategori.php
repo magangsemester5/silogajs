@@ -7,9 +7,10 @@ use CodeIgniter\Model;
 class M_Kategori extends Model
 {
     protected $table            = 'kategori';
-    protected $foreignKey       = 'katid';
+    protected $primaryKey       = 'id_kategori';
+    protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'katid', 'katnama'
+        'id_kategori', 'nama_kategori'
     ];
 }

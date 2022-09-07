@@ -24,10 +24,10 @@
                         <tbody class="table-border-bottom-0">
                             <?php foreach ($tampildata as $td) : ?>
                                 <tr>
-                                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $td->katid ?></strong></td>
-                                    <td><?= $td->katnama ?></td>
+                                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $td->id_kategori ?></strong></td>
+                                    <td><?= $td->nama_kategori ?></td>
                                     <td>
-                                        <a class="btn btn-warning" href="<?= base_url("C_Kategori/tampil_edit_data/$td->katid");?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                        <a class="btn btn-warning" href="<?= base_url("C_Kategori/tampil_edit_data/$td->id_kategori");?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
                                         <a class="btn btn-danger" href=""><i class="bx bx-trash me-1"></i> Delete</a>
                                     </td>
                                 </tr>

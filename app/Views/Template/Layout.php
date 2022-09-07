@@ -363,5 +363,11 @@
       <?php } ?>
       });
     </script>
+    <!-- Page level plugins -->
+    <script src="../template/assets/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="../template/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <link href="../template/assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <!-- Page level custom scripts -->
+    <script src="../template/assets/vendor/demo/datatables-demo.js"></script>
   </body>
 </html>

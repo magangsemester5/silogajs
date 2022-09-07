@@ -1,20 +1,21 @@
 <?= $this->extend('Template/layout') ?>
 <?= $this->section('content') ?>
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms /</span> Tambah Data Kategori</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms /</span> Ubah Data Kategori</h4>
     <!-- Basic Layout & Basic with Icons -->
     <div class="row">
         <!-- Basic with Icons -->
         <div class="col-xxl">
             <div class="card mb-4">
                 <div class="card-body">
-                    <form method="POST" action="<?= base_url("C_Kategori/proses_tambah") ?>">
+                    <form method="POST" action="<?= base_url("C_Kategori/ubah") ?>">
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Nama Kategori</label>
+                            <input type="hidden" name="id_barang" id="id_barang" value="<?php echo $tampildata->id_barang ?>">
+                            <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">ID Barang</label>
                             <div class="col-sm-10">
                                 <div class="input-group input-group-merge">
                                     <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-user"></i></span>
-                                    <input type="text" class="form-control" name="nama_kategori" id="basic-icon-default-fullname" placeholder="Masukan nama kategori disini" aria-label="Masukan nama kategori disini" aria-describedby="basic-icon-default-fullname2" />
+                                    <input type="text" class="form-control" name="nama_barang" id="basic-icon-default-fullname" value="<?= $tampildata->nama_barang ?>" placeholder="Masukan nama kategori disini" aria-label="Masukan nama kategori disini" aria-describedby="basic-icon-default-fullname2" />
                                 </div>
                             </div>
                         </div>
@@ -29,4 +30,4 @@
         </div>
     </div>
 </div>
-<?= $this->endSection('content') ?>
+<?= $this->endSection('content') ?> 

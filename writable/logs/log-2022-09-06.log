@@ -3522,3 +3522,23 @@ Stack trace:
 #14 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\logistikptajs\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
 #15 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\logistikptajs\spark(98): CodeIgniter\CLI\Console->run()
 #16 {main}
+CRITICAL - 2022-09-06 22:24:05 --> Invalid file: Menu/Barang/tambah.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Menu/Barang/tambah.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Barang/tambah', [], true)
+ 3 APPPATH\Controllers\C_Barang.php(28): view('Menu/Barang/tambah', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->tambah()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-06 22:24:12 --> Invalid file: Menu/Barang/tambah.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Menu/Barang/tambah.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Barang/tambah', [], true)
+ 3 APPPATH\Controllers\C_Barang.php(28): view('Menu/Barang/tambah', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->tambah()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
