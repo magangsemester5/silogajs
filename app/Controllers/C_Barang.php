@@ -31,7 +31,7 @@ class C_Barang extends BaseController
             'tampildatakategori' => $this->kategori->findAll(),
             'tampildatasatuan' => $this->satuan->findAll()
         ];
-        return view("Menu/Barang/tambah",$data);
+        return view("Menu/Barang/tambah", $data);
     }
     public function proses_tambah()
     {
@@ -47,12 +47,45 @@ class C_Barang extends BaseController
         return redirect()->to(base_url('C_Barang/index'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil ditambah');
     }
 
-    public function tampil_edit_data($id)
+    public function tampil_edit_data($id = null)
     {
         $data = [
-            'title' => "Halaman Ubah Barang | SILOG AJS",
-            'tampildata' => $this->barang->where('id_barang', $id)->first()
+            'tampildata' => $this->barang->where('id_barang', $id)->first(),
+            'tampildatakategori' => $this->kategori->findAll(),
+            'tampildatasatuan' => $this->satuan->findAll(),
+            'title' => "Halaman Edit Barang | SILOG AJS"
         ];
         return view("Menu/Barang/edit", $data);
     }
+
+    public function edit(){
+        $id = $this->request->getVar('id_barang');
+        $data = [
+            'nama_barang' => $this->request->getVar('nama_barang'),
+            'id_kategori'  => $this->request->getVar('id_kategori'),
+            'stok'  => $this->request->getVar('stok'),
+            'id_satuan'  => $this->request->getVar('id_satuan')
+        ];
+        session()->setFlashdata('status', 'Data Barang berhasil diupdate');
+        $this->barang->update($id, $data);
+        return redirect()->to(base_url('C_Barang/index'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil diupdate');
+    }
+
+    // public function konfirmasi_hapus($id = null){
+    //     $this->barang->delete($id);
+    //     $data = [
+    //         'status' => "Data Barang berhasil dihapus",
+    //         'status_text' => "Data Barang berhasil dihapus",
+    //         'status_icon' => "success"
+    //     ];
+    //     return $this->response->setJSON($data);
+    // } 
+
+    public function hapus($id = null){
+        session()->setFlashdata('status', 'Data Barang berhasil dihapus');
+        $data['tampildata'] = $this->barang->where('id_barang', $id)->delete($id);
+        return redirect()->to(base_url('C_Barang/index'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil dihapus');
+    }  
+
+
 }

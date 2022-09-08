@@ -43,11 +43,24 @@ $routes->get('/C_Kategori/tambah', 'C_Kategori::tambah');
 $routes->post('/C_Kategori/proses_tambah', 'C_Kategori::proses_tambah');
 $routes->get('/C_Kategori/tampil_edit_data/(:num)', 'C_Kategori::tampil_edit_data/$1');
 
+// Data Barang
 $routes->get('/C_Barang/index', 'C_Barang::index');
 $routes->get('/C_Barang/tambah', 'C_Barang::tambah');
 $routes->post('/C_Barang/proses_tambah', 'C_Barang::proses_tambah');
-$routes->get('/C_Barang/tampil_edit_data/(:segment)', 'C_Barang::tampil_edit_data/$1');
+$routes->get('prosesedit-barang/(:num)', 'C_Barang::tampil_edit_data/$1');
+$routes->post('edit-barang', 'C_Barang::edit');
+$routes->get('hapus-barang/(:num)', 'C_Barang::hapus/$1');
 
+// Barang Keluar
+$routes->get('tampil-barangkeluar', 'C_Transaksi::index');
+$routes->get('detail-barangkeluar/(:num)', 'C_Transaksi::detail/$1');
+$routes->get('tambah-barangkeluar', 'C_Transaksi::tambah');
+$routes->post('prosestambah-barangkeluar', 'C_Transaksi::proses_tambah');
+$routes->get('prosesedit-barangkeluar/(:num)', 'C_Transaksi::tampil_edit_data/$1');
+$routes->post('edit-barangkeluar', 'C_Transaksi::edit');
+$routes->get('hapus-barangkeluar/(:num)', 'C_Transaksi::hapus/$1');
+
+// Satuan
 $routes->get('/C_Satuan/index', 'C_Satuan::index');
 $routes->get('/C_Satuan/tambah', 'C_Satuan::tambah');
 

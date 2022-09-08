@@ -138,7 +138,6 @@
           </div>
 
           <div class="menu-inner-shadow"></div>
-
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
               <?php if ($title == 'Halaman Dashboard | SILOG AJS') : ?>
@@ -151,41 +150,102 @@
               <div data-i18n="Analytics">Dashboard</div>
               </a>
               </li>
-            <!-- Components -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Menu</span></li>
-            <!-- Cards -->
+            <!-- Data Master -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-server"></i>
+                <div data-i18n="Account Settings">Data Master</div>
+              </a>
+              <ul class="menu-sub">
               <?php if ($title == 'Halaman Kategori | SILOG AJS' || $title == 'Halaman Tambah Kategori | SILOG AJS' || $title == 'Halaman Edit Kategori | SILOG AJS') : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('/C_Kategori/index') ?>">
-              <i class="menu-icon tf-icons bx bx-home-circle"></i>
               <div data-i18n="Analytics">Kategori</div>
               </a>
               </li>
-            <!-- User interface -->
               <?php if ($title == 'Halaman Barang | SILOG AJS' || $title == 'Halaman Tambah Barang | SILOG AJS' || $title == 'Halaman Edit Barang | SILOG AJS') : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('/C_Barang/index') ?>">
-              <i class="menu-icon tf-icons bx bx-cube-alt"></i>
               <div data-i18n="Analytics">Barang</div>
               </a>
               </li>
-            <!-- User interface -->
               <?php if ($title == 'Halaman Satuan | SILOG AJS' || $title == 'Halaman Tambah Satuan | SILOG AJS' || $title == 'Halaman Edit Satuan | SILOG AJS') : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('/C_Satuan/index') ?>">
-              <i class="menu-icon tf-icons bx bxs-component"></i>
               <div data-i18n="Analytics">Satuan</div>
               </a>
               </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div data-i18n="Account Settings">Transaksi</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if ($title == 'Halaman Barang Masuk| SILOG AJS' || $title == 'Halaman Tambah Barang Masuk| SILOG AJS' || $title == 'Halaman Edit Barang Masuk| SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('/C_Transaksi/tampil_barang_masuk') ?>">
+              <div data-i18n="Analytics">Barang Masuk</div>
+              </a>
+              </li>
+              <?php if ($title == 'Halaman Barang Keluar | SILOG AJS' || $title == 'Halaman Tambah Barang Keluar | SILOG AJS' || $title == 'Halaman Edit Barang Keluar | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-barangkeluar') ?>">
+              <div data-i18n="Analytics">Barang Keluar</div>
+              </a>
+              </li>
+              </ul>
+            </li>
+            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('/C_Permintaan/index') ?>">
+              <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
+              <div data-i18n="Analytics">Permintaan</div>
+              </a>
+            </li>
+              <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
+              <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('/C_Permintaan/index') ?>">
+              <i class="menu-icon tf-icons bx bxs-user-badge"></i>
+              <div data-i18n="Analytics">Manajemen User</div>
+              </a>
+            </li>
+            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('/C_Permintaan/index') ?>">
+              <i class="menu-icon tf-icons bx bx-log-out"></i>
+              <div data-i18n="Analytics">Logout</div>
+              </a>
+            </li>
+            <!-- User interface -->
+            <!-- User interface -->
             <!-- Forms & Tables -->
             <!-- Forms -->
             <!-- Tables -->
@@ -287,32 +347,6 @@
             <!-- / Content -->
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
-              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-                <div class="mb-2 mb-md-0">
-                  ©
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                </div>
-                <div>
-                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
-
-                  <a
-                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Documentation</a
-                  >
-
-                  <a
-                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Support</a
-                  >
-                </div>
-              </div>
             </footer>
             <!-- / Footer -->
 
@@ -363,6 +397,69 @@
       <?php } ?>
       });
     </script>
+    <!-- <script>
+      $('confirm_del_btn').click(function (e) {    
+        e.preventDefault();
+        var id = $(this).val();   
+        swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to recover this imaginary file!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+        }) 
+      .then((willDelete) => {
+          if (willDelete) {
+            $.ajax({
+              url : "hapus-barang/"+id,
+              success : function(response){
+                swal({
+                  title: response.status,
+                  text: response.status_text,
+                  icon: response.status_icon,
+                  buttons: "OK",
+                }).then((confirmed) => {
+                  window.location.reload();
+                })
+              }
+            });
+          } else {
+            swal("Your imaginary file is safe!");
+          }
+        })
+      });
+    </script> -->
+        <!-- <script>
+      function deletedata(id_barang)
+      {
+        swal({
+          title: "Anda Yakin?",
+          text: "Data Akan Dihapus Secara Permanen!",
+          type: "warning",
+          showCancelButton: true,
+          // confirmButtonColor: "#DD6B55",
+          confirmButtonText: "Yes, delete it!",
+          closeOnConfirm: false
+        },
+        function(){
+          $.ajax({
+              url: "<?php echo base_url('hapus-barang/') ?>",
+              type: "post",
+              data: {id_barang:id_barang},
+              success:function(){
+                swal('Data Berhasil Di Hapus', ' ', 'success');
+                $("#delete"+id_barang).fadeTo("slow", 0.7, function(){
+                  $(this).remove();
+                })
+
+              },
+              error:function(){
+                swal('data gagal di hapus', 'error');
+              }
+          });
+        });
+      }
+    </script> -->
     <!-- Page level plugins -->
     <script src="../template/assets/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="../template/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>

@@ -20,10 +20,6 @@ class BarangKeluar extends Migration
                 'constraint' => '12',
                 'unsigned' => TRUE
             ],
-            'nama_material' => [
-                'type' => 'varchar',
-                'constraint' => '50'
-            ],
             'qty' => [
                 'type' => 'varchar',
                 'constraint' => '50'
