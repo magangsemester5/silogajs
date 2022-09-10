@@ -12,8 +12,8 @@ class C_Barang extends BaseController
     public function __construct()
     {
         $this->kategori  = new M_Kategori();
-        $this->barang  = new M_Barang();
-        $this->satuan  = new M_Satuan();
+        $this->barang    = new M_Barang();
+        $this->satuan    = new M_Satuan();
     }
 
     public function index()
@@ -58,7 +58,8 @@ class C_Barang extends BaseController
         return view("Menu/Barang/edit", $data);
     }
 
-    public function edit(){
+    public function edit()
+    {
         $id = $this->request->getVar('id_barang');
         $data = [
             'nama_barang' => $this->request->getVar('nama_barang'),
@@ -81,11 +82,14 @@ class C_Barang extends BaseController
     //     return $this->response->setJSON($data);
     // } 
 
-    public function hapus($id = null){
+    public function hapus($id = null)
+    {
         session()->setFlashdata('status', 'Data Barang berhasil dihapus');
         $data['tampildata'] = $this->barang->where('id_barang', $id)->delete($id);
         return redirect()->to(base_url('C_Barang/index'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil dihapus');
-    }  
+    }
 
-
+    public function auto_code_barang(){
+        return json_encode($this->barang->generateCode());
+    } 
 }

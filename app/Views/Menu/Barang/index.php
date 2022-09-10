@@ -18,7 +18,7 @@
                     <!-- </div> -->
                 <!-- </div> -->
                 <div class="card-body">
-                    <a href="<?= base_url('C_Barang/tambah'); ?>" class="btn btn-info btn-icon-split mb-3 mt-1">
+                    <a href="<?= base_url('tambah-barang'); ?>" class="btn btn-info btn-icon-split mb-3 mt-1">
                         <span class="icon text-green-50">
                             <i class="bx bx-plus-circle me-1"></i>
                         </span>

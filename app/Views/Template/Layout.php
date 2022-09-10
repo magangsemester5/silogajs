@@ -172,7 +172,7 @@
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('/C_Barang/index') ?>">
+              <a class="menu-link" href="<?= base_url('tampil-barang') ?>">
               <div data-i18n="Analytics">Barang</div>
               </a>
               </li>

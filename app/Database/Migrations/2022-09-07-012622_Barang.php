@@ -36,6 +36,14 @@ class Barang extends Migration
             'stok' => [
                 'type' => 'varchar',
                 'constraint' => '50'
+            ],
+            'serial_number' => [
+                'type' => 'varchar',
+                'constraint' => '50'
+            ],
+            'foto_serial_number' => [
+                'type' => 'varchar',
+                'constraint' => '50'
             ]
         ]);
         $this->forge->addPrimaryKey('id_barang');
