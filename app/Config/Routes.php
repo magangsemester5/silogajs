@@ -47,8 +47,8 @@ $routes->get('/C_Kategori/tampil_edit_data/(:num)', 'C_Kategori::tampil_edit_dat
 $routes->get('tampil-barang', 'C_Barang::index');
 $routes->get('tambah-barang', 'C_Barang::tambah');
 $routes->post('prosestambah-barang', 'C_Barang::proses_tambah');
-$routes->get('prosesedit-barang/(:num)', 'C_Barang::tampil_edit_data/$1');
-$routes->post('edit-barang', 'C_Barang::edit');
+$routes->get('edit-barang/(:num)', 'C_Barang::tampil_edit_data/$1');
+$routes->post('prosesedit-barang', 'C_Barang::edit');
 $routes->get('hapus-barang/(:num)', 'C_Barang::hapus/$1');
 
 // Barang Keluar
@@ -64,11 +64,6 @@ $routes->get('hapus-barangkeluar/(:num)', 'C_Transaksi::hapus/$1');
 // Satuan
 $routes->get('/C_Satuan/index', 'C_Satuan::index');
 $routes->get('/C_Satuan/tambah', 'C_Satuan::tambah');
-// Auto Code
-$routes->get('autocode-barang', 'C_Barang::auto_code_barang');
-$routes->get('autocode-barangmasuk', 'C_Transaksi::auto_code_barang_masuk');
-$routes->get('autocode-barangkeluar', 'C_Transaksi::auto_code_barang_keluar');
-
 /*
  * --------------------------------------------------------------------
  * Additional Routing

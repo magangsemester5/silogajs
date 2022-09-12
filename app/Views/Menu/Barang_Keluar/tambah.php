@@ -10,10 +10,10 @@
                     <h5 class="mb-0">Tambah Data Barang Keluar</h5>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="<?= base_url("prosestambah-barangkeluar") ?>">
+                    <form method="POST" action="<?= base_url("prosestambah-barangkeluar") ?>" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Kode Barang Keluar</label>
-                            <input type="text" name="kode_barang_keluar" class="form-control" id="kode_barang_keluar" disabled />
+                            <input type="text" name="kode_barang_keluar" class="form-control" readonly value="BKR<?= sprintf("%04s", $kode_barang_keluar) ?>" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="nama_barang">Nama Barang</label>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="serial_number">Serial Number</label>
-                            <input type="text" name="serial_number" id="serial_number" class="form-control" readonly required />
+                            <input type="text" id="serial_number" class="form-control" readonly required />
                         </div>
                         <div class="mb-3">
                             <label class="serial_number">Foto Serial Number</label>
@@ -40,8 +40,8 @@
                             </div>
                             <br>
                             <div class="mb-3">
-                                <label class="custom-file-label">Foto Pengambilan Paket</label>
-                                <input type="file" name="foto_pengambilan_paket" id="inputFile" class="form-control">
+                                <label class="custom-file-label">Foto Pengambilan Barang</label>
+                                <input type="file" name="foto_pengambilan_barang" id="inputFile" class="form-control">
                             </div>
                             <div class="col-md-3">
                                 <label>Preview Foto Pengambilan</label>
@@ -50,7 +50,7 @@
                             <br>
                             <br>
                             <button type="submit" class="btn btn-primary">Tambah</button>
-                            <a href="<?= base_url('tampil-barangkeluar') ?>" class="btn btn-primary">Cancel </a>
+                            <a href="<?= base_url('tampil-barangkeluar') ?>" class="btn btn-warning">Cancel </a>
                     </form>
                 </div>
             </div>
@@ -111,18 +111,5 @@
     function fadeInAlert(text) {
         $(".alert").text(text).addClass("loadAnimate");
     }
-</script>
-<!-- Auto Generate Kode Barang Keluar -->\
-<script type="text/javascript">
-    $(document).ready(function() {
-        $.ajax({
-            url: "<?php echo base_url('autocode-barangkeluar') ?>",
-            type: "GET",
-            success: function(hasil) {
-                var obj = $.parseJSON(hasil);
-                $('#kode_barang_keluar').val(obj);
-            }
-        });
-    });
 </script>
 <?= $this->endSection('content') ?>

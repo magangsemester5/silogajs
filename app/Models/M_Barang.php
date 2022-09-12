@@ -25,20 +25,14 @@ class M_Barang extends Model
     
     function generateCode()
     {
-        $builder = $this->table('barang');
-        $builder->selectMax('kode_barang', 'kode_barangMax');
-        $query = $builder->get();
-
-        if ($query->getNumRows() > 0) {
-            foreach ($query->getResult() as $key) {
-                $kd = '';
-                $ambildata = substr($key->kode_barangMax, -4);
-                $increment = intval($ambildata) + 1;
-                $kd = sprintf('%04s', $increment);
-            }
-        } else {
-            $kd = '0001';
-        }
-        return 'G-' . $kd;
+        $query = $this->db->query("SELECT MAX(kode_barang) as kode_barang from barang");
+        $query = $query->getRow();
+        return $query->kode_barang;
     }
+
+    // public function updateBarang($data, $id)
+    // {
+    //     $query = $this->db->table('barang')->update($data, array('id_barang' => $id));
+    //     return $query;
+    // }
 }

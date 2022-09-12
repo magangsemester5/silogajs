@@ -13,7 +13,7 @@
                     <form method="POST" action="<?= base_url("prosestambah-barang") ?>">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Kode Barang</label>
-                            <input type="text" name="kode_barang" class="form-control" id="kode_barang" disabled/>
+                            <input type="text" name="kode_barang" class="form-control" id="kode_barang" readonly value="BRG<?= sprintf("%04s", $kode_barang) ?>"/>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Nama Barang</label>
@@ -26,6 +26,17 @@
                                     <option value=""></option>
                                     <?php foreach ($tampildatakategori as $key => $value) : ?>
                                         <option value="<?= $value->id_kategori ?>"><?= $value->nama_kategori ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-email">Satuan Barang</label>
+                            <div class="input-group input-group-merge">
+                                <select name="id_satuan" class="form-control" required>
+                                    <option value=""></option>
+                                    <?php foreach ($tampildatasatuan as $key => $value) : ?>
+                                        <option value="<?= $value->id_satuan ?>"><?= $value->nama_satuan ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -49,7 +60,7 @@
                         <br>
                         <br>
                         <button type="submit" class="btn btn-primary">Tambah</button>
-                        <a href="<?= base_url('tampil-barang') ?>" class="btn btn-primary">Cancel </a>
+                        <a href="<?= base_url('tampil-barang') ?>" class="btn btn-warning">Cancel </a>
                     </form>
                 </div>
             </div>
@@ -92,18 +103,5 @@
     function fadeInAlert(text) {
         $(".alert").text(text).addClass("loadAnimate");
     }
-</script>
-<!-- Auto Generate Kode Barang -->
-<script type="text/javascript">
-    $(document).ready(function() {
-        $.ajax({
-            url: "<?php echo base_url('autocode-barang') ?>",
-            type: "GET",
-            success: function(data) {
-                var obj = $.parseJSON(data);
-                $('#kode_barang').val(obj);
-            }
-        });
-    });
 </script>
 <?= $this->endSection('content') ?>

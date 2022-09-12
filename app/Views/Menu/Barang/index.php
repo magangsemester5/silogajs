@@ -34,7 +34,8 @@
                         <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>ID Barang</th>
+                                    <th>No</th>
+                                    <th>Kode Barang</th>
                                     <th>Nama Barang</th>
                                     <th>Kategori Barang</th>
                                     <th>Stok</th>
@@ -43,16 +44,17 @@
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
-                                <?php foreach ($tampildata as $td) : ?>
+                                <?php $no = 1; foreach ($tampildata as $td) : ?>
                                     <tr>
-                                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $td->id_barang ?></strong></td>
+                                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $no++ ?></strong></td>
+                                        <td><?= $td->kode_barang ?></td>
                                         <td><?= $td->nama_barang ?></td>
                                         <td><?= $td->nama_kategori ?></td>
                                         <td><?= $td->stok ?></td>
                                         <td><?= $td->nama_satuan ?></td>
                                         <td>
-                                            <a class="btn btn-warning" href="<?= base_url("prosesedit-barang/$td->id_barang"); ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                            <a class="btn btn-danger" href="<?= base_url("hapus-barang/$td->id_barang"); ?>"><i class="bx bx-trash me-1"></i> Delete</a>
+                                            <a class="btn btn-warning btn-sm" href="<?= base_url("edit-barang/$td->id_barang"); ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                            <a class="btn btn-danger  btn-sm" href="<?= base_url("hapus-barang/$td->id_barang"); ?>"><i class="bx bx-trash me-1"></i> Delete</a>
                                         </td>
                                     </tr>
                             </tbody>

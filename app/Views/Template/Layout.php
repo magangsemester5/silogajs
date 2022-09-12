@@ -252,7 +252,7 @@
             <!-- Misc -->
           </ul>
         </aside>
-        <!-- / Menu -->
+        <!-- Menu -->
 
         <!-- Layout container -->
         <div class="layout-page">
@@ -269,7 +269,7 @@
 
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
               <!-- Search -->
-              <!-- /Search -->
+              <!-- Search -->
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <!-- Place this tag where you want the button to render. -->
@@ -281,7 +281,7 @@
                       <img src="../template/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
+                  <!-- <ul class="dropdown-menu dropdown-menu-end">
                     <li>
                       <a class="dropdown-item" href="#">
                         <div class="d-flex">
@@ -330,7 +330,7 @@
                         <span class="align-middle">Log Out</span>
                       </a>
                     </li>
-                  </ul>
+                  </ul> -->
                 </li>
                 <!--/ User -->
               </ul>

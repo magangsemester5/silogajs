@@ -28,7 +28,7 @@ class BarangKeluar extends Migration
                 'type' => 'varchar',
                 'constraint' => '50'
             ],
-            'foto_pengambilan_paket' => [
+            'foto_pengambilan_barang' => [
                 'type' => 'varchar',
                 'constraint' => '50'
             ]

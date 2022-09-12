@@ -26,10 +26,14 @@ class C_Barang extends BaseController
     }
     public function tambah()
     {
+        $getGenerate = $this->barang->generateCode();
+        $nourut = substr($getGenerate, 3, 4);
+        $kodeBarangGenerate = $nourut + 1;
         $data = [
             'title' => "Halaman Tambah Barang | SILOG AJS",
             'tampildatakategori' => $this->kategori->findAll(),
-            'tampildatasatuan' => $this->satuan->findAll()
+            'tampildatasatuan' => $this->satuan->findAll(),
+            'kode_barang' => $kodeBarangGenerate
         ];
         return view("Menu/Barang/tambah", $data);
     }
@@ -40,11 +44,12 @@ class C_Barang extends BaseController
             'id_satuan' => $this->request->getVar('id_satuan'),
             'kode_barang' => $this->request->getVar('kode_barang'),
             'nama_barang' => $this->request->getVar('nama_barang'),
-            'stok' => $this->request->getVar('stok')
+            'stok' => $this->request->getVar('stok'),
+            'serial_number' => $this->request->getVar('serial_number')
         ];
         session()->setFlashdata('status', 'Data Barang berhasil ditambahkan');
         $this->barang->insert($data);
-        return redirect()->to(base_url('C_Barang/index'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil ditambah');
+        return redirect()->to(base_url('tampil-barang'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil ditambah');
     }
 
     public function tampil_edit_data($id = null)
@@ -69,7 +74,7 @@ class C_Barang extends BaseController
         ];
         session()->setFlashdata('status', 'Data Barang berhasil diupdate');
         $this->barang->update($id, $data);
-        return redirect()->to(base_url('C_Barang/index'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil diupdate');
+        return redirect()->to(base_url('tampil-barang'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil diupdate');
     }
 
     // public function konfirmasi_hapus($id = null){

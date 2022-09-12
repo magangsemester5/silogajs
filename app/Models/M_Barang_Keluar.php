@@ -11,7 +11,7 @@ class M_Barang_Keluar extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_barang', 'qty', 'foto_pengambilan_paket', 'kode_barang_keluar'
+        'id_barang', 'kode_barang_keluar', 'qty', 'foto_pengambilan_barang'
     ];
 
     function getAll()
@@ -24,20 +24,8 @@ class M_Barang_Keluar extends Model
 
     function generateCode()
     {
-        $builder = $this->table('barang_keluar');
-        $builder->selectMax('kode_barang_keluar', 'kode_barang_keluar');
-        $query = $builder->get();
-
-        if ($query->getNumRows() > 0) {
-            foreach ($query->getResult() as $key) {
-                $kd = '';
-                $ambildata = substr($key->kode_barang_keluar, -4);
-                $increment = intval($ambildata) + 1;
-                $kd = sprintf('%04s', $increment);
-            }
-        } else {
-            $kd = '0001';
-        }
-        return 'G-' . $kd;
+        $query = $this->db->query("SELECT MAX(kode_barang_keluar) as kode_barang_keluar from barang_keluar");
+        $query = $query->getRow();
+        return $query->kode_barang_keluar;
     }
 }
