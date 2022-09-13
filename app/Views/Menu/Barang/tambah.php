@@ -10,7 +10,7 @@
                     <h5 class="mb-0">Tambah Data Barang</h5>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="<?= base_url("prosestambah-barang") ?>">
+                    <form method="POST" action="<?= base_url("prosestambah-barang") ?>" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Kode Barang</label>
                             <input type="text" name="kode_barang" class="form-control" id="kode_barang" readonly value="BRG<?= sprintf("%04s", $kode_barang) ?>"/>
@@ -67,41 +67,4 @@
         </div>
     </div>
 </div>
-<script src="../template/js/jquery-3.6.0.js"></script>
-<!-- Memunculkan Preview Foto    -->
-<script>
-    $("#inputFile").change(function(event) {
-        fadeInAdd();
-        getURL(this);
-    });
-
-    $("#inputFile").on('click', function(event) {
-        fadeInAdd();
-    });
-
-    function getURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            var filename = $("#inputFile").val();
-            filename = filename.substring(filename.lastIndexOf('\\') + 1);
-            reader.onload = function(e) {
-                debugger;
-                $('#imgView').attr('src', e.target.result);
-                $('#imgView').hide();
-                $('#imgView').fadeIn(500);
-                $('.custom-file-label').text(filename);
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-        $(".alert").removeClass("loadAnimate").hide();
-    }
-
-    function fadeInAdd() {
-        fadeInAlert();
-    }
-
-    function fadeInAlert(text) {
-        $(".alert").text(text).addClass("loadAnimate");
-    }
-</script>
 <?= $this->endSection('content') ?>

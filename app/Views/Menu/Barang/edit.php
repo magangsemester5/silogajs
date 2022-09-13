@@ -10,7 +10,8 @@
                     <h5 class="mb-0">Edit Data Barang</h5>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="<?= base_url("prosesedit-barang") ?>">
+                    <form method="POST" action="<?= base_url("prosesedit-barang") ?>" enctype="multipart/form-data">
+                    <input type="hidden" name="id_barang" class="form-control" id="id_barang" value="<?php echo $tampildata->id_barang ?>">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Kode Barang</label>
                             <input type="text" name="kode_barang" class="form-control" id="kode_barang" value="<?php echo $tampildata->kode_barang ?>" disabled>
@@ -49,6 +50,15 @@
                             <label class="form-label" for="basic-default-phone">Serial Number</label>
                             <input type="text" name="serial_number" id="basic-default-phone" value="<?= $tampildata->serial_number ?>" class="form-control phone-mask" />
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-phone">Foto Serial Number</label>
+                            <input type="file" name="foto_serial_number" id="inputFile" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label>Preview Foto Serial Number</label>
+                            <img src="<?= base_url("../uploads/$tampildata->foto_serial_number") ?>" width="150" id="imgView" class="card-img-top img-fluid">
+                        </div>
+                        <br>
                         <button type="submit" class="btn btn-primary">Edit</button>
                         <a href="<?= base_url('tampil-barang') ?>" class="btn btn-warning">Cancel</a>
                     </form>

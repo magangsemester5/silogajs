@@ -40,7 +40,7 @@ class C_Transaksi extends BaseController
     public function proses_tambah_barang_keluar()
     {
         $image = $this->request->getFile('foto_pengambilan_barang');
-        $image->move(WRITEPATH . 'uploads');
+        $image->move(ROOTPATH . 'public/uploads');
         $data =
             [
                 'kode_barang_keluar' => $this->request->getVar('kode_barang_keluar'),
@@ -48,7 +48,7 @@ class C_Transaksi extends BaseController
                 'qty' => $this->request->getVar('qty'),
                 'foto_pengambilan_barang' => $image->getClientName()
             ];
-        $this->barang->insert($data);
+        $this->barang_keluar->insert($data);
         session()->setFlashdata('status', 'Data Barang Keluar berhasil ditambahkan');
         return redirect()->to(base_url('tampil-barangkeluar'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil ditambah');
     }

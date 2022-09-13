@@ -69,7 +69,7 @@
                 dataType: 'json',
                 success: function(data) {
                     $('#serial_number').val(data.serial_number),
-                        $('#foto_serial_number').html("<img src='../img/barang/serial_number/" + data.foto_serial_number + "'width='200px' height='200px'>");
+                        $('#foto_serial_number').html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>");
                 }
             });
             return false;

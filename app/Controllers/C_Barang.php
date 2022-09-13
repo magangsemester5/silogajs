@@ -11,18 +11,19 @@ class C_Barang extends BaseController
 {
     public function __construct()
     {
-        $this->kategori  = new M_Kategori();
-        $this->barang    = new M_Barang();
-        $this->satuan    = new M_Satuan();
+        $this->kategori = new M_Kategori();
+        $this->barang = new M_Barang();
+        $this->satuan = new M_Satuan();
+        $db = \Config\Database::connect();
     }
 
     public function index()
     {
         $data = [
-            'title' => "Halaman Barang | SILOG AJS",
-            'tampildata' => $this->barang->getAll()
+            'title' => 'Halaman Barang | SILOG AJS',
+            'tampildata' => $this->barang->getAll(),
         ];
-        return view("Menu/Barang/index", $data);
+        return view('Menu/Barang/index', $data);
     }
     public function tambah()
     {
@@ -30,26 +31,32 @@ class C_Barang extends BaseController
         $nourut = substr($getGenerate, 3, 4);
         $kodeBarangGenerate = $nourut + 1;
         $data = [
-            'title' => "Halaman Tambah Barang | SILOG AJS",
+            'title' => 'Halaman Tambah Barang | SILOG AJS',
             'tampildatakategori' => $this->kategori->findAll(),
             'tampildatasatuan' => $this->satuan->findAll(),
-            'kode_barang' => $kodeBarangGenerate
+            'kode_barang' => $kodeBarangGenerate,
         ];
-        return view("Menu/Barang/tambah", $data);
+        return view('Menu/Barang/tambah', $data);
     }
     public function proses_tambah()
     {
+        $image = $this->request->getFile('foto_serial_number');
+        $image->move(ROOTPATH . 'public/uploads');
         $data = [
             'id_kategori' => $this->request->getVar('id_kategori'),
             'id_satuan' => $this->request->getVar('id_satuan'),
             'kode_barang' => $this->request->getVar('kode_barang'),
             'nama_barang' => $this->request->getVar('nama_barang'),
             'stok' => $this->request->getVar('stok'),
-            'serial_number' => $this->request->getVar('serial_number')
+            'serial_number' => $this->request->getVar('serial_number'),
+            'foto_serial_number' => $image->getClientName(),
         ];
         session()->setFlashdata('status', 'Data Barang berhasil ditambahkan');
         $this->barang->insert($data);
-        return redirect()->to(base_url('tampil-barang'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil ditambah');
+        return redirect()
+            ->to(base_url('tampil-barang'))
+            ->with('status_icon', 'success')
+            ->with('status_text', 'Data Berhasil ditambah');
     }
 
     public function tampil_edit_data($id = null)
@@ -58,23 +65,34 @@ class C_Barang extends BaseController
             'tampildata' => $this->barang->where('id_barang', $id)->first(),
             'tampildatakategori' => $this->kategori->findAll(),
             'tampildatasatuan' => $this->satuan->findAll(),
-            'title' => "Halaman Edit Barang | SILOG AJS"
+            'title' => 'Halaman Edit Barang | SILOG AJS',
         ];
-        return view("Menu/Barang/edit", $data);
+        return view('Menu/Barang/edit', $data);
     }
 
     public function edit()
     {
-        $id = $this->request->getVar('id_barang');
+        $loadmodel = $this->request->getVar('id_barang');
+        $dataId = $this->barang->where('id_barang', $loadmodel);
+        $foto = $dataId->foto_serial_number;
+        unlink('uploads/' . $foto);
+        $image = $this->request->getFile('foto_serial_number');
+        $image->move(ROOTPATH . 'public/uploads');
         $data = [
+            'id_kategori' => $this->request->getVar('id_kategori'),
+            'id_satuan' => $this->request->getVar('id_satuan'),
+            'kode_barang' => $this->request->getVar('kode_barang'),
             'nama_barang' => $this->request->getVar('nama_barang'),
-            'id_kategori'  => $this->request->getVar('id_kategori'),
-            'stok'  => $this->request->getVar('stok'),
-            'id_satuan'  => $this->request->getVar('id_satuan')
+            'stok' => $this->request->getVar('stok'),
+            'serial_number' => $this->request->getVar('serial_number'),
+            'foto_serial_number' => $image->getClientName(),
         ];
         session()->setFlashdata('status', 'Data Barang berhasil diupdate');
-        $this->barang->update($id, $data);
-        return redirect()->to(base_url('tampil-barang'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil diupdate');
+        $this->barang->delete($data);
+        return redirect()
+            ->to(base_url('tampil-barang'))
+            ->with('status_icon', 'success')
+            ->with('status_text', 'Data Berhasil diupdate');
     }
 
     // public function konfirmasi_hapus($id = null){
@@ -85,16 +103,25 @@ class C_Barang extends BaseController
     //         'status_icon' => "success"
     //     ];
     //     return $this->response->setJSON($data);
-    // } 
+    // }
 
-    public function hapus($id = null)
+    public function hapus($id)
     {
+        $data = $this->barang->find($id);
+        $foto = $data->foto_serial_number;
+        if (file_exists('uploads/' . $foto)) {
+            unlink('uploads/' . $foto);
+        }
+        $this->barang->delete($id);
         session()->setFlashdata('status', 'Data Barang berhasil dihapus');
-        $data['tampildata'] = $this->barang->where('id_barang', $id)->delete($id);
-        return redirect()->to(base_url('C_Barang/index'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil dihapus');
+        return redirect()
+            ->to(base_url('tampil-barang'))
+            ->with('status_icon', 'success')
+            ->with('status_text', 'Data Berhasil dihapus');
     }
 
-    public function auto_code_barang(){
+    public function auto_code_barang()
+    {
         return json_encode($this->barang->generateCode());
-    } 
+    }
 }

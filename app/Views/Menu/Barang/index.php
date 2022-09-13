@@ -13,9 +13,9 @@
                     <h6 class="fw-bold">Data Barang</h6>
                 </div>
                 <!-- <div class="row mt-2 ml-md-2 text-center"> -->
-                    <!-- <div class="col-md-1"> -->
-                    <!-- Form Error -->
-                    <!-- </div> -->
+                <!-- <div class="col-md-1"> -->
+                <!-- Form Error -->
+                <!-- </div> -->
                 <!-- </div> -->
                 <div class="card-body">
                     <a href="<?= base_url('tambah-barang'); ?>" class="btn btn-info btn-icon-split mb-3 mt-1">
@@ -44,7 +44,8 @@
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
-                                <?php $no = 1; foreach ($tampildata as $td) : ?>
+                                <?php $no = 1;
+                                foreach ($tampildata as $td) : ?>
                                     <tr>
                                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $no++ ?></strong></td>
                                         <td><?= $td->kode_barang ?></td>
@@ -54,7 +55,7 @@
                                         <td><?= $td->nama_satuan ?></td>
                                         <td>
                                             <a class="btn btn-warning btn-sm" href="<?= base_url("edit-barang/$td->id_barang"); ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                            <a class="btn btn-danger  btn-sm" href="<?= base_url("hapus-barang/$td->id_barang"); ?>"><i class="bx bx-trash me-1"></i> Delete</a>
+                                            <a href="" type="button"  data-toggle="modal" data-id="<?= $td->id_barang ?>" data-target="#myModal" id="del" class="btn btn-danger btn-sm"><i class="bx bx-trash-alt me-1"></i>Delete</a>
                                         </td>
                                     </tr>
                             </tbody>
