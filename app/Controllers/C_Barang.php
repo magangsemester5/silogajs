@@ -73,11 +73,16 @@ class C_Barang extends BaseController
     public function edit()
     {
         $loadmodel = $this->request->getVar('id_barang');
-        $dataId = $this->barang->where('id_barang', $loadmodel);
-        $foto = $dataId->foto_serial_number;
-        unlink('uploads/' . $foto);
+        $dataId = $this->barang->find($loadmodel);
         $image = $this->request->getFile('foto_serial_number');
-        $image->move(ROOTPATH . 'public/uploads');
+        if ($image->isValid() && !$image->hasMoved()) {
+            $foto = $dataId->foto_serial_number;
+            if (file_exists('uploads/' . $foto)) {
+                unlink('uploads/' . $foto);
+            }
+            $imageName = $image->getRandomName();
+            $image->move('uploads/', $imageName);
+        }
         $data = [
             'id_kategori' => $this->request->getVar('id_kategori'),
             'id_satuan' => $this->request->getVar('id_satuan'),
@@ -85,10 +90,10 @@ class C_Barang extends BaseController
             'nama_barang' => $this->request->getVar('nama_barang'),
             'stok' => $this->request->getVar('stok'),
             'serial_number' => $this->request->getVar('serial_number'),
-            'foto_serial_number' => $image->getClientName(),
+            'foto_serial_number' => $imageName,
         ];
         session()->setFlashdata('status', 'Data Barang berhasil diupdate');
-        $this->barang->delete($data);
+        $this->barang->update($loadmodel, $data);
         return redirect()
             ->to(base_url('tampil-barang'))
             ->with('status_icon', 'success')

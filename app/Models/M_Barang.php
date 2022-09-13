@@ -29,10 +29,4 @@ class M_Barang extends Model
         $query = $query->getRow();
         return $query->kode_barang;
     }
-
-    // public function updateBarang($data, $id)
-    // {
-    //     $query = $this->db->table('barang')->update($data, array('id_barang' => $id));
-    //     return $query;
-    // }
 }
