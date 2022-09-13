@@ -37,7 +37,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'C_Dashboard::index');
 $routes->get('/C_Dashboard/index', 'C_Dashboard::index');
-
+// Routing Kategori
 $routes->get('/C_Kategori/index', 'C_Kategori::index');
 $routes->get('/C_Kategori/tambah', 'C_Kategori::tambah');
 $routes->post('/C_Kategori/proses_tambah', 'C_Kategori::proses_tambah');
