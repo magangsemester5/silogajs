@@ -52,18 +52,21 @@ $routes->post('prosesedit-barang', 'C_Barang::edit');
 $routes->get('hapus-barang/(:num)', 'C_Barang::hapus/$1');
 
 // Barang Keluar
-$routes->get('tampil-barangkeluar', 'C_Transaksi::index');
-$routes->get('autotampildatabarangkeluar/(:num)', 'C_Transaksi::tampil_otomatis_data_barang/$1');
-$routes->get('detail-barangkeluar/(:num)', 'C_Transaksi::detail/$1');
-$routes->get('tambah-barangkeluar', 'C_Transaksi::tambah');
-$routes->post('prosestambah-barangkeluar', 'C_Transaksi::proses_tambah_barang_keluar');
-$routes->get('prosesedit-barangkeluar/(:num)', 'C_Transaksi::tampil_edit_data/$1');
-$routes->post('edit-barangkeluar', 'C_Transaksi::edit');
-$routes->get('hapus-barangkeluar/(:num)', 'C_Transaksi::hapus/$1');
+$routes->get('tampil-barangkeluar', 'C_Barang_Keluar::index');
+$routes->get('autotampildatabarangkeluar/(:num)', 'C_Barang_Keluar::tampil_otomatis_data_barang/$1');
+$routes->get('detail-barangkeluar/(:num)', 'C_Barang_Keluar::detail/$1');
+$routes->get('tambah-barangkeluar', 'C_Barang_Keluar::tambah');
+$routes->post('prosestambah-barangkeluar', 'C_Barang_Keluar::proses_tambah');
+$routes->get('prosesedit-barangkeluar/(:num)', 'C_Barang_Keluar::tampil_edit_data/$1');
+$routes->post('edit-barangkeluar', 'C_Barang_Keluar::edit');
+$routes->get('hapus-barangkeluar/(:num)', 'C_Barang_Keluar::hapus/$1');
 
 // Satuan
 $routes->get('/C_Satuan/index', 'C_Satuan::index');
 $routes->get('/C_Satuan/tambah', 'C_Satuan::tambah');
+
+$routes->get('cekstok/(:num)', 'C_barang::cek_stok/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

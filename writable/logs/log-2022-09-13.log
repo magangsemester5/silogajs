@@ -96,3 +96,27 @@ in APPPATH\Models\M_Barang.php on line 33.
  4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-13 23:49:51 --> Undefined variable: imageName
+in APPPATH\Controllers\C_Barang.php on line 93.
+ 1 APPPATH\Controllers\C_Barang.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: imageName', 'APPPATH\\Controllers\\C_Barang.php', 93, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->edit()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-13 23:50:37 --> Undefined variable: imageName
+in APPPATH\Controllers\C_Barang.php on line 93.
+ 1 APPPATH\Controllers\C_Barang.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: imageName', 'APPPATH\\Controllers\\C_Barang.php', 93, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->edit()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-13 23:54:13 --> Undefined variable: imageName
+in APPPATH\Controllers\C_Barang.php on line 93.
+ 1 APPPATH\Controllers\C_Barang.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: imageName', 'APPPATH\\Controllers\\C_Barang.php', 93, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->edit()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

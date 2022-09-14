@@ -14,7 +14,7 @@
                     <input type="hidden" name="id_barang" class="form-control" id="id_barang" value="<?php echo $tampildata->id_barang ?>">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Kode Barang</label>
-                            <input type="text" name="kode_barang" class="form-control" id="kode_barang" value="<?php echo $tampildata->kode_barang ?>" disabled>
+                            <input type="text" name="kode_barang" class="form-control" id="kode_barang" value="<?php echo $tampildata->kode_barang ?>" readonly>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Nama Barang</label>
@@ -52,7 +52,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Foto Serial Number</label>
-                            <input type="file" name="foto_serial_number" id="inputFile" class="form-control">
+                            <input type="file" name="foto_serial_number" id="inputFile" value="<?= $tampildata->foto_serial_number ?>" class="form-control">
                         </div>
                         <div class="col-md-3">
                             <label>Preview Foto Serial Number</label>

@@ -22,6 +22,15 @@ class M_Barang_Keluar extends Model
         return $query->getResult();
     }
 
+    function getRelasi($id)
+    {
+        $builder = $this->db->table('barang_keluar');
+        $builder->join('barang', 'barang.id_barang = barang_keluar.id_barang');
+        $builder->where('id_barang_keluar',$id);
+        $query = $builder->get();
+        return $query->getResult();
+    }
+
     function generateCode()
     {
         $query = $this->db->query("SELECT MAX(kode_barang_keluar) as kode_barang_keluar from barang_keluar");

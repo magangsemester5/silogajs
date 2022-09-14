@@ -10,26 +10,41 @@
                     <h5 class="mb-0">Tambah Data Barang Keluar</h5>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="<?= base_url("prosestambah-barangkeluar") ?>" enctype="multipart/form-data">
+                    <form method="POST" action="<?= base_url(
+                        'prosestambah-barangkeluar'
+                    ) ?>" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Kode Barang Keluar</label>
-                            <input type="text" name="kode_barang_keluar" class="form-control" readonly value="BKR<?= sprintf("%04s", $kode_barang_keluar) ?>" />
+                            <input type="text" name="kode_barang_keluar" class="form-control" readonly value="BKR<?= sprintf(
+                                '%04s',
+                                $kode_barang_keluar
+                            ) ?>" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="nama_barang">Nama Barang</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_barang" class="form-control" id="nama_barang" required>
                                     <option value="" disabled selected>Pilih Nama Barang</option>
-                                    <?php foreach ($tampildatabarang as $key => $value) : ?>
+                                    <?php foreach (
+                                        $tampildatabarang
+                                        as $key => $value
+                                    ): ?>
                                         <option value="<?= $value->id_barang ?>"><?= $value->nama_barang ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-phone">Jumlah Barang Keluar</label>
-                            <input type="text" name="qty" id="basic-default-phone" class="form-control" />
+                    <label class="col-md-4 text-md-right" for="jumlah_masuk">Jumlah Barang Keluar</label>
+                    <div class="col-md-5">
+                        <div class="input-group">
+                            <input value="<?= set_value('qty'); ?>" name="qty" id="qty" type="number" class="form-control" placeholder="Jumlah Keluar...">
+                            <div class="input-group-append">
+                                <input type="text" id="nama_satuan" class="form-control" readonly required />
+                            </div>
                         </div>
+                    </div>
+                    </div>
                         <div class="mb-3">
                             <label class="serial_number">Serial Number</label>
                             <input type="text" id="serial_number" class="form-control" readonly required />
@@ -50,66 +65,15 @@
                             <br>
                             <br>
                             <button type="submit" class="btn btn-primary">Tambah</button>
-                            <a href="<?= base_url('tampil-barangkeluar') ?>" class="btn btn-warning">Cancel </a>
+                            <a href="<?= base_url(
+                                'tampil-barangkeluar'
+                            ) ?>" class="btn btn-warning">Cancel </a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<script src="../template/js/jquery-3.6.0.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        //call function get data edit
-        $('#nama_barang').change(function() {
-            var id = $(this).val();
-            $.ajax({
-                url: "<?php echo base_url('autotampildatabarangkeluar'); ?>" + '/' + id,
-                method: "GET",
-                dataType: 'json',
-                success: function(data) {
-                    $('#serial_number').val(data.serial_number),
-                        $('#foto_serial_number').html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>");
-                }
-            });
-            return false;
-        });
-    });
-</script>
-<!-- Memunculkan Preview Foto    -->
-<script>
-    $("#inputFile").change(function(event) {
-        fadeInAdd();
-        getURL(this);
-    });
 
-    $("#inputFile").on('click', function(event) {
-        fadeInAdd();
-    });
 
-    function getURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            var filename = $("#inputFile").val();
-            filename = filename.substring(filename.lastIndexOf('\\') + 1);
-            reader.onload = function(e) {
-                debugger;
-                $('#imgView').attr('src', e.target.result);
-                $('#imgView').hide();
-                $('#imgView').fadeIn(500);
-                $('.custom-file-label').text(filename);
-            }
-            reader.readAsDataURL(input.files[0]);
-        }
-        $(".alert").removeClass("loadAnimate").hide();
-    }
-
-    function fadeInAdd() {
-        fadeInAlert();
-    }
-
-    function fadeInAlert(text) {
-        $(".alert").text(text).addClass("loadAnimate");
-    }
-</script>
 <?= $this->endSection('content') ?>

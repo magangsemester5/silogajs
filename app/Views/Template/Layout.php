@@ -359,9 +359,10 @@
     <script src="../template/assets/js/dashboards-analytics.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>\
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Sweet Alert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../template/js/jquery-3.6.0.js"></script>
     <script>
     $(document).ready(function () {
       <?php if (session()->getFlashdata('status')) { ?>
@@ -407,38 +408,6 @@
             });
         });
     </script>
-        <!-- <script>
-      function deletedata(id_barang)
-      {
-        swal({
-          title: "Anda Yakin?",
-          text: "Data Akan Dihapus Secara Permanen!",
-          type: "warning",
-          showCancelButton: true,
-          // confirmButtonColor: "#DD6B55",
-          confirmButtonText: "Yes, delete it!",
-          closeOnConfirm: false
-        },
-        function(){
-          $.ajax({
-              url: "<?php echo base_url('hapus-barang/'); ?>",
-              type: "post",
-              data: {id_barang:id_barang},
-              success:function(){
-                swal('Data Berhasil Di Hapus', ' ', 'success');
-                $("#delete"+id_barang).fadeTo("slow", 0.7, function(){
-                  $(this).remove();
-                })
-
-              },
-              error:function(){
-                swal('data gagal di hapus', 'error');
-              }
-          });
-        });
-      }
-    </script> -->
-    <script src="../template/js/jquery-3.6.0.js"></script>
     <!-- Memunculkan Preview Foto    -->
     <script>
         $("#inputFile").change(function(event) {
@@ -474,6 +443,25 @@
         function fadeInAlert(text) {
             $(".alert").text(text).addClass("loadAnimate");
         }
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //call function get data edit
+            $('#nama_barang').change(function() {
+                var id = $(this).val();
+                $.ajax({
+                    url: "<?php echo base_url('autotampildatabarangkeluar'); ?>" + '/' + id,
+                    method: "GET",
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#serial_number').val(data.serial_number),
+                        $('#nama_satuan').val(data.nama_satuan),
+                        $('#foto_serial_number').html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>");
+                    }
+                });
+                return false;
+            });
+        });
     </script>
     <!-- Page level plugins -->
     <script src="../template/assets/vendor/datatables/jquery.dataTables.min.js"></script>

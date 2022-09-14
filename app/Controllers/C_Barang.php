@@ -99,17 +99,7 @@ class C_Barang extends BaseController
             ->with('status_icon', 'success')
             ->with('status_text', 'Data Berhasil diupdate');
     }
-
-    // public function konfirmasi_hapus($id = null){
-    //     $this->barang->delete($id);
-    //     $data = [
-    //         'status' => "Data Barang berhasil dihapus",
-    //         'status_text' => "Data Barang berhasil dihapus",
-    //         'status_icon' => "success"
-    //     ];
-    //     return $this->response->setJSON($data);
-    // }
-
+    
     public function hapus($id)
     {
         $data = $this->barang->find($id);
@@ -128,5 +118,12 @@ class C_Barang extends BaseController
     public function auto_code_barang()
     {
         return json_encode($this->barang->generateCode());
+    }
+
+    public function cek_stok($id_cek)
+    {
+        $id = encode_php_tags($id_cek);
+        $query = $this->admin->cekStok($id);
+        $this->response->setJSON($query);
     }
 }
