@@ -50,6 +50,7 @@ $routes->post('prosestambah-barang', 'C_Barang::proses_tambah');
 $routes->get('edit-barang/(:num)', 'C_Barang::tampil_edit_data/$1');
 $routes->post('prosesedit-barang', 'C_Barang::edit');
 $routes->get('hapus-barang/(:num)', 'C_Barang::hapus/$1');
+$routes->get('export-barang', 'C_Barang::export');
 
 // Barang Keluar
 $routes->get('tampil-barangkeluar', 'C_Barang_Keluar::index');
@@ -57,7 +58,6 @@ $routes->get('autotampildatabarangkeluar/(:num)', 'C_Barang_Keluar::tampil_otoma
 $routes->get('detail-barangkeluar/(:num)', 'C_Barang_Keluar::detail/$1');
 $routes->get('tambah-barangkeluar', 'C_Barang_Keluar::tambah');
 $routes->post('prosestambah-barangkeluar', 'C_Barang_Keluar::proses_tambah');
-$routes->get('prosesedit-barangkeluar/(:num)', 'C_Barang_Keluar::tampil_edit_data/$1');
 $routes->post('edit-barangkeluar', 'C_Barang_Keluar::edit');
 $routes->get('hapus-barangkeluar/(:num)', 'C_Barang_Keluar::hapus/$1');
 

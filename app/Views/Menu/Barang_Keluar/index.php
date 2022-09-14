@@ -49,8 +49,7 @@
                                         <td><?= $td->qty ?></td>
                                         <td>
                                             <a class="btn btn-info btn-sm" href="<?= base_url("detail-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                            <a class="btn btn-warning btn-sm" href="<?= base_url("prosesedit-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-edit-alt"></i> Edit</a>
-                                            <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-trash"></i> Delete</a>
+                                            <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
                                         </td>
                                     </tr>
                             </tbody>

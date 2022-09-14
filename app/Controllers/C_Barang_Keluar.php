@@ -58,6 +58,16 @@ class C_Barang_Keluar extends BaseController
             ->with('status_text', 'Data Berhasil ditambah');
     }
 
+    public function tampil_edit_data($id = null)
+    {
+        $data = [
+            'tampildata' => $this->barang_keluar->getRelasi($id),
+            'tampildatabarang' => $this->barang->findAll(),
+            'title' => 'Halaman Edit Barang | SILOG AJS',
+        ];
+        return view('Menu/Barang_Keluar/edit', $data);
+    }
+
     public function edit()
     {
         $loadmodel = $this->request->getVar('id_barang');
@@ -81,7 +91,7 @@ class C_Barang_Keluar extends BaseController
             'foto_serial_number' => $imageName,
         ];
         session()->setFlashdata('status', 'Data Barang berhasil diupdate');
-        $this->barang->update($loadmodel, $data);
+        $this->barang_keluar->update($loadmodel, $data);
         return redirect()
             ->to(base_url('tampil-barang'))
             ->with('status_icon', 'success')

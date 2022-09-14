@@ -24,14 +24,14 @@
                         </span>
                         <span class="text">Tambah Barang</span>
                     </a>
-                    <a href="<?= base_url('C_Barang/export'); ?>" class="btn btn-warning btn-icon-split mb-3 mt-1">
+                    <a href="<?= base_url('export-barang'); ?>" class="btn btn-warning btn-icon-split mb-3 mt-1">
                         <span class="icon text-green-50">
                             <i class="bx bxs-file-blank"></i>
                         </span>
                         <span class="text">Export PDF</span>
                     </a>
                     <div class="table-responsive">
-                        <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-striped w-100 dt-responsive" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>No</th>
