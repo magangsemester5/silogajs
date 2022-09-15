@@ -11,7 +11,7 @@
             <a class="btn btn-primary" href="<?= base_url('C_Kategori/tambah'); ?>"><i class="bx bx-plus-circle me-1"></i>Tambah Data</a>
             <b><hr size="5"></b>
             <div class="card">
-                <h5 class="card-header">Table Kategori</h5>
+                <h5 class="card-header">Tabl Kategori</h5>
                 <div class="table-responsive text-nowrap">
                     <table class="table">
                         <thead>
