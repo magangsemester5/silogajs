@@ -37,17 +37,28 @@ class C_Barang_Keluar extends BaseController
 
     public function proses_tambah()
     {
+        // $input = $this->request->getPost('barang_id', true);
+        // $stok = $this->admin->get('barang', ['id_barang' => $input])['stok'];
+        // $stok_valid = $stok + 1;
         $image = $this->request->getFile('foto_pengambilan_barang');
         $image->move(ROOTPATH . 'public/uploads');
+        $id_barang = $this->request->getVar('id_barang');
         $data = [
             'kode_barang_keluar' => $this->request->getVar(
                 'kode_barang_keluar'
             ),
-            'id_barang' => $this->request->getVar('id_barang'),
-            'qty' => $this->request->getVar('qty'),
+            'id_barang' => $id_barang,
+            'jumlah_keluar' => $this->request->getVar('jumlah_keluar'),
             'foto_pengambilan_barang' => $image->getClientName(),
         ];
         $this->barang_keluar->insert($data);
+        $where = [
+            'id_barang' => $id_barang
+        ];
+        $data2 = [
+            'stok' => 15
+        ];
+        $this->barang->update($where, $data2, 'barang');
         session()->setFlashdata(
             'status',
             'Data Barang Keluar berhasil ditambahkan'

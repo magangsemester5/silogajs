@@ -443,24 +443,41 @@
             $(".alert").text(text).addClass("loadAnimate");
         }
     </script>
+    <!-- Mendapatkan Kalkulasi Total Stok -->
     <script type="text/javascript">
         $(document).ready(function() {
             //call function get data edit
             $('#nama_barang').change(function() {
                 var id = $(this).val();
+                <?php $request = \Config\Services::request(); ?>
+                let hal = '<?= $request->uri->getSegment(1) ?>';
+                let serial_number = $('#serial_number');
+                let nama_satuan = $('#nama_satuan');
+                let stok = $('#stok');
+                let total = $('#total_stok');
+                let foto_serial_number = $('#foto_serial_number');
+                let jumlah = hal == 'tampil-barangkeluar' ? $('#jumlah_masuk') : $('#jumlah_keluar');
                 $.ajax({
                     url: "<?php echo base_url('autotampildatabarangkeluar'); ?>" + '/' + id,
                     method: "GET",
                     dataType: 'json',
                     success: function(data) {
-                        $('#serial_number').val(data.serial_number),
-                        $('#nama_satuan').val(data.nama_satuan),
-                        $('#foto_serial_number').html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>");
+                      serial_number.val(data.serial_number),
+                      nama_satuan.val(data.nama_satuan),
+                      stok.val(data.stok),
+                      total.val(data.stok),
+                      foto_serial_number.html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>"),
+                      jumlah.focus()
                     }
                 });
-                return false;
             });
         });
+
+        $("#jumlah_keluar").on('keyup',function(){
+            var totalStok = stok.value() - $(this).val()
+            total.val(totalStok);
+        })
+
     </script>
     <!-- Data Tables -->
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>

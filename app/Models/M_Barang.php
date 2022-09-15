@@ -35,4 +35,8 @@ class M_Barang extends Model
         $query = $builder->get();
         return $query->getRowArray();
     }
+    function update_data($where,$data,$table){
+        $this->barang->where($where);
+		$this->barang->update($table,$data);
+	}
 }

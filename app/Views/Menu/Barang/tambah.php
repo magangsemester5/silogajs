@@ -13,7 +13,7 @@
                     <form method="POST" action="<?= base_url("prosestambah-barang") ?>" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Kode Barang</label>
-                            <input type="text" name="kode_barang" class="form-control" id="kode_barang" readonly value="BRG<?= sprintf("%04s", $kode_barang) ?>"/>
+                            <input type="text" name="kode_barang" class="form-control" id="kode_barang" readonly value="BRG<?= sprintf("%04s", $kode_barang) ?>" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Nama Barang</label>
@@ -22,7 +22,7 @@
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-email">Kategori Barang</label>
                             <div class="input-group input-group-merge">
-                                <select name="id_kategori" class="form-control" required>
+                                <select name="id_kategori" class="form-control">
                                     <option value=""></option>
                                     <?php foreach ($tampildatakategori as $key => $value) : ?>
                                         <option value="<?= $value->id_kategori ?>"><?= $value->nama_kategori ?></option>
@@ -33,7 +33,7 @@
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-email">Satuan Barang</label>
                             <div class="input-group input-group-merge">
-                                <select name="id_satuan" class="form-control" required>
+                                <select name="id_satuan" class="form-control">
                                     <option value=""></option>
                                     <?php foreach ($tampildatasatuan as $key => $value) : ?>
                                         <option value="<?= $value->id_satuan ?>"><?= $value->nama_satuan ?></option>

@@ -14,7 +14,6 @@ class C_Barang extends BaseController
         $this->kategori = new M_Kategori();
         $this->barang = new M_Barang();
         $this->satuan = new M_Satuan();
-        $db = \Config\Database::connect();
     }
 
     public function index()
@@ -35,6 +34,7 @@ class C_Barang extends BaseController
             'tampildatakategori' => $this->kategori->findAll(),
             'tampildatasatuan' => $this->satuan->findAll(),
             'kode_barang' => $kodeBarangGenerate,
+            'validation' => \Config\Services::validation()
         ];
         return view('Menu/Barang/tambah', $data);
     }
@@ -99,7 +99,7 @@ class C_Barang extends BaseController
             ->with('status_icon', 'success')
             ->with('status_text', 'Data Berhasil diupdate');
     }
-    
+
     public function hapus($id)
     {
         $data = $this->barang->find($id);
