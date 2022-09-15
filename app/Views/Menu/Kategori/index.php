@@ -17,7 +17,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Nama Kategori</th>
+                                <th>Nama Kategori Barang</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
