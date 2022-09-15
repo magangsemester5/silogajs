@@ -24,14 +24,8 @@
                         </span>
                         <span class="text">Tambah Barang</span>
                     </a>
-                    <a href="<?= base_url('export-barang'); ?>" class="btn btn-warning btn-icon-split mb-3 mt-1">
-                        <span class="icon text-green-50">
-                            <i class="bx bxs-file-blank"></i>
-                        </span>
-                        <span class="text">Export PDF</span>
-                    </a>
                     <div class="table-responsive">
-                        <table class="table table-striped w-100 dt-responsive" id="dataTable" width="100%" cellspacing="0">
+                        <table id="dataTable" class="table table-striped w-100 dt-responsive">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -40,26 +34,26 @@
                                     <th>Kategori Barang</th>
                                     <th>Stok</th>
                                     <th>Satuan</th>
-                                    <th>Actions</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
                                 <?php $no = 1;
                                 foreach ($tampildata as $td) : ?>
                                     <tr>
-                                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $no++ ?></strong></td>
+                                        <td><?= $no++; ?></td>
                                         <td><?= $td->kode_barang ?></td>
                                         <td><?= $td->nama_barang ?></td>
                                         <td><?= $td->nama_kategori ?></td>
                                         <td><?= $td->stok ?></td>
                                         <td><?= $td->nama_satuan ?></td>
                                         <td>
-                                            <a class="btn btn-warning btn-sm" href="<?= base_url("edit-barang/$td->id_barang"); ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                            <a href="" type="button"  data-toggle="modal" data-id="<?= $td->id_barang ?>" data-target="#myModal" id="del" class="btn btn-danger btn-sm"><i class="bx bx-trash-alt me-1"></i>Delete</a>
+                                            <a class="btn btn-info btn-sm" href="<?= base_url("detail-barang/$td->id_barang"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                            <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-barang/$td->id_barang"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
                                         </td>
                                     </tr>
+                                <?php endforeach; ?>
                             </tbody>
-                        <?php endforeach; ?>
                         </table>
                     </div>
                 </div>

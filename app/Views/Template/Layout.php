@@ -37,11 +37,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
+    <!-- Data Tables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../template/assets/vendor/fonts/boxicons.css" />
 
@@ -87,9 +86,9 @@
           <div class="menu-inner-shadow"></div>
           <ul class="menu-inner py-4">
             <!-- Dashboard -->
-              <?php if ($title == 'Halaman Dashboard | SILOG AJS'): ?>
+              <?php if ($title == 'Halaman Dashboard | SILOG AJS') : ?>
               <li class="menu-item active">
-              <?php else: ?>
+              <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('/C_Dashboard/index') ?>">
@@ -106,12 +105,12 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                  $title == 'Halaman Kategori | SILOG AJS' ||
-                  $title == 'Halaman Tambah Kategori | SILOG AJS' ||
-                  $title == 'Halaman Edit Kategori | SILOG AJS'
-              ): ?>
+                $title == 'Halaman Kategori | SILOG AJS' ||
+                $title == 'Halaman Tambah Kategori | SILOG AJS' ||
+                $title == 'Halaman Edit Kategori | SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
-              <?php else: ?>
+              <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('/C_Kategori/index') ?>">
@@ -119,12 +118,12 @@
               </a>
               </li>
               <?php if (
-                  $title == 'Halaman Barang | SILOG AJS' ||
-                  $title == 'Halaman Tambah Barang | SILOG AJS' ||
-                  $title == 'Halaman Edit Barang | SILOG AJS'
-              ): ?>
+                $title == 'Halaman Barang | SILOG AJS' ||
+                $title == 'Halaman Tambah Barang | SILOG AJS' ||
+                $title == 'Halaman Edit Barang | SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
-              <?php else: ?>
+              <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('tampil-barang') ?>">
@@ -132,12 +131,12 @@
               </a>
               </li>
               <?php if (
-                  $title == 'Halaman Satuan | SILOG AJS' ||
-                  $title == 'Halaman Tambah Satuan | SILOG AJS' ||
-                  $title == 'Halaman Edit Satuan | SILOG AJS'
-              ): ?>
+                $title == 'Halaman Satuan | SILOG AJS' ||
+                $title == 'Halaman Tambah Satuan | SILOG AJS' ||
+                $title == 'Halaman Edit Satuan | SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
-              <?php else: ?>
+              <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('/C_Satuan/index') ?>">
@@ -153,70 +152,70 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                  $title == 'Halaman Barang Masuk| SILOG AJS' ||
-                  $title == 'Halaman Tambah Barang Masuk| SILOG AJS' ||
-                  $title == 'Halaman Edit Barang Masuk| SILOG AJS'
-              ): ?>
+                $title == 'Halaman Barang Masuk| SILOG AJS' ||
+                $title == 'Halaman Tambah Barang Masuk| SILOG AJS' ||
+                $title == 'Halaman Edit Barang Masuk| SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
-              <?php else: ?>
+              <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                  '/C_Transaksi/tampil_barang_masuk'
-              ) ?>">
+                                            '/C_Transaksi/tampil_barang_masuk'
+                                          ) ?>">
               <div data-i18n="Analytics">Barang Masuk</div>
               </a>
               </li>
               <?php if (
-                  $title == 'Halaman Barang Keluar | SILOG AJS' ||
-                  $title == 'Halaman Tambah Barang Keluar | SILOG AJS' ||
-                  $title == 'Halaman Edit Barang Keluar | SILOG AJS'
-              ): ?>
+                $title == 'Halaman Barang Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah Barang Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit Barang Keluar | SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
-              <?php else: ?>
+              <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                  'tampil-barangkeluar'
-              ) ?>">
+                                            'tampil-barangkeluar'
+                                          ) ?>">
               <div data-i18n="Analytics">Barang Keluar</div>
               </a>
               </li>
               </ul>
             </li>
-            <?php if ($title == 'Halaman Permintaan | SILOG AJS'): ?>
+            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
               <li class="menu-item active">
-              <?php else: ?>
+              <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                  '/C_Permintaan/index'
-              ) ?>">
+                                            '/C_Permintaan/index'
+                                          ) ?>">
               <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
               <div data-i18n="Analytics">Permintaan</div>
               </a>
             </li>
               <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
-              <?php if ($title == 'Halaman Permintaan | SILOG AJS'): ?>
+              <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
               <li class="menu-item active">
-              <?php else: ?>
+              <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                  '/C_Permintaan/index'
-              ) ?>">
+                                            '/C_Permintaan/index'
+                                          ) ?>">
               <i class="menu-icon tf-icons bx bxs-user-badge"></i>
               <div data-i18n="Analytics">Manajemen User</div>
               </a>
             </li>
-            <?php if ($title == 'Halaman Permintaan | SILOG AJS'): ?>
+            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
               <li class="menu-item active">
-              <?php else: ?>
+              <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                  '/C_Permintaan/index'
-              ) ?>">
+                                            '/C_Permintaan/index'
+                                          ) ?>">
               <i class="menu-icon tf-icons bx bx-log-out"></i>
               <div data-i18n="Analytics">Logout</div>
               </a>
@@ -463,10 +462,14 @@
             });
         });
     </script>
-    <!-- Page level plugins -->
-    <script src="../template/assets/vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="../template/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-    <link href="../template/assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <!-- Data Tables -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
     <!-- Page level custom scripts -->
     <script src="../template/assets/vendor/demo/datatables-demo.js"></script>
   </body>

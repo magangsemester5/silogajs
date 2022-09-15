@@ -11,40 +11,34 @@
                 </div>
                 <div class="card-body">
                     <form method="POST" action="<?= base_url(
-                        'prosestambah-barangkeluar'
-                    ) ?>" enctype="multipart/form-data">
+                                                    'prosestambah-barangkeluar'
+                                                ) ?>" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Kode Barang Keluar</label>
                             <input type="text" name="kode_barang_keluar" class="form-control" readonly value="BKR<?= sprintf(
-                                '%04s',
-                                $kode_barang_keluar
-                            ) ?>" />
+                                                                                                                        '%04s',
+                                                                                                                        $kode_barang_keluar
+                                                                                                                    ) ?>" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="nama_barang">Nama Barang</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_barang" class="form-control" id="nama_barang" required>
                                     <option value="" disabled selected>Pilih Nama Barang</option>
-                                    <?php foreach (
-                                        $tampildatabarang
-                                        as $key => $value
-                                    ): ?>
+                                    <?php foreach ($tampildatabarang
+                                        as $key => $value) : ?>
                                         <option value="<?= $value->id_barang ?>"><?= $value->nama_barang ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                         </div>
-                        <div class="mb-3">
-                    <label class="col-md-4 text-md-right" for="jumlah_masuk">Jumlah Barang Keluar</label>
-                    <div class="col-md-5">
-                        <div class="input-group">
-                            <input value="<?= set_value('qty'); ?>" name="qty" id="qty" type="number" class="form-control" placeholder="Jumlah Keluar...">
-                            <div class="input-group-append">
-                                <input type="text" id="nama_satuan" class="form-control" readonly required />
+                        <label class="col-md-4 text-md-right" for="jumlah_masuk">Jumlah Barang Keluar</label>
+                        <div class="form-password-toggle col-md-3">
+                            <div class="input-group">
+                                <input value="<?= set_value('qty'); ?>" name="qty" id="qty" type="number" class="form-control" placeholder="Jumlah Keluar...">
+                                <input id="nama_satuan" class="input-group-text col-md-4" disabled>
                             </div>
                         </div>
-                    </div>
-                    </div>
                         <div class="mb-3">
                             <label class="serial_number">Serial Number</label>
                             <input type="text" id="serial_number" class="form-control" readonly required />
@@ -66,8 +60,8 @@
                             <br>
                             <button type="submit" class="btn btn-primary">Tambah</button>
                             <a href="<?= base_url(
-                                'tampil-barangkeluar'
-                            ) ?>" class="btn btn-warning">Cancel </a>
+                                            'tampil-barangkeluar'
+                                        ) ?>" class="btn btn-warning">Cancel </a>
                     </form>
                 </div>
             </div>
