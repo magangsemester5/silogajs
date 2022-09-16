@@ -141,3 +141,35 @@ in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 137.
  5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-15 20:49:18 --> Undefined property: stdClass::$qty
+in APPPATH\Views\Menu\Barang_Keluar\index.php on line 45.
+ 1 APPPATH\Views\Menu\Barang_Keluar\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$qty', 'APPPATH\\Views\\Menu\\Barang_Keluar\\index.php', 45, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Barang_Keluar\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Barang_Keluar/index', [], true)
+ 5 APPPATH\Controllers\C_Barang_Keluar.php(22): view('Menu/Barang_Keluar/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang_Keluar->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-15 20:52:36 --> Undefined property: stdClass::$qty
+in APPPATH\Views\Menu\Barang_Keluar\detail.php on line 25.
+ 1 APPPATH\Views\Menu\Barang_Keluar\detail.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$qty', 'APPPATH\\Views\\Menu\\Barang_Keluar\\detail.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Barang_Keluar\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Barang_Keluar/detail', [], true)
+ 5 APPPATH\Controllers\C_Barang_Keluar.php(114): view('Menu/Barang_Keluar/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang_Keluar->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-15 23:47:15 --> Undefined variable: imageName
+in APPPATH\Controllers\C_Barang.php on line 93.
+ 1 APPPATH\Controllers\C_Barang.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: imageName', 'APPPATH\\Controllers\\C_Barang.php', 93, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Barang->edit()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

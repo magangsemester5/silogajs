@@ -37,16 +37,13 @@ class C_Barang_Keluar extends BaseController
 
     public function proses_tambah()
     {
-        // $input = $this->request->getPost('barang_id', true);
-        // $stok = $this->admin->get('barang', ['id_barang' => $input])['stok'];
-        // $stok_valid = $stok + 1;
         $image = $this->request->getFile('foto_pengambilan_barang');
         $image->move(ROOTPATH . 'public/uploads');
         $id_barang = $this->request->getVar('id_barang');
+        $total_stok = $this->request->getVar('total_stok');
         $data = [
-            'kode_barang_keluar' => $this->request->getVar(
-                'kode_barang_keluar'
-            ),
+            'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
+            'kode_barang_keluar' => $this->request->getVar('kode_barang_keluar'),
             'id_barang' => $id_barang,
             'jumlah_keluar' => $this->request->getVar('jumlah_keluar'),
             'foto_pengambilan_barang' => $image->getClientName(),
@@ -56,7 +53,7 @@ class C_Barang_Keluar extends BaseController
             'id_barang' => $id_barang
         ];
         $data2 = [
-            'stok' => 15
+            'stok' => $total_stok
         ];
         $this->barang->update($where, $data2, 'barang');
         session()->setFlashdata(
@@ -95,6 +92,7 @@ class C_Barang_Keluar extends BaseController
         $data = [
             'id_kategori' => $this->request->getVar('id_kategori'),
             'id_satuan' => $this->request->getVar('id_satuan'),
+            'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
             'kode_barang' => $this->request->getVar('kode_barang'),
             'nama_barang' => $this->request->getVar('nama_barang'),
             'stok' => $this->request->getVar('stok'),

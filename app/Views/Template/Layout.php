@@ -43,15 +43,14 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../template/assets/vendor/fonts/boxicons.css" />
-
+    <!-- Picker Tanggal -->
+    <link rel="stylesheet" href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/assets/vendor/libs/flatpickr/flatpickr.css" />
     <!-- Core CSS -->
     <link rel="stylesheet" href="../template/assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../template/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../template/assets/css/demo.css" />
-
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../template/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-
     <link rel="stylesheet" href="../template/assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
@@ -443,42 +442,46 @@
             $(".alert").text(text).addClass("loadAnimate");
         }
     </script>
-    <!-- Mendapatkan Kalkulasi Total Stok -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            //call function get data edit
-            $('#nama_barang').change(function() {
-                var id = $(this).val();
-                <?php $request = \Config\Services::request(); ?>
-                let hal = '<?= $request->uri->getSegment(1) ?>';
-                let serial_number = $('#serial_number');
-                let nama_satuan = $('#nama_satuan');
-                let stok = $('#stok');
-                let total = $('#total_stok');
-                let foto_serial_number = $('#foto_serial_number');
-                let jumlah = hal == 'tampil-barangkeluar' ? $('#jumlah_masuk') : $('#jumlah_keluar');
-                $.ajax({
-                    url: "<?php echo base_url('autotampildatabarangkeluar'); ?>" + '/' + id,
-                    method: "GET",
-                    dataType: 'json',
-                    success: function(data) {
-                      serial_number.val(data.serial_number),
-                      nama_satuan.val(data.nama_satuan),
-                      stok.val(data.stok),
-                      total.val(data.stok),
-                      foto_serial_number.html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>"),
-                      jumlah.focus()
-                    }
-                });
+        <script type="text/javascript">
+          <?php $request = \Config\Services::request(); ?>
+          let hal = '<?= $request->uri->getSegment(1) ?>';
+          let serial_number = $('#serial_number');
+          let nama_satuan = $('#nama_satuan');
+          let stok = $('#stok');
+          let total = $('#total_stok');
+          let foto_serial_number = $('#foto_serial_number');
+          let jumlah = hal == 'tampil-barangkeluar' ? $('#jumlah_masuk') : $('#jumlah_keluar');
+
+        $(document).on('change', '#nama_barang', function() {
+          var id = $(this).val();
+          $.ajax({
+              url: "<?php echo base_url('autotampildatabarangkeluar'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                serial_number.val(data.serial_number);
+                nama_satuan.val(data.nama_satuan);
+                stok.val(data.stok);
+                total.val(data.stok);
+                foto_serial_number.html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>");
+                jumlah.focus();
+              }
             });
         });
 
-        $("#jumlah_keluar").on('keyup',function(){
-            var totalStok = stok.value() - $(this).val()
-            total.val(totalStok);
-        })
+        $(document).on('keyup', '#jumlah_masuk', function() {
+            let totalStok = parseInt(stok.val()) + parseInt(this.value);
+            total.val(Number(totalStok));
+        });
 
+        $(document).on('keyup', '#jumlah_keluar', function() {
+            let totalStok = parseInt(stok.val()) - parseInt(this.value);
+            total.val(Number(totalStok));
+        });
     </script>
+    <!-- Mendapatkan Kalkulasi Total Stok -->
+    <!-- Picker Tanggal -->
+    <script src="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/assets/vendor/libs/flatpickr/flatpickr.js"></script>
     <!-- Data Tables -->
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
@@ -489,5 +492,8 @@
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
     <!-- Page level custom scripts -->
     <script src="../template/assets/vendor/demo/datatables-demo.js"></script>
+    <script>
+      flatpickr('#flatpickrdate');
+    </script>
   </body>
 </html>

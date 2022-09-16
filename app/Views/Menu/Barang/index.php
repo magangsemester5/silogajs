@@ -34,7 +34,7 @@
                                     <th>Kategori Barang</th>
                                     <th>Stok</th>
                                     <th>Satuan</th>
-                                    <th>Action</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -49,7 +49,8 @@
                                         <td><?= $td->nama_satuan ?></td>
                                         <td>
                                             <a class="btn btn-info btn-sm" href="<?= base_url("detail-barang/$td->id_barang"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                            <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-barang/$td->id_barang"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                            <a class="btn btn-warning btn-sm" href="<?= base_url("edit-barang/$td->id_barang"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
+                                            <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-barang/$td->id_barang"); ?>"><i class="bx bx-trash"></i>Hapus</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

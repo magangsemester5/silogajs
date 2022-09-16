@@ -1,7 +1,7 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function () {
 	$("#dataTable").DataTable({
-        order: [[1, 'asc']],
+        order: [[2, 'asc']],
 		dom: 'Bfrtip',
         buttons: [
             {

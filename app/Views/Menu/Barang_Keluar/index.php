@@ -29,10 +29,11 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Tanggal</th>
                                     <th>Kode Barang</th>
                                     <th>Nama Barang</th>
                                     <th>Jumlah Barang Keluar</th>
-                                    <th>Action</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -40,9 +41,10 @@
                                 foreach ($tampildata as $td) : ?>
                                     <tr>
                                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $no++ ?></strong></td>
+                                        <td><?= $td->tanggal_keluar ?></td>
                                         <td><?= $td->kode_barang_keluar ?></td>
                                         <td><?= $td->nama_barang ?></td>
-                                        <td><?= $td->qty ?></td>
+                                        <td><?= $td->jumlah_keluar ?></td>
                                         <td>
                                             <a class="btn btn-info btn-sm" href="<?= base_url("detail-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                             <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>

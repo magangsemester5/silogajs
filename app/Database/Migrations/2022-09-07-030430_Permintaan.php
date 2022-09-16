@@ -24,7 +24,7 @@ class Permintaan extends Migration
                 'type' => 'varchar',
                 'constraint' => '50'
             ],
-            'qty' => [
+            'jumlah_permintaan' => [
                 'type' => 'varchar',
                 'constraint' => '50'
             ],

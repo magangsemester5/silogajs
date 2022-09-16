@@ -20,6 +20,9 @@ class BarangMasuk extends Migration
                 'constraint' => '12',
                 'unsigned' => TRUE
             ],
+            'tanggal_masuk' => [
+                'type' => 'date'
+            ],
             'kode_barang_masuk' => [
                 'type' => 'varchar',
                 'constraint' => '50'

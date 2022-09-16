@@ -12,6 +12,12 @@
                 <div class="card-body">
                     <form method="POST" action="<?= base_url('prosestambah-barangkeluar') ?>" enctype="multipart/form-data">
                         <div class="mb-3">
+                            <label class="form-label" for="tanggal_keluar">Tanggal Keluar</label>
+                            <div class="col-md-2">
+                                <input type="text" id="flatpickrdate" name="tanggal_keluar" class="form-control date" placeholder="Tanggal Keluar" readonly>
+                            </div>
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Kode Barang Keluar</label>
                             <input type="text" name="kode_barang_keluar" class="form-control" readonly value="BKR<?= sprintf('%04s', $kode_barang_keluar) ?>" />
                         </div>
@@ -42,7 +48,7 @@
                         <div class="mb-3">
                             <label class="total_stok" for="total_stok">Total Stok</label>
                             <div class="input-group">
-                                <input readonly id="total_stok" type="number" class="form-control">
+                                <input readonly id="total_stok" value="<?= set_value('total_stok'); ?>" name="total_stok" type="number" class="form-control">
                             </div>
                         </div>
                         <div class="mb-3">

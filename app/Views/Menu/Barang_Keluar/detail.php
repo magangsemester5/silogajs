@@ -22,7 +22,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Jumlah Barang Keluar</label>
-                            <input type="text" name="stok" id="basic-default-phone" value="<?= $td->qty ?>" class="form-control phone-mask" readonly/>
+                            <input type="text" name="stok" id="basic-default-phone" value="<?= $td->jumlah_keluar ?>" class="form-control phone-mask" readonly/>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Serial Number</label>
