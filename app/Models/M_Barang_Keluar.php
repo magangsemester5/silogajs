@@ -11,7 +11,7 @@ class M_Barang_Keluar extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_barang', 'kode_barang_keluar', 'jumlah_keluar', 'foto_pengambilan_barang'
+        'id_barang','tanggal_keluar', 'kode_barang_keluar', 'jumlah_keluar', 'foto_pengambilan_barang'
     ];
 
     function getAll()

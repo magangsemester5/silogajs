@@ -10,12 +10,19 @@
                     <h5 class="mb-0">Tambah Data Barang Keluar</h5>
                 </div>
                 <div class="card-body">
+                    <?php $validation = \Config\Services::validation(); ?>
                     <form method="POST" action="<?= base_url('prosestambah-barangkeluar') ?>" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="tanggal_keluar">Tanggal Keluar</label>
                             <div class="col-md-2">
                                 <input type="text" id="flatpickrdate" name="tanggal_keluar" class="form-control date" placeholder="Tanggal Keluar" readonly>
                             </div>
+                            <!-- Error Validation -->
+                            <?php if ($validation->getError('tanggal_keluar')) { ?>
+                                <div class='alert alert-danger mt-2'>
+                                    <?= $error = $validation->getError('tanggal_keluar'); ?>
+                                </div>
+                            <?php } ?>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Kode Barang Keluar</label>
@@ -24,18 +31,24 @@
                         <div class="mb-3">
                             <label class="form-label" for="nama_barang">Nama Barang</label>
                             <div class="input-group input-group-merge">
-                                <select name="id_barang" class="form-control" id="nama_barang" required>
+                                <select name="id_barang" class="form-control" id="nama_barang">
                                     <option value="" disabled selected>Pilih Nama Barang</option>
                                     <?php foreach ($tampildatabarang as $key => $value) : ?>
                                         <option value="<?= $value->id_barang ?>"><?= $value->nama_barang ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
+                            <!-- Error Validation -->
+                            <?php if ($validation->getError('id_barang')) { ?>
+                                <div class='alert alert-danger mt-2'>
+                                    <?= $error = $validation->getError('id_barang'); ?>
+                                </div>
+                            <?php } ?>
                         </div>
                         <div class="mb-3">
                             <label class="stok" for="stok">Stok</label>
                             <div class="input-group">
-                                <input readonly="readonly" id="stok" type="number" class="form-control">
+                                <input readonly="readonly" id="stok" name="stok" type="number" class="form-control">
                             </div>
                         </div>
                         <label class="col-md-4 text-md-right" for="jumlah_keluar">Jumlah Barang Keluar</label>
@@ -45,6 +58,12 @@
                                 <input id="nama_satuan" class="input-group-text col-md-4" disabled>
                             </div>
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('jumlah_keluar')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('jumlah_keluar'); ?>
+                            </div>
+                        <?php } ?>
                         <div class="mb-3">
                             <label class="total_stok" for="total_stok">Total Stok</label>
                             <div class="input-group">
@@ -53,7 +72,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="serial_number">Serial Number</label>
-                            <input type="text" id="serial_number" class="form-control" readonly required />
+                            <input type="text" id="serial_number" class="form-control" readonly />
                         </div>
                         <div class="mb-3">
                             <label class="serial_number">Foto Serial Number</label>
@@ -62,7 +81,7 @@
                             <br>
                             <div class="mb-3">
                                 <label class="custom-file-label">Foto Pengambilan Barang</label>
-                                <input type="file" name="foto_pengambilan_barang" id="inputFile" class="form-control">
+                                <input type="file" name="foto_pengambilan_barang" id="inputFile" class="form-control" required>
                             </div>
                             <div class="col-md-3">
                                 <label>Preview Foto Pengambilan</label>

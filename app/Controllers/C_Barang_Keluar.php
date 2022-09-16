@@ -37,33 +37,78 @@ class C_Barang_Keluar extends BaseController
 
     public function proses_tambah()
     {
-        $image = $this->request->getFile('foto_pengambilan_barang');
-        $image->move(ROOTPATH . 'public/uploads');
-        $id_barang = $this->request->getVar('id_barang');
         $total_stok = $this->request->getVar('total_stok');
-        $data = [
-            'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
-            'kode_barang_keluar' => $this->request->getVar('kode_barang_keluar'),
-            'id_barang' => $id_barang,
-            'jumlah_keluar' => $this->request->getVar('jumlah_keluar'),
-            'foto_pengambilan_barang' => $image->getClientName(),
+        $stok = $this->request->getVar('stok');
+        $rules = [
+            'tanggal_keluar' => [
+                'label' => "Tanggal Keluar",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'kode_barang_keluar' => [
+                'label' => "Kode Barang Keluar",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi",
+                ]
+            ],
+            'id_barang' => [
+                'label' => "Nama Barang",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'jumlah_keluar' => [
+                'label' => "Jumlah Barang Keluar",
+                'rules' => "required|numeric|less_than[{$total_stok}]",
+                'errors' => [
+                    'required' => "{field} harus diisi",
+                    'less_than' => "Jumlah Barang Keluar tidak boleh lebih dari {$stok}"
+                ]
+            ],
         ];
-        $this->barang_keluar->insert($data);
-        $where = [
-            'id_barang' => $id_barang
-        ];
-        $data2 = [
-            'stok' => $total_stok
-        ];
-        $this->barang->update($where, $data2, 'barang');
-        session()->setFlashdata(
-            'status',
-            'Data Barang Keluar berhasil ditambahkan'
-        );
-        return redirect()
-            ->to(base_url('tampil-barangkeluar'))
-            ->with('status_icon', 'success')
-            ->with('status_text', 'Data Berhasil ditambah');
+        if ($this->validate($rules)) {
+            $image = $this->request->getFile('foto_pengambilan_barang');
+            $image->move(ROOTPATH . 'public/uploads');
+            $id_barang = $this->request->getVar('id_barang');
+            $data = [
+                'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
+                'kode_barang_keluar' => $this->request->getVar('kode_barang_keluar'),
+                'id_barang' => $id_barang,
+                'jumlah_keluar' => $this->request->getVar('jumlah_keluar'),
+                'foto_pengambilan_barang' => $image->getClientName(),
+            ];
+            $this->barang_keluar->insert($data);
+            $where = [
+                'id_barang' => $id_barang
+            ];
+            $data2 = [
+                'stok' => $total_stok
+            ];
+            $this->barang->update($where, $data2, 'barang');
+            session()->setFlashdata(
+                'status',
+                'Data Barang Keluar berhasil ditambahkan'
+            );
+            return redirect()
+                ->to(base_url('tampil-barangkeluar'))
+                ->with('status_icon', 'success')
+                ->with('status_text', 'Data Berhasil ditambah');
+        } else {
+            $getGenerate = $this->barang_keluar->generateCode();
+            $nourut = substr($getGenerate, 3, 4);
+            $kodeBarangGenerate = $nourut + 1;
+            $data = [
+                'title' => 'Halaman Tambah Barang Keluar | SILOG AJS',
+                'tampildatabarang' => $this->barang->findAll(),
+                'kode_barang_keluar' => $kodeBarangGenerate,
+                'validation' => $this->validator
+            ];
+            return view('Menu/Barang_Keluar/tambah', $data);
+        }
     }
 
     public function tampil_edit_data($id = null)
