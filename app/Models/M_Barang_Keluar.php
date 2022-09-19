@@ -37,7 +37,7 @@ class M_Barang_Keluar extends Model
         $query = $query->getRow();
         return $query->kode_barang_keluar;
     }
-
+    
     function update_data_db()
     {
         $query = $this->db->query("SELECT * FROM barang_keluar");

@@ -31,9 +31,8 @@
                                     <img src="../template/assets/img/icons/unicons/chart-success.png" alt="chart success" class="rounded" />
                                 </div>
                             </div>
-                            <span class="fw-semibold d-block mb-1">Data Barang</span>
-                            <h3 class="card-title mb-2">$12,628</h3>
-                            <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
+                            <span class="fw-semibold d-block mb-1">Stok Barang</span>
+                            <h3 class="card-title mb-2"><?= $stok ?></h3>
                         </div>
                     </div>
                 </div>
@@ -46,8 +45,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Barang Masuk</span>
-                            <h3 class="card-title text-nowrap mb-2">$2,456</h3>
-                            <small class="text-danger fw-semibold"><i class="bx bx-down-arrow-alt"></i> -14.82%</small>
+                            <h3 class="card-title text-nowrap mb-2"><?= $barang_masuk ?></h3>
                         </div>
                     </div>
                 </div>
@@ -64,8 +62,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Barang Keluar</span>
-                            <h3 class="card-title text-nowrap mb-2">$2,456</h3>
-                            <small class="text-danger fw-semibold"><i class="bx bx-down-arrow-alt"></i> -14.82%</small>
+                            <h3 class="card-title text-nowrap mb-2"><?= $barang_keluar ?></h3>
                         </div>
                     </div>
                 </div>
@@ -78,8 +75,7 @@
                                 </div>
                             </div>
                             <span class="fw-semibold d-block mb-1">User</span>
-                            <h3 class="card-title mb-2">$14,857</h3>
-                            <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.14%</small>
+                            <h3 class="card-title mb-2"><?= $user ?></h3>
                         </div>
                     </div>
                 </div>

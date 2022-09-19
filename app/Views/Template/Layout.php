@@ -442,6 +442,7 @@
             $(".alert").text(text).addClass("loadAnimate");
         }
     </script>
+        <!-- Mendapatkan Kalkulasi Total Stok -->
         <script type="text/javascript">
           <?php $request = \Config\Services::request(); ?>
           let hal = '<?= $request->uri->getSegment(1) ?>';
@@ -479,7 +480,6 @@
             total.val(Number(totalStok));
         });
     </script>
-    <!-- Mendapatkan Kalkulasi Total Stok -->
     <!-- Picker Tanggal -->
     <script src="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/assets/vendor/libs/flatpickr/flatpickr.js"></script>
     <!-- Data Tables -->

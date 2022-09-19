@@ -11,11 +11,11 @@ class M_Barang extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_kategori', 'id_satuan', 'kode_barang', 'nama_barang', 'stok', 'serial_number','foto_serial_number'
+        'id_kategori', 'id_satuan', 'kode_barang', 'nama_barang', 'stok', 'serial_number', 'foto_serial_number'
     ];
     function getAll()
     {
-        $builder = $this->db->table('barang');                                                              
+        $builder = $this->db->table('barang');
         $builder->join('kategori', 'kategori.id_kategori = barang.id_kategori');
         $builder->join('satuan', 'satuan.id_satuan = barang.id_satuan');
         $query = $builder->get();
@@ -29,14 +29,31 @@ class M_Barang extends Model
     }
     public function cekStok($id = null)
     {
-        $builder = $this->db->table('barang');                                                              
+        $builder = $this->db->table('barang');
         $builder->join('satuan', 'satuan.id_satuan = barang.id_satuan');
         $builder->where('id_barang', $id);
         $query = $builder->get();
         return $query->getRowArray();
     }
-    function update_data($where,$data,$table){
+
+    public function sum($table, $field)
+    {
+        $builder = $this->db->table($table);
+        $builder->selectSum($field);
+        $query = $builder->get();
+        return $query->getRowArray()[$field];
+    }
+
+    function update_data($where, $data, $table)
+    {
         $this->barang->where($where);
-		$this->barang->update($table,$data);
-	}
+        $this->barang->update($table, $data);
+    }
+
+    function count($table)
+    {
+       $builder = $this->db->table($table);
+       $query = $builder->countAllResults();
+       return $query;
+    }
 }
