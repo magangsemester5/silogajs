@@ -36,6 +36,24 @@ class M_Barang extends Model
         return $query->getRowArray();
     }
 
+    public function chartBarangMasuk($bulan)
+	{
+		$like = 'BRM' . date('y') . $bulan;
+        $builder = $this->db->table('barang_masuk');
+        $builder->like('id_barang_masuk', $like, 'after');
+        $query = $builder->get();
+		return count($query->getResultArray());
+	}
+
+	public function chartBarangKeluar($bulan)
+	{
+		$like = 'BKR' . date('y') . $bulan;
+        $builder = $this->db->table('barang_keluar');
+        $builder->like('id_barang_keluar', $like, 'after');
+        $query = $builder->get();
+		return count($query->getResultArray());
+	}
+
     public function sum($table, $field)
     {
         $builder = $this->db->table($table);

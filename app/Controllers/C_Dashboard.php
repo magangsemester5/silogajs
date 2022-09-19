@@ -23,6 +23,16 @@ class C_Dashboard extends BaseController
             'user' => $this->barang->count('user')
         ];
 
+        // Line Chart
+		$bln = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+		$data['cbm'] = [];
+		$data['cbk'] = [];
+
+		foreach ($bln as $b) {
+			$data['cbm'][] = $this->barang->chartBarangMasuk($b);
+			$data['cbk'][] = $this->barang->chartBarangKeluar($b);
+		}
+
         return view("Dashboard/index", $data);
     }
 }

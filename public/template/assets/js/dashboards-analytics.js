@@ -19,11 +19,11 @@
       series: [
         {
           name: 'Barang Masuk',
-          data: [18, 7, 15, 29, 18, 12, 9]
+          data: json_encode($cbm)
         },
         {
           name: 'Barang Keluar',
-          data: [-13, -18, -9, -14, -5, -17, -15]
+          data: json_encode($cbk)
         }
       ],
       chart: {
@@ -78,7 +78,7 @@
         }
       },
       xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        categories: ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"],
         labels: {
           style: {
             fontSize: '13px',

@@ -1,0 +1,16 @@
+CRITICAL - 2022-09-19 08:32:33 --> Undefined property: App\Controllers\C_Dashboard::$admin
+in APPPATH\Controllers\C_Dashboard.php on line 32.
+ 1 APPPATH\Controllers\C_Dashboard.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\C_Dashboard::$admin', 'APPPATH\\Controllers\\C_Dashboard.php', 32, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-19 08:32:43 --> Call to a member function like() on null
+in APPPATH\Models\M_Barang.php on line 42.
+ 1 APPPATH\Controllers\C_Dashboard.php(32): App\Models\M_Barang->chartBarangMasuk('01')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
