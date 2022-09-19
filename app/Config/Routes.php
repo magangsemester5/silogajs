@@ -45,6 +45,7 @@ $routes->get('/C_Kategori/tampil_edit_data/(:num)', 'C_Kategori::tampil_edit_dat
 
 // Data Barang
 $routes->get('tampil-barang', 'C_Barang::index');
+$routes->get('detail-barang/(:num)', 'C_Barang::detail/$1');
 $routes->get('tambah-barang', 'C_Barang::tambah');
 $routes->post('prosestambah-barang', 'C_Barang::proses_tambah');
 $routes->get('edit-barang/(:num)', 'C_Barang::tampil_edit_data/$1');

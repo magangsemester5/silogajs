@@ -100,6 +100,15 @@ class C_Barang extends BaseController
             ->with('status_text', 'Data Berhasil diupdate');
     }
 
+    public function detail($id = null)
+    {
+        $data = [
+            'tampildatabarang' => $this->barang->find($id),
+            'title' => 'Halaman Detail Barang | SILOG AJS',
+        ];
+        return view('Menu/Barang/detail', $data);
+    }
+
     public function hapus($id)
     {
         $data = $this->barang->find($id);
