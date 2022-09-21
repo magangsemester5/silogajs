@@ -9,7 +9,9 @@
             <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span>Halaman Kategori</h4>
             <!-- Basic Bootstrap Table -->
             <a class="btn btn-primary" href="<?= base_url('C_Kategori/tambah'); ?>"><i class="bx bx-plus-circle me-1"></i>Tambah Data</a>
-            <b><hr size="5"></b>
+            <b>
+                <hr size="5">
+            </b>
             <div class="card">
                 <h5 class="card-header">Tabl Kategori</h5>
                 <div class="table-responsive text-nowrap">
@@ -27,8 +29,10 @@
                                     <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $td->id_kategori ?></strong></td>
                                     <td><?= $td->nama_kategori ?></td>
                                     <td>
-                                        <a class="btn btn-warning" href="<?= base_url("C_Kategori/tampil_edit_data/$td->id_kategori");?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="btn btn-danger" href=""><i class="bx bx-trash me-1"></i> Delete</a>
+                                        <?php if (session()->get('kriteria') == 'User B') { ?>
+                                            <a class="btn btn-warning" href="<?= base_url("C_Kategori/tampil_edit_data/$td->id_kategori"); ?>"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                            <a class="btn btn-danger" href=""><i class="bx bx-trash me-1"></i> Delete</a>
+                                        <?php } ?>
                                     </td>
                                 </tr>
                         </tbody>

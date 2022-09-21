@@ -25,6 +25,21 @@
                             <?php } ?>
                         </div>
                         <div class="mb-3">
+                            <label class="form-label" for="basic-default-fullname">Nomor Permintaan</label>
+                            <div class="input-group input-group-merge">
+                                <select class="form-control" id="id_permintaan">
+                                    <option value="" disabled selected>Pilih Nomor Permintaan</option>
+                                    <?php foreach ($tampildatapermintaan as $key => $value) : ?>
+                                        <option value="<?= $value->id_permintaan ?>"><?= $value->no_permintaan ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-fullname">Wilayah</label>
+                            <input readonly="readonly" id="wilayah" name="wilayah" type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Kode Barang Keluar</label>
                             <input type="text" name="kode_barang_keluar" class="form-control" readonly value="BKR<?= sprintf('%04s', $kode_barang_keluar) ?>" />
                         </div>
@@ -59,11 +74,11 @@
                             </div>
                         </div>
                         <!-- Error Validation -->
-                        <?php if ($validation->getError('jumlah_keluar')) { ?>
+                        <?php /* if ($validation->getError('jumlah_keluar')) { ?> 
                             <div class='alert alert-danger mt-2'>
                                 <?= $error = $validation->getError('jumlah_keluar'); ?>
                             </div>
-                        <?php } ?>
+                        <?php } */ ?>
                         <div class="mb-3">
                             <label class="total_stok" for="total_stok">Total Stok</label>
                             <div class="input-group">

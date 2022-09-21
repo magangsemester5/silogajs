@@ -11,7 +11,7 @@ class M_Barang_Keluar extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_barang','tanggal_keluar', 'kode_barang_keluar', 'jumlah_keluar', 'foto_pengambilan_barang'
+        'id_barang', 'tanggal_keluar', 'kode_barang_keluar', 'jumlah_keluar', 'foto_pengambilan_barang'
     ];
 
     function getAll()
@@ -37,7 +37,7 @@ class M_Barang_Keluar extends Model
         $query = $query->getRow();
         return $query->kode_barang_keluar;
     }
-    
+
     function update_data_db()
     {
         $query = $this->db->query("SELECT * FROM barang_keluar");

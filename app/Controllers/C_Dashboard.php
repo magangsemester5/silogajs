@@ -17,7 +17,7 @@ class C_Dashboard extends BaseController
     {
         $data = [
             'title' => "Halaman Dashboard | SILOG AJS",
-            'stok' => $this->barang->sum('barang', 'stok'),
+            'data_barang' => $this->barang->count('barang'),
             'barang_masuk' => $this->barang->count('barang_masuk'),
             'barang_keluar' => $this->barang->count('barang_keluar'),
             'user' => $this->barang->count('user')

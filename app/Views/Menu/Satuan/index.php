@@ -29,10 +29,12 @@
                                 <tr>
                                     <td><?= $no++ ?></td>
                                     <td><?= $td['satuanid'] ?></td>
-                                    <td><?= $td['satnama'] ?></td>
+                                    <td><?= $td['satnama'] ?></td> 
                                     <td>
+                                    <?php if (session()->get('kriteria') == 'User B') { ?>
                                         <a class="" href=""><i class="bx bx-edit-alt me-1"></i> Edit</a>
                                         <a class="" href=""><i class="bx bx-trash me-1"></i> Delete</a>
+                                    <?php } ?>
                                     </td>
                                 </tr>
                         </tbody>

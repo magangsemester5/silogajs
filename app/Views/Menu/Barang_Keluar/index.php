@@ -46,8 +46,13 @@
                                         <td><?= $td->nama_barang ?></td>
                                         <td><?= $td->jumlah_keluar ?></td>
                                         <td>
-                                            <a class="btn btn-info btn-sm" href="<?= base_url("detail-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                            <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                            <?php if (session()->get('kriteria') == 'User C') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                            <?php } ?>
+                                            <?php if (session()->get('kriteria') == 'User B') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                            <?php } ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

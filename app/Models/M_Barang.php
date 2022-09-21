@@ -27,6 +27,7 @@ class M_Barang extends Model
         $query = $query->getRow();
         return $query->kode_barang;
     }
+    
     public function cekStok($id = null)
     {
         $builder = $this->db->table('barang');
@@ -53,14 +54,6 @@ class M_Barang extends Model
         $query = $builder->get();
 		return count($query->getResultArray());
 	}
-
-    public function sum($table, $field)
-    {
-        $builder = $this->db->table($table);
-        $builder->selectSum($field);
-        $query = $builder->get();
-        return $query->getRowArray()[$field];
-    }
 
     function update_data($where, $data, $table)
     {

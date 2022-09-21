@@ -19,12 +19,16 @@ class User extends Migration
                 'type' => 'varchar',
                 'constraint' => '50'
             ],
+            'password' => [
+                'type' => 'varchar',
+                'constraint' => '50'
+            ],
             'jabatan' => [
                 'type' => 'varchar',
                 'constraint' => '50'
             ],
             'id_user' => [
-                'type' => 'int',
+                'type' => 'varchar',
                 'constraint' => '50'
             ],
             'kriteria' => [

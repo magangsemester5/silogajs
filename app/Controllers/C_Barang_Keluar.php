@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\M_Barang_Keluar;
 use App\Models\M_Barang;
+use App\Models\M_Permintaan;
 
 class C_Barang_Keluar extends BaseController
 {
@@ -12,6 +13,7 @@ class C_Barang_Keluar extends BaseController
     {
         $this->barang_keluar = new M_Barang_Keluar();
         $this->barang = new M_Barang();
+        $this->permintaan = new M_Permintaan();
     }
     public function index()
     {
@@ -30,6 +32,7 @@ class C_Barang_Keluar extends BaseController
         $data = [
             'title' => 'Halaman Tambah Barang Keluar | SILOG AJS',
             'tampildatabarang' => $this->barang->findAll(),
+            'tampildatapermintaan' => $this->permintaan->findAll(),
             'kode_barang_keluar' => $kodeBarangGenerate,
         ];
         return view('Menu/Barang_Keluar/tambah', $data);
@@ -61,14 +64,14 @@ class C_Barang_Keluar extends BaseController
                     'required' => "{field} harus diisi"
                 ]
             ],
-            'jumlah_keluar' => [
-                'label' => "Jumlah Barang Keluar",
-                'rules' => "required|numeric|less_than[{$total_stok}]",
-                'errors' => [
-                    'required' => "{field} harus diisi",
-                    'less_than' => "Jumlah Barang Keluar tidak boleh lebih dari {$stok}"
-                ]
-            ],
+            // 'jumlah_keluar' => [
+            //     'label' => "Jumlah Barang Keluar",
+            //     'rules' => "required|numeric|less_than[{$total_stok}]",
+            //     'errors' => [
+            //         'required' => "{field} harus diisi",
+            //         'less_than' => "Jumlah Barang Keluar tidak boleh lebih dari {$stok}"
+            //     ]
+            // ],
         ];
         if ($this->validate($rules)) {
             $image = $this->request->getFile('foto_pengambilan_barang');
@@ -104,6 +107,7 @@ class C_Barang_Keluar extends BaseController
             $data = [
                 'title' => 'Halaman Tambah Barang Keluar | SILOG AJS',
                 'tampildatabarang' => $this->barang->findAll(),
+                'tampildatapermintaan' => $this->permintaan->findAll(),
                 'kode_barang_keluar' => $kodeBarangGenerate,
                 'validation' => $this->validator
             ];

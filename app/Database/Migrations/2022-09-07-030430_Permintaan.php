@@ -29,7 +29,7 @@ class Permintaan extends Migration
                 'constraint' => '50'
             ],
             'wilayah' => [
-                'type' => 'int',
+                'type' => 'varchar',
                 'constraint' => '50'
             ]
         ]);

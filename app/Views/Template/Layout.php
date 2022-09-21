@@ -95,7 +95,47 @@
               <div data-i18n="Analytics">Dashboard</div>
               </a>
               </li>
-            <!-- Data Master -->
+            <!-- Tampilan User A -->
+            <?php if (session()->get('kriteria') == 'User A') { ?>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
+            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            '/C_Permintaan/index'
+                                          ) ?>">
+              <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
+              <div data-i18n="Analytics">Permintaan</div>
+              </a>
+            </li>
+            <?php if ($title == 'Halaman Laporan | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            '/C_Permintaan/index'
+                                          ) ?>">
+              <i class="menu-icon tf-icons bx bx-file"></i>
+              <div data-i18n="Analytics">Laporan</div>
+              </a>
+            </li>
+              <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
+            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('logout') ?>">
+              <i class="menu-icon tf-icons bx bx-log-out"></i>
+              <div data-i18n="Analytics">Logout</div>
+              </a>
+            </li>
+            <?php }; ?>
+            <!-- Tampilan User B -->
+            <?php if (session()->get('kriteria') == 'User B') { ?>
             <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -212,13 +252,126 @@
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url(
-                                            '/C_Permintaan/index'
-                                          ) ?>">
+              <a class="menu-link" href="<?= base_url('logout') ?>">
               <i class="menu-icon tf-icons bx bx-log-out"></i>
               <div data-i18n="Analytics">Logout</div>
               </a>
             </li>
+            <?php }; ?>
+             <!-- Tampilan User C -->
+             <?php if (session()->get('kriteria') == 'User C') { ?>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-server"></i>
+                <div data-i18n="Account Settings">Data Master</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                  $title == 'Halaman Kategori | SILOG AJS'
+                ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('/C_Kategori/index') ?>">
+              <div data-i18n="Analytics">Kategori</div>
+              </a>
+              </li>
+              <?php if (
+                  $title == 'Halaman Barang | SILOG AJS'
+                ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-barang') ?>">
+              <div data-i18n="Analytics">Barang</div>
+              </a>
+              </li>
+              <?php if (
+                  $title == 'Halaman Satuan | SILOG AJS'
+                ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('/C_Satuan/index') ?>">
+              <div data-i18n="Analytics">Satuan</div>
+              </a>
+              </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div data-i18n="Account Settings">Transaksi</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                  $title == 'Halaman Barang Masuk| SILOG AJS'
+                ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            '/C_Transaksi/tampil_barang_masuk'
+                                          ) ?>">
+              <div data-i18n="Analytics">Barang Masuk</div>
+              </a>
+              </li>
+              <?php if (
+                  $title == 'Halaman Barang Keluar | SILOG AJS'
+                ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-barangkeluar'
+                                          ) ?>">
+              <div data-i18n="Analytics">Barang Keluar</div>
+              </a>
+              </li>
+              </ul>
+            </li>
+            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            '/C_Permintaan/index'
+                                          ) ?>">
+              <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
+              <div data-i18n="Analytics">Permintaan</div>
+              </a>
+            </li>
+              <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
+              <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            '/C_Permintaan/index'
+                                          ) ?>">
+              <i class="menu-icon tf-icons bx bxs-user-badge"></i>
+              <div data-i18n="Analytics">Manajemen User</div>
+              </a>
+            </li>
+            <?php if ($title == 'Halaman Logout | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="#" data-toggle="modal" data-target="#logoutModal">
+              <i class="menu-icon tf-icons bx bx-log-out"></i>
+              <div data-i18n="Analytics">Logout</div>
+              </a>
+            </li>
+            <?php }; ?>
             <!-- User interface -->
             <!-- User interface -->
             <!-- Forms & Tables -->
@@ -452,6 +605,7 @@
           let total = $('#total_stok');
           let foto_serial_number = $('#foto_serial_number');
           let jumlah = hal == 'tampil-barangkeluar' ? $('#jumlah_masuk') : $('#jumlah_keluar');
+          let wilayah = $('#wilayah');
 
         $(document).on('change', '#nama_barang', function() {
           var id = $(this).val();
@@ -466,6 +620,18 @@
                 total.val(data.stok);
                 foto_serial_number.html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>");
                 jumlah.focus();
+              }
+            });
+        });
+
+        $(document).on('change', '#id_permintaan', function() {
+          var id = $(this).val();
+          $.ajax({
+              url: "<?php echo base_url('autotampildatapermintaan'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                wilayah.val(data.wilayah);
               }
             });
         });
