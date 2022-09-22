@@ -27,7 +27,7 @@ class M_Barang extends Model
         $query = $query->getRow();
         return $query->kode_barang;
     }
-    
+
     public function cekStok($id = null)
     {
         $builder = $this->db->table('barang');
@@ -37,23 +37,15 @@ class M_Barang extends Model
         return $query->getRowArray();
     }
 
-    public function chartBarangMasuk($bulan)
-	{
-		$like = 'BRM' . date('y') . $bulan;
-        $builder = $this->db->table('barang_masuk');
-        $builder->like('id_barang_masuk', $like, 'after');
-        $query = $builder->get();
-		return count($query->getResultArray());
-	}
+    public function chartBarangMasuk()
+    {
+        return $this->db->table('barang_masuk')->select('count(*) as jumlah, id_barang')->groupBy('id_barang')->get()->getResultArray();
+    }
 
-	public function chartBarangKeluar($bulan)
-	{
-		$like = 'BKR' . date('y') . $bulan;
-        $builder = $this->db->table('barang_keluar');
-        $builder->like('id_barang_keluar', $like, 'after');
-        $query = $builder->get();
-		return count($query->getResultArray());
-	}
+    public function chartBarangKeluar()
+    {
+        return $this->db->table('barang_keluar')->select('count(*) as jumlah, id_barang')->groupBy('id_barang')->get()->getResultArray();
+    }
 
     function update_data($where, $data, $table)
     {
@@ -63,8 +55,8 @@ class M_Barang extends Model
 
     function count($table)
     {
-       $builder = $this->db->table($table);
-       $query = $builder->countAllResults();
-       return $query;
+        $builder = $this->db->table($table);
+        $query = $builder->countAllResults();
+        return $query;
     }
 }

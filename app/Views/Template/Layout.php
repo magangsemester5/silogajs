@@ -501,13 +501,15 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="../template/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <!-- <script src="../template/assets/vendor/libs/apex-charts/apexcharts.js"></script> -->
 
     <!-- Main JS -->
     <script src="../template/assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="../template/assets/js/dashboards-analytics.js"></script>
+    <!-- <script src="../template/assets/js/dashboards-analytics.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

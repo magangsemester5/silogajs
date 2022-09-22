@@ -20,6 +20,11 @@ class BarangKeluar extends Migration
                 'constraint' => '12',
                 'unsigned' => TRUE
             ],
+            'id_permintaan' => [
+                'type' => 'int',
+                'constraint' => '12',
+                'unsigned' => TRUE
+            ],
             'tanggal_keluar' => [
                 'type' => 'date'
             ],
