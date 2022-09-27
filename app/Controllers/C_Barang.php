@@ -59,7 +59,7 @@ class C_Barang extends BaseController
             ->with('status_text', 'Data Berhasil ditambah');
     }
 
-    public function tampil_edit_data($id = null)
+    public function edit($id = null)
     {
         $data = [
             'tampildata' => $this->barang->where('id_barang', $id)->first(),
@@ -70,7 +70,7 @@ class C_Barang extends BaseController
         return view('Menu/Barang/edit', $data);
     }
 
-    public function edit()
+    public function proses_edit()
     {
         $loadmodel = $this->request->getVar('id_barang');
         $dataId = $this->barang->find($loadmodel);

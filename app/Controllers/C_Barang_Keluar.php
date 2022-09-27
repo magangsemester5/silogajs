@@ -115,7 +115,7 @@ class C_Barang_Keluar extends BaseController
         }
     }
 
-    public function tampil_edit_data($id = null)
+    public function edit($id = null)
     {
         $data = [
             'tampildata' => $this->barang_keluar->getRelasi($id),
@@ -125,7 +125,7 @@ class C_Barang_Keluar extends BaseController
         return view('Menu/Barang_Keluar/edit', $data);
     }
 
-    public function edit()
+    public function proses_edit()
     {
         $loadmodel = $this->request->getVar('id_barang');
         $dataId = $this->barang->find($loadmodel);
@@ -180,7 +180,7 @@ class C_Barang_Keluar extends BaseController
             ->with('status_text', 'Data Berhasil dihapus');
     }
 
-    public function tampil_otomatis_data_barang($id = null)
+    public function tampil_otomatis_data_barang_keluar($id = null)
     {
         $data = $this->barang->cekStok($id);
         return json_encode($data);

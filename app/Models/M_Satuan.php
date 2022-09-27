@@ -10,7 +10,7 @@ class M_Satuan extends Model
     protected $primaryKey       = 'id_satuan';
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_satuan , nama_satuan'
+        'nama_satuan'
     ];
 }
 ?>

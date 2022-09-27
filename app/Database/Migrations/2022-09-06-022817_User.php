@@ -34,6 +34,14 @@ class User extends Migration
             'kriteria' => [
                 'type' => 'varchar',
                 'constraint' => '50'
+            ],
+            'foto_user' => [
+                'type' => 'varchar',
+                'constraint' => '50'
+            ],
+            'wilayah' => [
+                'type' => 'varchar',
+                'constraint' => '50'
             ]
         ]);
  

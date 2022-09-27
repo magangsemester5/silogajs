@@ -48,12 +48,12 @@
                                         <td><?= $td->stok ?></td>
                                         <td><?= $td->nama_satuan ?></td>
                                         <td>
-                                            <?php if (session()->get('kriteria') == 'User B') { ?>
+                                            <?php if (session()->get('kriteria') == 'Admin') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-barang/$td->id_barang"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                                 <a class="btn btn-warning btn-sm" href="<?= base_url("edit-barang/$td->id_barang"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
                                                 <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-barang/$td->id_barang"); ?>"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>
-                                            <?php if (session()->get('kriteria') == 'User C') { ?>
+                                            <?php if (session()->get('kriteria') == 'Supervisor') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-barang/$td->id_barang"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                             <?php } ?>
                                         </td>

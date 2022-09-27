@@ -6,40 +6,52 @@
     <div class="content-wrapper">
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span>Halaman Satuan</h4>
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span>Halaman satuan</h4>
             <!-- Basic Bootstrap Table -->
-            <a class="btn btn-primary" href="<?= base_url('C_Satuan/tambah'); ?>"><i class="bx bx-plus-circle me-1"></i>Tambah Data</a>
-            <b>
-                <hr size="5">
-            </b>
-            <div class="card">
-                <h5 class="card-header">Table Satuan</h5>
-                <div class="table-responsive text-nowrap">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>ID Satuan</th>
-                                <th>Nama Satuan</th>
-                            </tr>
-                        </thead>
-                        <tbody class="table-border-bottom-0">
-                            <?php $no = 0;
-                            foreach ($tampildata as $td) : ?>
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="fw-bold">Data Satuan</h6>
+                </div>
+                <!-- <div class="row mt-2 ml-md-2 text-center"> -->
+                <!-- <div class="col-md-1"> -->
+                <!-- Form Error -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <div class="card-body">
+                    <a href="<?= base_url('tambah-satuan'); ?>" class="btn btn-info btn-icon-split mb-3">
+                        <span class="icon text-green-50">
+                            <i class="bx bx-plus-circle me-1"></i>
+                        </span>
+                        <span class="text">Tambah Satuan Barang</span>
+                    </a>
+                    <div class="table-responsive">
+                        <table id="dataTable" class="table table-striped w-100 dt-responsive">
+                            <thead>
                                 <tr>
-                                    <td><?= $no++ ?></td>
-                                    <td><?= $td['satuanid'] ?></td>
-                                    <td><?= $td['satnama'] ?></td> 
-                                    <td>
+                                    <th>No</th>
+                                    <th>Nama satuan</th>
                                     <?php if (session()->get('kriteria') == 'User B') { ?>
-                                        <a class="" href=""><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="" href=""><i class="bx bx-trash me-1"></i> Delete</a>
+                                    <th>Aksi</th>
                                     <?php } ?>
-                                    </td>
                                 </tr>
-                        </tbody>
-                    <?php endforeach; ?>
-                    </table>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                                <?php $no = 1;
+                                foreach ($tampildata as $td) : ?>
+                                    <tr>
+                                        <td><?= $no++; ?></td>
+                                        <td><?= $td->nama_satuan ?></td>
+                                        <td>
+                                            <?php if (session()->get('kriteria') == 'User B') { ?>
+                                                <a class="btn btn-warning btn-sm" href="<?= base_url("edit-satuan/$td->id_satuan"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
+                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-satuan/$td->id_satuan"); ?>"><i class="bx bx-trash"></i>Hapus</a>
+                                            <?php } ?>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!--/ Basic Bootstrap Table -->

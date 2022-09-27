@@ -1,9 +1,0 @@
-__ci_last_regenerate|i:1663217998;_ci_previous_url|s:45:"http://localhost:8080/index.php/tambah-barang";error|s:232:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
-	<div class="errors" role="alert">
-		<ul>
-					<li>nama_barang Harus diisi</li>
-				</ul>
-	</div>
-
-<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
-";__ci_vars|a:3:{s:5:"error";s:3:"old";s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";}_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:6:{s:11:"kode_barang";s:7:"BRG0003";s:11:"nama_barang";s:0:"";s:11:"id_kategori";s:0:"";s:9:"id_satuan";s:0:"";s:4:"stok";s:0:"";s:13:"serial_number";s:0:"";}}_ci_validation_errors|s:56:"a:1:{s:11:"nama_barang";s:23:"nama_barang Harus diisi";}";

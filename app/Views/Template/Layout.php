@@ -95,47 +95,8 @@
               <div data-i18n="Analytics">Dashboard</div>
               </a>
               </li>
-            <!-- Tampilan User A -->
-            <?php if (session()->get('kriteria') == 'User A') { ?>
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
-            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url(
-                                            '/C_Permintaan/index'
-                                          ) ?>">
-              <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
-              <div data-i18n="Analytics">Permintaan</div>
-              </a>
-            </li>
-            <?php if ($title == 'Halaman Laporan | SILOG AJS') : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url(
-                                            '/C_Permintaan/index'
-                                          ) ?>">
-              <i class="menu-icon tf-icons bx bx-file"></i>
-              <div data-i18n="Analytics">Laporan</div>
-              </a>
-            </li>
-              <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
-            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('logout') ?>">
-              <i class="menu-icon tf-icons bx bx-log-out"></i>
-              <div data-i18n="Analytics">Logout</div>
-              </a>
-            </li>
-            <?php }; ?>
-            <!-- Tampilan User B -->
-            <?php if (session()->get('kriteria') == 'User B') { ?>
+            <!-- Tampilan Admin -->
+            <?php if (session()->get('kriteria') == 'Admin') { ?>
             <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -152,7 +113,7 @@
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('/C_Kategori/index') ?>">
+              <a class="menu-link" href="<?= base_url('tampil-kategori') ?>">
               <div data-i18n="Analytics">Kategori</div>
               </a>
               </li>
@@ -178,7 +139,7 @@
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('/C_Satuan/index') ?>">
+              <a class="menu-link" href="<?= base_url('tampil-satuan') ?>">
               <div data-i18n="Analytics">Satuan</div>
               </a>
               </li>
@@ -200,7 +161,7 @@
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                                            '/C_Transaksi/tampil_barang_masuk'
+                                            'tampil-barangmasuk'
                                           ) ?>">
               <div data-i18n="Analytics">Barang Masuk</div>
               </a>
@@ -228,26 +189,26 @@
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                                            '/C_Permintaan/index'
+                                            'tampil-permintaan'
                                           ) ?>">
               <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
               <div data-i18n="Analytics">Permintaan</div>
               </a>
             </li>
               <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
-              <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
+              <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                                            '/C_Permintaan/index'
+                                            'tampil-user'
                                           ) ?>">
               <i class="menu-icon tf-icons bx bxs-user-badge"></i>
               <div data-i18n="Analytics">Manajemen User</div>
               </a>
             </li>
-            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
+            <?php if ($title == 'Halaman Logout | SILOG AJS') : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
@@ -258,8 +219,8 @@
               </a>
             </li>
             <?php }; ?>
-             <!-- Tampilan User C -->
-             <?php if (session()->get('kriteria') == 'User C') { ?>
+             <!-- Tampilan Supervisor -->
+             <?php if (session()->get('kriteria') == 'Supervisor') { ?>
             <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -274,7 +235,7 @@
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('/C_Kategori/index') ?>">
+              <a class="menu-link" href="<?= base_url('tampil-kategori') ?>">
               <div data-i18n="Analytics">Kategori</div>
               </a>
               </li>
@@ -296,7 +257,7 @@
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('/C_Satuan/index') ?>">
+              <a class="menu-link" href="<?= base_url('tampil-satuan') ?>">
               <div data-i18n="Analytics">Satuan</div>
               </a>
               </li>
@@ -316,7 +277,7 @@
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                                            '/C_Transaksi/tampil_barang_masuk'
+                                            'tampil-barangmasuk'
                                           ) ?>">
               <div data-i18n="Analytics">Barang Masuk</div>
               </a>
@@ -342,7 +303,7 @@
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                                            '/C_Permintaan/index'
+                                            'tampil-permintaan'
                                           ) ?>">
               <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
               <div data-i18n="Analytics">Permintaan</div>
@@ -355,7 +316,7 @@
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                                            '/C_Permintaan/index'
+                                            'tampil-user'
                                           ) ?>">
               <i class="menu-icon tf-icons bx bxs-user-badge"></i>
               <div data-i18n="Analytics">Manajemen User</div>
@@ -366,7 +327,7 @@
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="#" data-toggle="modal" data-target="#logoutModal">
+              <a class="menu-link" href="<?= base_url('logout') ?>">
               <i class="menu-icon tf-icons bx bx-log-out"></i>
               <div data-i18n="Analytics">Logout</div>
               </a>
@@ -406,7 +367,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="../template/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="<?= base_url('')?>/uploads/<?= session()->get('foto_user');?>" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <!-- <ul class="dropdown-menu dropdown-menu-end">

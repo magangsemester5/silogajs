@@ -33,7 +33,9 @@
                                     <th>Kode Barang</th>
                                     <th>Nama Barang</th>
                                     <th>Jumlah Barang Keluar</th>
+                                    <?php if (session()->get('kriteria') == 'Admin') { ?>
                                     <th>Aksi</th>
+                                    <?php } ?>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -46,10 +48,7 @@
                                         <td><?= $td->nama_barang ?></td>
                                         <td><?= $td->jumlah_keluar ?></td>
                                         <td>
-                                            <?php if (session()->get('kriteria') == 'User C') { ?>
-                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                            <?php } ?>
-                                            <?php if (session()->get('kriteria') == 'User B') { ?>
+                                            <?php if (session()->get('kriteria') == 'Admin') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                                 <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-barangkeluar/$td->id_barang_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
                                             <?php } ?>

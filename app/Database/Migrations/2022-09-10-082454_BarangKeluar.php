@@ -36,7 +36,7 @@ class BarangKeluar extends Migration
                 'type' => 'int',
                 'constraint' => '50'
             ],
-            'foto_pengambilan_barang' => [
+            'foto_penerima_barang' => [
                 'type' => 'varchar',
                 'constraint' => '50'
             ]

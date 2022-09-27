@@ -52,7 +52,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Foto Serial Number</label>
-                            <input type="file" name="foto_serial_number" id="inputFile" value="<?= $tampildata->foto_serial_number ?>" class="form-control">
+                            <input type="file" name="foto_serial_number" id="inputFile" value="<?= $tampildata->foto_serial_number ?>" class="form-control" required>
                         </div>
                         <div class="col-md-3">
                             <label>Preview Foto Serial Number</label>

@@ -31,11 +31,7 @@ class BarangMasuk extends Migration
                 'type' => 'int',
                 'constraint' => '50'
             ],
-            'foto_pengantaran_barang' => [
-                'type' => 'varchar',
-                'constraint' => '50'
-            ],
-            'status' => [
+            'foto_penerima_barang' => [
                 'type' => 'varchar',
                 'constraint' => '50'
             ]
