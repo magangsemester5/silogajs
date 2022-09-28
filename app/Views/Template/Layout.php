@@ -96,7 +96,7 @@
               </a>
               </li>
             <!-- Tampilan Admin -->
-            <?php if (session()->get('kriteria') == 'Admin') { ?>
+            <?php if (session()->get('kriteria') == 'Admin' && 'Super Admin') { ?>
             <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
