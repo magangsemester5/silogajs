@@ -41,7 +41,7 @@ class C_Auth extends BaseController
                     $this->session->set('jabatan', $jabatan);
                     $this->session->set('foto_user', $foto_user);
                     return redirect()->to(base_url('tampil_dashboard'));
-                } else if ($x['jabatan'] = "SM") {
+                } else if ($x['jabatan'] = "RPM") {
                     $nama = $x['nama'];
                     $this->session->set('id_user', $id_user);
                     $this->session->set('nama', $nama);
@@ -57,7 +57,7 @@ class C_Auth extends BaseController
                     $this->session->set('jabatan', $jabatan);
                     $this->session->set('foto_user', $foto_user);
                     return redirect()->to(base_url('tampil_dashboard'));
-                } else if ($x['kriteria'] == 'Supervisor' && $x['jabatan'] = "Project Manajer") {
+                } else if ($x['jabatan'] = "PM") {
                     $nama = $x['nama'];
                     $this->session->set('id_user', $id_user);
                     $this->session->set('nama', $nama);
@@ -65,7 +65,7 @@ class C_Auth extends BaseController
                     $this->session->set('jabatan', $jabatan);
                     $this->session->set('foto_user', $foto_user);
                     return redirect()->to(base_url('tampil_dashboard'));
-                } else if ($x['kriteria'] == 'Supervisor' && $x['jabatan'] = "Direktur") {
+                } else if ($x['jabatan'] = "Direktur") {
                     $nama = $x['nama'];
                     $this->session->set('id_user', $id_user);
                     $this->session->set('nama', $nama);
@@ -73,7 +73,7 @@ class C_Auth extends BaseController
                     $this->session->set('jabatan', $jabatan);
                     $this->session->set('foto_user', $foto_user);
                     return redirect()->to(base_url('tampil_dashboard'));
-                } else if ($x['kriteria'] == 'Supervisor' && $x['jabatan'] = "Manajemen") {
+                } else if ($x['jabatan'] = "Manajement") {
                     $nama = $x['nama'];
                     $this->session->set('id_user', $id_user);
                     $this->session->set('nama', $nama);

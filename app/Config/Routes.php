@@ -54,30 +54,30 @@ $routes->get('edit-kategori/(:num)', 'C_Kategori::edit/$1');
 $routes->post('prosesedit-kategori', 'C_Kategori::proses_edit', ['filter' => 'auth']);
 $routes->get('hapus-kategori/(:num)', 'C_Kategori::hapus/$1', ['filter' => 'auth']);
 
-// Data Barang
-$routes->get('tampil-barang', 'C_Barang::index', ['filter' => 'auth']);
-$routes->get('detail-barang/(:num)', 'C_Barang::detail/$1', ['filter' => 'auth']);
-$routes->get('tambah-barang', 'C_Barang::tambah', ['filter' => 'auth']);
-$routes->post('prosestambah-barang', 'C_Barang::proses_tambah', ['filter' => 'auth']);
-$routes->get('edit-barang/(:num)', 'C_Barang::edit/$1', ['filter' => 'auth']);
-$routes->post('prosesedit-barang', 'C_Barang::proses_edit', ['filter' => 'auth']);
-$routes->get('hapus-barang/(:num)', 'C_Barang::hapus/$1', ['filter' => 'auth']);
+// Data Material
+$routes->get('tampil-material', 'C_Material::index', ['filter' => 'auth']);
+$routes->get('detail-material/(:num)', 'C_Material::detail/$1', ['filter' => 'auth']);
+$routes->get('tambah-material', 'C_Material::tambah', ['filter' => 'auth']);
+$routes->post('prosestambah-material', 'C_Material::proses_tambah', ['filter' => 'auth']);
+$routes->get('edit-material/(:num)', 'C_Material::edit/$1', ['filter' => 'auth']);
+$routes->post('prosesedit-material', 'C_Material::proses_edit', ['filter' => 'auth']);
+$routes->get('hapus-material/(:num)', 'C_Material::hapus/$1', ['filter' => 'auth']);
 
-// Barang Masuk
-$routes->get('tampil-barangmasuk', 'C_Barang_Masuk::index', ['filter' => 'auth']);
-$routes->get('autotampildatabarangmasuk/(:num)', 'C_Barang_Masuk::tampil_otomatis_data_barang_masuk/$1', ['filter' => 'auth']);
-$routes->get('detail-barangmasuk/(:num)', 'C_Barang_Masuk::detail/$1', ['filter' => 'auth']);
-$routes->get('tambah-barangmasuk', 'C_Barang_Masuk::tambah', ['filter' => 'auth']);
-$routes->post('prosestambah-barangmasuk', 'C_Barang_Masuk::proses_tambah', ['filter' => 'auth']);
-$routes->get('hapus-barangmasuk/(:num)', 'C_Barang_Masuk::hapus/$1', ['filter' => 'auth']);
+// Material Masuk
+$routes->get('tampil-materialmasuk', 'C_Material_Masuk::index', ['filter' => 'auth']);
+$routes->get('autotampildatamaterialmasuk/(:num)', 'C_Material_Masuk::tampil_otomatis_data_material_masuk/$1', ['filter' => 'auth']);
+$routes->get('detail-materialmasuk/(:num)', 'C_Material_Masuk::detail/$1', ['filter' => 'auth']);
+$routes->get('tambah-materialmasuk', 'C_Material_Masuk::tambah', ['filter' => 'auth']);
+$routes->post('prosestambah-materialmasuk', 'C_Material_Masuk::proses_tambah', ['filter' => 'auth']);
+$routes->get('hapus-materialmasuk/(:num)', 'C_Material_Masuk::hapus/$1', ['filter' => 'auth']);
 
-// Barang Keluar
-$routes->get('tampil-barangkeluar', 'C_Barang_Keluar::index', ['filter' => 'auth']);
-$routes->get('autotampildatabarangkeluar/(:num)', 'C_Barang_Keluar::tampil_otomatis_data_barang_keluar/$1', ['filter' => 'auth']);
-$routes->get('detail-barangkeluar/(:num)', 'C_Barang_Keluar::detail/$1', ['filter' => 'auth']);
-$routes->get('tambah-barangkeluar', 'C_Barang_Keluar::tambah', ['filter' => 'auth']);
-$routes->post('prosestambah-barangkeluar', 'C_Barang_Keluar::proses_tambah', ['filter' => 'auth']);
-$routes->get('hapus-barangkeluar/(:num)', 'C_Barang_Keluar::hapus/$1', ['filter' => 'auth']);
+// Material Keluar
+$routes->get('tampil-materialkeluar', 'C_Material_Keluar::index', ['filter' => 'auth']);
+$routes->get('autotampildatamaterialkeluar/(:num)', 'C_Material_Keluar::tampil_otomatis_data_material_keluar/$1', ['filter' => 'auth']);
+$routes->get('detail-materialkeluar/(:num)', 'C_Material_Keluar::detail/$1', ['filter' => 'auth']);
+$routes->get('tambah-materialkeluar', 'C_Material_Keluar::tambah', ['filter' => 'auth']);
+$routes->post('prosestambah-materialkeluar', 'C_Material_Keluar::proses_tambah', ['filter' => 'auth']);
+$routes->get('hapus-materialkeluar/(:num)', 'C_Material_Keluar::hapus/$1', ['filter' => 'auth']);
 
 // Data Manajemen User
 $routes->get('tampil-user', 'C_User::index', ['filter' => 'auth']);
@@ -96,7 +96,7 @@ $routes->get('edit-satuan/(:num)', 'C_Satuan::edit/$1', ['filter' => 'auth']);
 $routes->post('prosesedit-satuan', 'C_Satuan::proses_edit', ['filter' => 'auth']);
 $routes->get('hapus-satuan/(:num)', 'C_Satuan::hapus/$1', ['filter' => 'auth']);
 
-$routes->get('cekstok/(:num)', 'C_barang::cek_stok/$1', ['filter' => 'auth']);
+$routes->get('cekstok/(:num)', 'C_Material::cek_stok/$1', ['filter' => 'auth']);
 
 // Permintaan
 $routes->get('tampil-permintaan', 'C_Permintaan::index', ['filter' => 'auth']);

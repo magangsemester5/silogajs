@@ -95,8 +95,34 @@
               <div data-i18n="Analytics">Dashboard</div>
               </a>
               </li>
+             <!-- Tampilan Admin Wilayah -->
+             <?php if (session()->get('jabatan') == 'Admin Wilayah') { ?>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
+            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-permintaan'
+                                          ) ?>">
+              <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
+              <div data-i18n="Analytics">Permintaan</div>
+              </a>
+              </li>
+            <?php if ($title == 'Halaman Logout | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('logout') ?>">
+              <i class="menu-icon tf-icons bx bx-log-out"></i>
+              <div data-i18n="Analytics">Logout</div>
+              </a>
+            </li>
+            <?php }; ?>
             <!-- Tampilan Admin -->
-            <?php if (session()->get('kriteria') == 'Admin' && 'Super Admin') { ?>
+            <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
             <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -118,16 +144,16 @@
               </a>
               </li>
               <?php if (
-                $title == 'Halaman Barang | SILOG AJS' ||
-                $title == 'Halaman Tambah Barang | SILOG AJS' ||
-                $title == 'Halaman Edit Barang | SILOG AJS'
+                $title == 'Halaman material | SILOG AJS' ||
+                $title == 'Halaman Tambah material | SILOG AJS' ||
+                $title == 'Halaman Edit material | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-barang') ?>">
-              <div data-i18n="Analytics">Barang</div>
+              <a class="menu-link" href="<?= base_url('tampil-material') ?>">
+              <div data-i18n="Analytics">material</div>
               </a>
               </li>
               <?php if (
@@ -152,33 +178,33 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman Barang Masuk| SILOG AJS' ||
-                $title == 'Halaman Tambah Barang Masuk| SILOG AJS' ||
-                $title == 'Halaman Edit Barang Masuk| SILOG AJS'
+                $title == 'Halaman material Masuk| SILOG AJS' ||
+                $title == 'Halaman Tambah material Masuk| SILOG AJS' ||
+                $title == 'Halaman Edit material Masuk| SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                                            'tampil-barangmasuk'
+                                            'tampil-materialmasuk'
                                           ) ?>">
-              <div data-i18n="Analytics">Barang Masuk</div>
+              <div data-i18n="Analytics">material Masuk</div>
               </a>
               </li>
               <?php if (
-                $title == 'Halaman Barang Keluar | SILOG AJS' ||
-                $title == 'Halaman Tambah Barang Keluar | SILOG AJS' ||
-                $title == 'Halaman Edit Barang Keluar | SILOG AJS'
+                $title == 'Halaman material Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah material Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit material Keluar | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                                            'tampil-barangkeluar'
+                                            'tampil-materialkeluar'
                                           ) ?>">
-              <div data-i18n="Analytics">Barang Keluar</div>
+              <div data-i18n="Analytics">material Keluar</div>
               </a>
               </li>
               </ul>
@@ -219,8 +245,8 @@
               </a>
             </li>
             <?php }; ?>
-             <!-- Tampilan Supervisor -->
-             <?php if (session()->get('kriteria') == 'Supervisor') { ?>
+             <!-- Tampilan Management -->
+            <?php if (session()->get('jabatan') == 'Management') { ?>
             <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -240,14 +266,14 @@
               </a>
               </li>
               <?php if (
-                  $title == 'Halaman Barang | SILOG AJS'
+                  $title == 'Halaman material | SILOG AJS'
                 ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-barang') ?>">
-              <div data-i18n="Analytics">Barang</div>
+              <a class="menu-link" href="<?= base_url('tampil-material') ?>">
+              <div data-i18n="Analytics">material</div>
               </a>
               </li>
               <?php if (
@@ -270,29 +296,29 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                  $title == 'Halaman Barang Masuk| SILOG AJS'
+                  $title == 'Halaman material Masuk| SILOG AJS'
                 ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                                            'tampil-barangmasuk'
+                                            'tampil-materialmasuk'
                                           ) ?>">
-              <div data-i18n="Analytics">Barang Masuk</div>
+              <div data-i18n="Analytics">material Masuk</div>
               </a>
               </li>
               <?php if (
-                  $title == 'Halaman Barang Keluar | SILOG AJS'
+                  $title == 'Halaman material Keluar | SILOG AJS'
                 ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                                            'tampil-barangkeluar'
+                                            'tampil-materialkeluar'
                                           ) ?>">
-              <div data-i18n="Analytics">Barang Keluar</div>
+              <div data-i18n="Analytics">material Keluar</div>
               </a>
               </li>
               </ul>
@@ -367,7 +393,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="<?= base_url('')?>/uploads/<?= session()->get('foto_user');?>" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="<?= base_url('') ?>/uploads/<?= session()->get('foto_user'); ?>" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <!-- <ul class="dropdown-menu dropdown-menu-end">
@@ -489,7 +515,7 @@
       <?php } ?>
       });
     </script>
-    <!-- Delete Confirm Data Barang -->
+    <!-- Delete Confirm Data material -->
     <script>
         $(document).ready(function(){
             $(document).on('click',"#del",function(e) {
@@ -505,13 +531,13 @@
                 .then((willDelete) => {
                     if (willDelete) {
                         $.ajax({
-                            url : "hapus-barang/" + del,
+                            url : "hapus-material/" + del,
                             type : "GET",
                             data : {id:del},
                             success : function() {
                                 swal({
                                     title: "Sukses",
-                                    text: "Data barang berhasil dihapus",
+                                    text: "Data material berhasil dihapus",
                                     icon: "success",
                                 }); 
                             }
@@ -567,13 +593,13 @@
           let stok = $('#stok');
           let total = $('#total_stok');
           let foto_serial_number = $('#foto_serial_number');
-          let jumlah = hal == 'tampil-barangkeluar' ? $('#jumlah_masuk') : $('#jumlah_keluar');
+          let jumlah = hal == 'tampil-materialkeluar' ? $('#jumlah_masuk') : $('#jumlah_keluar');
           let wilayah = $('#wilayah');
 
-        $(document).on('change', '#nama_barang', function() {
+        $(document).on('change', '#nama_material', function() {
           var id = $(this).val();
           $.ajax({
-              url: "<?php echo base_url('autotampildatabarangkeluar'); ?>" + "/" + id,
+              url: "<?php echo base_url('autotampildatamaterialkeluar'); ?>" + "/" + id,
               method: "GET",
               dataType: 'json',
               success: function(data) {

@@ -6,11 +6,11 @@
     <div class="content-wrapper">
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span>Halaman Manajemen User</h4>
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span>Halaman material Masuk</h4>
             <!-- Basic Bootstrap Table -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="fw-bold">Data User</h6>
+                    <h6 class="fw-bold">Data material Masuk</h6>
                 </div>
                 <!-- <div class="row mt-2 ml-md-2 text-center"> -->
                 <!-- <div class="col-md-1"> -->
@@ -18,24 +18,22 @@
                 <!-- </div> -->
                 <!-- </div> -->
                 <div class="card-body">
-                    <a href="<?= base_url('tambah-user'); ?>" class="btn btn-info btn-icon-split mb-3">
+                    <a href="<?= base_url('tambah-materialmasuk'); ?>" class="btn btn-info btn-icon-split mb-3">
                         <span class="icon text-green-50">
                             <i class="bx bx-plus-circle me-1"></i>
                         </span>
-                        <span class="text">Tambah User</span>
+                        <span class="text">Tambah material Masuk</span>
                     </a>
                     <div class="table-responsive">
                         <table id="dataTable" class="table table-striped w-100 dt-responsive">
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Nama</th>
-                                    <th>Password</th>
-                                    <th>Id User</th>
-                                    <th>Jabatan</th>
-                                    <th>Wilayah</th>
-                                    <th>Foto User</th>
-                                    <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
+                                    <th>Tanggal</th>
+                                    <th>Kode material</th>
+                                    <th>Nama material</th>
+                                    <th>Jumlah material Masuk</th>
+                                    <?php if (session()->get('kriteria') == 'Admin') { ?>
                                     <th>Aksi</th>
                                     <?php } ?>
                                 </tr>
@@ -44,17 +42,15 @@
                                 <?php $no = 1;
                                 foreach ($tampildata as $td) : ?>
                                     <tr>
-                                        <td><?= $no++; ?></td>
-                                        <td><?= $td->nama ?></td>
-                                        <td><?= $td->password ?></td>
-                                        <td><?= $td->id_user ?></td>
-                                        <td><?= $td->jabatan ?></td>
-                                        <td><?= $td->wilayah ?></td>
-                                        <td><img src="<?= base_url("../uploads/$td->foto_user") ?>" class="w-px-50 h-auto rounded-circle"></td>
+                                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $no++ ?></strong></td>
+                                        <td><?= $td->tanggal_masuk ?></td>
+                                        <td><?= $td->kode_material_masuk ?></td>
+                                        <td><?= $td->nama_material ?></td>
+                                        <td><?= $td->jumlah_masuk ?></td>
                                         <td>
-                                            <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
-                                                <a class="btn btn-warning btn-sm" href="<?= base_url("edit-user/$td->id"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-user/$td->id"); ?>"><i class="bx bx-trash"></i>Hapus</a>
+                                            <?php if (session()->get('kriteria') == 'Admin') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialmasuk/$td->id_material_masuk"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-materialmasuk/$td->id_material_masuk"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
                                             <?php } ?>
                                         </td>
                                     </tr>
