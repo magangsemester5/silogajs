@@ -39,6 +39,10 @@ class KabelMasuk extends Migration
                 'type' => 'int',
                 'constraint' => '50'
             ],
+            'merek' => [
+                'type' => 'varchar',
+                'constraint' => '50'
+            ],
             'foto_penerima' => [
                 'type' => 'varchar',
                 'constraint' => '50'
