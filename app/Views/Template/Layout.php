@@ -275,6 +275,162 @@
               </a>
             </li>
             <?php }; ?>
+             <!-- Tampilan PM -->
+            <?php if (session()->get('jabatan') == 'PM') { ?>
+              <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-server"></i>
+                <div data-i18n="Account Settings">Data Master</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                $title == 'Halaman Kategori | SILOG AJS' ||
+                $title == 'Halaman Tambah Kategori | SILOG AJS' ||
+                $title == 'Halaman Edit Kategori | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-kategori') ?>">
+              <div data-i18n="Analytics">Kategori</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Material | SILOG AJS' ||
+                $title == 'Halaman Tambah Material | SILOG AJS' ||
+                $title == 'Halaman Edit Material | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-material') ?>">
+              <div data-i18n="Analytics">Material</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel | SILOG AJS' ||
+                $title == 'Halaman Edit kabel | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-kabel') ?>">
+              <div data-i18n="Analytics">Kabel</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Satuan | SILOG AJS' ||
+                $title == 'Halaman Tambah Satuan | SILOG AJS' ||
+                $title == 'Halaman Edit Satuan | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-satuan') ?>">
+              <div data-i18n="Analytics">Satuan</div>
+              </a>
+              </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div data-i18n="Account Settings">Transaksi</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                $title == 'Halaman Material Masuk| SILOG AJS' ||
+                $title == 'Halaman Tambah Material Masuk| SILOG AJS' ||
+                $title == 'Halaman Edit Material Masuk| SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-materialmasuk'
+                                          ) ?>">
+              <div data-i18n="Analytics">Material Masuk</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Material Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah Material Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit Material Keluar | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-materialkeluar'
+                                          ) ?>">
+              <div data-i18n="Analytics">Material Keluar</div>
+              </a>
+              </li>
+              </ul>
+            </li>
+            <!-- New -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
+                <div data-i18n="Account Settings">Permintaan</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                $title == 'Halaman Permintaan material | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampilpermintaan-material') ?>">
+              <div data-i18n="Analytics">Permintaan Material</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Permintaan kabel | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampilpermintaan-kabel') ?>">
+              <div data-i18n="Analytics">Permintaan Kabel</div>
+              </a>
+              </li>
+              </ul>
+              </li>
+              <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
+              <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-user'
+                                          ) ?>">
+              <i class="menu-icon tf-icons bx bxs-user-badge"></i>
+              <div data-i18n="Analytics">Manajemen User</div>
+              </a>
+            </li>
+            <?php if ($title == 'Halaman Logout | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('logout') ?>">
+              <i class="menu-icon tf-icons bx bx-log-out"></i>
+              <div data-i18n="Analytics">Logout</div>
+              </a>
+            </li>
+            <?php }; ?>
              <!-- Tampilan Management -->
             <?php if (session()->get('jabatan') == 'Management') { ?>
             <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>

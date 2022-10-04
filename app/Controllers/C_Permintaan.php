@@ -49,9 +49,23 @@ class C_Permintaan extends BaseController
     
     public function approve_detail_permintaan_kabel($id)
     {
-        $data = array(
-            'status' => 2
-        );
+        if (session()->get('jabatan') == 'RPM') { 
+            $data = array(
+                'status' => 1
+            );
+        }else if (session()->get('jabatan') == 'Admin Pusat') { 
+            $data = array(
+                'status' => 2
+            );
+        }else if (session()->get('jabatan') == 'PM') { 
+            $data = array(
+                'status' => 3
+            );
+        }else if (session()->get('jabatan') == 'Direktur') { 
+            $data = array(
+                'status' => 4
+            );
+        }
         session()->setFlashdata('status', 'Data permintaan berhasil diupdate');
         $this->detail_permintaan_kabel->update($id,$data);
     }
