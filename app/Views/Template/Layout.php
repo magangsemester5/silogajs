@@ -142,16 +142,16 @@
               </a>
               </li>
               <?php if (
-                $title == 'Halaman material | SILOG AJS' ||
-                $title == 'Halaman Tambah material | SILOG AJS' ||
-                $title == 'Halaman Edit material | SILOG AJS'
+                $title == 'Halaman Material | SILOG AJS' ||
+                $title == 'Halaman Tambah Material | SILOG AJS' ||
+                $title == 'Halaman Edit Material | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('tampil-material') ?>">
-              <div data-i18n="Analytics">material</div>
+              <div data-i18n="Analytics">Material</div>
               </a>
               </li>
               <?php if (
@@ -164,7 +164,7 @@
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('tampil-kabel') ?>">
-              <div data-i18n="Analytics">kabel</div>
+              <div data-i18n="Analytics">Kabel</div>
               </a>
               </li>
               <?php if (
@@ -189,9 +189,9 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman material Masuk| SILOG AJS' ||
-                $title == 'Halaman Tambah material Masuk| SILOG AJS' ||
-                $title == 'Halaman Edit material Masuk| SILOG AJS'
+                $title == 'Halaman Material Masuk| SILOG AJS' ||
+                $title == 'Halaman Tambah Material Masuk| SILOG AJS' ||
+                $title == 'Halaman Edit Material Masuk| SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -200,13 +200,13 @@
               <a class="menu-link" href="<?= base_url(
                                             'tampil-materialmasuk'
                                           ) ?>">
-              <div data-i18n="Analytics">material Masuk</div>
+              <div data-i18n="Analytics">Material Masuk</div>
               </a>
               </li>
               <?php if (
-                $title == 'Halaman material Keluar | SILOG AJS' ||
-                $title == 'Halaman Tambah material Keluar | SILOG AJS' ||
-                $title == 'Halaman Edit material Keluar | SILOG AJS'
+                $title == 'Halaman Material Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah Material Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit Material Keluar | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -215,7 +215,7 @@
               <a class="menu-link" href="<?= base_url(
                                             'tampil-materialkeluar'
                                           ) ?>">
-              <div data-i18n="Analytics">material Keluar</div>
+              <div data-i18n="Analytics">Material Keluar</div>
               </a>
               </li>
               </ul>

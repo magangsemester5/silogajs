@@ -26,7 +26,7 @@
                                     <td>Nama Admin Wilayah</td>
                                     <th>Nomor Drum</th>
                                     <th>Panjang</th>
-                                    <th>Action</th>
+                                    <th>Keterangan</th>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -39,6 +39,19 @@
                                             <td><?= $td1->nama ?></td>
                                             <td><?= $td->no_drum ?></td>
                                             <td><?= $td->panjang ?></td>
+                                            <?php if ($td->status == 0) { ?>
+                                                <td><span class="btn btn-warning btn-sm">Belum di Approve Semua</span></td>
+                                                <td><a class="btn btn-success btn-sm" href="<?= base_url("approvedetailpermintaan-kabel/$td->id_detail_permintaan_kabel"); ?>">Approve Disini</a></td>
+                                            <?php } else if ($td->status == 1) { ?>
+                                                <td><span class="btn btn-success btn-sm">Sudah di Approve RPM</span></td>
+                                                <td><a class="btn btn-success btn-sm" href="<?= base_url("approvedetailpermintaan-kabel/$td->id_detail_permintaan_kabel"); ?>">Approve Disini</a></td>
+                                            <?php } else if ($td->status == 2) { ?>
+                                                <td><span class="btn btn-success btn-sm">Sudah di Approve Admin Pusat</span></td>
+                                            <?php } else if ($td->status == 3) { ?>
+                                                <td><span class="btn btn-sucess btn-sm">Sudah di Approve PM</span></td>
+                                            <?php } else if ($td->status == 4) { ?>
+                                                <td><span class="btn btn-sucess btn-sm">Sudah di Approve Direktur</span></td>
+                                            <?php } ?>
                                         </tr>
                                     <?php endforeach; ?>
                                 <?php endforeach; ?>

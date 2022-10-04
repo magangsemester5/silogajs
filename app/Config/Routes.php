@@ -111,6 +111,7 @@ $routes->get('tampilpermintaan-material', 'C_Permintaan::permintaan_material', [
 // Permintaan Kabel
 $routes->get('tampilpermintaan-kabel', 'C_Permintaan::permintaan_kabel', ['filter' => 'auth']);
 $routes->get('detailpermintaan-kabel/(:num)', 'C_Permintaan::detail_permintaan_kabel/$1', ['filter' => 'auth']);
+$routes->get('approvedetailpermintaan-kabel/(:num)', 'C_Permintaan::approve_detail_permintaan_kabel/$1', ['filter' => 'auth']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

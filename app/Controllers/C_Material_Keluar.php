@@ -20,7 +20,7 @@ class C_material_Keluar extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Halaman material Keluar | SILOG AJS',
+            'title' => 'Halaman Material Keluar | SILOG AJS',
             'tampildata' => $this->material_keluar->getAll(),
         ];
         return view('Menu/material_Keluar/index', $data);
@@ -29,7 +29,7 @@ class C_material_Keluar extends BaseController
     public function tambah()
     {
         $data = [
-            'title' => 'Halaman Tambah material Keluar | SILOG AJS',
+            'title' => 'Halaman Tambah Material Keluar | SILOG AJS',
             'tampildatamaterial' => $this->material->findAll(),
             'tampildatapermintaan' => $this->permintaan->findAll(),
             'tampildataadminwilayah' => $this->user->findAll()
@@ -109,7 +109,7 @@ class C_material_Keluar extends BaseController
         $data = [
             'tampildata' => $this->material_keluar->getRelasi($id),
             'tampildatamaterial' => $this->material->findAll(),
-            'title' => 'Halaman Edit material | SILOG AJS',
+            'title' => 'Halaman Edit Material | SILOG AJS',
         ];
         return view('Menu/material_Keluar/edit', $data);
     }
@@ -148,7 +148,7 @@ class C_material_Keluar extends BaseController
     {
         $data = [
             'tampildatamaterial' => $this->material_keluar->getRelasi($id),
-            'title' => 'Halaman Detail material Keluar | SILOG AJS',
+            'title' => 'Halaman Detail Material Keluar | SILOG AJS',
         ];
         return view('Menu/material_Keluar/detail', $data);
     }

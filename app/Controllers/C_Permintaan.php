@@ -46,6 +46,15 @@ class C_Permintaan extends BaseController
         // print_r($data);
         return view('Menu/Permintaan/Kabel/detail', $data);
     }
+    
+    public function approve_detail_permintaan_kabel($id)
+    {
+        $data = array(
+            'status' => 2
+        );
+        session()->setFlashdata('status', 'Data permintaan berhasil diupdate');
+        $this->detail_permintaan_kabel->update($id,$data);
+    }
 
     public function tampil_otomatis_data_permintaan($id = null)
     {

@@ -19,7 +19,7 @@ class C_material extends BaseController
     public function index()
     {
         $data = [
-            'title' => 'Halaman material | SILOG AJS',
+            'title' => 'Halaman Material | SILOG AJS',
             'tampildata' => $this->material->getAll(),
         ];
         return view('Menu/material/index', $data);
@@ -27,7 +27,7 @@ class C_material extends BaseController
     public function tambah()
     {
         $data = [
-            'title' => 'Halaman Tambah material | SILOG AJS',
+            'title' => 'Halaman Tambah Material | SILOG AJS',
             'tampildatakategori' => $this->kategori->findAll(),
             'tampildatasatuan' => $this->satuan->findAll(),
             'validation' => \Config\Services::validation()
@@ -60,7 +60,7 @@ class C_material extends BaseController
             'tampildata' => $this->material->where('id_material', $id)->first(),
             'tampildatakategori' => $this->kategori->findAll(),
             'tampildatasatuan' => $this->satuan->findAll(),
-            'title' => 'Halaman Edit material | SILOG AJS',
+            'title' => 'Halaman Edit Material | SILOG AJS',
         ];
         return view('Menu/material/edit', $data);
     }
