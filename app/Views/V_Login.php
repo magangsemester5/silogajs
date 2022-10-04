@@ -27,7 +27,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Halaman Login Hanif | Silog AJS</title>
+    <title>Halaman Login Hanif Arafi | Silog AJS</title>
 
     <meta name="description" content="" />
 
