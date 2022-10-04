@@ -11,12 +11,12 @@ class M_Permintaan_Kabel extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_permintaan','id','no_permintaan','wilayah'
+        'id_permintaan_kabel','id','no_permintaan'
     ];
 
     function getAll()
     {
-        $builder = $this->db->table('permintaan_kabel');                                                              
+        $builder = $this->db->table('permintaan_kabel');
         $builder->join('user', 'user.id = permintaan_kabel.id');
         $query = $builder->get();
         return $query->getResult();
@@ -24,20 +24,10 @@ class M_Permintaan_Kabel extends Model
 
     function getById($id)
     {
-        $builder = $this->db->table('kabel');      
-        $builder->join('detail_permintaan_kabel', 'detail_permintaan_kabel.id_kabel = kabel.id_kabel');
-        $builder->join('permintaan_kabel', 'permintaan_kabel.id_permintaan_kabel = detail_permintaan_kabel.id_permintaan_kabel');                                                        
-        $builder->getWhere('permintaan_kabel.id_permintaan_kabel',$id);
+        $builder = $this->db->table('permintaan_kabel');
+        $builder->join('user', 'user.id = permintaan_kabel.id');
+        $builder->where('permintaan_kabel.id_permintaan_kabel',$id);
         $query = $builder->get();
-        return $query->getResultArray();
-    }
-
-    function getAllRelation()
-    {
-        $builder = $this->db->table('kabel');      
-        $builder->join('detail_permintaan_kabel', 'detail_permintaan_kabel.id_kabel = kabel.id_kabel');
-        $builder->join('permintaan_kabel', 'permintaan_kabel.id_permintaan_kabel = detail_permintaan_kabel.id_permintaan_kabel');                                                        
-        $query = $builder->get();
-        return $query->getResultArray();
+        return $query->getResult();
     }
 }

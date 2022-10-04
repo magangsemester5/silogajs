@@ -22,21 +22,25 @@
                         <table id="dataTable" class="table table-striped w-100 dt-responsive">
                             <thead>
                                 <tr>
-                                    <th>No</th>
+                                    <td>No</td>
+                                    <td>Nama Admin Wilayah</td>
                                     <th>Nomor Drum</th>
-                                    <th>Jumlah Kabel</th>
+                                    <th>Panjang</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
                                 <?php $no = 1;
-                                foreach ($tampildatarelasi as $td) : ?>
-                                    <tr>
-                                        <td><?= $no++; ?></td>
-                                        <td><?= $td['no_drum'] ?></td>
-                                        <td><?= $td['panjang'] ?></td>
-                                        <td></td>
-                                    </tr>
+                                foreach ($tampildata as $td1) : ?>
+                                    <?php
+                                    foreach ($tampildatarelasi as $td) : ?>
+                                        <tr>
+                                            <td><?= $no++ ?></td>
+                                            <td><?= $td1->nama ?></td>
+                                            <td><?= $td->no_drum ?></td>
+                                            <td><?= $td->panjang ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>

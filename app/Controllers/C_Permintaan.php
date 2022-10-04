@@ -41,8 +41,9 @@ class C_Permintaan extends BaseController
         $data = [
             'title' => 'Halaman Detail Permintaan kabel | SILOG AJS',
             'tampildata' => $this->permintaan_kabel->getById($id),
-            'tampildatarelasi' => $this->permintaan_kabel->getAllRelation()
+            'tampildatarelasi' => $this->detail_permintaan_kabel->getAllRelation($id)
         ];
+        // print_r($data);
         return view('Menu/Permintaan/Kabel/detail', $data);
     }
 
