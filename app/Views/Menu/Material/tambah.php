@@ -1,26 +1,22 @@
 <?= $this->extend('Template/layout') ?>
 <?= $this->section('content') ?>
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms /</span> Tambah Data Barang</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms /</span> Tambah Data material</h4>
     <!-- Basic Layout & Basic with Icons -->
     <div class="row">
         <div class="col-xl">
             <div class="card mb-4">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Tambah Data Barang</h5>
+                    <h5 class="mb-0">Tambah Data material</h5>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="<?= base_url("prosestambah-barang") ?>" enctype="multipart/form-data">
+                    <form method="POST" action="<?= base_url("prosestambah-material") ?>" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-fullname">Kode Barang</label>
-                            <input type="text" name="kode_barang" class="form-control" id="kode_barang" readonly value="BRG<?= sprintf("%04s", $kode_barang) ?>" />
+                            <label class="form-label" for="basic-default-company">Nama material</label>
+                            <input type="text" name="nama_material" class="form-control" id="basic-default-company" placeholder="Masukan nama material disini" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-company">Nama Barang</label>
-                            <input type="text" name="nama_barang" class="form-control" id="basic-default-company" placeholder="Masukan nama barang disini" />
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="basic-default-email">Kategori Barang</label>
+                            <label class="form-label" for="basic-default-email">Kategori material</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_kategori" class="form-control">
                                     <option value=""></option>
@@ -31,7 +27,7 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-email">Satuan Barang</label>
+                            <label class="form-label" for="basic-default-email">Satuan material</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_satuan" class="form-control">
                                     <option value=""></option>
@@ -60,7 +56,7 @@
                         <br>
                         <br>
                         <button type="submit" class="btn btn-primary">Tambah</button>
-                        <a href="<?= base_url('tampil-barang') ?>" class="btn btn-warning">Cancel </a>
+                        <a href="<?= base_url('tampil-material') ?>" class="btn btn-warning">Cancel </a>
                     </form>
                 </div>
             </div>

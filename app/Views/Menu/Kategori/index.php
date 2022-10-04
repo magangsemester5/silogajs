@@ -30,8 +30,8 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Kategori</th>
-                                    <?php if (session()->get('kriteria') == 'Admin') { ?>
-                                    <th>Aksi</th>
+                                    <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
+                                        <th>Aksi</th>
                                     <?php } ?>
                                 </tr>
                             </thead>
@@ -42,7 +42,7 @@
                                         <td><?= $no++; ?></td>
                                         <td><?= $td->nama_kategori ?></td>
                                         <td>
-                                            <?php if (session()->get('kriteria') == 'Admin') { ?>
+                                            <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
                                                 <a class="btn btn-warning btn-sm" href="<?= base_url("edit-kategori/$td->id_kategori"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
                                                 <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-kategori/$td->id_kategori"); ?>"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>

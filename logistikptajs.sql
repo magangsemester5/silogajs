@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 26, 2022 at 04:22 AM
+-- Generation Time: Sep 30, 2022 at 01:54 PM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -24,72 +24,78 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `barang`
+-- Table structure for table `detail_permintaan_kabel`
 --
 
-CREATE TABLE `barang` (
-  `id_barang` int(12) UNSIGNED NOT NULL,
+CREATE TABLE `detail_permintaan_kabel` (
+  `id_detail_permintaan_kabel` int(12) UNSIGNED NOT NULL,
+  `id_permintaan` int(12) UNSIGNED NOT NULL,
+  `id_kabel` int(12) UNSIGNED NOT NULL,
+  `status` int(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `detail_permintaan_material`
+--
+
+CREATE TABLE `detail_permintaan_material` (
+  `id_detail_permintaan_material` int(12) UNSIGNED NOT NULL,
+  `id_permintaan` int(12) UNSIGNED NOT NULL,
+  `id_material` int(12) UNSIGNED NOT NULL,
+  `status` int(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kabel`
+--
+
+CREATE TABLE `kabel` (
+  `id_kabel` int(12) UNSIGNED NOT NULL,
   `id_kategori` int(12) UNSIGNED NOT NULL,
   `id_satuan` int(12) UNSIGNED NOT NULL,
-  `kode_barang` varchar(50) NOT NULL,
-  `nama_barang` varchar(50) NOT NULL,
-  `stok` varchar(50) NOT NULL,
+  `no_drum` varchar(50) NOT NULL,
+  `core` int(50) NOT NULL,
+  `panjang` int(50) NOT NULL,
   `serial_number` varchar(50) NOT NULL,
   `foto_serial_number` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `barang`
---
-
-INSERT INTO `barang` (`id_barang`, `id_kategori`, `id_satuan`, `kode_barang`, `nama_barang`, `stok`, `serial_number`, `foto_serial_number`) VALUES
-(1, 1, 1, 'BRG0001', 'RJ-46', '20', 'KB3235', '1663940728_c76121258409d9a085bc.png');
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `barang_keluar`
+-- Table structure for table `kabel_keluar`
 --
 
-CREATE TABLE `barang_keluar` (
-  `id_barang_keluar` int(12) UNSIGNED NOT NULL,
-  `id_barang` int(12) UNSIGNED NOT NULL,
-  `id_permintaan` int(12) UNSIGNED NOT NULL,
+CREATE TABLE `kabel_keluar` (
+  `id_kabel_keluar` int(12) UNSIGNED NOT NULL,
+  `id_kabel` int(12) UNSIGNED NOT NULL,
+  `id_satuan` int(12) UNSIGNED NOT NULL,
+  `id` int(12) UNSIGNED NOT NULL,
   `tanggal_keluar` date NOT NULL,
-  `kode_barang_keluar` varchar(50) NOT NULL,
-  `jumlah_keluar` int(50) NOT NULL,
-  `foto_pengambilan_barang` varchar(50) NOT NULL
+  `panjang` varchar(50) NOT NULL,
+  `foto_penerima` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `barang_keluar`
---
-
-INSERT INTO `barang_keluar` (`id_barang_keluar`, `id_barang`, `id_permintaan`, `tanggal_keluar`, `kode_barang_keluar`, `jumlah_keluar`, `foto_pengambilan_barang`) VALUES
-(1, 1, 0, '2022-09-06', 'BKR0001', 30, 'startech-rj45-cat6-utp-network-cable-2-m.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `barang_masuk`
+-- Table structure for table `kabel_masuk`
 --
 
-CREATE TABLE `barang_masuk` (
-  `id_barang_masuk` int(12) UNSIGNED NOT NULL,
-  `id_barang` int(12) UNSIGNED NOT NULL,
+CREATE TABLE `kabel_masuk` (
+  `id_kabel_masuk` int(12) UNSIGNED NOT NULL,
+  `id_kabel` int(12) UNSIGNED NOT NULL,
   `tanggal_masuk` date NOT NULL,
-  `kode_barang_masuk` varchar(50) NOT NULL,
-  `jumlah_masuk` int(50) NOT NULL,
-  `foto_pengantaran_barang` varchar(50) NOT NULL,
-  `status` varchar(50) NOT NULL
+  `no_delivery_order` varchar(50) NOT NULL,
+  `no_hasbell` int(50) NOT NULL,
+  `gudang` varchar(50) NOT NULL,
+  `panjang` int(50) NOT NULL,
+  `foto_penerima` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `barang_masuk`
---
-
-INSERT INTO `barang_masuk` (`id_barang_masuk`, `id_barang`, `tanggal_masuk`, `kode_barang_masuk`, `jumlah_masuk`, `foto_pengantaran_barang`, `status`) VALUES
-(2, 1, '2022-09-06', 'BMS0001', 10, '1663940283_7b76fb11c148b6e5d53e.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -102,12 +108,54 @@ CREATE TABLE `kategori` (
   `nama_kategori` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `kategori`
+-- Table structure for table `material`
 --
 
-INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
-(1, 'Kabel');
+CREATE TABLE `material` (
+  `id_material` int(12) UNSIGNED NOT NULL,
+  `id_kategori` int(12) UNSIGNED NOT NULL,
+  `id_satuan` int(12) UNSIGNED NOT NULL,
+  `nama_material` varchar(50) NOT NULL,
+  `stok` varchar(50) NOT NULL,
+  `serial_number` varchar(50) NOT NULL,
+  `foto_serial_number` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `material_keluar`
+--
+
+CREATE TABLE `material_keluar` (
+  `id_material_keluar` int(12) UNSIGNED NOT NULL,
+  `id_material` int(12) UNSIGNED NOT NULL,
+  `id_satuan` int(12) UNSIGNED NOT NULL,
+  `id` int(12) UNSIGNED NOT NULL,
+  `tanggal_keluar` date NOT NULL,
+  `jumlah_keluar` int(50) NOT NULL,
+  `foto_penerima` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `material_masuk`
+--
+
+CREATE TABLE `material_masuk` (
+  `id_material_masuk` int(12) UNSIGNED NOT NULL,
+  `id_material` int(12) UNSIGNED NOT NULL,
+  `id_satuan` int(12) UNSIGNED NOT NULL,
+  `tanggal_masuk` date NOT NULL,
+  `no_delivery_order` varchar(50) NOT NULL,
+  `jumlah_masuk` int(50) NOT NULL,
+  `gudang` varchar(50) NOT NULL,
+  `foto_penerima` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -130,13 +178,18 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
-(78, '2022-08-24-091640', 'App\\Database\\Migrations\\Kategori', 'default', 'App', 1663935777, 1),
-(79, '2022-08-24-095332', 'App\\Database\\Migrations\\Satuan', 'default', 'App', 1663935777, 1),
-(80, '2022-09-06-022817', 'App\\Database\\Migrations\\User', 'default', 'App', 1663935777, 1),
-(81, '2022-09-07-012622', 'App\\Database\\Migrations\\Barang', 'default', 'App', 1663935777, 1),
-(82, '2022-09-07-030430', 'App\\Database\\Migrations\\Permintaan', 'default', 'App', 1663935777, 1),
-(83, '2022-09-10-081918', 'App\\Database\\Migrations\\BarangMasuk', 'default', 'App', 1663935777, 1),
-(84, '2022-09-10-082454', 'App\\Database\\Migrations\\BarangKeluar', 'default', 'App', 1663935777, 1);
+(438, '2022-08-24-091640', 'App\\Database\\Migrations\\Kategori', 'default', 'App', 1664524350, 1),
+(439, '2022-08-24-095332', 'App\\Database\\Migrations\\Satuan', 'default', 'App', 1664524350, 1),
+(440, '2022-09-06-022817', 'App\\Database\\Migrations\\User', 'default', 'App', 1664524350, 1),
+(441, '2022-09-30-024748', 'App\\Database\\Migrations\\Material', 'default', 'App', 1664524350, 1),
+(442, '2022-09-30-025259', 'App\\Database\\Migrations\\Kabel', 'default', 'App', 1664524350, 1),
+(443, '2022-09-30-030853', 'App\\Database\\Migrations\\KabelMasuk', 'default', 'App', 1664524350, 1),
+(444, '2022-09-30-031451', 'App\\Database\\Migrations\\KabelKeluar', 'default', 'App', 1664524350, 1),
+(445, '2022-09-30-073133', 'App\\Database\\Migrations\\Permintaan', 'default', 'App', 1664524351, 1),
+(446, '2022-09-30-073325', 'App\\Database\\Migrations\\MaterialMasuk', 'default', 'App', 1664524351, 1),
+(447, '2022-09-30-073614', 'App\\Database\\Migrations\\MaterialKeluar', 'default', 'App', 1664524351, 1),
+(448, '2022-09-30-074402', 'App\\Database\\Migrations\\DetailPermintaanKabel', 'default', 'App', 1664524351, 1),
+(449, '2022-09-30-074637', 'App\\Database\\Migrations\\DetailPermintaanMaterial', 'default', 'App', 1664524351, 1);
 
 -- --------------------------------------------------------
 
@@ -146,19 +199,13 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 
 CREATE TABLE `permintaan` (
   `id_permintaan` int(12) UNSIGNED NOT NULL,
-  `id_barang` int(12) UNSIGNED NOT NULL,
+  `id_material` int(12) UNSIGNED NOT NULL,
+  `id_kabel` int(12) UNSIGNED NOT NULL,
   `no_permintaan` varchar(50) NOT NULL,
   `jumlah_permintaan` varchar(50) NOT NULL,
   `wilayah` varchar(50) NOT NULL,
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `permintaan`
---
-
-INSERT INTO `permintaan` (`id_permintaan`, `id_barang`, `no_permintaan`, `jumlah_permintaan`, `wilayah`, `status`) VALUES
-(1, 1, '001/LOG/PKU/21/IX/2022', '12', 'Pekanbaru', 'Accept');
 
 -- --------------------------------------------------------
 
@@ -170,13 +217,6 @@ CREATE TABLE `satuan` (
   `id_satuan` int(12) UNSIGNED NOT NULL,
   `nama_satuan` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `satuan`
---
-
-INSERT INTO `satuan` (`id_satuan`, `nama_satuan`) VALUES
-(1, 'Meter');
 
 -- --------------------------------------------------------
 
@@ -191,50 +231,107 @@ CREATE TABLE `user` (
   `jabatan` varchar(50) NOT NULL,
   `id_user` varchar(50) NOT NULL,
   `kriteria` varchar(50) NOT NULL,
-  `foto_user` varchar(50) NOT NULL
+  `foto_user` varchar(50) NOT NULL,
+  `wilayah` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `nama`, `password`, `jabatan`, `id_user`, `kriteria`, `foto_user`) VALUES
-(1, 'Muhammad Hanif Arafi', '123', 'Petugas Gudang', 'PG001', 'User A', '1663940283_7b76fb11c148b6e5d53e.jpg'),
-(2, 'Lisa Aviana Sulistyanto', '123', 'Admin', 'ADM001', 'User B', 'lisa.jpg'),
-(3, 'Roro Widya Adi Kusuma', '123', 'Supervisor', 'SPV001', 'User C', 'roro.jpg'),
-(4, 'Alexandro Gabriel Pratama Pangaribuan', '123', 'Admin', 'ADM002', 'User B', 'alex.jpg');
+INSERT INTO `user` (`id`, `nama`, `password`, `jabatan`, `id_user`, `kriteria`, `foto_user`, `wilayah`) VALUES
+(1, 'Nur Muhammad Yahya', '123', ' Admin Wilayah', 'AWM001', 'Admin Wilayah', 'Nur.jpg', 'Medan'),
+(2, 'Ahmad Kholis Rahman', '123', 'Admin Wilayah', 'AWPG001', 'Admin Wilayah', 'ahmad.jpg', 'Padang'),
+(3, 'Rahmat Setiawan', '123', 'Admin Wilayah', 'AWJ001', 'Admin Wilayah', 'rahmat.jpg', 'Jawa Barat'),
+(4, 'Rizka Rahmani', '123', 'Admin Wilayah', 'AWY001', 'Admin Wilayah', 'rizka.jpg', 'Yogyakarta'),
+(5, 'Siska Julia Sari', '123', 'Admin Wilayah', 'AWPN001', 'Admin Wilayah', 'siska.jpg', 'Pasuruan'),
+(6, 'Abdul Rahman', '123', 'RPM ', 'RPMM001', 'RPM', 'abdul.jpg', 'Medan'),
+(7, 'Abdul Rifai Natanegara', '123', 'RPM ', 'RPMPG001', 'RPM', 'rifai.jpg', 'Padang'),
+(8, 'Achmad Kalla', '123', 'RPM', 'RPMJ001', 'RPM', 'achmad.jpg', 'Jakarta'),
+(9, 'Ade Tjakralaksana', '123', 'RPM ', 'RPMJBG001', 'RPM', 'ade.jpg', 'Jawa Barat'),
+(10, 'Adi Sumito', '123', 'RPM', 'RPMY001', '123', 'adi.jpg', 'Yogyakarta'),
+(11, 'Adriana Maya Politon', '123', 'RPM', 'RPMPN001', 'RPM', 'adriana.jpg', 'Pasuruan'),
+(12, 'Akbar Yoso Trisedia', '123', 'Admin Wilayah', 'AWS001', 'Admin Wilayah', 'akbar.jpg', 'Sulawesi'),
+(13, 'Alexandra Miksar', '123', 'RPM ', 'RPMS001', 'RPM', 'alexandra.jpg', 'Sulawesi'),
+(14, 'Muhammad Hanif Arafi', '123', 'Admin Pusat', 'AP001', 'Admin Pusat', 'hanif.jpg', 'Jakarta'),
+(15, 'Lisa Aviana Sulistyanto', '123', 'PM', 'PM001', 'PM', 'lisa.jpg', 'Jakarta'),
+(16, 'Roro Widya Adi Kusuma', '123', 'Direktur', 'D001', 'Direktur', 'roro.jpg', 'Jakarta'),
+(17, 'Alexandro Gabriel Pratama Pangaribuan', '123', 'Management', 'M001', 'Management', 'alexandro.jpg', 'Jakarta');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `barang`
+-- Indexes for table `detail_permintaan_kabel`
 --
-ALTER TABLE `barang`
-  ADD PRIMARY KEY (`id_barang`),
-  ADD KEY `barang_id_kategori_foreign` (`id_kategori`),
-  ADD KEY `barang_id_satuan_foreign` (`id_satuan`);
+ALTER TABLE `detail_permintaan_kabel`
+  ADD PRIMARY KEY (`id_detail_permintaan_kabel`),
+  ADD KEY `detail_permintaan_kabel_id_permintaan_foreign` (`id_permintaan`),
+  ADD KEY `detail_permintaan_kabel_id_kabel_foreign` (`id_kabel`);
 
 --
--- Indexes for table `barang_keluar`
+-- Indexes for table `detail_permintaan_material`
 --
-ALTER TABLE `barang_keluar`
-  ADD PRIMARY KEY (`id_barang_keluar`),
-  ADD KEY `barang_keluar_id_barang_foreign` (`id_barang`);
+ALTER TABLE `detail_permintaan_material`
+  ADD PRIMARY KEY (`id_detail_permintaan_material`),
+  ADD KEY `detail_permintaan_material_id_permintaan_foreign` (`id_permintaan`),
+  ADD KEY `detail_permintaan_material_id_material_foreign` (`id_material`);
 
 --
--- Indexes for table `barang_masuk`
+-- Indexes for table `kabel`
 --
-ALTER TABLE `barang_masuk`
-  ADD PRIMARY KEY (`id_barang_masuk`),
-  ADD KEY `barang_masuk_id_barang_foreign` (`id_barang`);
+ALTER TABLE `kabel`
+  ADD PRIMARY KEY (`id_kabel`),
+  ADD KEY `kabel_id_kategori_foreign` (`id_kategori`),
+  ADD KEY `kabel_id_satuan_foreign` (`id_satuan`);
+
+--
+-- Indexes for table `kabel_keluar`
+--
+ALTER TABLE `kabel_keluar`
+  ADD PRIMARY KEY (`id_kabel_keluar`),
+  ADD KEY `kabel_keluar_id_kabel_foreign` (`id_kabel`),
+  ADD KEY `kabel_keluar_id_satuan_foreign` (`id_satuan`),
+  ADD KEY `kabel_keluar_id_foreign` (`id`);
+
+--
+-- Indexes for table `kabel_masuk`
+--
+ALTER TABLE `kabel_masuk`
+  ADD PRIMARY KEY (`id_kabel_masuk`),
+  ADD KEY `kabel_masuk_id_kabel_foreign` (`id_kabel`);
 
 --
 -- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
+
+--
+-- Indexes for table `material`
+--
+ALTER TABLE `material`
+  ADD PRIMARY KEY (`id_material`),
+  ADD KEY `material_id_kategori_foreign` (`id_kategori`),
+  ADD KEY `material_id_satuan_foreign` (`id_satuan`);
+
+--
+-- Indexes for table `material_keluar`
+--
+ALTER TABLE `material_keluar`
+  ADD PRIMARY KEY (`id_material_keluar`),
+  ADD KEY `material_keluar_id_material_foreign` (`id_material`),
+  ADD KEY `material_keluar_id_satuan_foreign` (`id_satuan`),
+  ADD KEY `material_keluar_id_foreign` (`id`);
+
+--
+-- Indexes for table `material_masuk`
+--
+ALTER TABLE `material_masuk`
+  ADD PRIMARY KEY (`id_material_masuk`),
+  ADD KEY `material_masuk_id_material_foreign` (`id_material`),
+  ADD KEY `material_masuk_id_satuan_foreign` (`id_satuan`);
 
 --
 -- Indexes for table `migrations`
@@ -247,7 +344,8 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `permintaan`
   ADD PRIMARY KEY (`id_permintaan`),
-  ADD KEY `permintaan_id_barang_foreign` (`id_barang`);
+  ADD KEY `permintaan_id_material_foreign` (`id_material`),
+  ADD KEY `permintaan_id_kabel_foreign` (`id_kabel`);
 
 --
 -- Indexes for table `satuan`
@@ -266,81 +364,150 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `barang`
+-- AUTO_INCREMENT for table `detail_permintaan_kabel`
 --
-ALTER TABLE `barang`
-  MODIFY `id_barang` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `detail_permintaan_kabel`
+  MODIFY `id_detail_permintaan_kabel` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `barang_keluar`
+-- AUTO_INCREMENT for table `detail_permintaan_material`
 --
-ALTER TABLE `barang_keluar`
-  MODIFY `id_barang_keluar` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `detail_permintaan_material`
+  MODIFY `id_detail_permintaan_material` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `barang_masuk`
+-- AUTO_INCREMENT for table `kabel`
 --
-ALTER TABLE `barang_masuk`
-  MODIFY `id_barang_masuk` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `kabel`
+  MODIFY `id_kabel` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `kabel_keluar`
+--
+ALTER TABLE `kabel_keluar`
+  MODIFY `id_kabel_keluar` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `kabel_masuk`
+--
+ALTER TABLE `kabel_masuk`
+  MODIFY `id_kabel_masuk` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_kategori` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `material`
+--
+ALTER TABLE `material`
+  MODIFY `id_material` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `material_keluar`
+--
+ALTER TABLE `material_keluar`
+  MODIFY `id_material_keluar` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `material_masuk`
+--
+ALTER TABLE `material_masuk`
+  MODIFY `id_material_masuk` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=450;
 
 --
 -- AUTO_INCREMENT for table `permintaan`
 --
 ALTER TABLE `permintaan`
-  MODIFY `id_permintaan` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_permintaan` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `satuan`
 --
 ALTER TABLE `satuan`
-  MODIFY `id_satuan` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_satuan` int(12) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `barang`
+-- Constraints for table `detail_permintaan_kabel`
 --
-ALTER TABLE `barang`
-  ADD CONSTRAINT `barang_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`),
-  ADD CONSTRAINT `barang_id_satuan_foreign` FOREIGN KEY (`id_satuan`) REFERENCES `satuan` (`id_satuan`);
+ALTER TABLE `detail_permintaan_kabel`
+  ADD CONSTRAINT `detail_permintaan_kabel_id_kabel_foreign` FOREIGN KEY (`id_kabel`) REFERENCES `kabel` (`id_kabel`),
+  ADD CONSTRAINT `detail_permintaan_kabel_id_permintaan_foreign` FOREIGN KEY (`id_permintaan`) REFERENCES `permintaan` (`id_permintaan`);
 
 --
--- Constraints for table `barang_keluar`
+-- Constraints for table `detail_permintaan_material`
 --
-ALTER TABLE `barang_keluar`
-  ADD CONSTRAINT `barang_keluar_id_barang_foreign` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id_barang`);
+ALTER TABLE `detail_permintaan_material`
+  ADD CONSTRAINT `detail_permintaan_material_id_material_foreign` FOREIGN KEY (`id_material`) REFERENCES `material` (`id_material`),
+  ADD CONSTRAINT `detail_permintaan_material_id_permintaan_foreign` FOREIGN KEY (`id_permintaan`) REFERENCES `permintaan` (`id_permintaan`);
 
 --
--- Constraints for table `barang_masuk`
+-- Constraints for table `kabel`
 --
-ALTER TABLE `barang_masuk`
-  ADD CONSTRAINT `barang_masuk_id_barang_foreign` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id_barang`);
+ALTER TABLE `kabel`
+  ADD CONSTRAINT `kabel_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`),
+  ADD CONSTRAINT `kabel_id_satuan_foreign` FOREIGN KEY (`id_satuan`) REFERENCES `satuan` (`id_satuan`);
+
+--
+-- Constraints for table `kabel_keluar`
+--
+ALTER TABLE `kabel_keluar`
+  ADD CONSTRAINT `kabel_keluar_id_foreign` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `kabel_keluar_id_kabel_foreign` FOREIGN KEY (`id_kabel`) REFERENCES `kabel` (`id_kabel`),
+  ADD CONSTRAINT `kabel_keluar_id_satuan_foreign` FOREIGN KEY (`id_satuan`) REFERENCES `satuan` (`id_satuan`);
+
+--
+-- Constraints for table `kabel_masuk`
+--
+ALTER TABLE `kabel_masuk`
+  ADD CONSTRAINT `kabel_masuk_id_kabel_foreign` FOREIGN KEY (`id_kabel`) REFERENCES `kabel` (`id_kabel`);
+
+--
+-- Constraints for table `material`
+--
+ALTER TABLE `material`
+  ADD CONSTRAINT `material_id_kategori_foreign` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`),
+  ADD CONSTRAINT `material_id_satuan_foreign` FOREIGN KEY (`id_satuan`) REFERENCES `satuan` (`id_satuan`);
+
+--
+-- Constraints for table `material_keluar`
+--
+ALTER TABLE `material_keluar`
+  ADD CONSTRAINT `material_keluar_id_foreign` FOREIGN KEY (`id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `material_keluar_id_material_foreign` FOREIGN KEY (`id_material`) REFERENCES `material` (`id_material`),
+  ADD CONSTRAINT `material_keluar_id_satuan_foreign` FOREIGN KEY (`id_satuan`) REFERENCES `satuan` (`id_satuan`);
+
+--
+-- Constraints for table `material_masuk`
+--
+ALTER TABLE `material_masuk`
+  ADD CONSTRAINT `material_masuk_id_material_foreign` FOREIGN KEY (`id_material`) REFERENCES `material` (`id_material`),
+  ADD CONSTRAINT `material_masuk_id_satuan_foreign` FOREIGN KEY (`id_satuan`) REFERENCES `satuan` (`id_satuan`);
 
 --
 -- Constraints for table `permintaan`
 --
 ALTER TABLE `permintaan`
-  ADD CONSTRAINT `permintaan_id_barang_foreign` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id_barang`);
+  ADD CONSTRAINT `permintaan_id_kabel_foreign` FOREIGN KEY (`id_kabel`) REFERENCES `kabel` (`id_kabel`),
+  ADD CONSTRAINT `permintaan_id_material_foreign` FOREIGN KEY (`id_material`) REFERENCES `material` (`id_material`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

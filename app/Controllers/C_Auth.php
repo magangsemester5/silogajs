@@ -83,12 +83,18 @@ class C_Auth extends BaseController
                     return redirect()->to(base_url('tampil_dashboard'));
                 }
             } else {
-                echo "password salah";
-                return redirect()->to(base_url('halaman_login'));
+                session()->setFlashdata('status', 'Gagal Login');
+                return redirect()
+                    ->to(base_url('halaman_login'))
+                    ->with('status_icon', 'error')
+                    ->with('status_text', 'Username atau Password yang Anda masukan salah');
             }
         } else {
-            echo "password salah";
-            return redirect()->to(base_url('halaman_login'));
+            session()->setFlashdata('status', 'Gagal Login');
+            return redirect()
+                ->to(base_url('halaman_login'))
+                ->with('status_icon', 'error')
+                ->with('status_text', 'Username atau Password yang Anda masukan salah');
         }
     }
     function logout()

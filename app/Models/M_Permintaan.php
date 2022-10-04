@@ -29,8 +29,4 @@ class M_Permintaan extends Model
         return $query->getRowArray();
     }
     
-    function update_data($where,$data,$table){
-        $this->material->where($where);
-		$this->material->update($table,$data);
-	}
 }

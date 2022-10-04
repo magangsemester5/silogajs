@@ -60,9 +60,9 @@ class C_Kategori extends BaseController
             ->with('status_text', 'Data Berhasil diupdate');
     }
 
-    public function hapus($id)
+    public function hapus($id_kategori)
     {
-        $this->kategori->delete($id);
+        $this->kategori->delete($id_kategori);
         session()->setFlashdata('status', 'Data Kategori berhasil dihapus');
         return redirect()
             ->to(base_url('tampil-kategori'))

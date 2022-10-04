@@ -95,17 +95,15 @@
               <div data-i18n="Analytics">Dashboard</div>
               </a>
               </li>
-             <!-- Tampilan Admin Wilayah -->
-             <?php if (session()->get('jabatan') == 'Admin Wilayah') { ?>
+            <!-- Tampilan Admin Wilayah -->
+            <?php if (session()->get('jabatan') == 'Admin Wilayah') { ?>
             <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
             <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url(
-                                            'tampil-permintaan'
-                                          ) ?>">
+              <a class="menu-link" href="<?= base_url('tampil-permintaan') ?>">
               <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
               <div data-i18n="Analytics">Permintaan</div>
               </a>
@@ -154,6 +152,19 @@
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('tampil-material') ?>">
               <div data-i18n="Analytics">material</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel | SILOG AJS' ||
+                $title == 'Halaman Edit kabel | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-kabel') ?>">
+              <div data-i18n="Analytics">kabel</div>
               </a>
               </li>
               <?php if (
@@ -209,18 +220,37 @@
               </li>
               </ul>
             </li>
-            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
+            <!-- New -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
+                <div data-i18n="Account Settings">Permintaan</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                $title == 'Halaman Permintaan material | SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url(
-                                            'tampil-permintaan'
-                                          ) ?>">
-              <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
-              <div data-i18n="Analytics">Permintaan</div>
+              <a class="menu-link" href="<?= base_url('tampilpermintaan-material') ?>">
+              <div data-i18n="Analytics">Permintaan Material</div>
               </a>
-            </li>
+              </li>
+              <?php if (
+                $title == 'Halaman Permintaan kabel | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampilpermintaan-kabel') ?>">
+              <div data-i18n="Analytics">Permintaan Kabel</div>
+              </a>
+              </li>
+              </ul>
+              </li>
               <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
               <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
               <li class="menu-item active">
@@ -255,8 +285,8 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                  $title == 'Halaman Kategori | SILOG AJS'
-                ) : ?>
+                $title == 'Halaman Kategori | SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
@@ -266,8 +296,8 @@
               </a>
               </li>
               <?php if (
-                  $title == 'Halaman material | SILOG AJS'
-                ) : ?>
+                $title == 'Halaman material | SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
@@ -277,8 +307,8 @@
               </a>
               </li>
               <?php if (
-                  $title == 'Halaman Satuan | SILOG AJS'
-                ) : ?>
+                $title == 'Halaman Satuan | SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
@@ -296,8 +326,8 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                  $title == 'Halaman material Masuk| SILOG AJS'
-                ) : ?>
+                $title == 'Halaman material Masuk | SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
@@ -309,8 +339,8 @@
               </a>
               </li>
               <?php if (
-                  $title == 'Halaman material Keluar | SILOG AJS'
-                ) : ?>
+                $title == 'Halaman material Keluar | SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">

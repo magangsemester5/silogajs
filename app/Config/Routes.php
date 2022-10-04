@@ -47,10 +47,10 @@ $routes->get('tampil_dashboard', 'C_Dashboard::index', ['filter' => 'auth']);
 $routes->get('logout', 'C_Auth::logout');
 
 // Routing Kategori
-$routes->get('tampil-kategori', 'C_Kategori::index');
-$routes->get('tambah-kategori', 'C_Kategori::tambah');
-$routes->post('prosestambah-kategori', 'C_Kategori::proses_tambah');
-$routes->get('edit-kategori/(:num)', 'C_Kategori::edit/$1');
+$routes->get('tampil-kategori', 'C_Kategori::index', ['filter' => 'auth']);
+$routes->get('tambah-kategori', 'C_Kategori::tambah', ['filter' => 'auth']);
+$routes->post('prosestambah-kategori', 'C_Kategori::proses_tambah', ['filter' => 'auth']);
+$routes->get('edit-kategori/(:num)', 'C_Kategori::edit/$1', ['filter' => 'auth']);
 $routes->post('prosesedit-kategori', 'C_Kategori::proses_edit', ['filter' => 'auth']);
 $routes->get('hapus-kategori/(:num)', 'C_Kategori::hapus/$1', ['filter' => 'auth']);
 
@@ -62,6 +62,14 @@ $routes->post('prosestambah-material', 'C_Material::proses_tambah', ['filter' =>
 $routes->get('edit-material/(:num)', 'C_Material::edit/$1', ['filter' => 'auth']);
 $routes->post('prosesedit-material', 'C_Material::proses_edit', ['filter' => 'auth']);
 $routes->get('hapus-material/(:num)', 'C_Material::hapus/$1', ['filter' => 'auth']);
+
+// Data Kabel
+$routes->get('tampil-kabel', 'C_Kabel::index', ['filter' => 'auth']);
+$routes->get('tambah-kabel', 'C_Kabel::tambah', ['filter' => 'auth']);
+$routes->post('prosestambah-kabel', 'C_Kabel::proses_tambah', ['filter' => 'auth']);
+$routes->get('edit-kabel/(:num)', 'C_Kabel::edit/$1', ['filter' => 'auth']);
+$routes->post('prosesedit-kabel', 'C_Kabel::proses_edit', ['filter' => 'auth']);
+$routes->get('hapus-kabel/(:num)', 'C_Kabel::hapus/$1', ['filter' => 'auth']);
 
 // Material Masuk
 $routes->get('tampil-materialmasuk', 'C_Material_Masuk::index', ['filter' => 'auth']);
@@ -98,11 +106,11 @@ $routes->get('hapus-satuan/(:num)', 'C_Satuan::hapus/$1', ['filter' => 'auth']);
 
 $routes->get('cekstok/(:num)', 'C_Material::cek_stok/$1', ['filter' => 'auth']);
 
-// Permintaan
-$routes->get('tampil-permintaan', 'C_Permintaan::index', ['filter' => 'auth']);
-$routes->get('hapus-permintaan/(:num)', 'C_Permintaan::hapus/$1', ['filter' => 'auth']);
-$routes->get('autotampildatapermintaan/(:num)', 'C_Permintaan::tampil_otomatis_data_permintaan/$1', ['filter' => 'auth']);
-
+// Permintaan Material
+$routes->get('tampilpermintaan-material', 'C_Permintaan::permintaan_material', ['filter' => 'auth']);
+// Permintaan Kabel
+$routes->get('tampilpermintaan-kabel', 'C_Permintaan::permintaan_kabel', ['filter' => 'auth']);
+$routes->get('detailpermintaan-kabel/(:num)', 'C_Permintaan::detail_permintaan_kabel/$1', ['filter' => 'auth']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

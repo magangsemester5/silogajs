@@ -31,13 +31,6 @@ class M_Material_Masuk extends Model
         return $query->getResult();
     }
 
-    function update_data_db()
-    {
-        $query = $this->db->query("SELECT * FROM material_masuk");
-        $query = $query->getRow();
-        return $query->kode_material_masuk;
-    }
-
     public function cekStok($id = null)
     {
         $builder = $this->db->table('material_masuk');                                                              

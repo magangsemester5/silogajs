@@ -37,7 +37,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Wilayah</label>
-                            <input readonly="readonly" id="wilayah" name="wilayah" type="text" class="form-control">
+                            <input readonly="readonly" id="wilayah" type="text" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="nama_material">Nama material</label>
@@ -69,6 +69,17 @@
                                 <input id="nama_satuan" class="input-group-text col-md-4" disabled>
                             </div>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-fullname">Nama Admin Wilayah</label>
+                            <div class="input-group input-group-merge">
+                                <select class="form-control" name="id" id="id">
+                                    <option value="" disabled selected>Pilih Nama Admin Wilayah</option>
+                                    <?php foreach ($tampildataadminwilayah as $key => $value) : ?>
+                                        <option value="<?= $value->id ?>"><?= $value->nama ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
                         <!-- Error Validation -->
                         <?php /* if ($validation->getError('jumlah_keluar')) { ?> 
                             <div class='alert alert-danger mt-2'>
@@ -91,11 +102,10 @@
                             </div>
                             <br>
                             <div class="mb-3">
-                                <label class="custom-file-label">Foto Pengambilan material</label>
-                                <input type="file" name="foto_pengambilan_material" id="inputFile" class="form-control" required>
+                                <label class="custom-file-label">Foto Penerima</label>
+                                <input type="file" name="foto_penerima" id="inputFile" class="form-control" required>
                             </div>
                             <div class="col-md-3">
-                                <label>Preview Foto Pengambilan</label>
                                 <img src="" id="imgView" class="card-img-top img-fluid">
                             </div>
                             <br>

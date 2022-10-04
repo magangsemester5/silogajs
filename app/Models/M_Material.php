@@ -39,12 +39,7 @@ class M_Material extends Model
     {
         return $this->db->table('material_keluar')->select('count(*) as jumlah, id_material')->groupBy('id_material')->get()->getResultArray();
     }
-
-    function update_data($where, $data, $table)
-    {
-        $this->material->where($where);
-        $this->material->update($table, $data);
-    }
+    
     function count($table)
     {
         $builder = $this->db->table($table);

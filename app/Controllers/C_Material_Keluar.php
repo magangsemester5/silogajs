@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\M_Material_Keluar;
 use App\Models\M_Material;
 use App\Models\M_Permintaan;
+use App\Models\M_User;
 
 class C_material_Keluar extends BaseController
 {
@@ -14,6 +15,7 @@ class C_material_Keluar extends BaseController
         $this->material_keluar = new M_Material_Keluar();
         $this->material = new M_Material();
         $this->permintaan = new M_Permintaan();
+        $this->user = new M_User();
     }
     public function index()
     {
@@ -29,7 +31,8 @@ class C_material_Keluar extends BaseController
         $data = [
             'title' => 'Halaman Tambah material Keluar | SILOG AJS',
             'tampildatamaterial' => $this->material->findAll(),
-            'tampildatapermintaan' => $this->permintaan->findAll()
+            'tampildatapermintaan' => $this->permintaan->findAll(),
+            'tampildataadminwilayah' => $this->user->findAll()
         ];
         return view('Menu/material_Keluar/tambah', $data);
     }
@@ -44,13 +47,6 @@ class C_material_Keluar extends BaseController
                 'rules' => "required",
                 'errors' => [
                     'required' => "{field} harus diisi"
-                ]
-            ],
-            'kode_material_keluar' => [
-                'label' => "Kode material Keluar",
-                'rules' => "required",
-                'errors' => [
-                    'required' => "{field} harus diisi",
                 ]
             ],
             'id_material' => [
@@ -70,15 +66,16 @@ class C_material_Keluar extends BaseController
             // ],
         ];
         if ($this->validate($rules)) {
-            $image = $this->request->getFile('foto_pengambilan_material');
+            $image = $this->request->getFile('foto_penerima');
             $image->move(ROOTPATH . 'public/uploads');
             $id_material = $this->request->getVar('id_material');
             $data = [
                 'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
-                'kode_material_keluar' => $this->request->getVar('kode_material_keluar'),
                 'id_material' => $id_material,
+                'id_satuan' => $this->request->getVar('id_satuan'),
+                'id' => $this->request->getVar('id'),
                 'jumlah_keluar' => $this->request->getVar('jumlah_keluar'),
-                'foto_pengambilan_material' => $image->getClientName(),
+                'foto_penerima' => $image->getClientName(),
             ];
             $this->material_keluar->insert($data);
             $where = [
@@ -97,14 +94,10 @@ class C_material_Keluar extends BaseController
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil ditambah');
         } else {
-            $getGenerate = $this->material_keluar->generateCode();
-            $nourut = substr($getGenerate, 3, 4);
-            $kodematerialGenerate = $nourut + 1;
             $data = [
                 'title' => 'Halaman Tambah material Keluar | SILOG AJS',
                 'tampildatamaterial' => $this->material->findAll(),
                 'tampildatapermintaan' => $this->permintaan->findAll(),
-                'kode_material_keluar' => $kodematerialGenerate,
                 'validation' => $this->validator
             ];
             return view('Menu/material_Keluar/tambah', $data);
@@ -138,7 +131,6 @@ class C_material_Keluar extends BaseController
             'id_kategori' => $this->request->getVar('id_kategori'),
             'id_satuan' => $this->request->getVar('id_satuan'),
             'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
-            'kode_material' => $this->request->getVar('kode_material'),
             'nama_material' => $this->request->getVar('nama_material'),
             'stok' => $this->request->getVar('stok'),
             'serial_number' => $this->request->getVar('serial_number'),

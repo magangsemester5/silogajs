@@ -30,11 +30,4 @@ class M_Material_Keluar extends Model
         $query = $builder->get();
         return $query->getResult();
     }
-    
-    function update_data_db()
-    {
-        $query = $this->db->query("SELECT * FROM material_keluar");
-        $query = $query->getRow();
-        return $query->kode_material_keluar;
-    }
 }

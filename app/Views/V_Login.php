@@ -123,5 +123,20 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Sweet Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../template/js/jquery-3.6.0.js"></script>
+    <script>
+    $(document).ready(function () {
+      <?php if (session()->getFlashdata('status')) { ?>
+      swal({
+          title: "<?= session()->getFlashdata('status') ?>",
+          text: "<?= session()->getFlashdata('status_text') ?>",
+          icon: "<?= session()->getFlashdata('status_icon') ?>",
+          button: "OK",
+      });
+      <?php } ?>
+      });
+    </script>
   </body>
 </html>

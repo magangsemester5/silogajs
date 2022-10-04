@@ -31,10 +31,10 @@
                                     <th>No</th>
                                     <th>Tanggal</th>
                                     <th>Nama material</th>
-                                    <th>Jumlah material Keluar</th>
-                                    <?php if (session()->get('kriteria') == 'Admin') { ?>
+                                    <th>Wilayah</th>
+                                    <th>Nama Admin Wilayah</th>
+                                    <th>Jumlah Keluar</th>
                                     <th>Aksi</th>
-                                    <?php } ?>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -44,11 +44,23 @@
                                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $no++ ?></strong></td>
                                         <td><?= $td->tanggal_keluar ?></td>
                                         <td><?= $td->nama_material ?></td>
+                                        <td><?= $td->wilayah ?></td>
                                         <td><?= $td->jumlah_keluar ?></td>
                                         <td>
-                                            <?php if (session()->get('kriteria') == 'Admin') { ?>
+                                        <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
+                                            <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                            <?php } ?>
+                                            <?php if (session()->get('jabatan') == 'PM') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                                 <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                            <?php } ?>
+                                            <?php if (session()->get('jabatan') == 'Direktur') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                            <?php } ?>
+                                            <?php if (session()->get('jabatan') == 'Management') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-kabel/$td->id_kabel"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                             <?php } ?>
                                         </td>
                                     </tr>
