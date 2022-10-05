@@ -87,6 +87,14 @@ $routes->get('tambah-materialkeluar', 'C_Material_Keluar::tambah', ['filter' => 
 $routes->post('prosestambah-materialkeluar', 'C_Material_Keluar::proses_tambah', ['filter' => 'auth']);
 $routes->get('hapus-materialkeluar/(:num)', 'C_Material_Keluar::hapus/$1', ['filter' => 'auth']);
 
+// Kabel Keluar
+$routes->get('tampil-kabelkeluar', 'C_Kabel_Keluar::index', ['filter' => 'auth']);
+$routes->get('autotampildatakabelkeluar/(:num)', 'C_Kabel_Keluar::tampil_otomatis_data_kabel_keluar/$1', ['filter' => 'auth']);
+$routes->get('detail-kabelkeluar/(:num)', 'C_Kabel_Keluar::detail/$1', ['filter' => 'auth']);
+$routes->get('tambah-kabelkeluar', 'C_Kabel_Keluar::tambah', ['filter' => 'auth']);
+$routes->post('prosestambah-kabelkeluar', 'C_Kabel_Keluar::proses_tambah', ['filter' => 'auth']);
+$routes->get('hapus-kabelkeluar/(:num)', 'C_Kabel_Keluar::hapus/$1', ['filter' => 'auth']);
+
 // Data Manajemen User
 $routes->get('tampil-user', 'C_User::index', ['filter' => 'auth']);
 $routes->get('detail-user/(:num)', 'C_User::detail/$1', ['filter' => 'auth']);

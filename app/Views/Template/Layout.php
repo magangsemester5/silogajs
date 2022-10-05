@@ -218,6 +218,21 @@
               <div data-i18n="Analytics">Material Keluar</div>
               </a>
               </li>
+              <?php if (
+                $title == 'Halaman kabel Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit kabel Keluar | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-kabelkeluar'
+                                          ) ?>">
+              <div data-i18n="Analytics">Kabel Keluar</div>
+              </a>
+              </li>
               </ul>
             </li>
             <!-- New -->
@@ -770,7 +785,7 @@
             $(".alert").text(text).addClass("loadAnimate");
         }
     </script>
-        <!-- Mendapatkan Kalkulasi Total Stok -->
+        <!-- Mendapatkan Kalkulasi Total Stok Material Keluar -->
         <script type="text/javascript">
           <?php $request = \Config\Services::request(); ?>
           let hal = '<?= $request->uri->getSegment(1) ?>';
@@ -819,6 +834,57 @@
         $(document).on('keyup', '#jumlah_keluar', function() {
             let totalStok = parseInt(stok.val()) - parseInt(this.value);
             total.val(Number(totalStok));
+        });
+    </script>
+    <!-- Mendapatkan Kalkulasi Total Stok Kabel Keluar -->
+    <script type="text/javascript">
+          <?php $request = \Config\Services::request(); ?>
+          let hal = '<?= $request->uri->getSegment(1) ?>';
+          let serial_number = $('#serial_number');
+          let nama_satuan = $('#nama_satuan');
+          let panjang = $('#panjang');
+          let total = $('#total_pajang');
+          let foto_serial_number = $('#foto_serial_number');
+          let jumlah = hal == 'tampil-kabelkeluar' ? $('#panjang_masuk') : $('#panjang_keluar');
+          let wilayah = $('#wilayah');
+
+        $(document).on('change', '#no_drum', function() {
+          var id = $(this).val();
+          $.ajax({
+              url: "<?php echo base_url('autotampildatakabelkeluar'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                serial_number.val(data.serial_number);
+                nama_satuan.val(data.nama_satuan);
+                panjang.val(data.panjang);
+                total.val(data.panjang);
+                foto_serial_number.html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>");
+                jumlah.focus();
+              }
+            });
+        });
+
+        $(document).on('change', '#id_permintaan', function() {
+          var id = $(this).val();
+          $.ajax({
+              url: "<?php echo base_url('autotampildatapermintaan'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                wilayah.val(data.wilayah);
+              }
+            });
+        });
+
+        $(document).on('keyup', '#panjang_masuk', function() {
+            let totalPanjang = parseInt(panjang.val()) + parseInt(this.value);
+            total.val(Number(totalPanjang));
+        });
+
+        $(document).on('keyup', '#panjang_keluar', function() {
+            let totalPanjang = parseInt(panjang.val()) - parseInt(this.value);
+            total.val(Number(totalPanjang));
         });
     </script>
     <!-- Picker Tanggal -->
