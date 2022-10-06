@@ -27,10 +27,10 @@
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Nomor Permintaan</label>
                             <div class="input-group input-group-merge">
-                                <select class="form-control" id="id_permintaan">
+                                <select class="form-control" id="id_permintaan_kabel">
                                     <option value="" disabled selected>Pilih Nomor Permintaan</option>
-                                    <?php foreach ($tampildatapermintaan as $key => $value) : ?>
-                                        <option value="<?= $value->id_permintaan ?>"><?= $value->no_permintaan ?></option>
+                                    <?php foreach ($tampildatapermintaankabel as $key => $value) : ?>
+                                        <option value="<?= $value->id_permintaan_kabel ?>"><?= $value->no_permintaan ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -65,14 +65,14 @@
                         <label class="col-md-4 text-md-right" for="panjang_keluar">Jumlah Panjang Kabel Keluar</label>
                         <div class="form-password-toggle col-md-3">
                             <div class="input-group">
-                                <input value="<?= set_value('panjang_keluar'); ?>" name="panjang_keluar" id="panjang_keluar" type="number" class="form-control" placeholder="Jumlah Keluar...">
-                                <input id="nama_satuan" class="input-group-text col-md-4" disabled>
+                                <input value="<?= set_value('panjang_keluar'); ?>" id="panjang_keluar" name="panjang_keluar" type="number" class="form-control" placeholder="Jumlah Keluar...">
+                                <input value="<?= set_value('nama_satuan'); ?>" id="nama_satuan" name="nama_satuan" class="input-group-text col-md-4" readonly>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Nama Admin Wilayah</label>
                             <div class="input-group input-group-merge">
-                                <select class="form-control" name="id" id="id">
+                                <select class="form-control" name="id">
                                     <option value="" disabled selected>Pilih Nama Admin Wilayah</option>
                                     <?php foreach ($tampildataadminwilayah as $key => $value) : ?>
                                         <option value="<?= $value->id ?>"><?= $value->nama ?></option>

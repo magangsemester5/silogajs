@@ -16,7 +16,6 @@ class M_Material extends Model
     function getAll()
     {
         $builder = $this->db->table('material');
-        $builder->join('kategori', 'kategori.id_kategori = material.id_kategori');
         $builder->join('satuan', 'satuan.id_satuan = material.id_satuan');
         $query = $builder->get();
         return $query->getResult();

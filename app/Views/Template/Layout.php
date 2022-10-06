@@ -789,14 +789,19 @@
         <script type="text/javascript">
           <?php $request = \Config\Services::request(); ?>
           let hal = '<?= $request->uri->getSegment(1) ?>';
+          let hal_panjang_keluar = '<?= $request->uri->getSegment(1) ?>';
           let serial_number = $('#serial_number');
           let nama_satuan = $('#nama_satuan');
           let stok = $('#stok');
-          let total = $('#total_stok');
+          let total_stok = $('#total_stok');
           let foto_serial_number = $('#foto_serial_number');
           let jumlah = hal == 'tampil-materialkeluar' ? $('#jumlah_masuk') : $('#jumlah_keluar');
+          let panjang = $('#panjang');
+          let total_panjang = $('#total_panjang');
+          let panjang_keluar = hal_panjang_keluar == 'tampil-kabelkeluar' ? $('#panjang_masuk') : $('#panjang_keluar');
           let wilayah = $('#wilayah');
 
+        // Mendapatkan Kalkulasi Target Nama Material
         $(document).on('change', '#nama_material', function() {
           var id = $(this).val();
           $.ajax({
@@ -807,47 +812,14 @@
                 serial_number.val(data.serial_number);
                 nama_satuan.val(data.nama_satuan);
                 stok.val(data.stok);
-                total.val(data.stok);
+                total_stok.val(data.stok);
                 foto_serial_number.html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>");
                 jumlah.focus();
               }
             });
         });
 
-        $(document).on('change', '#id_permintaan', function() {
-          var id = $(this).val();
-          $.ajax({
-              url: "<?php echo base_url('autotampildatapermintaan'); ?>" + "/" + id,
-              method: "GET",
-              dataType: 'json',
-              success: function(data) {
-                wilayah.val(data.wilayah);
-              }
-            });
-        });
-
-        $(document).on('keyup', '#jumlah_masuk', function() {
-            let totalStok = parseInt(stok.val()) + parseInt(this.value);
-            total.val(Number(totalStok));
-        });
-
-        $(document).on('keyup', '#jumlah_keluar', function() {
-            let totalStok = parseInt(stok.val()) - parseInt(this.value);
-            total.val(Number(totalStok));
-        });
-    </script>
-    <!-- Mendapatkan Kalkulasi Total Stok Kabel Keluar -->
-    <script type="text/javascript">
-          <?php $request = \Config\Services::request(); ?>
-          let hal = '<?= $request->uri->getSegment(1) ?>';
-          let serial_number = $('#serial_number');
-          let nama_satuan = $('#nama_satuan');
-          let panjang = $('#panjang');
-          let total = $('#total_pajang');
-          let foto_serial_number = $('#foto_serial_number');
-          let jumlah = hal == 'tampil-kabelkeluar' ? $('#panjang_masuk') : $('#panjang_keluar');
-          let wilayah = $('#wilayah');
-
+        // Mendapatkan Kalkulasi Target Nama Kabel
         $(document).on('change', '#no_drum', function() {
           var id = $(this).val();
           $.ajax({
@@ -858,17 +830,29 @@
                 serial_number.val(data.serial_number);
                 nama_satuan.val(data.nama_satuan);
                 panjang.val(data.panjang);
-                total.val(data.panjang);
+                total_panjang.val(data.panjang);
                 foto_serial_number.html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>");
-                jumlah.focus();
+                panjang_keluar.focus();
               }
             });
         });
 
-        $(document).on('change', '#id_permintaan', function() {
+        $(document).on('change', '#id_permintaan_material', function() {
           var id = $(this).val();
           $.ajax({
-              url: "<?php echo base_url('autotampildatapermintaan'); ?>" + "/" + id,
+              url: "<?php echo base_url('autotampildatamaterial'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                wilayah.val(data.wilayah);
+              }
+            });
+        });
+        
+        $(document).on('change', '#id_permintaan_kabel', function() {
+          var id = $(this).val();
+          $.ajax({
+              url: "<?php echo base_url('autotampildatapermintaankabel'); ?>" + "/" + id,
               method: "GET",
               dataType: 'json',
               success: function(data) {
@@ -877,14 +861,24 @@
             });
         });
 
+        $(document).on('keyup', '#jumlah_masuk', function() {
+            let totalStok = parseInt(stok.val()) + parseInt(this.value);
+            total_stok.val(Number(totalStok));
+        });
+
+        $(document).on('keyup', '#jumlah_keluar', function() {
+            let totalStok = parseInt(stok.val()) - parseInt(this.value);
+            total_stok.val(Number(totalStok));
+        });
+
         $(document).on('keyup', '#panjang_masuk', function() {
             let totalPanjang = parseInt(panjang.val()) + parseInt(this.value);
-            total.val(Number(totalPanjang));
+            total_panjang.val(Number(totalPanjang));
         });
 
         $(document).on('keyup', '#panjang_keluar', function() {
             let totalPanjang = parseInt(panjang.val()) - parseInt(this.value);
-            total.val(Number(totalPanjang));
+            total_panjang.val(Number(totalPanjang));
         });
     </script>
     <!-- Picker Tanggal -->

@@ -35,7 +35,7 @@ class KabelMasuk extends Migration
                 'type' => 'varchar',
                 'constraint' => '50'
             ],
-            'panjang' => [
+            'panjang_masuk' => [
                 'type' => 'int',
                 'constraint' => '50'
             ],

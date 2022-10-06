@@ -33,7 +33,7 @@ class KabelKeluar extends Migration
             'tanggal_keluar' => [
                 'type' => 'date'
             ],
-            'panjang' => [
+            'panjang_keluar' => [
                 'type' => 'varchar',
                 'constraint' => '50'
             ],

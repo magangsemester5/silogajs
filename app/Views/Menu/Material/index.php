@@ -30,7 +30,6 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama material</th>
-                                    <th>Kategori material</th>
                                     <th>Stok</th>
                                     <th>Satuan</th>
                                     <th>Aksi</th>
@@ -42,7 +41,6 @@
                                     <tr>
                                         <td><?= $no++; ?></td>
                                         <td><?= $td->nama_material ?></td>
-                                        <td><?= $td->nama_kategori ?></td>
                                         <td><?= $td->stok ?></td>
                                         <td><?= $td->nama_satuan ?></td>
                                         <td>

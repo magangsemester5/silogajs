@@ -39,7 +39,6 @@ class C_Kabel extends BaseController
         $image = $this->request->getFile('foto_serial_number');
         $image->move(ROOTPATH . 'public/uploads');
         $data = [
-            'id_kategori' => $this->request->getVar('id_kategori'),
             'id_satuan' => $this->request->getVar('id_satuan'),
             'no_drum' => $this->request->getVar('no_drum'),
             'core' => $this->request->getVar('core'),
@@ -79,7 +78,6 @@ class C_Kabel extends BaseController
             $imageName = $image->getRandomName();
             $image->move('uploads/', $imageName);
             $data = [
-                'id_kategori' => $this->request->getVar('id_kategori'),
                 'id_satuan' => $this->request->getVar('id_satuan'),
                 'no_drum' => $this->request->getVar('no_drum'),
                 'core' => $this->request->getVar('core'),
@@ -95,7 +93,6 @@ class C_Kabel extends BaseController
                 ->with('status_text', 'Data Berhasil diupdate');
         }else{
             $data = [
-                'id_kategori' => $this->request->getVar('id_kategori'),
                 'id_satuan' => $this->request->getVar('id_satuan'),
                 'no_drum' => $this->request->getVar('no_drum'),
                 'core' => $this->request->getVar('core'),

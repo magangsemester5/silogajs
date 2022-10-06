@@ -39,7 +39,6 @@ class C_material extends BaseController
         $image = $this->request->getFile('foto_serial_number');
         $image->move(ROOTPATH . 'public/uploads');
         $data = [
-            'id_kategori' => $this->request->getVar('id_kategori'),
             'id_satuan' => $this->request->getVar('id_satuan'),
             'nama_material' => $this->request->getVar('nama_material'),
             'stok' => $this->request->getVar('stok'),
@@ -78,7 +77,7 @@ class C_material extends BaseController
             $imageName = $image->getRandomName();
             $image->move('uploads/', $imageName);
             $data = [
-                'id_kategori' => $this->request->getVar('id_kategori'),
+
                 'id_satuan' => $this->request->getVar('id_satuan'),
                 'nama_material' => $this->request->getVar('nama_material'),
                 'stok' => $this->request->getVar('stok'),
@@ -93,7 +92,7 @@ class C_material extends BaseController
                 ->with('status_text', 'Data Berhasil diupdate');
         }else{
             $data = [
-                'id_kategori' => $this->request->getVar('id_kategori'),
+
                 'id_satuan' => $this->request->getVar('id_satuan'),
                 'nama_material' => $this->request->getVar('nama_material'),
                 'stok' => $this->request->getVar('stok'),

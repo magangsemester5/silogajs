@@ -31,7 +31,7 @@ class C_kabel_Keluar extends BaseController
         $data = [
             'title' => 'Halaman Tambah kabel Keluar | SILOG AJS',
             'tampildatakabel' => $this->kabel->findAll(),
-            'tampildatapermintaan' => $this->permintaan_kabel->findAll(),
+            'tampildatapermintaankabel' => $this->permintaan_kabel->findAll(),
             'tampildataadminwilayah' => $this->user->findAll()
         ];
         return view('Menu/kabel_Keluar/tambah', $data);
@@ -69,11 +69,11 @@ class C_kabel_Keluar extends BaseController
             $image->move(ROOTPATH . 'public/uploads');
             $id_kabel = $this->request->getVar('id_kabel');
             $data = [
-                'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
                 'id_kabel' => $id_kabel,
-                'id_satuan' => $this->request->getVar('id_satuan'),
+                'id_satuan' => $this->request->getVar('nama_satuan'),
                 'id' => $this->request->getVar('id'),
-                'panjang' => $this->request->getVar('panjang'),
+                'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
+                'panjang_keluar' => $this->request->getVar('panjang_keluar'),
                 'foto_penerima' => $image->getClientName(),
             ];
             $this->kabel_keluar->insert($data);
@@ -96,7 +96,8 @@ class C_kabel_Keluar extends BaseController
             $data = [
                 'title' => 'Halaman Tambah kabel Keluar | SILOG AJS',
                 'tampildatakabel' => $this->kabel->findAll(),
-                'tampildatapermintaan' => $this->permintaan->findAll(),
+                'tampildatapermintaankabel' => $this->permintaan_kabel->findAll(),
+                'tampildataadminwilayah' => $this->user->findAll(),
                 'validation' => $this->validator
             ];
             return view('Menu/kabel_Keluar/tambah', $data);
@@ -108,6 +109,7 @@ class C_kabel_Keluar extends BaseController
         $data = [
             'tampildata' => $this->kabel_keluar->getRelasi($id),
             'tampildatakabel' => $this->kabel->findAll(),
+            'tampildataadminwilayah' => $this->user->findAll(),
             'title' => 'Halaman Edit kabel | SILOG AJS',
         ];
         return view('Menu/kabel_Keluar/edit', $data);
@@ -168,7 +170,13 @@ class C_kabel_Keluar extends BaseController
 
     public function tampil_otomatis_data_kabel_keluar($id = null)
     {
-        $data = $this->kabel->cekStok($id);
+        $data = $this->kabel_keluar->cekPanjang($id);
+        return json_encode($data);
+    }
+
+    public function tampil_otomatis_data_wilayah_kabel_keluar($id = null)
+    {
+        $data = $this->kabel_keluar->cekWilayah($id);
         return json_encode($data);
     }
 }

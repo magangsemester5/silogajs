@@ -44,7 +44,7 @@
                                         <td><?= $no++; ?></td>
                                         <td><?= $td->no_drum ?></td>
                                         <td><?= $td->core ?></td>
-                                        <td><?= $td->panjang ?></td>
+                                        <td><?= $td->panjang ?>&nbsp<?= $td->nama_satuan ?></td>
                                         <td><?= $td->serial_number ?></td>
                                         <td>
                                             <img src="<?= base_url("../uploads/$td->foto_serial_number") ?>" width="100">
