@@ -15,6 +15,11 @@ class Material extends Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
+            'id_kategori' => [
+                'type' => 'int',
+                'constraint' => '12',
+                'unsigned' => TRUE
+            ],
             'id_satuan' => [
                 'type' => 'int',
                 'constraint' => '12',
@@ -38,6 +43,7 @@ class Material extends Migration
             ]
         ]);
         $this->forge->addPrimaryKey('id_material');
+        $this->forge->addForeignKey('id_kategori', 'kategori', 'id_kategori');
         $this->forge->addForeignKey('id_satuan', 'satuan', 'id_satuan');
         $this->forge->createTable('material');
     }
