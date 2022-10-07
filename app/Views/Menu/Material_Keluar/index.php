@@ -47,20 +47,20 @@
                                         <td><?= $td->wilayah ?></td>
                                         <td><?= $td->jumlah_keluar ?></td>
                                         <td>
-                                        <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
-                                            <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                            <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatamaterialkeluar(<?= $td->id_material_keluar ?>)"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>
                                             <?php if (session()->get('jabatan') == 'PM') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatamaterialkeluar(<?= $td->id_material_keluar ?>)"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>
                                             <?php if (session()->get('jabatan') == 'Direktur') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatamaterialkeluar(<?= $td->id_material_keluar ?>)"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>
                                             <?php if (session()->get('jabatan') == 'Management') { ?>
-                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-kabel/$td->id_kabel"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                             <?php } ?>
                                         </td>
                                     </tr>

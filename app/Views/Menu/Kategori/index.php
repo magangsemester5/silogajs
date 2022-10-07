@@ -44,7 +44,7 @@
                                         <td>
                                             <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
                                                 <a class="btn btn-warning btn-sm" href="<?= base_url("edit-kategori/$td->id_kategori"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-kategori/$td->id_kategori"); ?>"><i class="bx bx-trash"></i>Hapus</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatakategori(<?= $td->id_kategori ?>)"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>
                                         </td>
                                     </tr>

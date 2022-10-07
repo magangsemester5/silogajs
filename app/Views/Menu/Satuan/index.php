@@ -30,7 +30,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama satuan</th>
-                                    <?php if (session()->get('kriteria') == 'User B') { ?>
+                                    <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
                                     <th>Aksi</th>
                                     <?php } ?>
                                 </tr>
@@ -42,9 +42,9 @@
                                         <td><?= $no++; ?></td>
                                         <td><?= $td->nama_satuan ?></td>
                                         <td>
-                                            <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
+                                            <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
                                                 <a class="btn btn-warning btn-sm" href="<?= base_url("edit-satuan/$td->id_satuan"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-satuan/$td->id_satuan"); ?>"><i class="bx bx-trash"></i>Hapus</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatasatuan(<?= $td->id_satuan ?>)"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>
                                         </td>
                                     </tr>

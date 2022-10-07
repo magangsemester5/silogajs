@@ -30,7 +30,6 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
-                                    <th>Password</th>
                                     <th>Id User</th>
                                     <th>Jabatan</th>
                                     <th>Wilayah</th>
@@ -46,15 +45,14 @@
                                     <tr>
                                         <td><?= $no++; ?></td>
                                         <td><?= $td->nama ?></td>
-                                        <td><?= $td->password ?></td>
                                         <td><?= $td->id_user ?></td>
                                         <td><?= $td->jabatan ?></td>
                                         <td><?= $td->wilayah ?></td>
-                                        <td><img src="<?= base_url("../uploads/$td->foto_user") ?>" class="w-px-50 h-auto rounded-circle"></td>
+                                        <td><img src="<?= base_url("../uploads/$td->foto_user") ?>" class="w-px-50 h-px-50 rounded-circle"></td>
                                         <td>
                                             <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
                                                 <a class="btn btn-warning btn-sm" href="<?= base_url("edit-user/$td->id"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-user/$td->id"); ?>"><i class="bx bx-trash"></i>Hapus</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatauser(<?= $td->id?>)"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>
                                         </td>
                                     </tr>

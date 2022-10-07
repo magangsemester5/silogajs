@@ -47,7 +47,7 @@
                                             <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-material/$td->id_material"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                                 <a class="btn btn-warning btn-sm" href="<?= base_url("edit-material/$td->id_material"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-material/$td->id_material"); ?>"><i class="bx bx-trash"></i>Hapus</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatamaterial(<?= $td->id_material ?>)"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>
                                             <?php if (session()->get('kriteria') == 'Management') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-material/$td->id_material"); ?>"><i class="bx bx-show-alt"></i>Detail</a>

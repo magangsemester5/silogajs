@@ -20,7 +20,7 @@ class C_Auth extends BaseController
     public function proses_login()
     {
         $id_user = $this->request->getVar('id_user');
-        $password = $this->request->getVar('password');
+        $password = md5($this->request->getVar('password'));
 
         $validasi_id_user = $this->auth->query_validasi_id_user($id_user);
         if ($validasi_id_user->getNumRows() > 0) {

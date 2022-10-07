@@ -34,7 +34,7 @@ class C_User extends BaseController
         $image->move(ROOTPATH . 'public/uploads');
         $data = [
             'nama' => $this->request->getVar('nama'),
-            'password' => $this->request->getVar('password'),
+            'password' => md5($this->request->getVar('password')),
             'id_user' => $this->request->getVar('id_user'),
             'jabatan' => $this->request->getVar('jabatan'),
             'kriteria' => $this->request->getVar('kriteria'),
@@ -66,21 +66,35 @@ class C_User extends BaseController
             }
             $imageName = $image->getRandomName();
             $image->move('uploads/', $imageName);
+            $data = [
+                'nama' => $this->request->getVar('nama'),
+                'password' => md5($this->request->getVar('password')),
+                'id_user' => $this->request->getVar('id_user'),
+                'jabatan' => $this->request->getVar('jabatan'),
+                'kriteria' => $this->request->getVar('kriteria'),
+                'foto_user' => $imageName,
+            ];
+            session()->setFlashdata('status', 'Data Manajemen User berhasil diupdate');
+            $this->user->update($loadmodel, $data);
+            return redirect()
+                ->to(base_url('tampil-user'))
+                ->with('status_icon', 'success')
+                ->with('status_text', 'Data Berhasil diupdate');
+        } else {
+            $data = [
+                'nama' => $this->request->getVar('nama'),
+                'password' => md5($this->request->getVar('password')),
+                'id_user' => $this->request->getVar('id_user'),
+                'jabatan' => $this->request->getVar('jabatan'),
+                'kriteria' => $this->request->getVar('kriteria'),
+            ];
+            session()->setFlashdata('status', 'Data Manajemen User berhasil diupdate');
+            $this->user->update($loadmodel, $data);
+            return redirect()
+                ->to(base_url('tampil-user'))
+                ->with('status_icon', 'success')
+                ->with('status_text', 'Data Berhasil diupdate');
         }
-        $data = [
-            'nama' => $this->request->getVar('nama'),
-            'password' => $this->request->getVar('password'),
-            'id_user' => $this->request->getVar('id_user'),
-            'jabatan' => $this->request->getVar('jabatan'),
-            'kriteria' => $this->request->getVar('kriteria'),
-            'foto_user' => $imageName,
-        ];
-        session()->setFlashdata('status', 'Data Manajemen User berhasil diupdate');
-        $this->user->update($loadmodel, $data);
-        return redirect()
-            ->to(base_url('tampil-user'))
-            ->with('status_icon', 'success')
-            ->with('status_text', 'Data Berhasil diupdate');
     }
 
     public function hapus($id)

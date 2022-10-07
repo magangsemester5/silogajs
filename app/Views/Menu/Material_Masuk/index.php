@@ -50,7 +50,7 @@
                                         <td>
                                             <?php if (session()->get('kriteria') == 'Admin') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialmasuk/$td->id_material_masuk"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-materialmasuk/$td->id_material_masuk"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatamaterialmasuk(<?= $td->id_material_masuk ?>)"><i class="bx bx-trash"></i>Hapus History</a>
                                             <?php } ?>
                                         </td>
                                     </tr>

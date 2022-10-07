@@ -1,0 +1,68 @@
+CRITICAL - 2022-10-07 01:25:55 --> Undefined property: stdClass::$id_kategori
+in APPPATH\Views\Menu\Kabel\edit.php on line 29.
+ 1 APPPATH\Views\Menu\Kabel\edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_kategori', 'APPPATH\\Views\\Menu\\Kabel\\edit.php', 29, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Kabel\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/kabel/edit', [], true)
+ 5 APPPATH\Controllers\C_Kabel.php(65): view('Menu/kabel/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Kabel->edit('5')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kabel))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 02:36:32 --> Undefined property: stdClass::$id_kategori
+in APPPATH\Views\Menu\Kabel\edit.php on line 29.
+ 1 APPPATH\Views\Menu\Kabel\edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_kategori', 'APPPATH\\Views\\Menu\\Kabel\\edit.php', 29, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Kabel\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/kabel/edit', [], true)
+ 5 APPPATH\Controllers\C_Kabel.php(65): view('Menu/kabel/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Kabel->edit('5')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kabel))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 02:36:39 --> Undefined property: stdClass::$id_kategori
+in APPPATH\Views\Menu\Kabel\edit.php on line 29.
+ 1 APPPATH\Views\Menu\Kabel\edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$id_kategori', 'APPPATH\\Views\\Menu\\Kabel\\edit.php', 29, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Kabel\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/kabel/edit', [], true)
+ 5 APPPATH\Controllers\C_Kabel.php(65): view('Menu/kabel/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Kabel->edit('5')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kabel))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 03:24:11 --> Trying to get property 'foto_serial_number' of non-object
+in APPPATH\Controllers\C_Kabel.php on line 123.
+ 1 APPPATH\Controllers\C_Kabel.php(123): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto_serial_number\' of non-object', 'APPPATH\\Controllers\\C_Kabel.php', 123, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Kabel->hapus('5')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kabel))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 03:24:47 --> Trying to get property 'foto_serial_number' of non-object
+in APPPATH\Controllers\C_Kabel.php on line 123.
+ 1 APPPATH\Controllers\C_Kabel.php(123): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto_serial_number\' of non-object', 'APPPATH\\Controllers\\C_Kabel.php', 123, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Kabel->hapus('6')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kabel))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 03:43:16 --> Trying to get property 'foto_serial_number' of non-object
+in APPPATH\Controllers\C_Material.php on line 122.
+ 1 APPPATH\Controllers\C_Material.php(122): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto_serial_number\' of non-object', 'APPPATH\\Controllers\\C_Material.php', 122, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material->hapus('9')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-07 04:13:14 --> Undefined variable: imageName
+in APPPATH\Controllers\C_User.php on line 76.
+ 1 APPPATH\Controllers\C_User.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: imageName', 'APPPATH\\Controllers\\C_User.php', 76, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

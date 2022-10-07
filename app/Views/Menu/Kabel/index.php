@@ -52,15 +52,15 @@
                                         <td>
                                             <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
                                                 <a class="btn btn-warning btn-sm" href="<?= base_url("edit-kabel/$td->id_kabel"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-kabel/$td->id_kabel"); ?>"><i class="bx bx-trash"></i>Hapus</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatakabel(<?= $td->id_kabel ?>)"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>
                                             <?php if (session()->get('jabatan') == 'PM') { ?>
                                                 <a class="btn btn-warning btn-sm" href="<?= base_url("edit-kabel/$td->id_kabel"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-kabel/$td->id_kabel"); ?>"><i class="bx bx-trash"></i>Hapus</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatakabel(<?= $td->id_kabel ?>)"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>
                                             <?php if (session()->get('jabatan') == 'Direktur') { ?>
                                                 <a class="btn btn-warning btn-sm" href="<?= base_url("edit-kabel/$td->id_kabel"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-kabel/$td->id_kabel"); ?>"><i class="bx bx-trash"></i>Hapus</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatakabel(<?= $td->id_kabel ?>)"><i class="bx bx-trash"></i>Hapus</a>
                                             <?php } ?>
                                             <?php if (session()->get('jabatan') == 'Management') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-kabel/$td->id_kabel"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
