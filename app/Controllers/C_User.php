@@ -20,6 +20,15 @@ class C_User extends BaseController
         return view('Menu/User/index', $data);
     }
 
+    public function profil()
+    {
+        $data = [
+            'title' => 'Halaman Manajemen User | SILOG AJS',
+            'tampildata' => $this->user->findAll(),
+        ];
+        return view('Profil/index', $data);
+    }
+
     public function tambah()
     {
         $data = [
@@ -94,6 +103,70 @@ class C_User extends BaseController
                 ->to(base_url('tampil-user'))
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil diupdate');
+        }
+    }
+
+    public function ganti_password_profil()
+    {
+        $data = [
+            'title' => "Halaman Ganti Password Profil | SILOG AJS",
+            'validation' => \Config\Services::validation()
+        ];
+        return view("Profil/Ganti_Password", $data);
+    }
+
+    public function proses_ganti_password_profil()
+    {
+        $loadmodel = $this->request->getVar('id');
+        $rules = [
+            'password_lama' => [
+                'label' => "Password Lama",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'password_baru' => [
+                'label' => "Password Baru",
+                'rules' => "required|min_length[6]",
+                'errors' => [
+                    'required' => "{field} harus diisi",
+                    'min_length[6]' => "{field} harus diisi minimal 6 digit",
+                ]
+            ],
+            'konfirmasi_password' => [
+                'label' => "Konfirmasi Password",
+                'rules' => "required|matches[password_baru]",
+                'errors' => [
+                    'required' => "{field} harus diisi",
+                    'matches[password_baru]' => "{field} dengan password baru yang dimasukan harus sama",
+                    'min_length[6]' => "{field} harus diisi minimal 6 digit",
+                ]
+            ]
+        ];
+        if ($this->validate($rules)) {
+            $password_lama = $this->request->getVar('password_lama');
+            if (password_verify($password_lama, session()->get('password'))) {
+                $password_baru = md5($this->request->getVar('password_baru'), PASSWORD_DEFAULT);
+                $new_pass = ['password' => $password_baru];
+                $this->user->update($loadmodel, $new_pass);
+                return redirect()
+                    ->to(base_url('tampil_dashboard'))
+                    ->with('status_icon', 'success')
+                    ->with('status_text', 'Data Berhasil diupdate');
+            } else {
+                session()->setFlashdata('status', 'Data Manajemen User Gagal diubah');
+                return redirect()
+                    ->to(base_url('tampil_dashboard'))
+                    ->with('status_icon', 'warning')
+                    ->with('status_text', 'Password lama yang dimasukan tidak sama dengan di database');
+            }
+        } else {
+            $data = [
+                'title' => "Halaman Ganti Password Profil | SILOG AJS",
+                'validation' => $this->validator
+            ];
+            return view("Profil/Ganti_Password", $data);
         }
     }
 

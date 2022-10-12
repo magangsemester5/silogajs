@@ -18,12 +18,14 @@
                 <!-- </div> -->
                 <!-- </div> -->
                 <div class="card-body">
-                    <a href="<?= base_url('tambah-materialmasuk'); ?>" class="btn btn-info btn-icon-split mb-3">
-                        <span class="icon text-green-50">
-                            <i class="bx bx-plus-circle me-1"></i>
-                        </span>
-                        <span class="text">Tambah material Masuk</span>
-                    </a>
+                    <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
+                        <a href="<?= base_url('tambah-materialmasuk'); ?>" class="btn btn-info btn-icon-split mb-3">
+                            <span class="icon text-green-50">
+                                <i class="bx bx-plus-circle me-1"></i>
+                            </span>
+                            <span class="text">Tambah material Masuk</span>
+                        </a>
+                    <?php } ?>
                     <div class="table-responsive">
                         <table id="dataTable" class="table table-striped w-100 dt-responsive">
                             <thead>
@@ -33,9 +35,7 @@
                                     <th>Kode material</th>
                                     <th>Nama material</th>
                                     <th>Jumlah material Masuk</th>
-                                    <?php if (session()->get('kriteria') == 'Admin') { ?>
                                     <th>Aksi</th>
-                                    <?php } ?>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -48,9 +48,21 @@
                                         <td><?= $td->nama_material ?></td>
                                         <td><?= $td->jumlah_masuk ?></td>
                                         <td>
-                                            <?php if (session()->get('kriteria') == 'Admin') { ?>
+                                            <?php if (session()->get('jabatan') == 'Rpm') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialmasuk/$td->id_material_masuk"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                                <a class="btn btn-danger btn-sm" onclick="deletedatamaterialmasuk(<?= $td->id_material_masuk ?>)"><i class="bx bx-trash"></i>Hapus History</a>
+                                            <?php } ?>
+                                            <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialmasuk/$td->id_material_masuk"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-materialmasuk/$td->id_material_masuk"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                            <?php } ?>
+                                            <?php if (session()->get('jabatan') == 'PM') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialmasuk/$td->id_material_masuk"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                            <?php } ?>
+                                            <?php if (session()->get('jabatan') == 'Direktur') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialmasuk/$td->id_material_masuk"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                            <?php } ?>
+                                            <?php if (session()->get('jabatan') == 'Management') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialmasuk/$td->id_material_masuk"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                             <?php } ?>
                                         </td>
                                     </tr>

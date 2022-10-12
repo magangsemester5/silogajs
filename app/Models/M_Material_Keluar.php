@@ -11,13 +11,14 @@ class M_Material_Keluar extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_material','id_satuan','id','tanggal_keluar','jumlah_keluar', 'foto_penerima'
+        'id_material','id_permintaan_material','tanggal_keluar','jumlah_keluar', 'foto_penerima'
     ];
 
     function getAll()
     {
         $builder = $this->db->table('material_keluar');
         $builder->join('material', 'material.id_material = material_keluar.id_material');
+        $builder->join('permintaan_material', 'permintaan_material.id_permintaan_material = material_keluar.id_permintaan_material');
         $query = $builder->get();
         return $query->getResult();
     }
@@ -26,6 +27,7 @@ class M_Material_Keluar extends Model
     {
         $builder = $this->db->table('material_keluar');
         $builder->join('material', 'material.id_material = material_keluar.id_material');
+        $builder->join('permintaan_material', 'permintaan_material.id_permintaan_material = material_keluar.id_permintaan_material');
         $builder->where('id_material_keluar', $id);
         $query = $builder->get();
         return $query->getResult();

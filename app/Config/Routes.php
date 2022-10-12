@@ -115,6 +115,12 @@ $routes->get('hapus-satuan/(:num)', 'C_Satuan::hapus/$1', ['filter' => 'auth']);
 
 $routes->get('cekstok/(:num)', 'C_Material::cek_stok/$1', ['filter' => 'auth']);
 
+// Profil
+$routes->get('tampil-profil', 'C_User::profil', ['filter' => 'auth']);
+$routes->post('prosesedit-profil', 'C_User::proses_edit_profil', ['filter' => 'auth']);
+$routes->get('gantipassword-profil', 'C_User::ganti_password_profil', ['filter' => 'auth']);
+$routes->post('prosesgantipassword-profil', 'C_User::proses_ganti_password_profil', ['filter' => 'auth']);
+
 // Permintaan Material
 $routes->get('tampilpermintaan-material', 'C_Permintaan::permintaan_material', ['filter' => 'auth']);
 // Permintaan Kabel

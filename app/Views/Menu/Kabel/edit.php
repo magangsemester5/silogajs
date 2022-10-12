@@ -21,17 +21,6 @@
                             <input type="text" name="core" class="form-control" id="basic-default-company" placeholder="Masukan jumlah core disini" value="<?php echo $tampildata->core ?>" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-email">Kategori kabel</label>
-                            <div class="input-group input-group-merge">
-                                <select name="id_kategori" class="form-control" required>
-                                    <option value=""></option>
-                                    <?php foreach ($tampildatakategori as $key => $value) : ?>
-                                        <option value="<?= $value->id_kategori ?>" <?= $tampildata->id_kategori == $value->id_kategori ? 'selected' : null ?>><?= $value->nama_kategori ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Satuan</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_satuan" class="form-control" required>

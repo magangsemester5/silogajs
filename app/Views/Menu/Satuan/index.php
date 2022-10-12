@@ -18,12 +18,14 @@
                 <!-- </div> -->
                 <!-- </div> -->
                 <div class="card-body">
-                    <a href="<?= base_url('tambah-satuan'); ?>" class="btn btn-info btn-icon-split mb-3">
-                        <span class="icon text-green-50">
-                            <i class="bx bx-plus-circle me-1"></i>
-                        </span>
-                        <span class="text">Tambah Satuan Barang</span>
-                    </a>
+                    <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
+                        <a href="<?= base_url('tambah-satuan'); ?>" class="btn btn-info btn-icon-split mb-3">
+                            <span class="icon text-green-50">
+                                <i class="bx bx-plus-circle me-1"></i>
+                            </span>
+                            <span class="text">Tambah Satuan Barang</span>
+                        </a>
+                    <?php } ?>
                     <div class="table-responsive">
                         <table id="dataTable" class="table table-striped w-100 dt-responsive">
                             <thead>
@@ -31,7 +33,7 @@
                                     <th>No</th>
                                     <th>Nama satuan</th>
                                     <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
-                                    <th>Aksi</th>
+                                        <th>Aksi</th>
                                     <?php } ?>
                                 </tr>
                             </thead>

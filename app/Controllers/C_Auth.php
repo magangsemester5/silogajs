@@ -27,59 +27,88 @@ class C_Auth extends BaseController
             $validate_ps = $this->auth->query_validasi_password($id_user, $password);
             if ($validate_ps->getNumRows() > 0) {
                 $x = $validate_ps->getRowArray();
+                $id = $x['id'];
                 $id_user = $x['id_user'];
                 $kriteria = $x['kriteria'];
                 $jabatan = $x['jabatan'];
+                $wilayah = $x['wilayah'];
+                $password = $x['password'];
                 $foto_user = $x['foto_user'];
+                $no_telepon = $x['no_telepon'];
                 $this->session->set('logged_in', TRUE);
                 $this->session->set('user', $id_user);
                 if ($x['jabatan'] = "Admin Wilayah") {
                     $nama = $x['nama'];
+                    $this->session->set('id', $id);
                     $this->session->set('id_user', $id_user);
                     $this->session->set('nama', $nama);
                     $this->session->set('kriteria', $kriteria);
                     $this->session->set('jabatan', $jabatan);
+                    $this->session->set('wilayah', $wilayah);
                     $this->session->set('foto_user', $foto_user);
+                    $this->session->set('wilayah', $wilayah);
+                    $this->session->set('no_telepon', $no_telepon);
+                    $this->session->set('password', $password);
                     return redirect()->to(base_url('tampil_dashboard'));
-                } else if ($x['jabatan'] = "RPM") {
+                } else if ($x['jabatan'] = "Rpm") {
                     $nama = $x['nama'];
+                    $this->session->set('id', $id);
                     $this->session->set('id_user', $id_user);
                     $this->session->set('nama', $nama);
                     $this->session->set('kriteria', $kriteria);
                     $this->session->set('jabatan', $jabatan);
                     $this->session->set('foto_user', $foto_user);
+                    $this->session->set('wilayah', $wilayah);
+                    $this->session->set('no_telepon', $no_telepon);
+                    $this->session->set('password', $password);
                     return redirect()->to(base_url('tampil_dashboard'));
                 } else if ($x['jabatan'] = "Admin Pusat") {
                     $nama = $x['nama'];
+                    $this->session->set('id', $id);
                     $this->session->set('id_user', $id_user);
                     $this->session->set('nama', $nama);
                     $this->session->set('kriteria', $kriteria);
                     $this->session->set('jabatan', $jabatan);
                     $this->session->set('foto_user', $foto_user);
+                    $this->session->set('wilayah', $wilayah);
+                    $this->session->set('no_telepon', $no_telepon);
+                    $this->session->set('password', $password);
                     return redirect()->to(base_url('tampil_dashboard'));
                 } else if ($x['jabatan'] = "PM") {
                     $nama = $x['nama'];
+                    $this->session->set('id', $id);
                     $this->session->set('id_user', $id_user);
                     $this->session->set('nama', $nama);
                     $this->session->set('kriteria', $kriteria);
                     $this->session->set('jabatan', $jabatan);
                     $this->session->set('foto_user', $foto_user);
+                    $this->session->set('wilayah', $wilayah);
+                    $this->session->set('no_telepon', $no_telepon);
+                    $this->session->set('password', $password);
                     return redirect()->to(base_url('tampil_dashboard'));
                 } else if ($x['jabatan'] = "Direktur") {
                     $nama = $x['nama'];
+                    $this->session->set('id', $id);
                     $this->session->set('id_user', $id_user);
                     $this->session->set('nama', $nama);
                     $this->session->set('kriteria', $kriteria);
                     $this->session->set('jabatan', $jabatan);
                     $this->session->set('foto_user', $foto_user);
+                    $this->session->set('wilayah', $wilayah);
+                    $this->session->set('no_telepon', $no_telepon);
+                    $this->session->set('password', $password);
                     return redirect()->to(base_url('tampil_dashboard'));
                 } else if ($x['jabatan'] = "Manajement") {
                     $nama = $x['nama'];
+                    $this->session->set('id', $id);
                     $this->session->set('id_user', $id_user);
                     $this->session->set('nama', $nama);
                     $this->session->set('kriteria', $kriteria);
                     $this->session->set('jabatan', $jabatan);
                     $this->session->set('foto_user', $foto_user);
+                    $this->session->set('wilayah', $wilayah);
+                    $this->session->set('no_telepon', $no_telepon);
+                    $this->session->set('password', $password);
                     return redirect()->to(base_url('tampil_dashboard'));
                 }
             } else {

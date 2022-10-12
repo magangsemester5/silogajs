@@ -16,7 +16,18 @@
                             <input type="text" name="nama_material" class="form-control" id="basic-default-company" placeholder="Masukan nama material disini" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-email">Satuan material</label>
+                            <label class="form-label" for="basic-default-email">Kategori</label>
+                            <div class="input-group input-group-merge">
+                                <select name="id_kategori" class="form-control">
+                                    <option value=""></option>
+                                    <?php foreach ($tampildatakategori as $key => $value) : ?>
+                                        <option value="<?= $value->id_kategori ?>"><?= $value->nama_kategori ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-email">Satuan</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_satuan" class="form-control">
                                     <option value=""></option>

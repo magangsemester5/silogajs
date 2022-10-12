@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="../template/assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
-
+    <!-- Clock Display -->
     <!-- Helpers -->
     <script src="../template/assets/vendor/js/helpers.js"></script>
 
@@ -142,164 +142,8 @@
               </a>
             </li>
             <?php }; ?>
-             <!-- Tampilan PM -->
-            <?php if (session()->get('jabatan') == 'PM') { ?>
-              <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-server"></i>
-                <div data-i18n="Account Settings">Data Master</div>
-              </a>
-              <ul class="menu-sub">
-              <?php if (
-                $title == 'Halaman Kategori | SILOG AJS' ||
-                $title == 'Halaman Tambah Kategori | SILOG AJS' ||
-                $title == 'Halaman Edit Kategori | SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-kategori') ?>">
-              <div data-i18n="Analytics">Kategori</div>
-              </a>
-              </li>
-              <?php if (
-                $title == 'Halaman Material | SILOG AJS' ||
-                $title == 'Halaman Tambah Material | SILOG AJS' ||
-                $title == 'Halaman Edit Material | SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-material') ?>">
-              <div data-i18n="Analytics">Material</div>
-              </a>
-              </li>
-              <?php if (
-                $title == 'Halaman kabel | SILOG AJS' ||
-                $title == 'Halaman Tambah kabel | SILOG AJS' ||
-                $title == 'Halaman Edit kabel | SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-kabel') ?>">
-              <div data-i18n="Analytics">Kabel</div>
-              </a>
-              </li>
-              <?php if (
-                $title == 'Halaman Satuan | SILOG AJS' ||
-                $title == 'Halaman Tambah Satuan | SILOG AJS' ||
-                $title == 'Halaman Edit Satuan | SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-satuan') ?>">
-              <div data-i18n="Analytics">Satuan</div>
-              </a>
-              </li>
-              </ul>
-            </li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">Transaksi</div>
-              </a>
-              <ul class="menu-sub">
-              <?php if (
-                $title == 'Halaman Material Masuk| SILOG AJS' ||
-                $title == 'Halaman Tambah Material Masuk| SILOG AJS' ||
-                $title == 'Halaman Edit Material Masuk| SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url(
-                                            'tampil-materialmasuk'
-                                          ) ?>">
-              <div data-i18n="Analytics">Material Masuk</div>
-              </a>
-              </li>
-              <?php if (
-                $title == 'Halaman Material Keluar | SILOG AJS' ||
-                $title == 'Halaman Tambah Material Keluar | SILOG AJS' ||
-                $title == 'Halaman Edit Material Keluar | SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url(
-                                            'tampil-materialkeluar'
-                                          ) ?>">
-              <div data-i18n="Analytics">Material Keluar</div>
-              </a>
-              </li>
-              </ul>
-            </li>
-            <!-- New -->
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
-                <div data-i18n="Account Settings">Permintaan</div>
-              </a>
-              <ul class="menu-sub">
-              <?php if (
-                $title == 'Halaman Permintaan material | SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampilpermintaan-material') ?>">
-              <div data-i18n="Analytics">Permintaan Material</div>
-              </a>
-              </li>
-              <?php if (
-                $title == 'Halaman Permintaan kabel | SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampilpermintaan-kabel') ?>">
-              <div data-i18n="Analytics">Permintaan Kabel</div>
-              </a>
-              </li>
-              </ul>
-              </li>
-              <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
-              <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url(
-                                            'tampil-user'
-                                          ) ?>">
-              <i class="menu-icon tf-icons bx bxs-user-badge"></i>
-              <div data-i18n="Analytics">Manajemen User</div>
-              </a>
-            </li>
-            <?php if ($title == 'Halaman Logout | SILOG AJS') : ?>
-              <li class="btn menu-item active">
-              <?php else : ?>
-              <li class="btn menu-item">
-              <?php endif; ?>
-              <a class="btn menu-link" onclick="logout()">
-              <i class="menu-icon tf-icons bx bx-log-out"></i>
-              <div data-i18n="Analytics">Logout</div>
-              </a>
-            </li>
-            <?php }; ?>
-            <!-- Tampilan Admin -->
-            <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
+            <!-- Tampilan RPM -->
+            <?php if (session()->get('jabatan') == 'Rpm') { ?>
             <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -308,16 +152,16 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman Kategori | SILOG AJS' ||
-                $title == 'Halaman Tambah Kategori | SILOG AJS' ||
-                $title == 'Halaman Edit Kategori | SILOG AJS'
+                $title == 'Halaman Satuan | SILOG AJS' ||
+                $title == 'Halaman Tambah Satuan | SILOG AJS' ||
+                $title == 'Halaman Edit Satuan | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-kategori') ?>">
-              <div data-i18n="Analytics">Kategori</div>
+              <a class="menu-link" href="<?= base_url('tampil-satuan') ?>">
+              <div data-i18n="Analytics">Satuan</div>
               </a>
               </li>
               <?php if (
@@ -344,19 +188,6 @@
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('tampil-kabel') ?>">
               <div data-i18n="Analytics">Kabel</div>
-              </a>
-              </li>
-              <?php if (
-                $title == 'Halaman Satuan | SILOG AJS' ||
-                $title == 'Halaman Tambah Satuan | SILOG AJS' ||
-                $title == 'Halaman Edit Satuan | SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-satuan') ?>">
-              <div data-i18n="Analytics">Satuan</div>
               </a>
               </li>
               </ul>
@@ -412,6 +243,194 @@
               <div data-i18n="Analytics">Kabel Keluar</div>
               </a>
               </li>
+              <?php if (
+                $title == 'Halaman kabel Masuk | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel Masuk | SILOG AJS' ||
+                $title == 'Halaman Edit kabel Masuk | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-kabelmasuk'
+                                          ) ?>">
+              <div data-i18n="Analytics">Kabel Masuk</div>
+              </a>
+              </li>
+              </ul>
+            </li>
+            <!-- New -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
+                <div data-i18n="Account Settings">Permintaan</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                $title == 'Halaman Permintaan material | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampilpermintaan-material') ?>">
+              <div data-i18n="Analytics">Permintaan Material</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Permintaan kabel | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampilpermintaan-kabel') ?>">
+              <div data-i18n="Analytics">Permintaan Kabel</div>
+              </a>
+              </li>
+              </ul>
+              </li>
+              <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
+              <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-user'
+                                          ) ?>">
+              <i class="menu-icon tf-icons bx bxs-user-badge"></i>
+              <div data-i18n="Analytics">Manajemen User</div>
+              </a>
+            </li>
+            <?php if ($title == 'Halaman Logout | SILOG AJS') : ?>
+              <li class="btn menu-item active">
+              <?php else : ?>
+              <li class="btn menu-item">
+              <?php endif; ?>
+              <a class="btn menu-link" onclick="logout()">
+              <i class="menu-icon tf-icons bx bx-log-out"></i>
+              <div data-i18n="Analytics">Logout</div>
+              </a>
+            </li>
+            <?php }; ?>
+            <!-- Tampilan Admin Pusat -->
+            <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-server"></i>
+                <div data-i18n="Account Settings">Data Master</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                $title == 'Halaman Satuan | SILOG AJS' ||
+                $title == 'Halaman Tambah Satuan | SILOG AJS' ||
+                $title == 'Halaman Edit Satuan | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-satuan') ?>">
+              <div data-i18n="Analytics">Satuan</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Material | SILOG AJS' ||
+                $title == 'Halaman Tambah Material | SILOG AJS' ||
+                $title == 'Halaman Edit Material | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-material') ?>">
+              <div data-i18n="Analytics">Material</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel | SILOG AJS' ||
+                $title == 'Halaman Edit kabel | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-kabel') ?>">
+              <div data-i18n="Analytics">Kabel</div>
+              </a>
+              </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div data-i18n="Account Settings">Transaksi</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                $title == 'Halaman Material Masuk| SILOG AJS' ||
+                $title == 'Halaman Tambah Material Masuk| SILOG AJS' ||
+                $title == 'Halaman Edit Material Masuk| SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-materialmasuk'
+                                          ) ?>">
+              <div data-i18n="Analytics">Material Masuk</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Material Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah Material Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit Material Keluar | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-materialkeluar'
+                                          ) ?>">
+              <div data-i18n="Analytics">Material Keluar</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit kabel Keluar | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-kabelkeluar'
+                                          ) ?>">
+              <div data-i18n="Analytics">Kabel Keluar</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel Masuk | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel Masuk | SILOG AJS' ||
+                $title == 'Halaman Edit kabel Masuk | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-kabelmasuk'
+                                          ) ?>">
+              <div data-i18n="Analytics">Kabel Masuk</div>
+              </a>
+              </li>
               </ul>
             </li>
             <!-- New -->
@@ -471,7 +490,7 @@
             <?php }; ?>
              <!-- Tampilan PM -->
             <?php if (session()->get('jabatan') == 'PM') { ?>
-              <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-server"></i>
@@ -479,16 +498,16 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman Kategori | SILOG AJS' ||
-                $title == 'Halaman Tambah Kategori | SILOG AJS' ||
-                $title == 'Halaman Edit Kategori | SILOG AJS'
+                $title == 'Halaman Satuan | SILOG AJS' ||
+                $title == 'Halaman Tambah Satuan | SILOG AJS' ||
+                $title == 'Halaman Edit Satuan | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-kategori') ?>">
-              <div data-i18n="Analytics">Kategori</div>
+              <a class="menu-link" href="<?= base_url('tampil-satuan') ?>">
+              <div data-i18n="Analytics">Satuan</div>
               </a>
               </li>
               <?php if (
@@ -515,19 +534,6 @@
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('tampil-kabel') ?>">
               <div data-i18n="Analytics">Kabel</div>
-              </a>
-              </li>
-              <?php if (
-                $title == 'Halaman Satuan | SILOG AJS' ||
-                $title == 'Halaman Tambah Satuan | SILOG AJS' ||
-                $title == 'Halaman Edit Satuan | SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-satuan') ?>">
-              <div data-i18n="Analytics">Satuan</div>
               </a>
               </li>
               </ul>
@@ -566,6 +572,208 @@
                                             'tampil-materialkeluar'
                                           ) ?>">
               <div data-i18n="Analytics">Material Keluar</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit kabel Keluar | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-kabelkeluar'
+                                          ) ?>">
+              <div data-i18n="Analytics">Kabel Keluar</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel Masuk | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel Masuk | SILOG AJS' ||
+                $title == 'Halaman Edit kabel Masuk | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-kabelmasuk'
+                                          ) ?>">
+              <div data-i18n="Analytics">Kabel Masuk</div>
+              </a>
+              </li>
+              </ul>
+            </li>
+            <!-- New -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
+                <div data-i18n="Account Settings">Permintaan</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                $title == 'Halaman Permintaan material | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampilpermintaan-material') ?>">
+              <div data-i18n="Analytics">Permintaan Material</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Permintaan kabel | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampilpermintaan-kabel') ?>">
+              <div data-i18n="Analytics">Permintaan Kabel</div>
+              </a>
+              </li>
+              </ul>
+              </li>
+              <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
+              <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-user'
+                                          ) ?>">
+              <i class="menu-icon tf-icons bx bxs-user-badge"></i>
+              <div data-i18n="Analytics">Manajemen User</div>
+              </a>
+            </li>
+            <?php if ($title == 'Halaman Logout | SILOG AJS') : ?>
+              <li class="btn menu-item active">
+              <?php else : ?>
+              <li class="btn menu-item">
+              <?php endif; ?>
+              <a class="btn menu-link" onclick="logout()">
+              <i class="menu-icon tf-icons bx bx-log-out"></i>
+              <div data-i18n="Analytics">Logout</div>
+              </a>
+            </li>
+            <?php }; ?>
+            <?php if (session()->get('jabatan') == 'Direktur') { ?>
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">MENU UTAMA</span></li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-server"></i>
+                <div data-i18n="Account Settings">Data Master</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                $title == 'Halaman Satuan | SILOG AJS' ||
+                $title == 'Halaman Tambah Satuan | SILOG AJS' ||
+                $title == 'Halaman Edit Satuan | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-satuan') ?>">
+              <div data-i18n="Analytics">Satuan</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Material | SILOG AJS' ||
+                $title == 'Halaman Tambah Material | SILOG AJS' ||
+                $title == 'Halaman Edit Material | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-material') ?>">
+              <div data-i18n="Analytics">Material</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel | SILOG AJS' ||
+                $title == 'Halaman Edit kabel | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-kabel') ?>">
+              <div data-i18n="Analytics">Kabel</div>
+              </a>
+              </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div data-i18n="Account Settings">Transaksi</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                $title == 'Halaman Material Masuk| SILOG AJS' ||
+                $title == 'Halaman Tambah Material Masuk| SILOG AJS' ||
+                $title == 'Halaman Edit Material Masuk| SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-materialmasuk'
+                                          ) ?>">
+              <div data-i18n="Analytics">Material Masuk</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Material Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah Material Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit Material Keluar | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-materialkeluar'
+                                          ) ?>">
+              <div data-i18n="Analytics">Material Keluar</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit kabel Keluar | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-kabelkeluar'
+                                          ) ?>">
+              <div data-i18n="Analytics">Kabel Keluar</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel Masuk | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel Masuk | SILOG AJS' ||
+                $title == 'Halaman Edit kabel Masuk | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-kabelmasuk'
+                                          ) ?>">
+              <div data-i18n="Analytics">Kabel Masuk</div>
               </a>
               </li>
               </ul>
@@ -635,29 +843,9 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman Kategori | SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-kategori') ?>">
-              <div data-i18n="Analytics">Kategori</div>
-              </a>
-              </li>
-              <?php if (
-                $title == 'Halaman material | SILOG AJS'
-              ) : ?>
-              <li class="menu-item active">
-              <?php else : ?>
-              <li class="menu-item">
-              <?php endif; ?>
-              <a class="menu-link" href="<?= base_url('tampil-material') ?>">
-              <div data-i18n="Analytics">material</div>
-              </a>
-              </li>
-              <?php if (
-                $title == 'Halaman Satuan | SILOG AJS'
+                $title == 'Halaman Satuan | SILOG AJS' ||
+                $title == 'Halaman Tambah Satuan | SILOG AJS' ||
+                $title == 'Halaman Edit Satuan | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -665,6 +853,32 @@
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url('tampil-satuan') ?>">
               <div data-i18n="Analytics">Satuan</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Material | SILOG AJS' ||
+                $title == 'Halaman Tambah Material | SILOG AJS' ||
+                $title == 'Halaman Edit Material | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-material') ?>">
+              <div data-i18n="Analytics">Material</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel | SILOG AJS' ||
+                $title == 'Halaman Edit kabel | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampil-kabel') ?>">
+              <div data-i18n="Analytics">Kabel</div>
               </a>
               </li>
               </ul>
@@ -676,7 +890,9 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman material Masuk | SILOG AJS'
+                $title == 'Halaman Material Masuk| SILOG AJS' ||
+                $title == 'Halaman Tambah Material Masuk| SILOG AJS' ||
+                $title == 'Halaman Edit Material Masuk| SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -685,11 +901,13 @@
               <a class="menu-link" href="<?= base_url(
                                             'tampil-materialmasuk'
                                           ) ?>">
-              <div data-i18n="Analytics">material Masuk</div>
+              <div data-i18n="Analytics">Material Masuk</div>
               </a>
               </li>
               <?php if (
-                $title == 'Halaman material Keluar | SILOG AJS'
+                $title == 'Halaman Material Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah Material Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit Material Keluar | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -698,23 +916,72 @@
               <a class="menu-link" href="<?= base_url(
                                             'tampil-materialkeluar'
                                           ) ?>">
-              <div data-i18n="Analytics">material Keluar</div>
+              <div data-i18n="Analytics">Material Keluar</div>
               </a>
               </li>
-              </ul>
-            </li>
-            <?php if ($title == 'Halaman Permintaan | SILOG AJS') : ?>
+              <?php if (
+                $title == 'Halaman kabel Keluar | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel Keluar | SILOG AJS' ||
+                $title == 'Halaman Edit kabel Keluar | SILOG AJS'
+              ) : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
               <?php endif; ?>
               <a class="menu-link" href="<?= base_url(
-                                            'tampil-permintaan'
+                                            'tampil-kabelkeluar'
                                           ) ?>">
-              <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
-              <div data-i18n="Analytics">Permintaan</div>
+              <div data-i18n="Analytics">Kabel Keluar</div>
               </a>
+              </li>
+              <?php if (
+                $title == 'Halaman kabel Masuk | SILOG AJS' ||
+                $title == 'Halaman Tambah kabel Masuk | SILOG AJS' ||
+                $title == 'Halaman Edit kabel Masuk | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url(
+                                            'tampil-kabelmasuk'
+                                          ) ?>">
+              <div data-i18n="Analytics">Kabel Masuk</div>
+              </a>
+              </li>
+              </ul>
             </li>
+            <!-- New -->
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-git-pull-request"></i>
+                <div data-i18n="Account Settings">Permintaan</div>
+              </a>
+              <ul class="menu-sub">
+              <?php if (
+                $title == 'Halaman Permintaan material | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampilpermintaan-material') ?>">
+              <div data-i18n="Analytics">Permintaan Material</div>
+              </a>
+              </li>
+              <?php if (
+                $title == 'Halaman Permintaan kabel | SILOG AJS'
+              ) : ?>
+              <li class="menu-item active">
+              <?php else : ?>
+              <li class="menu-item">
+              <?php endif; ?>
+              <a class="menu-link" href="<?= base_url('tampilpermintaan-kabel') ?>">
+              <div data-i18n="Analytics">Permintaan Kabel</div>
+              </a>
+              </li>
+              </ul>
+              </li>
               <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
               <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
               <li class="menu-item active">
@@ -765,10 +1032,15 @@
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
               <!-- Search -->
               <!-- Search -->
-
+              <div class="rounded" style="background-color:#696CFF">
+                <div class="d-flex flex-wrap justify-content-center">
+                    <a><span class="badge hours"></span></a> :
+                    <a><span class="badge min"></span></a> :
+                    <a><span class="badge sec"></span></a>
+                </div>
+              </div>
               <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <!-- Place this tag where you want the button to render. -->
-
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
@@ -776,46 +1048,22 @@
                       <img src="<?= base_url('') ?>/uploads/<?= session()->get('foto_user'); ?>" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
-                  <!-- <ul class="dropdown-menu dropdown-menu-end">
+                  <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                      <a class="dropdown-item" href="#">
-                        <div class="d-flex">
-                          <div class="flex-shrink-0 me-3">
-                            <div class="avatar avatar-online">
-                              <img src="../template/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                            </div>
-                          </div>
-                          <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
-                            <small class="text-muted">Admin</small>
-                          </div>
-                        </div>
+                      <a class="dropdown-item" href="<?= base_url('tampil-profil') ?>">
+                        <i class="bx bx-user me-2"></i>
+                        <span class="align-middle">My Profile</span>
                       </a>
                     </li>
                     <li>
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
-                        <i class="bx bx-user me-2"></i>
-                        <span class="align-middle">My Profile</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
+                      <a class="dropdown-item" href="<?= base_url('gantipassword-profil') ?>">
                         <i class="bx bx-cog me-2"></i>
-                        <span class="align-middle">Settings</span>
+                        <span class="align-middle">Ganti Password</span>
                       </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
-                      </a>
-                    </li>
+                    </li> 
                     <li>
                       <div class="dropdown-divider"></div>
                     </li>
@@ -825,7 +1073,7 @@
                         <span class="align-middle">Log Out</span>
                       </a>
                     </li>
-                  </ul> -->
+                  </ul>
                 </li>
                 <!--/ User -->
               </ul>
@@ -1094,6 +1342,9 @@
           let hal_panjang_keluar = '<?= $request->uri->getSegment(1) ?>';
           let serial_number = $('#serial_number');
           let nama_satuan = $('#nama_satuan');
+          let nama = $('#nama');
+          let no_drum = $('#no_drum');
+          let core = $('#core');
           let stok = $('#stok');
           let total_stok = $('#total_stok');
           let foto_serial_number = $('#foto_serial_number');
@@ -1153,15 +1404,22 @@
         
         $(document).on('change', '#id_permintaan_kabel', function() {
           var id = $(this).val();
+          
           $.ajax({
               url: "<?php echo base_url('autotampildatapermintaankabel'); ?>" + "/" + id,
               method: "GET",
               dataType: 'json',
               success: function(data) {
                 wilayah.val(data.wilayah);
+                nama.val(data.nama);
+                for(i=0; i<data.length; i++){
+                  data[i].no_drum.val(data.no_drum);
+                  data[i].core.val(data.core);
+                  data[i].panjang.val(data.panjang);
+                }
               }
             });
-        });
+          });
 
         $(document).on('keyup', '#jumlah_masuk', function() {
             let totalStok = parseInt(stok.val()) + parseInt(this.value);
@@ -1183,6 +1441,22 @@
             total_panjang.val(Number(totalPanjang));
         });
     </script>
+    <script>
+      $(document).ready(function() {
+      setInterval( function() {
+      var hours = new Date().getHours();
+      $(".hours").html(( hours < 10 ? "0" : "" ) + hours);
+      }, 1000);
+      setInterval( function() {
+      var minutes = new Date().getMinutes();
+      $(".min").html(( minutes < 10 ? "0" : "" ) + minutes);
+      },1000);
+      setInterval( function() {
+      var seconds = new Date().getSeconds();
+      $(".sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+      },1000);
+      });
+    </script>
     <!-- Picker Tanggal -->
     <script src="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/assets/vendor/libs/flatpickr/flatpickr.js"></script>
     <!-- Data Tables -->
@@ -1198,5 +1472,23 @@
     <script>
       flatpickr('#flatpickrdate');
     </script>
+    <!-- Modal Detail Item Kabel yang akan keluar -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Kabel yang diminta</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

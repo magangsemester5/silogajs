@@ -4,14 +4,12 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\M_Material;
-use App\Models\M_Kategori;
 use App\Models\M_Satuan;
 
 class C_material extends BaseController
 {
     public function __construct()
     {
-        $this->kategori = new M_Kategori();
         $this->material = new M_Material();
         $this->satuan = new M_Satuan();
     }
@@ -28,7 +26,6 @@ class C_material extends BaseController
     {
         $data = [
             'title' => 'Halaman Tambah Material | SILOG AJS',
-            'tampildatakategori' => $this->kategori->findAll(),
             'tampildatasatuan' => $this->satuan->findAll(),
             'validation' => \Config\Services::validation()
         ];
@@ -57,7 +54,6 @@ class C_material extends BaseController
     {
         $data = [
             'tampildata' => $this->material->where('id_material', $id)->first(),
-            'tampildatakategori' => $this->kategori->findAll(),
             'tampildatasatuan' => $this->satuan->findAll(),
             'title' => 'Halaman Edit Material | SILOG AJS',
         ];
@@ -77,7 +73,6 @@ class C_material extends BaseController
             $imageName = $image->getRandomName();
             $image->move('uploads/', $imageName);
             $data = [
-
                 'id_satuan' => $this->request->getVar('id_satuan'),
                 'nama_material' => $this->request->getVar('nama_material'),
                 'stok' => $this->request->getVar('stok'),
@@ -92,7 +87,6 @@ class C_material extends BaseController
                 ->with('status_text', 'Data Berhasil diupdate');
         }else{
             $data = [
-
                 'id_satuan' => $this->request->getVar('id_satuan'),
                 'nama_material' => $this->request->getVar('nama_material'),
                 'stok' => $this->request->getVar('stok'),

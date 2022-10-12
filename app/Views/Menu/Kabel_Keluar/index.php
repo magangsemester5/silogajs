@@ -18,21 +18,22 @@
                 <!-- </div> -->
                 <!-- </div> -->
                 <div class="card-body">
-                    <a href="<?= base_url('tambah-kabelkeluar'); ?>" class="btn btn-info btn-icon-split mb-3">
-                        <span class="icon text-green-50">
-                            <i class="bx bx-plus-circle me-1"></i>
-                        </span>
-                        <span class="text">Tambah kabel Keluar</span>
-                    </a>
+                    <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
+                        <a href="<?= base_url('tambah-kabelkeluar'); ?>" class="btn btn-info btn-icon-split mb-3">
+                            <span class="icon text-green-50">
+                                <i class="bx bx-plus-circle me-1"></i>
+                            </span>
+                            <span class="text">Tambah kabel Keluar</span>
+                        </a>
+                    <?php } ?>
                     <div class="table-responsive">
                         <table id="dataTable" class="table table-striped w-100 dt-responsive">
                             <thead>
                                 <tr>
                                     <th>No</th>
                                     <th>Tanggal</th>
-                                    <th>No Drum</th>
+                                    <th>No Permintaan</th>
                                     <th>Nama Admin Wilayah</th>
-                                    <th>Panjang Kabel Keluar</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -42,21 +43,21 @@
                                     <tr>
                                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong><?= $no++ ?></strong></td>
                                         <td><?= $td->tanggal_keluar ?></td>
-                                        <td><?= $td->no_drum ?></td>
+                                        <td><?= $td->no_permintaan ?></td>
                                         <td><?= $td->nama ?></td>
-                                        <td><?= $td->panjang ?></td>
                                         <td>
-                                        <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
+                                            <?php if (session()->get('jabatan') == 'Rpm') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-kabelkeluar/$td->id_kabel_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-kabelkeluar/$td->id_kabel_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
+                                            <?php } ?>
+                                            <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-kabelkeluar/$td->id_kabel_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                                <a class="btn btn-danger btn-sm" onclick="deletedatakabelkeluar(<?= $td->id_kabel_keluar ?>)"><i class="bx bx-trash"></i>Hapus History</a>
                                             <?php } ?>
                                             <?php if (session()->get('jabatan') == 'PM') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-kabelkeluar/$td->id_kabel_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-kabelkeluar/$td->id_kabel_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
                                             <?php } ?>
                                             <?php if (session()->get('jabatan') == 'Direktur') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-kabelkeluar/$td->id_kabel_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-kabelkeluar/$td->id_kabel_keluar"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
                                             <?php } ?>
                                             <?php if (session()->get('jabatan') == 'Management') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-kabel/$td->id_kabel"); ?>"><i class="bx bx-show-alt"></i>Detail</a>

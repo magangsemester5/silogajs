@@ -46,28 +46,31 @@ class C_Permintaan extends BaseController
         // print_r($data);
         return view('Menu/Permintaan/Kabel/detail', $data);
     }
-    
+
     public function approve_detail_permintaan_kabel($id)
     {
-        if (session()->get('jabatan') == 'RPM') { 
+        if (session()->get('jabatan') == 'RPM') {
             $data = array(
                 'status' => 1
             );
-        }else if (session()->get('jabatan') == 'Admin Pusat') { 
+        } else if (session()->get('jabatan') == 'Admin Pusat') {
             $data = array(
                 'status' => 2
             );
-        }else if (session()->get('jabatan') == 'PM') { 
+        } else if (session()->get('jabatan') == 'PM') {
             $data = array(
                 'status' => 3
             );
-        }else if (session()->get('jabatan') == 'Direktur') { 
+        } else if (session()->get('jabatan') == 'Direktur') {
             $data = array(
                 'status' => 4
             );
         }
+        $this->detail_permintaan_kabel->update($id, $data); 
         session()->setFlashdata('status', 'Data permintaan berhasil diupdate');
-        $this->detail_permintaan_kabel->update($id,$data);
+        return redirect()->to(base_url('detailpermintaan-kabel/' . $id . ''))
+            ->with('status_icon', 'success')
+            ->with('status_text', 'Data Berhasil ditambah');
     }
 
     public function tampil_otomatis_data_permintaan($id = null)

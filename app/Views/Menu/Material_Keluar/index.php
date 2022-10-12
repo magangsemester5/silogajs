@@ -18,12 +18,14 @@
                 <!-- </div> -->
                 <!-- </div> -->
                 <div class="card-body">
-                    <a href="<?= base_url('tambah-materialkeluar'); ?>" class="btn btn-info btn-icon-split mb-3">
-                        <span class="icon text-green-50">
-                            <i class="bx bx-plus-circle me-1"></i>
-                        </span>
-                        <span class="text">Tambah material Keluar</span>
-                    </a>
+                    <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
+                        <a href="<?= base_url('tambah-materialkeluar'); ?>" class="btn btn-info btn-icon-split mb-3">
+                            <span class="icon text-green-50">
+                                <i class="bx bx-plus-circle me-1"></i>
+                            </span>
+                            <span class="text">Tambah material Keluar</span>
+                        </a>
+                    <?php } ?>
                     <div class="table-responsive">
                         <table id="dataTable" class="table table-striped w-100 dt-responsive">
                             <thead>
@@ -47,6 +49,9 @@
                                         <td><?= $td->wilayah ?></td>
                                         <td><?= $td->jumlah_keluar ?></td>
                                         <td>
+                                            <?php if (session()->get('jabatan') == 'Rpm') { ?>
+                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
+                                            <?php } ?>
                                             <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
                                                 <a class="btn btn-info btn-sm" href="<?= base_url("detail-materialkeluar/$td->id_material_keluar"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                                 <a class="btn btn-danger btn-sm" onclick="deletedatamaterialkeluar(<?= $td->id_material_keluar ?>)"><i class="bx bx-trash"></i>Hapus</a>

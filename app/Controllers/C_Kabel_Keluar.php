@@ -32,7 +32,8 @@ class C_kabel_Keluar extends BaseController
             'title' => 'Halaman Tambah kabel Keluar | SILOG AJS',
             'tampildatakabel' => $this->kabel->findAll(),
             'tampildatapermintaankabel' => $this->permintaan_kabel->findAll(),
-            'tampildataadminwilayah' => $this->user->findAll()
+            'tampildataadminwilayah' => $this->user->findAll(),
+            'validation' => \Config\Services::validation()
         ];
         return view('Menu/kabel_Keluar/tambah', $data);
     }
@@ -70,8 +71,7 @@ class C_kabel_Keluar extends BaseController
             $id_kabel = $this->request->getVar('id_kabel');
             $data = [
                 'id_kabel' => $id_kabel,
-                'id_satuan' => $this->request->getVar('nama_satuan'),
-                'id' => $this->request->getVar('id'),
+                'id_permintaan_kabel' => $this->request->getVar('id_permintaan_kabel'),
                 'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
                 'panjang_keluar' => $this->request->getVar('panjang_keluar'),
                 'foto_penerima' => $image->getClientName(),
@@ -130,8 +130,7 @@ class C_kabel_Keluar extends BaseController
         }
         $data = [
             'id_kabel' => $this->request->getVar('id_kabel'),
-            'id_satuan' => $this->request->getVar('id_satuan'),
-            'id' => $this->request->getVar('id'),
+            'id_permintaan_kabel' => $this->request->getVar('id_permintaan_kabel'),
             'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
             'panjang' => $this->request->getVar('panjang'),
             'foto_penerima' => $imageName,
@@ -176,6 +175,20 @@ class C_kabel_Keluar extends BaseController
 
     public function tampil_otomatis_data_wilayah_kabel_keluar($id = null)
     {
+        // $data = [
+        //     'datahanif' => $this->kabel_keluar->cekWilayah($id)
+        // ];
+        // foreach ($data['datahanif'] as $h) {
+        //    $lists = "
+        //     <td>" . $h->nama . "</td>
+        //     <td>" . $h->no_drum . "</td>
+        //     <td>" . $h->core ."</td>
+        //     <td>" . $h->panjang . "</td>
+        //     ";
+        // }
+        // $data2 = array('list_permintaan_kabel'=>$lists);
+        // $final = json_encode($data2);
+        // print_r($final);
         $data = $this->kabel_keluar->cekWilayah($id);
         return json_encode($data);
     }

@@ -18,12 +18,14 @@
                 <!-- </div> -->
                 <!-- </div> -->
                 <div class="card-body">
-                    <a href="<?= base_url('tambah-material'); ?>" class="btn btn-info btn-icon-split mb-3">
-                        <span class="icon text-green-50">
-                            <i class="bx bx-plus-circle me-1"></i>
-                        </span>
-                        <span class="text">Tambah material</span>
-                    </a>
+                    <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
+                        <a href="<?= base_url('tambah-material'); ?>" class="btn btn-info btn-icon-split mb-3">
+                            <span class="icon text-green-50">
+                                <i class="bx bx-plus-circle me-1"></i>
+                            </span>
+                            <span class="text">Tambah material</span>
+                        </a>
+                    <?php } ?>
                     <div class="table-responsive">
                         <table id="dataTable" class="table table-striped w-100 dt-responsive">
                             <thead>
@@ -32,7 +34,9 @@
                                     <th>Nama material</th>
                                     <th>Stok</th>
                                     <th>Satuan</th>
-                                    <th>Aksi</th>
+                                    <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
+                                        <th>Aksi</th>
+                                    <?php } ?>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -45,12 +49,8 @@
                                         <td><?= $td->nama_satuan ?></td>
                                         <td>
                                             <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
-                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-material/$td->id_material"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                                 <a class="btn btn-warning btn-sm" href="<?= base_url("edit-material/$td->id_material"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
                                                 <a class="btn btn-danger btn-sm" onclick="deletedatamaterial(<?= $td->id_material ?>)"><i class="bx bx-trash"></i>Hapus</a>
-                                            <?php } ?>
-                                            <?php if (session()->get('kriteria') == 'Management') { ?>
-                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-material/$td->id_material"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
                                             <?php } ?>
                                         </td>
                                     </tr>

@@ -1,0 +1,152 @@
+CRITICAL - 2022-10-11 01:41:48 --> Undefined property: stdClass::$kode_kabel_keluar
+in APPPATH\Views\Menu\Kabel_Keluar\detail.php on line 23.
+ 1 APPPATH\Views\Menu\Kabel_Keluar\detail.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$kode_kabel_keluar', 'APPPATH\\Views\\Menu\\Kabel_Keluar\\detail.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Kabel_Keluar\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/kabel_Keluar/detail', [], true)
+ 5 APPPATH\Controllers\C_Kabel_Keluar.php(152): view('Menu/kabel_Keluar/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 02:26:57 --> Undefined property: stdClass::$kode_kabel_keluar
+in APPPATH\Views\Menu\Kabel_Keluar\detail.php on line 23.
+ 1 APPPATH\Views\Menu\Kabel_Keluar\detail.php(23): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$kode_kabel_keluar', 'APPPATH\\Views\\Menu\\Kabel_Keluar\\detail.php', 23, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Kabel_Keluar\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/kabel_Keluar/detail', [], true)
+ 5 APPPATH\Controllers\C_Kabel_Keluar.php(152): view('Menu/kabel_Keluar/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:27:21 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:27:47 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:28:18 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:28:22 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:28:29 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:36:08 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:36:27 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:37:22 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:40:59 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:41:35 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:53:34 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:53:36 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:53:37 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:54:17 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:54:18 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:55:19 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 71.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:55:31 --> Trying to get property 'foto_user' of non-object
+in APPPATH\Controllers\C_User.php on line 72.
+ 1 APPPATH\Controllers\C_User.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto_user\' of non-object', 'APPPATH\\Controllers\\C_User.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-11 03:55:40 --> Trying to get property 'foto_user' of non-object
+in APPPATH\Controllers\C_User.php on line 72.
+ 1 APPPATH\Controllers\C_User.php(72): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'foto_user\' of non-object', 'APPPATH\\Controllers\\C_User.php', 72, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

@@ -4,14 +4,12 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\M_Kabel;
-use App\Models\M_Kategori;
 use App\Models\M_Satuan;
 
 class C_Kabel extends BaseController
 {
     public function __construct()
     {
-        $this->kategori = new M_Kategori();
         $this->kabel = new M_Kabel();
         $this->satuan = new M_Satuan();
     }
@@ -28,7 +26,6 @@ class C_Kabel extends BaseController
     {
         $data = [
             'title' => 'Halaman Tambah kabel | SILOG AJS',
-            'tampildatakategori' => $this->kategori->findAll(),
             'tampildatasatuan' => $this->satuan->findAll(),
             'validation' => \Config\Services::validation()
         ];
@@ -58,7 +55,6 @@ class C_Kabel extends BaseController
     {
         $data = [
             'tampildata' => $this->kabel->where('id_kabel', $id)->first(),
-            'tampildatakategori' => $this->kategori->findAll(),
             'tampildatasatuan' => $this->satuan->findAll(),
             'title' => 'Halaman Edit kabel | SILOG AJS',
         ];
