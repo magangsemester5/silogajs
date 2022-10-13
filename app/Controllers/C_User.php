@@ -10,6 +10,7 @@ class C_User extends BaseController
     public function __construct()
     {
         $this->user = new M_User();
+        \Config\Services::validation();
     }
     public function index()
     {
@@ -110,7 +111,6 @@ class C_User extends BaseController
     {
         $data = [
             'title' => "Halaman Ganti Password Profil | SILOG AJS",
-            'validation' => \Config\Services::validation()
         ];
         return view("Profil/Ganti_Password", $data);
     }
@@ -163,8 +163,7 @@ class C_User extends BaseController
             }
         } else {
             $data = [
-                'title' => "Halaman Ganti Password Profil | SILOG AJS",
-                'validation' => $this->validator
+                'title' => "Halaman Ganti Password Profil | SILOG AJS"
             ];
             return view("Profil/Ganti_Password", $data);
         }

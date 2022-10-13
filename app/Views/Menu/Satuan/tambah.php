@@ -13,8 +13,14 @@
                     <form method="POST" action="<?= base_url("prosestambah-satuan") ?>" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Nama satuan</label>
-                            <input type="text" name="nama_satuan" id="basic-default-phone" class="form-control phone-mask" placeholder="Masukan nama satuan"/>
+                            <input type="text" name="nama_satuan" id="basic-default-phone" class="form-control phone-mask" placeholder="Masukan nama satuan" />
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('nama_satuan')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('nama_satuan'); ?>
+                            </div>
+                        <?php } ?>
                         <button type="submit" class="btn btn-primary">Tambah</button>
                         <a href="<?= base_url('tampil-satuan') ?>" class="btn btn-warning">Cancel </a>
                     </form>

@@ -27,7 +27,7 @@
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Nomor Permintaan</label>
                             <div class="input-group input-group-merge">
-                                <select class="form-control" id="id_permintaan">
+                                <select class="form-control" id="id_permintaan_material">
                                     <option value="" disabled selected>Pilih Nomor Permintaan</option>
                                     <?php foreach ($tampildatapermintaan as $key => $value) : ?>
                                         <option value="<?= $value->id_permintaan ?>"><?= $value->no_permintaan ?></option>
@@ -35,6 +35,12 @@
                                 </select>
                             </div>
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('id_permintaan_material')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('id_permintaan_material'); ?>
+                            </div>
+                        <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Wilayah</label>
                             <input readonly="readonly" id="wilayah" type="text" class="form-control">
@@ -69,6 +75,12 @@
                                 <input id="nama_satuan" class="input-group-text col-md-4" disabled>
                             </div>
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('jumlah_keluar')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('jumlah_keluar'); ?>
+                            </div>
+                        <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Nama Admin Wilayah</label>
                             <div class="input-group input-group-merge">

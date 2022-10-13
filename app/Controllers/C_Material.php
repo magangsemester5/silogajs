@@ -12,6 +12,7 @@ class C_material extends BaseController
     {
         $this->material = new M_Material();
         $this->satuan = new M_Satuan();
+        \Config\Services::validation();
     }
 
     public function index()
@@ -33,21 +34,59 @@ class C_material extends BaseController
     }
     public function proses_tambah()
     {
-        $image = $this->request->getFile('foto_serial_number');
-        $image->move(ROOTPATH . 'public/uploads');
-        $data = [
-            'id_satuan' => $this->request->getVar('id_satuan'),
-            'nama_material' => $this->request->getVar('nama_material'),
-            'stok' => $this->request->getVar('stok'),
-            'serial_number' => $this->request->getVar('serial_number'),
-            'foto_serial_number' => $image->getClientName(),
+        $rules = [
+            'id_satuan' => [
+                'label' => "Satuan",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'nama_material' => [
+                'label' => "Nama material",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'stok' => [
+                'label' => "Stok",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'serial_number' => [
+                'label' => "Serial Number",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ]
         ];
-        session()->setFlashdata('status', 'Data material berhasil ditambahkan');
-        $this->material->insert($data);
-        return redirect()
-            ->to(base_url('tampil-material'))
-            ->with('status_icon', 'success')
-            ->with('status_text', 'Data Berhasil ditambah');
+        if ($this->validate($rules)) {
+            $image = $this->request->getFile('foto_serial_number');
+            $image->move(ROOTPATH . 'public/uploads');
+            $data = [
+                'id_satuan' => $this->request->getVar('id_satuan'),
+                'nama_material' => $this->request->getVar('nama_material'),
+                'stok' => $this->request->getVar('stok'),
+                'serial_number' => $this->request->getVar('serial_number'),
+                'foto_serial_number' => $image->getClientName(),
+            ];
+            session()->setFlashdata('status', 'Data material berhasil ditambahkan');
+            $this->material->insert($data);
+            return redirect()
+                ->to(base_url('tampil-material'))
+                ->with('status_icon', 'success')
+                ->with('status_text', 'Data Berhasil ditambah');
+        } else {
+            $data = [
+                'title' => 'Halaman Tambah Material | SILOG AJS',
+                'tampildatasatuan' => $this->satuan->findAll()
+            ];
+            return view('Menu/material/tambah', $data);
+        }
     }
 
     public function edit($id = null)
@@ -85,7 +124,7 @@ class C_material extends BaseController
                 ->to(base_url('tampil-material'))
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil diupdate');
-        }else{
+        } else {
             $data = [
                 'id_satuan' => $this->request->getVar('id_satuan'),
                 'nama_material' => $this->request->getVar('nama_material'),

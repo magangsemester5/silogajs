@@ -10,15 +10,28 @@
                     <h5 class="mb-0">Tambah Data kabel</h5>
                 </div>
                 <div class="card-body">
+                    <?php $validation = \Config\Services::validation(); ?>
                     <form method="POST" action="<?= base_url("prosestambah-kabel") ?>" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Nomor Drum</label>
                             <input type="text" name="no_drum" class="form-control" id="basic-default-company" placeholder="Masukan nomor drum disini" />
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('no_drum')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('no_drum'); ?>
+                            </div>
+                        <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Core</label>
                             <input type="text" name="core" class="form-control" id="basic-default-company" placeholder="Masukan jumlah core disini" />
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('core')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('core'); ?>
+                            </div>
+                        <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-email">Satuan</label>
                             <div class="input-group input-group-merge">
@@ -30,17 +43,35 @@
                                 </select>
                             </div>
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('id_satuan')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('id_satuan'); ?>
+                            </div>
+                        <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Panjang</label>
-                            <input type="text" name="panjang" id="basic-default-phone" class="form-control phone-mask" placeholder="Masukan Total Panjang Kabel Disini"/>
+                            <input type="text" name="panjang" id="basic-default-phone" class="form-control phone-mask" placeholder="Masukan Total Panjang Kabel Disini" />
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('panjang')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('panjang'); ?>
+                            </div>
+                        <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Serial Number</label>
-                            <input type="text" name="serial_number" id="basic-default-phone" class="form-control phone-mask" placeholder="Masukan Serial Number Disini"/>
+                            <input type="text" name="serial_number" id="basic-default-phone" class="form-control phone-mask" placeholder="Masukan Serial Number Disini" />
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('serial_number')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('serial_number'); ?>
+                            </div>
+                        <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Foto Serial Number</label>
-                            <input type="file" name="foto_serial_number" id="inputFile" class="form-control">
+                            <input type="file" name="foto_serial_number" id="inputFile" class="form-control" required>
                         </div>
                         <div class="col-md-3">
                             <label>Preview Foto Serial Number</label>

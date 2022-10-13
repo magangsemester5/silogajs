@@ -33,6 +33,12 @@
                                 <?php endforeach; ?>
                             </select>
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('id_permintaan_kabel')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('id_permintaan_kabel'); ?>
+                            </div>
+                        <?php } ?>
                         <br>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Detail Kabel yang diminta</label>

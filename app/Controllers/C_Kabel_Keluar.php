@@ -49,8 +49,8 @@ class C_kabel_Keluar extends BaseController
                     'required' => "{field} harus diisi"
                 ]
             ],
-            'id_kabel' => [
-                'label' => "Nama kabel",
+            'id_permintaan_kabel' => [
+                'label' => "Nomor Permintaan",
                 'rules' => "required",
                 'errors' => [
                     'required' => "{field} harus diisi"

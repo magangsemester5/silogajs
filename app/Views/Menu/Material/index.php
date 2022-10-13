@@ -33,7 +33,8 @@
                                     <th>No</th>
                                     <th>Nama material</th>
                                     <th>Stok</th>
-                                    <th>Satuan</th>
+                                    <th>Serial Number</th>
+                                    <th>Foto Serial Number</th>
                                     <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
                                         <th>Aksi</th>
                                     <?php } ?>
@@ -45,8 +46,11 @@
                                     <tr>
                                         <td><?= $no++; ?></td>
                                         <td><?= $td->nama_material ?></td>
-                                        <td><?= $td->stok ?></td>
-                                        <td><?= $td->nama_satuan ?></td>
+                                        <td><?= $td->stok ?> <?= $td->nama_satuan ?></td>
+                                        <td><?= $td->serial_number ?></td>
+                                        <td>
+                                            <img src="<?= base_url("../uploads/$td->foto_serial_number") ?>" width="100">
+                                        </td>
                                         <td>
                                             <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
                                                 <a class="btn btn-warning btn-sm" href="<?= base_url("edit-material/$td->id_material"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>

@@ -12,6 +12,7 @@ class C_Kabel extends BaseController
     {
         $this->kabel = new M_Kabel();
         $this->satuan = new M_Satuan();
+        \Config\Services::validation();
     }
 
     public function index()
@@ -26,29 +27,73 @@ class C_Kabel extends BaseController
     {
         $data = [
             'title' => 'Halaman Tambah kabel | SILOG AJS',
-            'tampildatasatuan' => $this->satuan->findAll(),
-            'validation' => \Config\Services::validation()
+            'tampildatasatuan' => $this->satuan->findAll()
         ];
         return view('Menu/kabel/tambah', $data);
     }
     public function proses_tambah()
     {
-        $image = $this->request->getFile('foto_serial_number');
-        $image->move(ROOTPATH . 'public/uploads');
-        $data = [
-            'id_satuan' => $this->request->getVar('id_satuan'),
-            'no_drum' => $this->request->getVar('no_drum'),
-            'core' => $this->request->getVar('core'),
-            'panjang' => $this->request->getVar('panjang'),
-            'serial_number' => $this->request->getVar('serial_number'),
-            'foto_serial_number' => $image->getClientName(),
+        $rules = [
+            'id_satuan' => [
+                'label' => "Satuan",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'no_drum' => [
+                'label' => "Nomor Drum",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'core' => [
+                'label' => "Core",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'panjang' => [
+                'label' => "Panjang",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'serial_number' => [
+                'label' => "Serial Number",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ]
         ];
-        session()->setFlashdata('status', 'Data kabel berhasil ditambahkan');
-        $this->kabel->insert($data);
-        return redirect()
-            ->to(base_url('tampil-kabel'))
-            ->with('status_icon', 'success')
-            ->with('status_text', 'Data Berhasil ditambah');
+        if ($this->validate($rules)) {
+            $image = $this->request->getFile('foto_serial_number');
+            $image->move(ROOTPATH . 'public/uploads');
+            $data = [
+                'id_satuan' => $this->request->getVar('id_satuan'),
+                'no_drum' => $this->request->getVar('no_drum'),
+                'core' => $this->request->getVar('core'),
+                'panjang' => $this->request->getVar('panjang'),
+                'serial_number' => $this->request->getVar('serial_number'),
+                'foto_serial_number' => $image->getClientName(),
+            ];
+            session()->setFlashdata('status', 'Data kabel berhasil ditambahkan');
+            $this->kabel->insert($data);
+            return redirect()
+                ->to(base_url('tampil-kabel'))
+                ->with('status_icon', 'success')
+                ->with('status_text', 'Data Berhasil ditambah');
+        } else {
+            $data = [
+                'title' => 'Halaman Tambah kabel | SILOG AJS',
+                'tampildatasatuan' => $this->satuan->findAll()
+            ];
+            return view('Menu/kabel/tambah', $data);
+        }
     }
 
     public function edit($id = null)
@@ -87,7 +132,7 @@ class C_Kabel extends BaseController
                 ->to(base_url('tampil-kabel'))
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil diupdate');
-        }else{
+        } else {
             $data = [
                 'id_satuan' => $this->request->getVar('id_satuan'),
                 'no_drum' => $this->request->getVar('no_drum'),

@@ -49,21 +49,27 @@ class C_material_Keluar extends BaseController
                     'required' => "{field} harus diisi"
                 ]
             ],
-            'id_material' => [
-                'label' => "Nama material",
+            'id_permintaan_material' => [
+                'label' => "Nomor Permintaan",
                 'rules' => "required",
                 'errors' => [
                     'required' => "{field} harus diisi"
                 ]
             ],
-            // 'jumlah_keluar' => [
-            //     'label' => "Jumlah material Keluar",
-            //     'rules' => "required|numeric|less_than[{$total_stok}]",
-            //     'errors' => [
-            //         'required' => "{field} harus diisi",
-            //         'less_than' => "Jumlah material Keluar tidak boleh lebih dari {$stok}"
-            //     ]
-            // ],
+            'id_material' => [
+                'label' => "Nama Material",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'jumlah_keluar' => [
+                'label' => "Jumlah Keluar",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ]
         ];
         if ($this->validate($rules)) {
             $image = $this->request->getFile('foto_penerima');

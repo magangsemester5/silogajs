@@ -10,6 +10,7 @@ class C_Satuan extends BaseController
     public function __construct()
     {
         $this->satuan  = new M_Satuan();
+        \Config\Services::validation();
     }
 
     public function index()
@@ -18,7 +19,7 @@ class C_Satuan extends BaseController
             'title' => "Halaman Satuan | SILOG AJS",
             'tampildata' => $this->satuan->findAll()
         ];
-        return view("Menu/Satuan/index",$data);
+        return view("Menu/Satuan/index", $data);
     }
 
     public function tambah()
@@ -26,17 +27,33 @@ class C_Satuan extends BaseController
         $data = [
             'title' => "Halaman Tambah Satuan | SILOG AJS"
         ];
-        return view("Menu/Satuan/tambah",$data);
+        return view("Menu/Satuan/tambah", $data);
     }
 
     public function proses_tambah()
     {
-        $data = [
-            'nama_satuan' => $this->request->getVar('nama_satuan')
+        $rules = [
+            'nama_satuan' => [
+                'label' => "Nama Satuan",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ]
         ];
-        session()->setFlashdata('status', 'Data Satuan berhasil ditambahkan');
-        $this->satuan->insert($data);
-        return redirect()->to(base_url('tampil-satuan'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil ditambah');
+        if ($this->validate($rules)) {
+            $data = [
+                'nama_satuan' => $this->request->getVar('nama_satuan')
+            ];
+            session()->setFlashdata('status', 'Data Satuan berhasil ditambahkan');
+            $this->satuan->insert($data);
+            return redirect()->to(base_url('tampil-satuan'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil ditambah');
+        } else {
+            $data = [
+                'title' => "Halaman Tambah Satuan | SILOG AJS"
+            ];
+            return view("Menu/Satuan/tambah", $data);
+        }
     }
 
     public function edit($id)
@@ -71,5 +88,4 @@ class C_Satuan extends BaseController
             ->with('status_icon', 'success')
             ->with('status_text', 'Data Berhasil dihapus');
     }
-
 }

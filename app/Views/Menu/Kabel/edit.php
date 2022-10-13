@@ -33,7 +33,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Panjang</label>
-                            <input type="text" name="panjang" id="basic-default-phone" class="form-control phone-mask" placeholder="Masukan Total Panjang Kabel Disini" value="<?= $tampildata->panjang ?>"/>
+                            <input type="text" name="panjang" id="basic-default-phone" class="form-control phone-mask" placeholder="Masukan Total Panjang Kabel Disini" value="<?= $tampildata->panjang ?>" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Serial Number</label>
