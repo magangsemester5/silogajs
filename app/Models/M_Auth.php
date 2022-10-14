@@ -10,10 +10,10 @@ class M_Auth extends Model
     protected $primaryKey = "id";
     protected $returnType = "object";
     protected $allowedFields = ['nama', 'jabatan', 'id_user', 'kriteria', 'password'];
-    
+
     function query_validasi_id_user($id_user)
     {
-        $result = $this->db->query("SELECT * FROM user WHERE id_user='$id_user' LIMIT 1");
+        $result = $this->db->query("SELECT * FROM user WHERE id_user='$id_user'");
         return $result;
     }
 

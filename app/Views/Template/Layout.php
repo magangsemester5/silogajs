@@ -1299,6 +1299,33 @@
        });
     }
     </script>
+    <!-- Delete Confirm Data Kabel Keluar -->
+    <script>
+    function deletedatakabelkeluar($id) 
+    { 
+      swal({
+            title:"Anda Yakin ?",
+            text: "Data Akan dihapus Secara Permanen!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+      })
+      .then((willDelete) => {
+         if (willDelete) {
+            $.ajax({
+              url: "<?php echo base_url('hapus-kabelkeluar'); ?>" + "/" + $id,
+              method: "GET",
+              success: function() {
+                swal({    
+                    icon: "success",
+                });
+              }
+            });
+            location.reload();
+          }
+       });
+    }
+    </script>
     <!-- Memunculkan Preview Foto -->
     <script>
         $("#inputFile").change(function(event) {
@@ -1482,11 +1509,60 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+          <div class="content-wrapper">
+        <!-- Content -->
+            <!-- Basic Bootstrap Table -->
+            <div class="card shadow mb-4">
+                <!-- <div class="row mt-2 ml-md-2 text-center"> -->
+                <!-- <div class="col-md-1"> -->
+                <!-- Form Error -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="dataTable" class="table table-striped w-100 dt-responsive">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>No Drum</th>
+                                    <th>Core</th>
+                                    <th>Jumlah Keluar</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-border-bottom-0">
+                                <td>1</td>
+                                <td>KB-343</td>
+                                <td>Core</td>
+                                <td>200 Meter</td>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--/ Basic Bootstrap Table -->
+
+            <!--/ Borderless Table -->
+
+            <!-- Hoverable Table rows -->
+            <!--/ Hoverable Table rows -->
+
+            <!-- Small table -->
+            <!--/ Small table -->
+
+            <!-- Contextual Classes -->
+            <!--/ Contextual Classes -->
+
+            <!-- Table within card -->
+            <!--/ Table within card -->
+
+            <!-- Responsive Table -->
+            <!--/ Responsive Table -->
+        <!-- / Content -->
+        <!-- / Footer -->
+
+        <div class="content-backdrop fade"></div>
+        </div>
+        </div>
         </div>
       </div>
     </div>

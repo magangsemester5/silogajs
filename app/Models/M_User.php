@@ -11,20 +11,8 @@ class M_User extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'nama', 'password', 'id_user', 'jabatan', 'kriteria', 'foto_user'
+        'nama', 'password', 'id_user', 'jabatan', 'kriteria', 'foto_user', 'wilayah', 'no_telepon'
     ];
-
-    function generateCode()
-    {
-        $query = $this->db->query("SELECT MAX(kode_user) as kode_user from user");
-    }
-
-    function update_data_db()
-    {
-        $query = $this->db->query("SELECT * FROM user");
-        $query = $query->getRow();
-        return $query->kode_user;
-    }
 
     function count_where_location()
     {

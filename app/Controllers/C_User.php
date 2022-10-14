@@ -44,7 +44,7 @@ class C_User extends BaseController
         $image->move(ROOTPATH . 'public/uploads');
         $data = [
             'nama' => $this->request->getVar('nama'),
-            'password' => md5($this->request->getVar('password')),
+            'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
             'id_user' => $this->request->getVar('id_user'),
             'jabatan' => $this->request->getVar('jabatan'),
             'kriteria' => $this->request->getVar('kriteria'),
@@ -78,7 +78,7 @@ class C_User extends BaseController
             $image->move('uploads/', $imageName);
             $data = [
                 'nama' => $this->request->getVar('nama'),
-                'password' => md5($this->request->getVar('password')),
+                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
                 'id_user' => $this->request->getVar('id_user'),
                 'jabatan' => $this->request->getVar('jabatan'),
                 'kriteria' => $this->request->getVar('kriteria'),
@@ -93,7 +93,7 @@ class C_User extends BaseController
         } else {
             $data = [
                 'nama' => $this->request->getVar('nama'),
-                'password' => md5($this->request->getVar('password')),
+                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
                 'id_user' => $this->request->getVar('id_user'),
                 'jabatan' => $this->request->getVar('jabatan'),
                 'kriteria' => $this->request->getVar('kriteria'),
@@ -102,6 +102,45 @@ class C_User extends BaseController
             $this->user->update($loadmodel, $data);
             return redirect()
                 ->to(base_url('tampil-user'))
+                ->with('status_icon', 'success')
+                ->with('status_text', 'Data Berhasil diupdate');
+        }
+    }
+
+    public function proses_edit_profil()
+    {
+        $loadmodel = $this->request->getVar('id');
+        $dataId = $this->user->find($loadmodel);
+        $image = $this->request->getFile('foto_user');
+        if ($image->isValid() && !$image->hasMoved()) {
+            $foto = $dataId->foto_user;
+            if (file_exists('uploads/' . $foto)) {
+                unlink('uploads/' . $foto);
+            }
+            $imageName = $image->getRandomName();
+            $image->move('uploads/', $imageName);
+            $data = [
+                'nama' => $this->request->getVar('nama'),
+                'id_user' => $this->request->getVar('id_user'),
+                'no_telepon' => $this->request->getVar('no_telepon'),
+                'foto_user' => $imageName,
+            ];
+            session()->setFlashdata('status', 'Data Profil berhasil diupdate');
+            $this->user->update($loadmodel, $data);
+            return redirect()
+                ->to(base_url('tampil-dashboard'))
+                ->with('status_icon', 'success')
+                ->with('status_text', 'Data Berhasil diupdate');
+        } else {
+            $data = [
+                'nama' => $this->request->getVar('nama'),
+                'no_telepon' => $this->request->getVar('no_telepon'),
+                'id_user' => $this->request->getVar('id_user'),
+            ];
+            session()->setFlashdata('status', 'Data Profil berhasil diupdate');
+            $this->user->update($loadmodel, $data);
+            return redirect()
+                ->to(base_url('tampil-dashboard'))
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil diupdate');
         }
@@ -117,7 +156,6 @@ class C_User extends BaseController
 
     public function proses_ganti_password_profil()
     {
-        $loadmodel = $this->request->getVar('id');
         $rules = [
             'password_lama' => [
                 'label' => "Password Lama",
@@ -131,7 +169,7 @@ class C_User extends BaseController
                 'rules' => "required|min_length[6]",
                 'errors' => [
                     'required' => "{field} harus diisi",
-                    'min_length[6]' => "{field} harus diisi minimal 6 digit",
+                    'min_length' => "{field} harus diisi minimal 6 digit",
                 ]
             ],
             'konfirmasi_password' => [
@@ -139,17 +177,19 @@ class C_User extends BaseController
                 'rules' => "required|matches[password_baru]",
                 'errors' => [
                     'required' => "{field} harus diisi",
-                    'matches[password_baru]' => "{field} dengan password baru yang dimasukan harus sama",
-                    'min_length[6]' => "{field} harus diisi minimal 6 digit",
+                    'matches' => "{field} dengan         password baru yang dimasukan harus sama",
                 ]
             ]
         ];
         if ($this->validate($rules)) {
             $password_lama = $this->request->getVar('password_lama');
             if (password_verify($password_lama, session()->get('password'))) {
-                $password_baru = md5($this->request->getVar('password_baru'), PASSWORD_DEFAULT);
-                $new_pass = ['password' => $password_baru];
-                $this->user->update($loadmodel, $new_pass);
+                $loadmodel = $this->request->getVar('id');
+                $data = [
+                    'password' => password_hash($this->request->getVar('password_baru'), PASSWORD_DEFAULT)
+                ];
+                $this->user->update($loadmodel, $data);
+                session()->setFlashdata('status', 'Data Password berhasil diubah');
                 return redirect()
                     ->to(base_url('tampil_dashboard'))
                     ->with('status_icon', 'success')

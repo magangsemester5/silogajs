@@ -42,7 +42,7 @@
                         <br>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Detail Kabel yang diminta</label>
-                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bx bx-package"></i>&nbspLaunch demo modal</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bx bx-package"></i>&nbspKlik Disini</button>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Nama Admin Wilayah</label>

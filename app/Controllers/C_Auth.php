@@ -20,13 +20,12 @@ class C_Auth extends BaseController
     public function proses_login()
     {
         $id_user = $this->request->getVar('id_user');
-        $password = md5($this->request->getVar('password'));
-
+        $password = $this->request->getVar('password');
         $validasi_id_user = $this->auth->query_validasi_id_user($id_user);
         if ($validasi_id_user->getNumRows() > 0) {
-            $validate_ps = $this->auth->query_validasi_password($id_user, $password);
-            if ($validate_ps->getNumRows() > 0) {
-                $x = $validate_ps->getRowArray();
+            $validate_ps = $this->auth->where('id_user', $id_user)->first();
+            if (password_verify($password, $validate_ps->password)) {
+                $x = $validasi_id_user->getRowArray();
                 $id = $x['id'];
                 $id_user = $x['id_user'];
                 $kriteria = $x['kriteria'];
