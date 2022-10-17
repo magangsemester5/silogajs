@@ -1,0 +1,12 @@
+CRITICAL - 2022-10-17 03:02:42 --> Undefined property: stdClass::$kode_kabel_keluar
+in APPPATH\Views\Menu\Kabel_Keluar\detail.php on line 23.
+ 1 APPPATH\Views\Menu\Kabel_Keluar\detail.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$kode_kabel_keluar', 'APPPATH\\Views\\Menu\\Kabel_Keluar\\detail.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Kabel_Keluar\\detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/kabel_Keluar/detail', [], true)
+ 5 APPPATH\Controllers\C_Kabel_Keluar.php(152): view('Menu/kabel_Keluar/detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

@@ -11,17 +11,19 @@
                 </div>
                 <div class="card-body">
                     <?php $validation = \Config\Services::validation(); ?>
-                    <form method="POST" action="<?= base_url('prosestambah-kabelkeluar') ?>" enctype="multipart/form-data">
+                    <form method="POST" action="<?= base_url('prosestambah-kabelkeluar') ?>"
+                        enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="tanggal_keluar">Tanggal Keluar</label>
                             <div class="col-md-2">
-                                <input type="text" id="flatpickrdate" name="tanggal_keluar" class="form-control date" placeholder="Tanggal Keluar" readonly>
+                                <input type="text" id="flatpickrdate" name="tanggal_keluar" class="form-control date"
+                                    placeholder="Tanggal Keluar" readonly>
                             </div>
                             <!-- Error Validation -->
                             <?php if ($validation->getError('tanggal_keluar')) { ?>
-                                <div class='alert alert-danger mt-2'>
-                                    <?= $error = $validation->getError('tanggal_keluar'); ?>
-                                </div>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('tanggal_keluar'); ?>
+                            </div>
                             <?php } ?>
                         </div>
                         <label class="form-label" for="basic-default-fullname">Nomor Permintaan</label>
@@ -29,20 +31,22 @@
                             <select class="form-control" name="id_permintaan_kabel" id="id_permintaan_kabel">
                                 <option value="" disabled selected>Pilih Nomor Permintaan</option>
                                 <?php foreach ($tampildatapermintaankabel as $key => $value) : ?>
-                                    <option value="<?= $value->id_permintaan_kabel ?>"><?= $value->no_permintaan ?></option>
+                                <option value="<?= $value->id_permintaan_kabel ?>">
+                                    <?= $value->no_permintaan ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('id_permintaan_kabel')) { ?>
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('id_permintaan_kabel'); ?>
-                            </div>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('id_permintaan_kabel'); ?>
+                        </div>
                         <?php } ?>
                         <br>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Detail Kabel yang diminta</label>
-                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bx bx-package"></i>&nbspKlik Disini</button>
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="bx bx-package"></i>&nbspKlik Disini</button>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Nama Admin Wilayah</label>
