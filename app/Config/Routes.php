@@ -87,6 +87,14 @@ $routes->get('tambah-materialkeluar', 'C_Material_Keluar::tambah', ['filter' => 
 $routes->post('prosestambah-materialkeluar', 'C_Material_Keluar::proses_tambah', ['filter' => 'auth']);
 $routes->get('hapus-materialkeluar/(:num)', 'C_Material_Keluar::hapus/$1', ['filter' => 'auth']);
 
+// Kabel Masuk
+$routes->get('tampil-kabelmasuk', 'C_Kabel_Masuk::index', ['filter' => 'auth']);
+$routes->get('autotampildatakabelmasuk/(:num)', 'C_Kabel_Masuk::tampil_otomatis_data_kabel_masuk/$1', ['filter' => 'auth']);
+$routes->get('detail-kabelmasuk/(:num)', 'C_Kabel_Masuk::detail/$1', ['filter' => 'auth']);
+$routes->get('tambah-kabelmasuk', 'C_Kabel_Masuk::tambah', ['filter' => 'auth']);
+$routes->post('prosestambah-kabelmasuk', 'C_Kabel_Masuk::proses_tambah', ['filter' => 'auth']);
+$routes->get('hapus-kabelmasuk/(:num)', 'C_Kabel_Masuk::hapus/$1', ['filter' => 'auth']);
+
 // Kabel Keluar
 $routes->get('tampil-kabelkeluar', 'C_Kabel_Keluar::index', ['filter' => 'auth']);
 $routes->get('autotampildatakabelkeluar/(:num)', 'C_Kabel_Keluar::tampil_otomatis_data_kabel_keluar/$1', ['filter' => 'auth']);
