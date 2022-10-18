@@ -28,7 +28,7 @@
                             <label class="form-label" for="nama_kabel">Nama kabel</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_kabel" class="form-control" id="nama_kabel">
-                                    <option value="" disabled selected>Pilih Nama kabel</option>
+                                    <option value="" disabled selected>Pilih Nomor Drum</option>
                                     <?php foreach ($tampildatakabel as $key => $value) : ?>
                                         <option value="<?= $value->id_kabel ?>"><?= $value->nama_kabel ?></option>
                                     <?php endforeach; ?>
