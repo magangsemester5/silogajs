@@ -173,6 +173,11 @@ class C_kabel_Keluar extends BaseController
         return json_encode($data);
     }
 
+    public function tampil_data_detail_kabel_keluar($id = null){
+        $data = $this->kabel_keluar->cekdetailkabelkeluar($id);
+        return json_encode($data);
+    }
+
     public function tampil_otomatis_data_wilayah_kabel_keluar($id = null)
     {
         // $data = [

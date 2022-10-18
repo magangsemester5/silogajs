@@ -1428,10 +1428,11 @@
               }
             });
         });
-        
+
+          // Menampilkan detail laman kabel keluar
         $(document).on('change', '#id_permintaan_kabel', function() {
           var id = $(this).val();
-          
+            
           $.ajax({
               url: "<?php echo base_url('autotampildatapermintaankabel'); ?>" + "/" + id,
               method: "GET",
@@ -1439,14 +1440,28 @@
               success: function(data) {
                 wilayah.val(data.wilayah);
                 nama.val(data.nama);
-                for(i=0; i<data.length; i++){
-                  data[i].no_drum.val(data.no_drum);
-                  data[i].core.val(data.core);
-                  data[i].panjang.val(data.panjang);
-                }
+                $.ajax({
+                  url: "<?php echo base_url('autotampildetaildatakabelkeluar'); ?>" + "/" + id,
+                  method: "GET",
+                  dataType: 'json',
+                  success: function(data) {
+                    var str = "";
+                    var count = 1;
+                    for (var i = 0; i < data.length; i++) {
+                      str += "<tr>";
+                      str += "<td>"+ count++ +"</td>";
+                      str += "<td>"+ data[i].no_drum +"</td>";
+                      str += "<td>"+ data[i].core+"</td>";
+                      str += "<td>"+ data[i].panjang +"</td>";
+                      str += "<td>"+ data[i].serial_number +"</td>";
+                      str += "</tr>";
+                    }
+                    document.querySelector('tbody').innerHTML = str;
+                  }
+                })
               }
             });
-          });
+        });
 
         $(document).on('keyup', '#jumlah_masuk', function() {
             let totalStok = parseInt(stok.val()) + parseInt(this.value);
@@ -1520,20 +1535,17 @@
                 <!-- </div> -->
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="dataTable" class="table table-striped w-100 dt-responsive">
+                        <table class="table table-striped w-100 dt-responsive">
                             <thead>
                                 <tr>
                                     <th>No</th>
                                     <th>No Drum</th>
                                     <th>Core</th>
                                     <th>Jumlah Keluar</th>
+                                    <th>Serial Number</th>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
-                                <td>1</td>
-                                <td>KB-343</td>
-                                <td>Core</td>
-                                <td>200 Meter</td>
                             </tbody>
                         </table>
                     </div>

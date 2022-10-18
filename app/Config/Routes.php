@@ -99,6 +99,7 @@ $routes->get('hapus-kabelmasuk/(:num)', 'C_Kabel_Masuk::hapus/$1', ['filter' => 
 $routes->get('tampil-kabelkeluar', 'C_Kabel_Keluar::index', ['filter' => 'auth']);
 $routes->get('autotampildatakabelkeluar/(:num)', 'C_Kabel_Keluar::tampil_otomatis_data_kabel_keluar/$1', ['filter' => 'auth']);
 $routes->get('autotampildatapermintaankabel/(:num)', 'C_Kabel_Keluar::tampil_otomatis_data_wilayah_kabel_keluar/$1', ['filter' => 'auth']);
+$routes->get('autotampildetaildatakabelkeluar/(:num)', 'C_Kabel_Keluar::tampil_data_detail_kabel_keluar/$1', ['filter' => 'auth']);
 $routes->get('detail-kabelkeluar/(:num)', 'C_Kabel_Keluar::detail/$1', ['filter' => 'auth']);
 $routes->get('tambah-kabelkeluar', 'C_Kabel_Keluar::tambah', ['filter' => 'auth']);
 $routes->post('prosestambah-kabelkeluar', 'C_Kabel_Keluar::proses_tambah', ['filter' => 'auth']);

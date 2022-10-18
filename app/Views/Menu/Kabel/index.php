@@ -19,12 +19,12 @@
                 <!-- </div> -->
                 <div class="card-body">
                     <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
-                        <a href="<?= base_url('tambah-kabel'); ?>" class="btn btn-info btn-icon-split mb-3">
-                            <span class="icon text-green-50">
-                                <i class="bx bx-plus-circle me-1"></i>
-                            </span>
-                            <span class="text">Tambah kabel</span>
-                        </a>
+                    <a href="<?= base_url('tambah-kabel'); ?>" class="btn btn-info btn-icon-split mb-3">
+                        <span class="icon text-green-50">
+                            <i class="bx bx-plus-circle me-1"></i>
+                        </span>
+                        <span class="text">Tambah kabel</span>
+                    </a>
                     <?php } ?>
                     <div class="table-responsive">
                         <table id="dataTable" class="table table-striped w-100 dt-responsive">
@@ -37,29 +37,33 @@
                                     <th>Serial Number</th>
                                     <th>Foto Serial Number</th>
                                     <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
-                                        <th>Aksi</th>
+                                    <th>Aksi</th>
                                     <?php } ?>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
                                 <?php $no = 1;
                                 foreach ($tampildata as $td) : ?>
-                                    <tr>
-                                        <td><?= $no++; ?></td>
-                                        <td><?= $td->no_drum ?></td>
-                                        <td><?= $td->core ?></td>
-                                        <td><?= $td->panjang ?>&nbsp<?= $td->nama_satuan ?></td>
-                                        <td><?= $td->serial_number ?></td>
-                                        <td>
-                                            <img src="<?= base_url("../uploads/$td->foto_serial_number") ?>" width="100">
-                                        </td>
-                                        <td>
-                                            <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
-                                                <a class="btn btn-warning btn-sm" href="<?= base_url("edit-kabel/$td->id_kabel"); ?>"><i class="bx bx-edit-alt"></i>Edit</a>
-                                                <a class="btn btn-danger btn-sm" onclick="deletedatakabel(<?= $td->id_kabel ?>)"><i class="bx bx-trash"></i>Hapus</a>
-                                            <?php } ?>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td><?= $no++; ?></td>
+                                    <td><?= $td->no_drum ?></td>
+                                    <td><?= $td->core ?></td>
+                                    <td><?= $td->panjang ?>&nbsp<?= $td->nama_satuan ?></td>
+                                    <td><?= $td->serial_number ?></td>
+                                    <td>
+                                        <img src="<?= base_url("../uploads/$td->foto_serial_number") ?>" width="100">
+                                    </td>
+                                    <td>
+                                        <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
+                                        <a class="btn btn-warning btn-sm"
+                                            href="<?= base_url("edit-kabel/$td->id_kabel"); ?>"><i
+                                                class="bx bx-edit-alt"></i>Edit</a>
+                                        <a class="btn btn-danger btn-sm"
+                                            onclick="deletedatakabel(<?= $td->id_kabel ?>)"><i
+                                                class="bx bx-trash"></i>Hapus</a>
+                                        <?php } ?>
+                                    </td>
+                                </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>

@@ -53,4 +53,17 @@ class M_Kabel_Keluar extends Model
         $query = $builder->get();
         return $query->getRowArray();
     }
+
+    public function cekdetailkabelkeluar($id = null)
+    {
+        $builder = $this->db->table('kabel_keluar');
+        $builder->select('kabel.no_drum, kabel.core, detail_permintaan_kabel.panjang, kabel.serial_number');
+        $builder->join('kabel', 'kabel.id_kabel = kabel_keluar.id_kabel');
+        $builder->join('permintaan_kabel', 'permintaan_kabel.id_permintaan_kabel = kabel_keluar.id_permintaan_kabel');
+        $builder->join('detail_permintaan_kabel', 'detail_permintaan_kabel.id_permintaan_kabel = permintaan_kabel.id_permintaan_kabel');
+        $builder->join('user', 'user.id = permintaan_kabel.id');
+        $builder->where('permintaan_kabel.id_permintaan_kabel', $id);
+        $query = $builder->get();
+        return $query->getResultArray();
+    }
 }
