@@ -54,7 +54,18 @@
                                 <input id="nama_satuan" class="input-group-text col-md-4" disabled>
                             </div>
                         </div>
-                        
+                        <!-- Error Validation -->
+                        <?php /* if ($validation->getError('jumlah_masuk')) { ?> 
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('jumlah_masuk'); ?>
+                            </div>
+                        <?php } */ ?>
+                        <!-- <div class="mb-3">
+                            <label class="total_stok" for="total_stok">Total Stok</label>
+                            <div class="input-group">
+                                <input readonly id="total_stok" value="<?= set_value('total_stok'); ?>" name="total_stok" type="number" class="form-control">
+                            </div>
+                        </div> -->
                         <div class="mb-3">
                             <label class="serial_number">Serial Number</label>
                             <input type="text" id="serial_number" class="form-control" readonly />
