@@ -25,7 +25,7 @@
                             <?php } ?>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="nama_kabel">Nama kabel</label>
+                            <label class="form-label" for="nama_kabel">Nomor Drum</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_kabel" class="form-control" id="nama_kabel">
                                     <option value="" disabled selected>Pilih Nomor Drum</option>
@@ -41,12 +41,12 @@
                                 </div>
                             <?php } ?>
                         </div>
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label class="stok" for="stok">Stok</label>
                             <div class="input-group">
                                 <input readonly="readonly" id="stok" name="stok" type="number" class="form-control">
                             </div>
-                        </div>
+                        </div> -->
                         <label class="col-md-4 text-md-right" for="jumlah_masuk">Jumlah kabel Masuk</label>
                         <div class="form-password-toggle col-md-3">
                             <div class="input-group">
@@ -54,27 +54,21 @@
                                 <input id="nama_satuan" class="input-group-text col-md-4" disabled>
                             </div>
                         </div>
-                        <!-- Error Validation -->
-                        <?php /* if ($validation->getError('jumlah_masuk')) { ?> 
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('jumlah_masuk'); ?>
-                            </div>
-                        <?php } */ ?>
-                        <div class="mb-3">
-                            <label class="total_stok" for="total_stok">Total Stok</label>
-                            <div class="input-group">
-                                <input readonly id="total_stok" value="<?= set_value('total_stok'); ?>" name="total_stok" type="number" class="form-control">
-                            </div>
-                        </div>
+                        
                         <div class="mb-3">
                             <label class="serial_number">Serial Number</label>
                             <input type="text" id="serial_number" class="form-control" readonly />
                         </div>
                         <div class="mb-3">
-                            <label class="serial_number">Foto Serial Number</label>
-                            <div id="foto_serial_number">
+                            <div class="mb-3">
+                                <label class="custom-file-label">Foto Pengantaran kabel</label>
+                                <input type="file" name="foto_pengantaran_kabel" id="inputFile" class="form-control" required>
                             </div>
                             <br>
+                            <div class="mb-3">
+                                <label class="form-label" for="basic-default-company">Nama Penerima</label>
+                                <input type="text" name="nama_penerima" class="form-control" id="basic-default-company" placeholder="Masukan nama penerima disini" />
+                            </div>
                             <div class="mb-3">
                                 <label class="custom-file-label">Foto Pengantaran kabel</label>
                                 <input type="file" name="foto_pengantaran_kabel" id="inputFile" class="form-control" required>

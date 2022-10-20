@@ -21,7 +21,7 @@ class User extends Migration
             ],
             'password' => [
                 'type' => 'varchar',
-                'constraint' => '50'
+                'constraint' => '100'
             ],
             'jabatan' => [
                 'type' => 'varchar',

@@ -1,0 +1,24 @@
+ERROR - 2022-10-20 03:20:47 --> mysqli_sql_exception: Table 'logistikptajs.permintaan' doesn't exist in C:\Users\Lisa\Desktop\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\Users\Lisa\Desktop\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lisa\Desktop\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lisa\Desktop\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lisa\Desktop\silogajs\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lisa\Desktop\silogajs\system\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lisa\Desktop\silogajs\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\Lisa\Desktop\silogajs\app\Controllers\C_Material_Keluar.php(34): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\Lisa\Desktop\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#8 C:\Users\Lisa\Desktop\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#9 C:\Users\Lisa\Desktop\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\Lisa\Desktop\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\Lisa\Desktop\silogajs\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\Lisa\\D...')
+#12 {main}
+CRITICAL - 2022-10-20 03:20:47 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 223.
+ 1 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\C_Material_Keluar.php(34): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
