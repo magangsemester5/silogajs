@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\M_Material_Keluar;
 use App\Models\M_Material;
-use App\Models\M_Permintaan;
+use App\Models\M_Permintaan_Material;
 use App\Models\M_User;
 
 class C_material_Keluar extends BaseController
@@ -14,7 +14,7 @@ class C_material_Keluar extends BaseController
     {
         $this->material_keluar = new M_Material_Keluar();
         $this->material = new M_Material();
-        $this->permintaan = new M_Permintaan();
+        $this->permintaan_material = new M_Permintaan_Material();
         $this->user = new M_User();
     }
     public function index()
@@ -31,16 +31,16 @@ class C_material_Keluar extends BaseController
         $data = [
             'title' => 'Halaman Tambah Material Keluar | SILOG AJS',
             'tampildatamaterial' => $this->material->findAll(),
-            'tampildatapermintaan' => $this->permintaan->findAll(),
-            'tampildataadminwilayah' => $this->user->findAll()
+            'tampildatapermintaanmaterial' => $this->permintaan_material->findAll(),
+            'tampildataadminwilayah' => $this->user->findAll(),
+            'validation' => \Config\Services::validation()
         ];
         return view('Menu/material_Keluar/tambah', $data);
     }
 
     public function proses_tambah()
     {
-        $total_stok = $this->request->getVar('total_stok');
-        $stok = $this->request->getVar('stok');
+        // $total_panjang = $this->request->getVar('total_panjang');
         $rules = [
             'tanggal_keluar' => [
                 'label' => "Tanggal Keluar",
@@ -56,41 +56,35 @@ class C_material_Keluar extends BaseController
                     'required' => "{field} harus diisi"
                 ]
             ],
-            'id_material' => [
-                'label' => "Nama Material",
-                'rules' => "required",
-                'errors' => [
-                    'required' => "{field} harus diisi"
-                ]
-            ],
-            'jumlah_keluar' => [
-                'label' => "Jumlah Keluar",
-                'rules' => "required",
-                'errors' => [
-                    'required' => "{field} harus diisi"
-                ]
-            ]
+            // 'panjang' => [
+            //     'label' => "Jumlah material Keluar",
+            //     'rules' => "required|numeric|less_than[{$total_panjang}]",
+            //     'errors' => [
+            //         'required' => "{field} harus diisi",
+            //         'less_than' => "Jumlah material Keluar tidak boleh lebih dari {$stok}"
+            //     ]
+            // ],
         ];
         if ($this->validate($rules)) {
             $image = $this->request->getFile('foto_penerima');
             $image->move(ROOTPATH . 'public/uploads');
-            $id_material = $this->request->getVar('id_material');
             $data = [
+                'id_permintaan_material' => $this->request->getVar('id_permintaan_material'),
                 'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
-                'id_material' => $id_material,
-                'id_satuan' => $this->request->getVar('id_satuan'),
-                'id' => $this->request->getVar('id'),
-                'jumlah_keluar' => $this->request->getVar('jumlah_keluar'),
                 'foto_penerima' => $image->getClientName(),
             ];
             $this->material_keluar->insert($data);
-            $where = [
-                'id_material' => $id_material
-            ];
-            $data2 = [
-                'stok' => $total_stok
-            ];
-            $this->material->update($where, $data2, 'material');
+            $data2 = array();
+            $jumlah_keluar = $this->request->getVar('total_keluar');
+            $id_material_2 = $this->request->getVar('id_material');
+            $jumlah = count((array)$this->request->getVar('id_material'));
+            for ($i = 0; $i < $jumlah; $i++) {
+				$data2[] = array(
+                    'id_material' => $id_material_2[$i],
+                    'stok' => $jumlah_keluar[$i]
+				);
+			}
+            $this->material->table('material')->updateBatch($data2,'id_material');
             session()->setFlashdata(
                 'status',
                 'Data material Keluar berhasil ditambahkan'
@@ -103,71 +97,22 @@ class C_material_Keluar extends BaseController
             $data = [
                 'title' => 'Halaman Tambah material Keluar | SILOG AJS',
                 'tampildatamaterial' => $this->material->findAll(),
-                'tampildatapermintaan' => $this->permintaan->findAll(),
+                'tampildatapermintaanmaterial' => $this->permintaan_material->findAll(),
+                'tampildataadminwilayah' => $this->user->findAll(),
                 'validation' => $this->validator
             ];
             return view('Menu/material_Keluar/tambah', $data);
         }
     }
 
-    public function edit($id = null)
-    {
-        $data = [
-            'tampildata' => $this->material_keluar->getRelasi($id),
-            'tampildatamaterial' => $this->material->findAll(),
-            'title' => 'Halaman Edit Material | SILOG AJS',
-        ];
-        return view('Menu/material_Keluar/edit', $data);
-    }
-
-    public function proses_edit()
-    {
-        $loadmodel = $this->request->getVar('id_material');
-        $dataId = $this->material->find($loadmodel);
-        $image = $this->request->getFile('foto_serial_number');
-        if ($image->isValid() && !$image->hasMoved()) {
-            $foto = $dataId->foto_serial_number;
-            if (file_exists('uploads/' . $foto)) {
-                unlink('uploads/' . $foto);
-            }
-            $imageName = $image->getRandomName();
-            $image->move('uploads/', $imageName);
-        }
-        $data = [
-            'id_kategori' => $this->request->getVar('id_kategori'),
-            'id_satuan' => $this->request->getVar('id_satuan'),
-            'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
-            'nama_material' => $this->request->getVar('nama_material'),
-            'stok' => $this->request->getVar('stok'),
-            'serial_number' => $this->request->getVar('serial_number'),
-            'foto_serial_number' => $imageName,
-        ];
-        session()->setFlashdata('status', 'Data material berhasil diupdate');
-        $this->material_keluar->update($loadmodel, $data);
-        return redirect()
-            ->to(base_url('tampil-material'))
-            ->with('status_icon', 'success')
-            ->with('status_text', 'Data Berhasil diupdate');
-    }
-
-    public function detail($id = null)
-    {
-        $data = [
-            'tampildatamaterial' => $this->material_keluar->getRelasi($id),
-            'title' => 'Halaman Detail Material Keluar | SILOG AJS',
-        ];
-        return view('Menu/material_Keluar/detail', $data);
-    }
-
     public function hapus($id = null)
     {
-        session()->setFlashdata(
-            'status',
-            'Data material Keluar berhasil dihapus'
-        );
-        $data['tampildata'] = $this->material_keluar
-            ->where('id_material_keluar', $id)
-            ->delete($id);
+        $data = $this->material_keluar->find($id);
+        $foto = $data->foto_penerima;
+        if (file_exists('uploads/' . $foto)) {
+            unlink('uploads/' . $foto);
+        }
+        $this->material_keluar->delete($id);
         return redirect()
             ->to(base_url('tampil-materialkeluar'))
             ->with('status_icon', 'success')
@@ -177,6 +122,31 @@ class C_material_Keluar extends BaseController
     public function tampil_otomatis_data_material_keluar($id = null)
     {
         $data = $this->material->cekStok($id);
+        return json_encode($data);
+    }
+
+    public function tampil_data_detail_material_keluar($id = null){
+        $data = $this->material_keluar->cekdetailmaterialkeluar($id);
+        return json_encode($data);
+    }
+
+    public function tampil_otomatis_data_wilayah_material_keluar($id = null)
+    {
+        // $data = [
+        //     'datahanif' => $this->material_keluar->cekWilayah($id)
+        // ];
+        // foreach ($data['datahanif'] as $h) {
+        //    $lists = "
+        //     <td>" . $h->nama . "</td>
+        //     <td>" . $h->no_drum . "</td>
+        //     <td>" . $h->core ."</td>
+        //     <td>" . $h->panjang . "</td>
+        //     ";
+        // }
+        // $data2 = array('list_permintaan_material'=>$lists);
+        // $final = json_encode($data2);
+        // print_r($final);
+        $data = $this->material_keluar->cekWilayah($id);
         return json_encode($data);
     }
 }

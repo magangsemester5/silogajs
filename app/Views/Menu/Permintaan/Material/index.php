@@ -21,11 +21,11 @@
                         <table id="dataTable" class="table table-striped w-100 dt-responsive">
                             <thead>
                                 <tr>
-                                <th>No</th>
-                                <th>No Permintaan</th>
-                                <th>Nama Admin Wilayah</th>
-                                <th>Wilayah</th>
-                                <th>Action</th>
+                                    <th>No</th>
+                                    <th>No Permintaan</th>
+                                    <th>Wilayah</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -34,7 +34,7 @@
                                     <tr>
                                         <td><?= $no++; ?></td>
                                         <td><?= $td->no_permintaan ?></td>
-                                        <td><?= $td->wilayah ?></td>
+                                        <td><?= $td->jwilayah ?></td>
                                         <td><?= $td->status ?></td>
                                         <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
                                             <td>

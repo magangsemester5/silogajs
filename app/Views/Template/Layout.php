@@ -1326,6 +1326,34 @@
        });
     }
     </script>
+
+    <!-- Delete Confirm Data Material Keluar -->
+    <script>
+    function  deletedatamaterialkeluar($id) 
+    { 
+      swal({
+            title:"Anda Yakin ?",
+            text: "Data Akan dihapus Secara Permanen!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+      })
+      .then((willDelete) => {
+         if (willDelete) {
+            $.ajax({
+              url: "<?php echo base_url('hapus-materialkeluar'); ?>" + "/" + $id,
+              method: "GET",
+              success: function() {
+                swal({    
+                    icon: "success",
+                });
+              }
+            });
+            location.reload();
+          }
+       });
+    }
+    </script>
     <!-- Memunculkan Preview Foto -->
     <script>
         $("#inputFile").change(function(event) {
@@ -1363,12 +1391,14 @@
         }
     </script>
         <!-- Mendapatkan Kalkulasi Total Stok Material Keluar -->
-        <script type="text/javascript">
+    <script type="text/javascript">
           <?php $request = \Config\Services::request(); ?>
           let hal = '<?= $request->uri->getSegment(1) ?>';
           let hal_panjang_keluar = '<?= $request->uri->getSegment(1) ?>';
           let serial_number = $('#serial_number');
+          let nama_material = $('#nama_material');
           let nama_satuan = $('#nama_satuan');
+          let foto_penerima = $('#foto_penerima');
           let nama = $('#nama');
           let no_drum = $('#no_drum');
           let core = $('#core');
@@ -1382,52 +1412,71 @@
           let wilayah = $('#wilayah');
 
         // Mendapatkan Kalkulasi Target Nama Material
-        $(document).on('change', '#nama_material', function() {
-          var id = $(this).val();
-          $.ajax({
-              url: "<?php echo base_url('autotampildatamaterialkeluar'); ?>" + "/" + id,
-              method: "GET",
-              dataType: 'json',
-              success: function(data) {
-                serial_number.val(data.serial_number);
-                nama_satuan.val(data.nama_satuan);
-                stok.val(data.stok);
-                total_stok.val(data.stok);
-                foto_serial_number.html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>");
-                jumlah.focus();
-              }
-            });
-        });
-
-        // Mendapatkan Kalkulasi Target Nama Kabel
-        $(document).on('change', '#no_drum', function() {
-          var id = $(this).val();
-          $.ajax({
-              url: "<?php echo base_url('autotampildatakabelkeluar'); ?>" + "/" + id,
-              method: "GET",
-              dataType: 'json',
-              success: function(data) {
-                serial_number.val(data.serial_number);
-                nama_satuan.val(data.nama_satuan);
-                panjang.val(data.panjang);
-                total_panjang.val(data.panjang);
-                foto_serial_number.html("<img src='../uploads/" + data.foto_serial_number + "'width='200px' height='200px'>");
-                panjang_keluar.focus();
-              }
-            });
-        });
-
         $(document).on('change', '#id_permintaan_material', function() {
           var id = $(this).val();
+            
           $.ajax({
               url: "<?php echo base_url('autotampildatapermintaanmaterial'); ?>" + "/" + id,
               method: "GET",
               dataType: 'json',
               success: function(data) {
                 wilayah.val(data.wilayah);
+                nama.val(data.nama);
+                $.ajax({
+                  url: "<?php echo base_url('autotampildetaildatamaterialkeluar'); ?>" + "/" + id,
+                  method: "GET",
+                  dataType: 'json',
+                  success: function(data) {
+                    var str = "";
+                    var count = 1;
+                    for (var i = 0; i < data.length; i++) {
+                      str += "<tr>";
+                      str += "<td>"+ count++ +"</td>";
+                      str += '<input type="text" name="id_material[]" value="'+ data[i].id_material +'" hidden />';
+                      str += '<td><input type="text" style="width:75px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="nama_material[]" value="'+ data[i].nama_material +'"/></td>';
+                      str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="dpmj[]" value="'+ data[i].dpmj +" "+ data[i].nama_satuan +'"/></td>';
+                      str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="total_keluar[]" value="'+ parseInt(data[i].ms - data[i].dpmj)+'"/>'+data[i].nama_satuan+'</td>';
+                      str += "</tr>";
+                    }
+                    document.querySelector('#showdetailmaterialkeluar').innerHTML = str;
+                  }
+                })
               }
             });
         });
+
+        // Menampilkan detail material keluar
+        $(document).on('click', 'button[data-bs-target="#detaildatamaterialkeluar"]', function() {
+          var id = $(this).attr('data-id');
+         
+          $.ajax({
+              url: "<?php echo base_url('autotampildatapermintaanmaterial'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                wilayah.val(data.wilayah);
+                foto_penerima.html("<img src='../uploads/" + data.foto_penerima + "'width='200px' height='200px'>");
+                $.ajax({
+                  url: "<?php echo base_url('autotampildetaildatamaterialkeluar'); ?>" + "/" + id,
+                  method: "GET",
+                  dataType: 'json',
+                  success: function(data) {
+                    var str = "";
+                    var count = 1;
+                    for (var i = 0; i < data.length; i++) {
+                      str += "<tr>";
+                      str += "<td>"+ count++ +"</td>";
+                      str += '<td>'+ data[i].nama_material +'</td>';
+                      str += '<td>'+ data[i].dpmj +" "+ data[i].nama_satuan +'</td>';
+                      str += '<td>'+ data[i].serial_number +'</td>';
+                      str += "</tr>";
+                    }
+                    document.querySelector('#isitabeldetailmaterialkeluar').innerHTML = str;
+                  }
+                })
+              }
+            });
+          });
 
           // Menampilkan detail laman kabel keluar
         $(document).on('change', '#id_permintaan_kabel', function() {
@@ -1450,10 +1499,11 @@
                     for (var i = 0; i < data.length; i++) {
                       str += "<tr>";
                       str += "<td>"+ count++ +"</td>";
-                      str += "<td>"+ data[i].no_drum +"</td>";
-                      str += "<td>"+ data[i].core+"</td>";
-                      str += "<td>"+ data[i].panjang +"</td>";
-                      str += "<td>"+ data[i].serial_number +"</td>";
+                      str += '<input type="text" name="id_kabel[]" value="'+ data[i].id_kabel +'" hidden />';
+                      str += '<td><input type="text" style="width:75px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="no_drum[]" value="'+ data[i].no_drum +'"/></td>';
+                      str += '<td><input type="text" style="width:30px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="core[]" value="'+ data[i].core +'"/></td>';
+                      str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="dpkp[]" value="'+ data[i].dpkp +" "+ data[i].nama_satuan +'"/></td>';
+                      str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="total_panjang[]" value="'+ parseInt(data[i].kp - data[i].dpkp)+'"/>'+data[i].nama_satuan+'</td>';
                       str += "</tr>";
                     }
                     document.querySelector('tbody').innerHTML = str;
@@ -1461,6 +1511,45 @@
                 })
               }
             });
+        });
+
+        // Menampilkan detail kabel keluar
+        $(document).on('click', 'button[data-bs-target="#detaildatakabelkeluar"]', function() {
+          var id = $(this).attr('data-id');
+         
+          $.ajax({
+              url: "<?php echo base_url('autotampildatapermintaankabel'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                wilayah.val(data.wilayah);
+                foto_penerima.html("<img src='../uploads/" + data.foto_penerima + "'width='200px' height='200px'>");
+                $.ajax({
+                  url: "<?php echo base_url('autotampildetaildatakabelkeluar'); ?>" + "/" + id,
+                  method: "GET",
+                  dataType: 'json',
+                  success: function(data) {
+                    var str = "";
+                    var count = 1;
+                    for (var i = 0; i < data.length; i++) {
+                      str += "<tr>";
+                      str += "<td>"+ count++ +"</td>";
+                      str += '<td>'+ data[i].no_drum +'</td>';
+                      str += '<td>'+ data[i].core +'</td>';
+                      str += '<td>'+ data[i].dpkp +" "+ data[i].nama_satuan +'</td>';
+                      str += '<td>'+ data[i].serial_number +'</td>';
+                      str += "</tr>";
+                    }
+                    document.querySelector('#isitabeldetailkabelkeluar').innerHTML = str;
+                  }
+                })
+              }
+            });
+          });
+        
+        $(document).on('keyup', '#panjang_masuk', function() {
+            let totalPanjang = parseInt(panjang.val()) + data[i].panjang;
+            total_panjang.val(Number(totalPanjang));
         });
 
         $(document).on('keyup', '#jumlah_masuk', function() {
@@ -1471,16 +1560,6 @@
         $(document).on('keyup', '#jumlah_keluar', function() {
             let totalStok = parseInt(stok.val()) - parseInt(this.value);
             total_stok.val(Number(totalStok));
-        });
-
-        $(document).on('keyup', '#panjang_masuk', function() {
-            let totalPanjang = parseInt(panjang.val()) + parseInt(this.value);
-            total_panjang.val(Number(totalPanjang));
-        });
-
-        $(document).on('keyup', '#panjang_keluar', function() {
-            let totalPanjang = parseInt(panjang.val()) - parseInt(this.value);
-            total_panjang.val(Number(totalPanjang));
         });
     </script>
     <script>
@@ -1514,69 +1593,5 @@
     <script>
       flatpickr('#flatpickrdate');
     </script>
-    <!-- Modal Detail Item Kabel yang akan keluar -->
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Kabel yang diminta</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-          <div class="content-wrapper">
-        <!-- Content -->
-            <!-- Basic Bootstrap Table -->
-            <div class="card shadow mb-4">
-                <!-- <div class="row mt-2 ml-md-2 text-center"> -->
-                <!-- <div class="col-md-1"> -->
-                <!-- Form Error -->
-                <!-- </div> -->
-                <!-- </div> -->
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-striped w-100 dt-responsive">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>No Drum</th>
-                                    <th>Core</th>
-                                    <th>Jumlah Keluar</th>
-                                    <th>Serial Number</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-border-bottom-0">
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <!--/ Basic Bootstrap Table -->
-
-            <!--/ Borderless Table -->
-
-            <!-- Hoverable Table rows -->
-            <!--/ Hoverable Table rows -->
-
-            <!-- Small table -->
-            <!--/ Small table -->
-
-            <!-- Contextual Classes -->
-            <!--/ Contextual Classes -->
-
-            <!-- Table within card -->
-            <!--/ Table within card -->
-
-            <!-- Responsive Table -->
-            <!--/ Responsive Table -->
-        <!-- / Content -->
-        <!-- / Footer -->
-
-        <div class="content-backdrop fade"></div>
-        </div>
-        </div>
-        </div>
-      </div>
-    </div>
   </body>
 </html>

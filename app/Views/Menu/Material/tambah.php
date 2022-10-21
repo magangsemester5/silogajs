@@ -13,13 +13,14 @@
                     <form method="POST" action="<?= base_url("prosestambah-material") ?>" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Nama material</label>
-                            <input type="text" name="nama_material" class="form-control" id="basic-default-company" placeholder="Masukan nama material disini" />
+                            <input type="text" name="nama_material" class="form-control" id="basic-default-company"
+                                placeholder="Masukan nama material disini" />
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('nama_material')) { ?>
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('nama_material'); ?>
-                            </div>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('nama_material'); ?>
+                        </div>
                         <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-email">Satuan</label>
@@ -27,36 +28,38 @@
                                 <select name="id_satuan" class="form-control">
                                     <option>Pilih satuan disini</option>
                                     <?php foreach ($tampildatasatuan as $key => $value) : ?>
-                                        <option value="<?= $value->id_satuan ?>"><?= $value->nama_satuan ?></option>
+                                    <option value="<?= $value->id_satuan ?>"><?= $value->nama_satuan ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('id_satuan')) { ?>
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('id_satuan'); ?>
-                            </div>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('id_satuan'); ?>
+                        </div>
                         <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Stok</label>
-                            <input type="text" name="stok" id="basic-default-phone" class="form-control phone-mask" placeholder="Masukan jumlah stok disini" />
+                            <input type="text" name="stok" id="basic-default-phone" class="form-control phone-mask"
+                                placeholder="Masukan jumlah stok disini" />
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('stok')) { ?>
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('stok'); ?>
-                            </div>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('stok'); ?>
+                        </div>
                         <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Serial Number</label>
-                            <input type="text" name="serial_number" id="basic-default-phone" class="form-control phone-mask" placeholder="Masukan serial number disini" />
+                            <input type="text" name="serial_number" id="basic-default-phone"
+                                class="form-control phone-mask" placeholder="Masukan serial number disini" />
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('serial_number')) { ?>
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('serial_number'); ?>
-                            </div>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('serial_number'); ?>
+                        </div>
                         <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Foto Serial Number</label>

@@ -11,7 +11,7 @@ class M_Material extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_kategori', 'id_satuan', 'kode_material', 'nama_material', 'stok', 'serial_number', 'foto_serial_number'
+        'id_satuan', 'nama_material', 'stok', 'serial_number', 'foto_serial_number'
     ];
     function getAll()
     {
@@ -29,15 +29,15 @@ class M_Material extends Model
         return $query->getRowArray();
     }
 
-    public function chartmaterialMasuk()
-    {
-        return $this->db->table('material_masuk')->select('count(*) as jumlah, id_material')->groupBy('id_material')->get()->getResultArray();
-    }
+    // public function chartmaterialMasuk()
+    // {
+    //     return $this->db->table('material_masuk')->select('count(*) as jumlah, id_material')->groupBy('id_material')->get()->getResultArray();
+    // }
 
-    public function chartmaterialKeluar()
-    {
-        return $this->db->table('material_keluar')->select('count(*) as jumlah, id_material')->groupBy('id_material')->get()->getResultArray();
-    }
+    // public function chartmaterialKeluar()
+    // {
+    //     return $this->db->table('material_keluar')->select('count(*) as jumlah, id_material')->groupBy('id_material')->get()->getResultArray();
+    // }
     
     function count($table)
     {

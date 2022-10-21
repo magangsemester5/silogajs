@@ -82,6 +82,8 @@ $routes->get('hapus-materialmasuk/(:num)', 'C_Material_Masuk::hapus/$1', ['filte
 // Material Keluar
 $routes->get('tampil-materialkeluar', 'C_Material_Keluar::index', ['filter' => 'auth']);
 $routes->get('autotampildatamaterialkeluar/(:num)', 'C_Material_Keluar::tampil_otomatis_data_material_keluar/$1', ['filter' => 'auth']);
+$routes->get('autotampildatapermintaanmaterial/(:num)', 'C_Material_Keluar::tampil_otomatis_data_wilayah_material_keluar/$1', ['filter' => 'auth']);
+$routes->get('autotampildetaildatamaterialkeluar/(:num)', 'C_Material_Keluar::tampil_data_detail_material_keluar/$1', ['filter' => 'auth']);
 $routes->get('detail-materialkeluar/(:num)', 'C_Material_Keluar::detail/$1', ['filter' => 'auth']);
 $routes->get('tambah-materialkeluar', 'C_Material_Keluar::tambah', ['filter' => 'auth']);
 $routes->post('prosestambah-materialkeluar', 'C_Material_Keluar::proses_tambah', ['filter' => 'auth']);

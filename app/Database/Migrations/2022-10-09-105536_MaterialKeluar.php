@@ -15,11 +15,6 @@ class MaterialKeluar extends Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'id_material' => [
-                'type' => 'int',
-                'constraint' => '12',
-                'unsigned' => TRUE
-            ],
             'id_permintaan_material' => [
                 'type' => 'int',
                 'constraint' => '12',
@@ -28,10 +23,6 @@ class MaterialKeluar extends Migration
             'tanggal_keluar' => [
                 'type' => 'date'
             ],
-            'jumlah_keluar' => [
-                'type' => 'int',
-                'constraint' => '50'
-            ],
             'foto_penerima' => [
                 'type' => 'varchar',
                 'constraint' => '50'
@@ -39,7 +30,6 @@ class MaterialKeluar extends Migration
         ]);
 
         $this->forge->addPrimaryKey('id_material_keluar');
-        $this->forge->addForeignKey('id_material', 'material', 'id_material');
         $this->forge->addForeignKey('id_permintaan_material', 'permintaan_material', 'id_permintaan_material');
         $this->forge->createTable('material_keluar');
     }

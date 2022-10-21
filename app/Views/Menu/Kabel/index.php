@@ -58,7 +58,7 @@
                                         <a class="btn btn-warning btn-sm"
                                             href="<?= base_url("edit-kabel/$td->id_kabel"); ?>"><i
                                                 class="bx bx-edit-alt"></i>Edit</a>
-                                        <a class="btn btn-danger btn-sm"
+                                        <a class="btn btn-danger btn-sm" style="color:white"
                                             onclick="deletedatakabel(<?= $td->id_kabel ?>)"><i
                                                 class="bx bx-trash"></i>Hapus</a>
                                         <?php } ?>

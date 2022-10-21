@@ -40,7 +40,7 @@ class C_kabel_Keluar extends BaseController
 
     public function proses_tambah()
     {
-        $total_panjang = $this->request->getVar('total_panjang');
+        // $total_panjang = $this->request->getVar('total_panjang');
         $rules = [
             'tanggal_keluar' => [
                 'label' => "Tanggal Keluar",
@@ -68,22 +68,24 @@ class C_kabel_Keluar extends BaseController
         if ($this->validate($rules)) {
             $image = $this->request->getFile('foto_penerima');
             $image->move(ROOTPATH . 'public/uploads');
-            $id_kabel = $this->request->getVar('id_kabel');
             $data = [
-                'id_kabel' => $id_kabel,
                 'id_permintaan_kabel' => $this->request->getVar('id_permintaan_kabel'),
                 'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
                 'panjang_keluar' => $this->request->getVar('panjang_keluar'),
                 'foto_penerima' => $image->getClientName(),
             ];
             $this->kabel_keluar->insert($data);
-            $where = [
-                'id_kabel' => $id_kabel
-            ];
-            $data2 = [
-                'panjang' => $total_panjang
-            ];
-            $this->kabel->update($where, $data2, 'kabel');
+            $data2 = array();
+            $panjang_keluar = $this->request->getVar('total_panjang');
+            $id_kabel_2 = $this->request->getVar('id_kabel');
+            $jumlah = count((array)$this->request->getVar('id_kabel'));
+            for ($i = 0; $i < $jumlah; $i++) {
+				$data2[] = array(
+                    'id_kabel' => $id_kabel_2[$i],
+                    'panjang' => $panjang_keluar[$i]
+				);
+			}
+            $this->kabel->table('kabel')->updateBatch($data2,'id_kabel');
             session()->setFlashdata(
                 'status',
                 'Data kabel Keluar berhasil ditambahkan'
@@ -102,54 +104,6 @@ class C_kabel_Keluar extends BaseController
             ];
             return view('Menu/kabel_Keluar/tambah', $data);
         }
-    }
-
-    public function edit($id = null)
-    {
-        $data = [
-            'tampildata' => $this->kabel_keluar->getRelasi($id),
-            'tampildatakabel' => $this->kabel->findAll(),
-            'tampildataadminwilayah' => $this->user->findAll(),
-            'title' => 'Halaman Edit kabel | SILOG AJS',
-        ];
-        return view('Menu/kabel_Keluar/edit', $data);
-    }
-
-    public function proses_edit()
-    {
-        $loadmodel = $this->request->getVar('id_kabel');
-        $dataId = $this->kabel->find($loadmodel);
-        $image = $this->request->getFile('foto_penerima');
-        if ($image->isValid() && !$image->hasMoved()) {
-            $foto = $dataId->foto_penerima;
-            if (file_exists('uploads/' . $foto)) {
-                unlink('uploads/' . $foto);
-            }
-            $imageName = $image->getRandomName();
-            $image->move('uploads/', $imageName);
-        }
-        $data = [
-            'id_kabel' => $this->request->getVar('id_kabel'),
-            'id_permintaan_kabel' => $this->request->getVar('id_permintaan_kabel'),
-            'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
-            'panjang' => $this->request->getVar('panjang'),
-            'foto_penerima' => $imageName,
-        ];
-        session()->setFlashdata('status', 'Data kabel berhasil diupdate');
-        $this->kabel_keluar->update($loadmodel, $data);
-        return redirect()
-            ->to(base_url('tampil-kabel'))
-            ->with('status_icon', 'success')
-            ->with('status_text', 'Data Berhasil diupdate');
-    }
-
-    public function detail($id = null)
-    {
-        $data = [
-            'tampildatakabel' => $this->kabel_keluar->getRelasi($id),
-            'title' => 'Halaman Detail kabel Keluar | SILOG AJS',
-        ];
-        return view('Menu/kabel_Keluar/detail', $data);
     }
 
     public function hapus($id = null)
@@ -180,7 +134,7 @@ class C_kabel_Keluar extends BaseController
 
     public function tampil_otomatis_data_wilayah_kabel_keluar($id = null)
     {
-        // $data = [
+        // $data = [    
         //     'datahanif' => $this->kabel_keluar->cekWilayah($id)
         // ];
         // foreach ($data['datahanif'] as $h) {

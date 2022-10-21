@@ -128,7 +128,7 @@ class C_User extends BaseController
             session()->setFlashdata('status', 'Data Profil berhasil diupdate');
             $this->user->update($loadmodel, $data);
             return redirect()
-                ->to(base_url('tampil-dashboard'))
+                ->to(base_url('tampil_dashboard'))
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil diupdate');
         } else {
@@ -140,7 +140,7 @@ class C_User extends BaseController
             session()->setFlashdata('status', 'Data Profil berhasil diupdate');
             $this->user->update($loadmodel, $data);
             return redirect()
-                ->to(base_url('tampil-dashboard'))
+                ->to(base_url('tampil_dashboard'))
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil diupdate');
         }
