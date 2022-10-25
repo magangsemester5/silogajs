@@ -17,24 +17,28 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Password</label>
-                            <input type="text" name="password" id="basic-default-phone" class="form-control phone-mask" />
+                            <input type="text" name="password" id="basic-default-phone"
+                                class="form-control phone-mask" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Id User</label>
-                            <input type="text" name="id_user" id="basic-default-phone" class="form-control phone-mask" />
+                            <input type="text" name="id_user" id="basic-default-phone"
+                                class="form-control phone-mask" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Jabatan</label>
-                            <input type="text" name="jabatan" id="basic-default-phone" class="form-control phone-mask" />
+                            <input type="text" name="jabatan" id="basic-default-phone"
+                                class="form-control phone-mask" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Kriteria</label>
-                            <input type="text" name="kriteria" id="basic-default-phone" class="form-control phone-mask" />
+                            <input type="text" name="kriteria" id="basic-default-phone"
+                                class="form-control phone-mask" />
                         </div>
                         <div class="mb-3">
-                                <label class="form-label" for="basic-default-phone">Foto User</label>
-                                <input type="file" name="foto_user" id="inputFile" class="form-control" required>
-                            </div>
+                            <label class="form-label" for="basic-default-phone">Foto User</label>
+                            <input type="file" name="foto_user" id="inputFile" class="form-control" required>
+                        </div>
                         <button type="submit" class="btn btn-primary">Tambah</button>
                         <a href="<?= base_url('tampil-user') ?>" class="btn btn-warning">Cancel </a>
                     </form>

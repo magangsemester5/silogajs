@@ -11,9 +11,9 @@ class M_Kabel extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-      'id_satuan', 'no_drum','core','panjang', 'serial_number', 'foto_serial_number'
+        'id_satuan', 'no_drum', 'core', 'panjang', 'serial_number', 'foto_serial_number'
     ];
-    
+
     function getAll()
     {
         $builder = $this->db->table('kabel');

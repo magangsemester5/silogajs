@@ -157,7 +157,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Material Keluar</span>
-                            <h3 class="card-title text-nowrap mb-2"></h3>
+                            <h3 class="card-title text-nowrap mb-2"><?= $material_keluar ?></h3>
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Kabel Keluar</span>
-                            <h3 class="card-title text-nowrap mb-2"></h3>
+                            <h3 class="card-title text-nowrap mb-2"><?= $kabel_keluar ?></h3>
                         </div>
                     </div>
                 </div>
@@ -279,7 +279,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Material Keluar</span>
-                            <h3 class="card-title text-nowrap mb-2"></h3>
+                            <h3 class="card-title text-nowrap mb-2"><?= $material_keluar ?></h3>
                         </div>
                     </div>
                 </div>
@@ -293,7 +293,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Kabel Keluar</span>
-                            <h3 class="card-title text-nowrap mb-2"></h3>
+                            <h3 class="card-title text-nowrap mb-2"><?= $kabel_keluar ?></h3>
                         </div>
                     </div>
                 </div>
@@ -414,7 +414,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Material Keluar</span>
-                            <h3 class="card-title text-nowrap mb-2"></h3>
+                            <h3 class="card-title text-nowrap mb-2"><?= $material_keluar ?></h3>
                         </div>
                     </div>
                 </div>
@@ -428,7 +428,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Kabel Keluar</span>
-                            <h3 class="card-title text-nowrap mb-2"></h3>
+                            <h3 class="card-title text-nowrap mb-2"><?= $kabel_keluar ?></h3>
                         </div>
                     </div>
                 </div>
@@ -552,7 +552,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Material Keluar</span>
-                            <h3 class="card-title text-nowrap mb-2"></h3>
+                            <h3 class="card-title text-nowrap mb-2"><?= $material_keluar ?></h3>
                         </div>
                     </div>
                 </div>
@@ -566,7 +566,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Kabel Keluar</span>
-                            <h3 class="card-title text-nowrap mb-2"></h3>
+                            <h3 class="card-title text-nowrap mb-2"><?= $kabel_keluar ?></h3>
                         </div>
                     </div>
                 </div>
@@ -688,7 +688,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Material Keluar</span>
-                            <h3 class="card-title text-nowrap mb-2"></h3>
+                            <h3 class="card-title text-nowrap mb-2"><?= $material_keluar ?></h3>
                         </div>
                     </div>
                 </div>
@@ -702,7 +702,7 @@
                                 </div>
                             </div>
                             <span class="d-block mb-1">Kabel Keluar</span>
-                            <h3 class="card-title text-nowrap mb-2"></h3>
+                            <h3 class="card-title text-nowrap mb-2"><?= $kabel_keluar ?></h3>
                         </div>
                     </div>
                 </div>

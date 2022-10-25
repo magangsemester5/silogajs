@@ -11,17 +11,19 @@
                 </div>
                 <div class="card-body">
                     <?php $validation = \Config\Services::validation(); ?>
-                    <form method="POST" action="<?= base_url('prosestambah-materialmasuk') ?>" enctype="multipart/form-data">
+                    <form method="POST" action="<?= base_url('prosestambah-materialmasuk') ?>"
+                        enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="tanggal_masuk">Tanggal Masuk</label>
                             <div class="col-md-2">
-                                <input type="text" id="flatpickrdate" name="tanggal_masuk" class="form-control date" placeholder="Tanggal Masuk" readonly>
+                                <input type="text" id="flatpickrdate" name="tanggal_masuk" class="form-control date"
+                                    placeholder="Tanggal Masuk" readonly>
                             </div>
                             <!-- Error Validation -->
                             <?php if ($validation->getError('tanggal_masuk')) { ?>
-                                <div class='alert alert-danger mt-2'>
-                                    <?= $error = $validation->getError('tanggal_masuk'); ?>
-                                </div>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('tanggal_masuk'); ?>
+                            </div>
                             <?php } ?>
                         </div>
                         <div class="mb-3">
@@ -30,15 +32,15 @@
                                 <select name="id_material" class="form-control" id="nama_material">
                                     <option value="" disabled selected>Pilih Nama material</option>
                                     <?php foreach ($tampildatamaterial as $key => $value) : ?>
-                                        <option value="<?= $value->id_material ?>"><?= $value->nama_material ?></option>
+                                    <option value="<?= $value->id_material ?>"><?= $value->nama_material ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                             <!-- Error Validation -->
                             <?php if ($validation->getError('id_material')) { ?>
-                                <div class='alert alert-danger mt-2'>
-                                    <?= $error = $validation->getError('id_material'); ?>
-                                </div>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('id_material'); ?>
+                            </div>
                             <?php } ?>
                         </div>
                         <div class="mb-3">
@@ -50,20 +52,22 @@
                         <label class="col-md-4 text-md-right" for="jumlah_masuk">Jumlah material Masuk</label>
                         <div class="form-password-toggle col-md-3">
                             <div class="input-group">
-                                <input value="<?= set_value('jumlah_masuk'); ?>" name="jumlah_masuk" id="jumlah_masuk" type="number" class="form-control" placeholder="Jumlah Masuk...">
+                                <input value="<?= set_value('jumlah_masuk'); ?>" name="jumlah_masuk" id="jumlah_masuk"
+                                    type="number" class="form-control" placeholder="Jumlah Masuk...">
                                 <input id="nama_satuan" class="input-group-text col-md-4" disabled>
                             </div>
                         </div>
                         <!-- Error Validation -->
-                        <?php /* if ($validation->getError('jumlah_masuk')) { ?> 
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('jumlah_masuk'); ?>
-                            </div>
+                        <?php /* if ($validation->getError('jumlah_masuk')) { ?>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('jumlah_masuk'); ?>
+                        </div>
                         <?php } */ ?>
                         <div class="mb-3">
                             <label class="total_stok" for="total_stok">Total Stok</label>
                             <div class="input-group">
-                                <input readonly id="total_stok" value="<?= set_value('total_stok'); ?>" name="total_stok" type="number" class="form-control">
+                                <input readonly id="total_stok" value="<?= set_value('total_stok'); ?>"
+                                    name="total_stok" type="number" class="form-control">
                             </div>
                         </div>
                         <div class="mb-3">
@@ -77,7 +81,8 @@
                             <br>
                             <div class="mb-3">
                                 <label class="custom-file-label">Foto Pengantaran material</label>
-                                <input type="file" name="foto_pengantaran_material" id="inputFile" class="form-control" required>
+                                <input type="file" name="foto_pengantaran_material" id="inputFile" class="form-control"
+                                    required>
                             </div>
                             <div class="col-md-3">
                                 <label>Preview Foto Penerima</label>

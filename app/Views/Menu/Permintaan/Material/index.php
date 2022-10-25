@@ -1,11 +1,13 @@
 <?= $this->extend('Template/layout') ?>
 <?= $this->section('content') ?>
+
 <body>
     <!-- Content wrapper -->
     <div class="content-wrapper">
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span>Halaman Permintaan Material</h4>
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span>Halaman Permintaan Material
+            </h4>
             <!-- Basic Bootstrap Table -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
@@ -31,24 +33,32 @@
                             <tbody class="table-border-bottom-0">
                                 <?php $no = 1;
                                 foreach ($tampildata as $td) : ?>
-                                    <tr>
-                                        <td><?= $no++; ?></td>
-                                        <td><?= $td->no_permintaan ?></td>
-                                        <td><?= $td->jwilayah ?></td>
-                                        <td><?= $td->status ?></td>
-                                        <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
-                                            <td>
-                                                <a class="btn btn-info btn-sm" href="<?= base_url("status-permintaan/$td->id_permintaan_material"); ?>"><i class="bx bx-show-alt"></i>Aprove/Reject</a>
-                                                <a class="btn btn-info btn-sm" href="<?= base_url("detail-permintaan/$td->id_permintaan_material"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                                <a class="btn btn-danger btn-sm" href="<?= base_url("hapus-permintaan/$td->id_permintaan_material"); ?>"><i class="bx bx-trash"></i>Hapus History</a>
-                                            </td>
-                                        <?php } ?>
-                                        <?php if (session()->get('kriteria') == 'Management') { ?>
-                                            <td>
-                                                <a class="btn btn-info btn-sm" href="<?= base_url("status-permintaan/$td->id_permintaan_material"); ?>"><i class="bx bx-show-alt"></i>Aprove/Reject</a>
-                                            </td>
-                                        <?php } ?>
-                                    </tr>
+                                <tr>
+                                    <td><?= $no++; ?></td>
+                                    <td><?= $td->no_permintaan ?></td>
+                                    <td><?= $td->wilayah ?></td>
+                                    <td><?= $td->status ?></td>
+                                    <?php if (session()->get('kriteria') == 'Admin Pusat') { ?>
+                                    <td>
+                                        <a class="btn btn-info btn-sm"
+                                            href="<?= base_url("status-permintaan/$td->id_permintaan_material"); ?>"><i
+                                                class="bx bx-show-alt"></i>Aprove/Reject</a>
+                                        <a class="btn btn-info btn-sm"
+                                            href="<?= base_url("detail-permintaan/$td->id_permintaan_material"); ?>"><i
+                                                class="bx bx-show-alt"></i>Detail</a>
+                                        <a class="btn btn-danger btn-sm"
+                                            href="<?= base_url("hapus-permintaan/$td->id_permintaan_material"); ?>"><i
+                                                class="bx bx-trash"></i>Hapus History</a>
+                                    </td>
+                                    <?php } ?>
+                                    <?php if (session()->get('kriteria') == 'Management') { ?>
+                                    <td>
+                                        <a class="btn btn-info btn-sm"
+                                            href="<?= base_url("status-permintaan/$td->id_permintaan_material"); ?>"><i
+                                                class="bx bx-show-alt"></i>Aprove/Reject</a>
+                                    </td>
+                                    <?php } ?>
+                                </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>

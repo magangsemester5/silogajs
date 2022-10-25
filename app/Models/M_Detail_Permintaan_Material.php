@@ -11,14 +11,23 @@ class M_Detail_Permintaan_Material extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_detail_permintaan_material','id_permintaan_material','id_material','panjang','status'
+        'id_detail_permintaan_material', 'id_permintaan_material', 'id_material', 'jumlah', 'status'
     ];
 
     function getAll()
     {
-        $builder = $this->db->table('permintaan_material');                                                              
+        $builder = $this->db->table('permintaan_material');
         $builder->join('user', 'user.id = permintaan_material.id');
         $query = $builder->get();
         return $query->getResult();
+    }
+
+    function countMaterialKeluar()
+    {
+        $builder = $this->db->table('detail_permintaan_material');
+        $builder->selectCount('id_material as material_keluar');
+        $builder->where('status = 4');
+        $query = $builder->countAllResults();
+        return $query;
     }
 }

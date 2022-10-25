@@ -66,7 +66,7 @@ class C_Permintaan extends BaseController
                 'status' => 4
             );
         }
-        $this->detail_permintaan_kabel->update($id, $data); 
+        $this->detail_permintaan_kabel->update($id, $data);
         session()->setFlashdata('status', 'Data permintaan berhasil diupdate');
         return redirect()->to(base_url('detailpermintaan-kabel/' . $id . ''))
             ->with('status_icon', 'success')

@@ -79,12 +79,12 @@ class C_material_Keluar extends BaseController
             $id_material_2 = $this->request->getVar('id_material');
             $jumlah = count((array)$this->request->getVar('id_material'));
             for ($i = 0; $i < $jumlah; $i++) {
-				$data2[] = array(
+                $data2[] = array(
                     'id_material' => $id_material_2[$i],
                     'stok' => $jumlah_keluar[$i]
-				);
-			}
-            $this->material->table('material')->updateBatch($data2,'id_material');
+                );
+            }
+            $this->material->table('material')->updateBatch($data2, 'id_material');
             session()->setFlashdata(
                 'status',
                 'Data material Keluar berhasil ditambahkan'
@@ -95,7 +95,7 @@ class C_material_Keluar extends BaseController
                 ->with('status_text', 'Data Berhasil ditambah');
         } else {
             $data = [
-                'title' => 'Halaman Tambah material Keluar | SILOG AJS',
+                'title' => 'Halaman Tambah Material Keluar | SILOG AJS',
                 'tampildatamaterial' => $this->material->findAll(),
                 'tampildatapermintaanmaterial' => $this->permintaan_material->findAll(),
                 'tampildataadminwilayah' => $this->user->findAll(),
@@ -125,7 +125,8 @@ class C_material_Keluar extends BaseController
         return json_encode($data);
     }
 
-    public function tampil_data_detail_material_keluar($id = null){
+    public function tampil_data_detail_material_keluar($id = null)
+    {
         $data = $this->material_keluar->cekdetailmaterialkeluar($id);
         return json_encode($data);
     }

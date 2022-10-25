@@ -11,7 +11,7 @@ class M_Permintaan_Kabel extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_permintaan_kabel','id','no_permintaan'
+        'id_permintaan_kabel', 'id', 'no_permintaan'
     ];
 
     function getAll()
@@ -26,7 +26,7 @@ class M_Permintaan_Kabel extends Model
     {
         $builder = $this->db->table('permintaan_kabel');
         $builder->join('user', 'user.id = permintaan_kabel.id');
-        $builder->where('permintaan_kabel.id_permintaan_kabel',$id);
+        $builder->where('permintaan_kabel.id_permintaan_kabel', $id);
         $query = $builder->get();
         return $query->getResult();
     }
