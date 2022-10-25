@@ -56,17 +56,19 @@ class C_material_Keluar extends BaseController
                     'required' => "{field} harus diisi"
                 ]
             ],
-            // 'panjang' => [
-            //     'label' => "Jumlah material Keluar",
-            //     'rules' => "required|numeric|less_than[{$total_panjang}]",
-            //     'errors' => [
-            //         'required' => "{field} harus diisi",
-            //         'less_than' => "Jumlah material Keluar tidak boleh lebih dari {$stok}"
-            //     ]
-            // ],
+            'image' => [
+                'label' => "Foto Penerima",
+                'rules' => "uploaded[image]|mime_in[image,image/png,image/jpeg]|max_size[image,2048]",
+                'errors' => [
+                    'uploaded' => "Foto yang diupload sudah pernah diupload",
+                    'mime_in' => "File yang diupload harus berupa PNG/JPG",
+                    'max_size' => "Foto yang diupload maximal harus berukuran 2Mb"
+                ]
+
+            ]
         ];
         if ($this->validate($rules)) {
-            $image = $this->request->getFile('foto_penerima');
+            $image = $this->request->getFile('image');
             $image->move(ROOTPATH . 'public/uploads');
             $data = [
                 'id_permintaan_material' => $this->request->getVar('id_permintaan_material'),

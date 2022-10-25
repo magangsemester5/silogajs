@@ -58,8 +58,14 @@
                         </div>
                         <div class="mb-3">
                             <label class="custom-file-label">Foto Penerima</label>
-                            <input type="file" name="foto_penerima" id="inputFile" class="form-control" required>
+                            <input type="file" name="image" id="inputFile" class="form-control">
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('image')) { ?>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('image'); ?>
+                        </div>
+                        <?php } ?>
                         <div class="col-md-3">
                             <img src="" id="imgView" class="card-img-top img-fluid">
                         </div>

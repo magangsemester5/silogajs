@@ -56,17 +56,19 @@ class C_kabel_Keluar extends BaseController
                     'required' => "{field} harus diisi"
                 ]
             ],
-            // 'panjang' => [
-            //     'label' => "Jumlah kabel Keluar",
-            //     'rules' => "required|numeric|less_than[{$total_panjang}]",
-            //     'errors' => [
-            //         'required' => "{field} harus diisi",
-            //         'less_than' => "Jumlah kabel Keluar tidak boleh lebih dari {$stok}"
-            //     ]
-            // ],
+            'image' => [
+                'label' => "Foto Penerima",
+                'rules' => "uploaded[image]|mime_in[image,image/png,image/jpeg]|max_size[image,2048]",
+                'errors' => [
+                    'uploaded' => "Foto yang diupload sudah pernah diupload",
+                    'mime_in' => "File yang diupload harus berupa PNG/JPG",
+                    'max_size' => "Foto yang diupload maximal harus berukuran 2Mb"
+                ]
+
+            ]
         ];
         if ($this->validate($rules)) {
-            $image = $this->request->getFile('foto_penerima');
+            $image = $this->request->getFile('image');
             $image->move(ROOTPATH . 'public/uploads');
             $data = [
                 'id_permintaan_kabel' => $this->request->getVar('id_permintaan_kabel'),
@@ -80,12 +82,12 @@ class C_kabel_Keluar extends BaseController
             $id_kabel_2 = $this->request->getVar('id_kabel');
             $jumlah = count((array)$this->request->getVar('id_kabel'));
             for ($i = 0; $i < $jumlah; $i++) {
-				$data2[] = array(
+                $data2[] = array(
                     'id_kabel' => $id_kabel_2[$i],
                     'panjang' => $panjang_keluar[$i]
-				);
-			}
-            $this->kabel->table('kabel')->updateBatch($data2,'id_kabel');
+                );
+            }
+            $this->kabel->table('kabel')->updateBatch($data2, 'id_kabel');
             session()->setFlashdata(
                 'status',
                 'Data kabel Keluar berhasil ditambahkan'
@@ -127,7 +129,8 @@ class C_kabel_Keluar extends BaseController
         return json_encode($data);
     }
 
-    public function tampil_data_detail_kabel_keluar($id = null){
+    public function tampil_data_detail_kabel_keluar($id = null)
+    {
         $data = $this->kabel_keluar->cekdetailkabelkeluar($id);
         return json_encode($data);
     }
