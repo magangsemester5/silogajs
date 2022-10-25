@@ -33,7 +33,7 @@
                                     <th>Id User</th>
                                     <th>Jabatan</th>
                                     <th>Wilayah</th>
-                                    <th>Foto User</th>
+                                    <th>Foto user</th>
                                     <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
                                     <th>Aksi</th>
                                     <?php } ?>
