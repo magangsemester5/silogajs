@@ -11,7 +11,7 @@ class M_Material_Keluar extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_permintaan_material','tanggal_keluar','foto_penerima'
+        'id_permintaan_material', 'tanggal_keluar', 'foto_penerima'
     ];
 
     function getAll()
@@ -43,7 +43,7 @@ class M_Material_Keluar extends Model
         $query = $builder->get();
         return $query->getRowArray();
     }
-    
+
     public function cekdetailmaterialkeluar($id = null)
     {
         $builder = $this->db->table('detail_permintaan_material');

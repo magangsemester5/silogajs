@@ -32,15 +32,17 @@
                             <tbody class="table-border-bottom-0">
                                 <?php $no = 1;
                                 foreach ($tampildata as $td) : ?>
-                                    <tr>
-                                        <td><?= $no++; ?></td>
-                                        <td><?= $td->no_permintaan ?></td>
-                                        <td><?= $td->nama ?></td>
-                                        <td><?= $td->wilayah ?></td>
-                                        <td>
-                                            <a class="btn btn-info btn-sm" href="<?= base_url("detailpermintaan-kabel/$td->id_permintaan_kabel"); ?>"><i class="bx bx-show-alt"></i>Detail</a>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td><?= $no++; ?></td>
+                                    <td><?= $td->no_permintaan ?></td>
+                                    <td><?= $td->nama ?></td>
+                                    <td><?= $td->wilayah ?></td>
+                                    <td>
+                                        <a class="btn btn-info btn-sm"
+                                            href="<?= base_url("detailpermintaan-kabel/$td->id_permintaan_kabel"); ?>"><i
+                                                class="bx bx-show-alt"></i>Detail</a>
+                                    </td>
+                                </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>

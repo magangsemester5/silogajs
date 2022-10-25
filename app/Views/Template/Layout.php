@@ -1457,7 +1457,7 @@
                 wilayah.val(data.wilayah);
                 foto_penerima.html("<img src='../uploads/" + data.foto_penerima + "'width='200px' height='200px'>");
                 $.ajax({
-                  url: "<?php echo base_url('autotampildetaildatamaterialkeluar'); ?>" + "/" + id,
+                  url: "<?php echo base_url('autotampildetaildatamaterialkeluar'); ?>" + "/" + 1,
                   method: "GET",
                   dataType: 'json',
                   success: function(data) {

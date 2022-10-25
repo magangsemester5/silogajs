@@ -13,7 +13,7 @@ class M_Kabel_Keluar extends Model
     protected $allowedFields    = [
         'id_permintaan_kabel', 'tanggal_keluar', 'foto_penerima'
     ];
-    
+
     function getAll()
     {
         $builder = $this->db->table('kabel_keluar');
@@ -51,7 +51,7 @@ class M_Kabel_Keluar extends Model
         $query = $builder->get();
         return $query->getRowArray();
     }
-    
+
     public function cekdetailkabelkeluar($id = null)
     {
         $builder = $this->db->table('detail_permintaan_kabel');
