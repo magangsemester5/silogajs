@@ -32,7 +32,9 @@
                                     <th>Nama</th>
                                     <th>Id User</th>
                                     <th>Jabatan</th>
+                                    <th>Kriteria</th>
                                     <th>Wilayah</th>
+                                    <th>Nomor Telepon</th>
                                     <th>Foto user</th>
                                     <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
                                     <th>Aksi</th>
@@ -47,7 +49,9 @@
                                         <td><?= $td->nama ?></td>
                                         <td><?= $td->id_user ?></td>
                                         <td><?= $td->jabatan ?></td>
+                                        <td><?= $td->kriteria ?></td>
                                         <td><?= $td->wilayah ?></td>
+                                        <td><?= $td->no_telepon ?></td>
                                         <td><img src="<?= base_url("../uploads/$td->foto_user") ?>" class="w-px-50 h-px-50 rounded-circle"></td>
                                         <td>
                                             <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>

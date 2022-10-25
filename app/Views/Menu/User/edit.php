@@ -17,20 +17,49 @@
                             <input type="text" name="nama" class="form-control" id="nama" value="<?php echo $tampildata->nama ?>">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-company">Password</label>
-                            <input type="text" name="password" class="form-control" id="basic-default-company" value="<?= $tampildata->password ?>" />
-                        </div>
-                        <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Id User</label>
                             <input type="text" name="id_user" class="form-control" id="basic-default-company" value="<?= $tampildata->id_user ?>" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Jabatan</label>
-                            <input type="text" name="jabatan" class="form-control" id="basic-default-company" value="<?= $tampildata->jabatan ?>" />
+                            <select name="jabatan" id="jabatan" class="form-control" required>
+                            <option value="">-- Silahkan Pilih --</option>
+                            <option value="Admin Pusat">Admin Pusat</option>
+                            <option value="Admin Wilayah">Admin Wilayah</option>
+                            <option value="Rpm">Rpm</option>
+                            <option value="PM">PM</option>
+                            <option value="Direktur">Direktur</option>
+                            <option value="Management">Management</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Kriteria</label>
-                            <input type="text" name="kriteria" class="form-control" id="basic-default-company" value="<?= $tampildata->kriteria ?>" />
+                            <select name="kriteria" id="kriteria" class="form-control" required>
+                            <option value="">-- Silahkan Pilih --</option>
+                            <option value="Admin Pusat">Admin Pusat</option>
+                            <option value="Admin Wilayah">Admin Wilayah</option>
+                            <option value="Rpm">Rpm</option>
+                            <option value="PM">PM</option>
+                            <option value="Direktur">Direktur</option>
+                            <option value="Management">Management</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-company">Wilayah</label>
+                            <select name="wilayah" id="wilayah" class="form-control" required>
+                            <option value="">-- Silahkan Pilih --</option>
+                            <option value="Padang">Padang</option>
+                            <option value="Medan">Medan</option>
+                            <option value="Jawa Barat">Jawa Barat</option>
+                            <option value="Pasuruan">Pasuruan</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Yogyakarta">Yogyakarta</option>
+                            <option value="Sulawesi">Sulawesi</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-company">Nomor Telepon</label>
+                            <input type="number" name="no_telepon" class="form-control" id="basic-default-company" value="<?= $tampildata->kriteria ?>" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Foto User</label>

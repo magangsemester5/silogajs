@@ -27,12 +27,44 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Jabatan</label>
-                            <input type="text" name="jabatan" id="basic-default-phone"
-                                class="form-control phone-mask" />
+                            <select name="jabatan" id="jabatan" class="form-control" required>
+                            <option value="">-- Silahkan Pilih --</option>
+                            <option value="Admin Pusat">Admin Pusat</option>
+                            <option value="Admin Wilayah">Admin Wilayah</option>
+                            <option value="Rpm">Rpm</option>
+                            <option value="PM">PM</option>
+                            <option value="Direktur">Direktur</option>
+                            <option value="Management">Management</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Kriteria</label>
-                            <input type="text" name="kriteria" id="basic-default-phone"
+                            <select name="kriteria" id="kriteria" class="form-control" required>
+                            <option value="">-- Silahkan Pilih --</option>
+                            <option value="Admin Pusat">Admin Pusat</option>
+                            <option value="Admin Wilayah">Admin Wilayah</option>
+                            <option value="Rpm">Rpm</option>
+                            <option value="PM">PM</option>
+                            <option value="Direktur">Direktur</option>
+                            <option value="Management">Management</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-phone">Wilayah</label>
+                            <select name="wilayah" id="wilayah" class="form-control" required>
+                            <option value="">-- Silahkan Pilih --</option>
+                            <option value="Padang">Padang</option>
+                            <option value="Medan">Medan</option>
+                            <option value="Jawa Barat">Jawa Barat</option>
+                            <option value="Pasuruan">Pasuruan</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Yogyakarta">Yogyakarta</option>
+                            <option value="Sulawesi">Sulawesi</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-phone">Nomor Telepon</label>
+                            <input type="number" name="no_telepon" id="basic-default-phone"
                                 class="form-control phone-mask" />
                         </div>
                         <div class="mb-3">
