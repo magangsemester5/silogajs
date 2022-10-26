@@ -156,10 +156,10 @@
                                 style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;"
                                 readonly id="wilayah" />
                             <br>
-                            <label class="foto_penerima">Foto Pengambilan material :</label>
+                            <label class="foto_penerima">Foto Pengambilan Kabel :</label>
                             <div id="foto_penerima">
                             </div>
-                            <h8>Data material yang ada pada tabel diatas ialah data yang sudah diapprove oleh
+                            <h8>Data kabel yang ada pada tabel diatas ialah data yang sudah diapprove oleh
                                 Direktur</h8>
                         </div>
                     </div>

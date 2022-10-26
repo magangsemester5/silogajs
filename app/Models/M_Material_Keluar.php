@@ -39,6 +39,7 @@ class M_Material_Keluar extends Model
         $builder->join('user', 'user.id = permintaan_material.id');
         $builder->join('detail_permintaan_material', 'detail_permintaan_material.id_permintaan_material = permintaan_material.id_permintaan_material');
         $builder->join('material', 'material.id_material = detail_permintaan_material.id_material');
+        $builder->join('material_keluar', 'material_keluar.id_permintaan_material = detail_permintaan_material.id_permintaan_material');
         $builder->where('permintaan_material.id_permintaan_material', $id);
         $query = $builder->get();
         return $query->getRowArray();

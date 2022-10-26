@@ -27,8 +27,7 @@ class C_material extends BaseController
     {
         $data = [
             'title' => 'Halaman Tambah Material | SILOG AJS',
-            'tampildatasatuan' => $this->satuan->findAll(),
-            'validation' => \Config\Services::validation()
+            'tampildatasatuan' => $this->satuan->findAll()
         ];
         return view('Menu/material/tambah', $data);
     }
@@ -62,10 +61,20 @@ class C_material extends BaseController
                 'errors' => [
                     'required' => "{field} harus diisi"
                 ]
+            ],
+            'image' => [
+                'label' => "Foto Serial Number",
+                'rules' => "uploaded[image]|mime_in[image,image/png,image/jpeg]|max_size[image,2048]",
+                'errors' => [
+                    'uploaded' => "Foto yang diupload sudah pernah diupload",
+                    'mime_in' => "File yang diupload harus berupa PNG/JPG",
+                    'max_size' => "Foto yang diupload maximal harus berukuran 2Mb"
+                ]
+
             ]
         ];
         if ($this->validate($rules)) {
-            $image = $this->request->getFile('foto_serial_number');
+            $image = $this->request->getFile('image');
             $image->move(ROOTPATH . 'public/uploads');
             $data = [
                 'id_satuan' => $this->request->getVar('id_satuan'),
@@ -103,7 +112,7 @@ class C_material extends BaseController
     {
         $loadmodel = $this->request->getVar('id_material');
         $dataId = $this->material->find($loadmodel);
-        $image = $this->request->getFile('foto_serial_number');
+        $image = $this->request->getFile('image');
         if ($image->isValid() && !$image->hasMoved()) {
             $foto = $dataId->foto_serial_number;
             if (file_exists('uploads/' . $foto)) {
@@ -138,15 +147,6 @@ class C_material extends BaseController
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil diupdate');
         }
-    }
-
-    public function detail($id = null)
-    {
-        $data = [
-            'tampildatamaterial' => $this->material->find($id),
-            'title' => 'Halaman Detail material | SILOG AJS',
-        ];
-        return view('Menu/material/detail', $data);
     }
 
     public function hapus($id)

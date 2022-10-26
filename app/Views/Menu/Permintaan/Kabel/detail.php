@@ -69,7 +69,7 @@
                                             Disini</a></td>
                                     <?php } ?>
                                     <?php } else if ($td->status == 4) { ?>
-                                    <td><span class="btn btn-sucess btn-sm">Sudah di Approve Direktur</span></td>
+                                    <td><span class="btn btn-success btn-sm">Sudah di Approve Direktur</span></td>
                                     <?php } ?>
                                 </tr>
                                 <?php endforeach; ?>

@@ -10,6 +10,7 @@
                     <h5 class="mb-0">Tambah Data material</h5>
                 </div>
                 <div class="card-body">
+                    <?php $validation = \Config\Services::validation(); ?>
                     <form method="POST" action="<?= base_url("prosestambah-material") ?>" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Nama material</label>
@@ -41,7 +42,7 @@
                         <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Stok</label>
-                            <input type="text" name="stok" id="basic-default-phone" class="form-control phone-mask"
+                            <input type="number" name="stok" id="basic-default-phone" class="form-control phone-mask"
                                 placeholder="Masukan jumlah stok disini" />
                         </div>
                         <!-- Error Validation -->
@@ -63,8 +64,14 @@
                         <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Foto Serial Number</label>
-                            <input type="file" name="foto_serial_number" id="inputFile" class="form-control" required>
+                            <input type="file" name="image" id="inputFile" class="form-control" required>
                         </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('image')) { ?>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('image'); ?>
+                        </div>
+                        <?php } ?>
                         <div class="col-md-3">
                             <label>Preview Foto Serial Number</label>
                             <img src="" id="imgView" class="card-img-top img-fluid">
