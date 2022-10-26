@@ -21,10 +21,47 @@ class C_Permintaan extends BaseController
     public function permintaan_material()
     {
         $data = [
-            'title' => 'Halaman Permintaan material | SILOG AJS',
+            'title' => 'Halaman Permintaan Material | SILOG AJS',
             'tampildata' => $this->permintaan_material->getAll(),
         ];
         return view('Menu/Permintaan/Material/index', $data);
+    }
+
+    public function detail_permintaan_material($id)
+    {
+        $data = [
+            'title' => 'Halaman Detail Permintaan Material | SILOG AJS',
+            'tampildata' => $this->permintaan_material->getById($id),
+            'tampildatarelasi' => $this->detail_permintaan_material->getAllRelation($id)
+        ];
+        // print_r($data);
+        return view('Menu/Permintaan/Material/detail', $data);
+    }
+
+    public function approve_detail_permintaan_material($id)
+    {
+        if (session()->get('jabatan') == 'RPM') {
+            $data = array(
+                'status' => 1
+            );
+        } else if (session()->get('jabatan') == 'Admin Pusat') {
+            $data = array(
+                'status' => 2
+            );
+        } else if (session()->get('jabatan') == 'PM') {
+            $data = array(
+                'status' => 3
+            );
+        } else if (session()->get('jabatan') == 'Direktur') {
+            $data = array(
+                'status' => 4
+            );
+        }
+        $this->detail_permintaan_material->update($id, $data);
+        session()->setFlashdata('status', 'Data permintaan berhasil diupdate');
+        return redirect()->to(base_url('detailpermintaan-material/' . $id . ''))
+            ->with('status_icon', 'success')
+            ->with('status_text', 'Data Berhasil ditambah');
     }
 
     public function permintaan_kabel()

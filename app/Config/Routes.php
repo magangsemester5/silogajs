@@ -134,6 +134,8 @@ $routes->post('prosesgantipassword-profil', 'C_User::proses_ganti_password_profi
 
 // Permintaan Material
 $routes->get('tampilpermintaan-material', 'C_Permintaan::permintaan_material', ['filter' => 'auth']);
+$routes->get('detailpermintaan-material/(:num)', 'C_Permintaan::detail_permintaan_material/$1', ['filter' => 'auth']);
+$routes->get('approvedetailpermintaan-material/(:num)', 'C_Permintaan::approve_detail_permintaan_material/$1', ['filter' => 'auth']);
 // Permintaan Kabel
 $routes->get('tampilpermintaan-kabel', 'C_Permintaan::permintaan_kabel', ['filter' => 'auth']);
 $routes->get('detailpermintaan-kabel/(:num)', 'C_Permintaan::detail_permintaan_kabel/$1', ['filter' => 'auth']);

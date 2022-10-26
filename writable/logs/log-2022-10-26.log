@@ -1,0 +1,48 @@
+CRITICAL - 2022-10-26 04:58:40 --> Undefined property: stdClass::$status
+in APPPATH\Views\Menu\Permintaan\Material\index.php on line 40.
+ 1 APPPATH\Views\Menu\Permintaan\Material\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$status', 'APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php', 40, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Permintaan/Material/index', [], true)
+ 5 APPPATH\Controllers\C_Permintaan.php(27): view('Menu/Permintaan/Material/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-26 05:01:38 --> Undefined property: stdClass::$status
+in APPPATH\Views\Menu\Permintaan\Material\index.php on line 40.
+ 1 APPPATH\Views\Menu\Permintaan\Material\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$status', 'APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php', 40, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Permintaan/Material/index', [], true)
+ 5 APPPATH\Controllers\C_Permintaan.php(27): view('Menu/Permintaan/Material/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-26 05:11:38 --> Undefined property: stdClass::$status
+in APPPATH\Views\Menu\Permintaan\Material\index.php on line 40.
+ 1 APPPATH\Views\Menu\Permintaan\Material\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$status', 'APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php', 40, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Permintaan/Material/index', [], true)
+ 5 APPPATH\Controllers\C_Permintaan.php(27): view('Menu/Permintaan/Material/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-26 05:11:43 --> Undefined property: stdClass::$status
+in APPPATH\Views\Menu\Permintaan\Material\index.php on line 40.
+ 1 APPPATH\Views\Menu\Permintaan\Material\index.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$status', 'APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php', 40, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Permintaan/Material/index', [], true)
+ 5 APPPATH\Controllers\C_Permintaan.php(27): view('Menu/Permintaan/Material/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
