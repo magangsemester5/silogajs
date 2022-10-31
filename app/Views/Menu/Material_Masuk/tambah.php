@@ -27,6 +27,10 @@
                             <?php } ?>
                         </div>
                         <div class="mb-3">
+                            <label class="form-label" for="basic-default-phone">No Delivery Order</label>
+                            <input type="text" name="nama" id="basic-default-phone" class="form-control phone-mask" />
+                        </div>
+                        <div class="mb-3">
                             <label class="form-label" for="nama_material">Nama material</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_material" class="form-control" id="nama_material">
@@ -56,6 +60,13 @@
                                     type="number" class="form-control" placeholder="Jumlah Masuk...">
                                 <input id="nama_satuan" class="input-group-text col-md-4" disabled>
                             </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-phone">Gudang</label>
+                            <select name="jabatan" id="jabatan" class="form-control" required>
+                            <option value="">Pilih Gudang</option>
+                            <option value="Jakarta">Jakarta</option>
+                            </select>
                         </div>
                         <!-- Error Validation -->
                         <?php /* if ($validation->getError('jumlah_masuk')) { ?>

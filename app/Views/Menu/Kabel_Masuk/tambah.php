@@ -25,7 +25,11 @@
                             <?php } ?>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="nama_kabel">Nama kabel</label>
+                            <label class="form-label" for="basic-default-phone">No Delivery Order</label>
+                            <input type="text" name="nama" id="basic-default-phone" class="form-control phone-mask" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="nama_kabel">Nomor Drum</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_kabel" class="form-control" id="nama_kabel">
                                     <option value="" disabled selected>Pilih Nomor Drum</option>
@@ -40,6 +44,13 @@
                                     <?= $error = $validation->getError('id_kabel'); ?>
                                 </div>
                             <?php } ?>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-phone">Gudang</label>
+                            <select name="jabatan" id="jabatan" class="form-control" required>
+                            <option value="">Pilih Gudang</option>
+                            <option value="Jakarta">Jakarta</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label class="stok" for="stok">Stok</label>
@@ -60,6 +71,10 @@
                                 <?= $error = $validation->getError('jumlah_masuk'); ?>
                             </div>
                         <?php } */ ?>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-phone">Merek</label>
+                            <input type="text" name="nama" id="basic-default-phone" class="form-control phone-mask" />
+                        </div>
                         <div class="mb-3">
                             <label class="total_stok" for="total_stok">Total Stok</label>
                             <div class="input-group">

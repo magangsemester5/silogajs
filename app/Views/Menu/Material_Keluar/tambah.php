@@ -126,7 +126,6 @@
 
                                             <!-- Table within card -->
                                             <!--/ Table within card -->
-
                                             <!-- Responsive Table -->
                                             <!--/ Responsive Table -->
                                             <!-- / Content -->
