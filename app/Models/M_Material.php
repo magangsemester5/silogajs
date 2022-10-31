@@ -45,4 +45,15 @@ class M_Material extends Model
         $query = $builder->countAllResults();
         return $query;
     }
+
+    function cek_data_direlasi($table, $table2, $where)
+    {
+        $builder = $this->db->table($table);
+        $builder = $this->db->table($table2);
+        $builder->where($table, $where);
+        $builder->where($table2, $where);
+        $builder->countAllResults();
+        $query = $builder->get();
+        return $query->getResult();
+    }
 }

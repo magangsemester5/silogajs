@@ -151,17 +151,29 @@ class C_material extends BaseController
 
     public function hapus($id)
     {
-        $data = $this->material->find($id);
-        $foto = $data->foto_serial_number;
-        if (file_exists('uploads/' . $foto)) {
-            unlink('uploads/' . $foto);
+        $where = [
+            'id_satuan' => $id
+        ];
+        $cek_material = count((array) $this->material->cek_data_direlasi('detail_material_keluar', 'detail_material_masuk', $where));
+        if ($cek_material > 0) {
+            session()->setFlashdata('status', 'Cek data Pada tabel material keluar dan material masuk pastikan material yang terkait sudah tidak ada');
+            return redirect()
+                ->to(base_url('tampil-material'))
+                ->with('status_icon', 'warning')
+                ->with('status_text', 'Data Gagal dihapus');
+        } else {
+            $data = $this->material->find($id);
+            $foto = $data->foto_serial_number;
+            if (file_exists('uploads/' . $foto)) {
+                unlink('uploads/' . $foto);
+            }
+            $this->material->delete($id);
+            session()->setFlashdata('status', 'Data material berhasil dihapus');
+            return redirect()
+                ->to(base_url('tampil-material'))
+                ->with('status_icon', 'success')
+                ->with('status_text', 'Data Berhasil dihapus');
         }
-        $this->material->delete($id);
-        session()->setFlashdata('status', 'Data material berhasil dihapus');
-        return redirect()
-            ->to(base_url('tampil-material'))
-            ->with('status_icon', 'success')
-            ->with('status_text', 'Data Berhasil dihapus');
     }
 
     public function cek_stok($id_cek)

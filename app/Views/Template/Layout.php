@@ -1064,24 +1064,13 @@
                         <span class="align-middle">Ganti Password</span>
                       </a>
                     </li> 
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="../template/html/auth-login-basic.html">
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
-                    </li>
                   </ul>
                 </li>
                 <!--/ User -->
               </ul>
             </div>
           </nav>
-
           <!-- / Navbar -->
-
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->

@@ -30,13 +30,15 @@
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
+                                <?php if (session()->get('user') == 'Medan') { ?>
                                 <?php $no = 1;
-                                foreach ($tampildata as $td) : ?>
+                                    foreach ($tampildata as $td) : ?>
                                 <tr>
                                     <td><?= $no++; ?></td>
                                     <td><?= $td->no_permintaan ?></td>
                                     <td><?= $td->nama ?></td>
                                     <td><?= $td->wilayah ?></td>
+
                                     <td>
                                         <a class="btn btn-info btn-sm"
                                             href="<?= base_url("detailpermintaan-kabel/$td->id_permintaan_kabel"); ?>"><i
@@ -44,6 +46,7 @@
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
