@@ -1423,6 +1423,7 @@
                       str += "<td>"+ count++ +"</td>";
                       str += '<input type="text" name="id_material[]" value="'+ data[i].id_material +'" hidden />';
                       str += '<td><input type="text" style="width:75px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="nama_material[]" value="'+ data[i].nama_material +'"/></td>';
+                      str += '<td><input type="text" hidden name="nama_satuan[]" value="'+ data[i].nama_satuan +'"/></td>';
                       str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="dpmj[]" value="'+ data[i].dpmj +" "+ data[i].nama_satuan +'"/></td>';
                       str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="total_keluar[]" value="'+ parseInt(data[i].ms - data[i].dpmj)+'"/>'+data[i].nama_satuan+'</td>';
                       str += "</tr>";
@@ -1439,14 +1440,14 @@
           var id = $(this).attr('data-id');
          
           $.ajax({
-              url: "<?php echo base_url('autotampildatapermintaanmaterial'); ?>" + "/" + id,
+              url: "<?php echo base_url('autotampildatausermaterialkeluarsetelahdikirim'); ?>" + "/" + id,
               method: "GET",
               dataType: 'json',
               success: function(data) {
                 wilayah.val(data.wilayah);
                 foto_penerima.html("<img src='../uploads/" + data.foto_penerima + "'width='200px' height='200px'>");
                 $.ajax({
-                  url: "<?php echo base_url('autotampildetaildatamaterialkeluar'); ?>" + "/" + 1,
+                  url: "<?php echo base_url('autotampildetaildatamaterialkeluarsetelahdikirim'); ?>" + "/" + id,
                   method: "GET",
                   dataType: 'json',
                   success: function(data) {
@@ -1456,8 +1457,7 @@
                       str += "<tr>";
                       str += "<td>"+ count++ +"</td>";
                       str += '<td>'+ data[i].nama_material +'</td>';
-                      str += '<td>'+ data[i].dpmj +" "+ data[i].nama_satuan +'</td>';
-                      str += '<td>'+ data[i].serial_number +'</td>';
+                      str += '<td>'+ data[i].jumlah +" "+ data[i].nama_satuan +'</td>';
                       str += "</tr>";
                     }
                     document.querySelector('#isitabeldetailmaterialkeluar').innerHTML = str;

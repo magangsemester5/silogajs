@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\M_Detail_Material_Keluar;
 use App\Models\M_Material_Keluar;
 use App\Models\M_Material;
 use App\Models\M_Permintaan_Material;
@@ -13,6 +14,7 @@ class C_material_Keluar extends BaseController
     public function __construct()
     {
         $this->material_keluar = new M_Material_Keluar();
+        $this->detail_material_keluar = new M_Detail_Material_Keluar();
         $this->material = new M_Material();
         $this->permintaan_material = new M_Permintaan_Material();
         $this->user = new M_User();
@@ -49,7 +51,7 @@ class C_material_Keluar extends BaseController
                     'required' => "{field} harus diisi"
                 ]
             ],
-            'id_permintaan_material' => [
+            'no_permintaan' => [
                 'label' => "Nomor Permintaan",
                 'rules' => "required",
                 'errors' => [
@@ -71,11 +73,27 @@ class C_material_Keluar extends BaseController
             $image = $this->request->getFile('image');
             $image->move(ROOTPATH . 'public/uploads');
             $data = [
-                'id_permintaan_material' => $this->request->getVar('id_permintaan_material'),
+                'no_permintaan' => $this->request->getVar('no_permintaan'),
+                'nama' => $this->request->getVar('nama'),
+                'wilayah' => $this->request->getVar('wilayah'),
                 'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
                 'foto_penerima' => $image->getClientName(),
             ];
             $this->material_keluar->insert($data);
+            $id_material_keluar  = $this->material_keluar->getInsertID();
+            $data1 = array();
+            $nama_material = $this->request->getVar('nama_material');
+            $nama_satuan = $this->request->getVar('nama_satuan');
+            $jumlah_detail_keluar = $this->request->getVar('dpmj');
+            $jumlah_material = count((array)$this->request->getVar('nama_material'));
+            for ($i = 0; $i < $jumlah_material; $i++) {
+                $data1[] = array(
+                    'id_material_keluar' => $id_material_keluar,
+                    'nama_material' => $nama_material[$i],
+                    'nama_satuan' => $nama_satuan[$i],
+                    'jumlah' => $jumlah_detail_keluar[$i],
+                );
+            }
             $data2 = array();
             $jumlah_keluar = $this->request->getVar('total_keluar');
             $id_material_2 = $this->request->getVar('id_material');
@@ -86,6 +104,7 @@ class C_material_Keluar extends BaseController
                     'stok' => $jumlah_keluar[$i]
                 );
             }
+            $this->detail_material_keluar->table('detail_material_keluar')->insertBatch($data1);
             $this->material->table('material')->updateBatch($data2, 'id_material');
             session()->setFlashdata(
                 'status',
@@ -109,6 +128,10 @@ class C_material_Keluar extends BaseController
 
     public function hapus($id = null)
     {
+        $id_material_keluar = array(
+            'id_material_keluar' => $id
+        );
+        $this->detail_material_keluar->delete_detail_material_keluar($id_material_keluar);
         $data = $this->material_keluar->find($id);
         $foto = $data->foto_penerima;
         if (file_exists('uploads/' . $foto)) {
@@ -150,6 +173,16 @@ class C_material_Keluar extends BaseController
         // $final = json_encode($data2);
         // print_r($final);
         $data = $this->material_keluar->cekWilayah($id);
+        return json_encode($data);
+    }
+    public function tampil_data_user_setelah_dikirim($id = null)
+    {
+        $data = $this->material_keluar->cekdatausersetelahdikirim($id);
+        return json_encode($data);
+    }
+    public function tampil_data_detail_material_keluar_setelah_dikirim($id = null)
+    {
+        $data = $this->detail_material_keluar->cekdetailsetelahdikirim($id);
         return json_encode($data);
     }
 }

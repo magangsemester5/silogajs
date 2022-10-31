@@ -28,7 +28,7 @@
                         </div>
                         <label class="form-label" for="basic-default-fullname">Nomor Permintaan</label>
                         <div class="input-group input-group-merge">
-                            <select class="form-control" name="id_permintaan_material" id="id_permintaan_material">
+                            <select class="form-control" name="no_permintaan" id="id_permintaan_material">
                                 <option value="" disabled selected>Pilih Nomor Permintaan</option>
                                 <?php foreach ($tampildatapermintaanmaterial as $key => $value) : ?>
                                 <option value="<?= $value->id_permintaan_material ?>">
@@ -50,11 +50,11 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Nama Admin Wilayah</label>
-                            <input type="text" id="nama" class="form-control" readonly />
+                            <input type="text" id="nama" name="nama" class="form-control" readonly />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Wilayah</label>
-                            <input readonly="readonly" id="wilayah" type="text" class="form-control">
+                            <input readonly="readonly" id="wilayah" name="wilayah" type="text" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label class="custom-file-label">Foto Penerima</label>

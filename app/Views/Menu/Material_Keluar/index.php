@@ -51,13 +51,13 @@
                                         <?php if (session()->get('jabatan') == 'Rpm') { ?>
                                         <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#detaildatamaterialkeluar"
-                                            data-id="<?= $td->id_permintaan_material ?>"><i
+                                            data-id="<?= $td->id_material_keluar ?>"><i
                                                 class="bx bx-show-alt"></i>Detail</button>
                                         <?php } ?>
                                         <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
                                         <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#detaildatamaterialkeluar"
-                                            data-id="<?= $td->id_permintaan_material ?>"><i
+                                            data-id="<?= $td->id_material_keluar ?>"><i
                                                 class="bx bx-show-alt"></i>Detail</button>
                                         <a class="btn btn-danger btn-sm" style="color:white"
                                             onclick="deletedatamaterialkeluar(<?= $td->id_material_keluar ?>)"><i
@@ -66,19 +66,19 @@
                                         <?php if (session()->get('jabatan') == 'PM') { ?>
                                         <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#detaildatamaterialkeluar"
-                                            data-id="<?= $td->id_permintaan_material ?>"><i
+                                            data-id="<?= $td->id_material_keluar ?>"><i
                                                 class="bx bx-show-alt"></i>Detail</button>
                                         <?php } ?>
                                         <?php if (session()->get('jabatan') == 'Direktur') { ?>
                                         <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#detaildatamaterialkeluar"
-                                            data-id="<?= $td->id_permintaan_material ?>"><i
+                                            data-id="<?= $td->id_material_keluar ?>"><i
                                                 class="bx bx-show-alt"></i>Detail</button>
                                         <?php } ?>
                                         <?php if (session()->get('jabatan') == 'Management') { ?>
                                         <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
                                             data-bs-target="#detaildatamaterialkeluar"
-                                            data-id="<?= $td->id_permintaan_material ?>"><i
+                                            data-id="<?= $td->id_material_keluar ?>"><i
                                                 class="bx bx-show-alt"></i>Detail</button>
                                         <?php } ?>
                                     </td>
@@ -118,7 +118,7 @@
                                                         <th>No</th>
                                                         <th>Nama Material</th>
                                                         <th>Jumlah Keluar</th>
-                                                        <th>Serial Number</th>
+                                                        <!-- <th>Serial Number</th> -->
                                                     </tr>
                                                 </thead>
                                                 <tbody id="isitabeldetailmaterialkeluar" class="table-border-bottom-0"

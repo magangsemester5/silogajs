@@ -21,13 +21,4 @@ class M_Detail_Permintaan_Material extends Model
         $query = $builder->get();
         return $query->getResult();
     }
-
-    function countMaterialKeluar()
-    {
-        $builder = $this->db->table('detail_permintaan_material');
-        $builder->selectCount('id_material as material_keluar');
-        $builder->where('status = 4');
-        $query = $builder->countAllResults();
-        return $query;
-    }
 }

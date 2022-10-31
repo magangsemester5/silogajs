@@ -30,9 +30,8 @@
                                 </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
-                                <?php if (session()->get('user') == 'Medan') { ?>
                                 <?php $no = 1;
-                                    foreach ($tampildata as $td) : ?>
+                                foreach ($tampildata as $td) : ?>
                                 <tr>
                                     <td><?= $no++; ?></td>
                                     <td><?= $td->no_permintaan ?></td>
@@ -46,7 +45,6 @@
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
-                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
