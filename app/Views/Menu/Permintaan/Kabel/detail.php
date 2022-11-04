@@ -70,6 +70,9 @@
                                     <?php } ?>
                                     <?php } else if ($td->status == 4) { ?>
                                     <td><span class="btn btn-success btn-sm">Sudah di Approve Direktur</span></td>
+                                    <?php } else if ($td->status == 5) { ?>
+                                    <td><span class="btn btn-info btn-sm">Sedang Dalam Perjalanan ke Penerima</span>
+                                    </td>
                                     <?php } ?>
                                 </tr>
                                 <?php endforeach; ?>

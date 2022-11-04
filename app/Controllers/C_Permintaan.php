@@ -38,6 +38,33 @@ class C_Permintaan extends BaseController
         return view('Menu/Permintaan/Material/detail', $data);
     }
 
+    public function tambah_permintaan_kabel()
+    {
+        // $id_permintaan_kabel = $this->request->getVar('no_permintaan');
+        $id_kabel = $this->request->getVar('no_drum');
+        $panjang = $this->request->getVar('panjang');
+        // $wilayah = $this->request->getVar('wilayah');
+        $data1 = array();
+        $jumlah_kabel = count((array)$this->request->getVar('no_drum'));
+        for ($i = 0; $i < $jumlah_kabel; $i++) {
+            $data1[] = array(
+                'id_permintaan_kabel' => 1,
+                'id_kabel' => $id_kabel[$i],
+                'panjang' => $panjang[$i],
+                'status' => 0,
+            );
+        }
+        $this->detail_permintaan_kabel->insert($data1);
+        session()->setFlashdata(
+            'status',
+            'Data Permintaan Kabel berhasil ditambahkan'
+        );
+        return redirect()
+            ->to(base_url('tampilpermintaan-kabel'))
+            ->with('status_icon', 'success')
+            ->with('status_text', 'Data Berhasil ditambah');
+    }
+
     public function approve_detail_permintaan_material($id)
     {
         if (session()->get('jabatan') == 'RPM') {

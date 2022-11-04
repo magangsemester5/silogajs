@@ -11,7 +11,7 @@ class M_Permintaan_Kabel extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_permintaan_kabel', 'id', 'no_permintaan'
+        'id', 'no_permintaan'
     ];
 
     function getAll()

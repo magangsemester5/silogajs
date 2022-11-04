@@ -33,7 +33,7 @@
                                     <th>No</th>
                                     <th>Tanggal</th>
                                     <th>No Permintaan</th>
-                                    <th>Nama Admin Wilayah</th>
+                                    <th>Nama Peminta</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>

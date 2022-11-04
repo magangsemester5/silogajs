@@ -23,7 +23,7 @@ class C_material_Keluar extends BaseController
     {
         $data = [
             'title' => 'Halaman Material Keluar | SILOG AJS',
-            'tampildata' => $this->material_keluar->getAll(),
+            'tampildata' => $this->material_keluar->findAll(),
         ];
         return view('Menu/material_Keluar/index', $data);
     }
@@ -46,13 +46,6 @@ class C_material_Keluar extends BaseController
         $rules = [
             'tanggal_keluar' => [
                 'label' => "Tanggal Keluar",
-                'rules' => "required",
-                'errors' => [
-                    'required' => "{field} harus diisi"
-                ]
-            ],
-            'no_permintaan' => [
-                'label' => "Nomor Permintaan",
                 'rules' => "required",
                 'errors' => [
                     'required' => "{field} harus diisi"
@@ -138,6 +131,10 @@ class C_material_Keluar extends BaseController
             unlink('uploads/' . $foto);
         }
         $this->material_keluar->delete($id);
+        session()->setFlashdata(
+            'status',
+            'Data material Keluar berhasil dihapus'
+        );
         return redirect()
             ->to(base_url('tampil-materialkeluar'))
             ->with('status_icon', 'success')
@@ -158,20 +155,6 @@ class C_material_Keluar extends BaseController
 
     public function tampil_otomatis_data_wilayah_material_keluar($id = null)
     {
-        // $data = [
-        //     'datahanif' => $this->material_keluar->cekWilayah($id)
-        // ];
-        // foreach ($data['datahanif'] as $h) {
-        //    $lists = "
-        //     <td>" . $h->nama . "</td>
-        //     <td>" . $h->no_drum . "</td>
-        //     <td>" . $h->core ."</td>
-        //     <td>" . $h->panjang . "</td>
-        //     ";
-        // }
-        // $data2 = array('list_permintaan_material'=>$lists);
-        // $final = json_encode($data2);
-        // print_r($final);
         $data = $this->material_keluar->cekWilayah($id);
         return json_encode($data);
     }

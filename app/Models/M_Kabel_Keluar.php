@@ -11,17 +11,8 @@ class M_Kabel_Keluar extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_permintaan_kabel', 'tanggal_keluar', 'foto_penerima'
+        'no_permintaan', 'nama', 'wilayah', 'tanggal_keluar', 'foto_penerima'
     ];
-
-    function getAll()
-    {
-        $builder = $this->db->table('kabel_keluar');
-        $builder->join('permintaan_kabel', 'permintaan_kabel.id_permintaan_kabel = kabel_keluar.id_permintaan_kabel');
-        $builder->join('user', 'user.id = permintaan_kabel.id');
-        $query = $builder->get();
-        return $query->getResult();
-    }
 
     function getRelasi($id)
     {
@@ -64,5 +55,13 @@ class M_Kabel_Keluar extends Model
         $builder->where($where);
         $query = $builder->get();
         return $query->getResultArray();
+    }
+
+    public function cekdatausersetelahdikirim($id = null)
+    {
+        $builder = $this->db->table('kabel_keluar');
+        $builder->where('id_kabel_keluar', $id);
+        $query = $builder->get();
+        return $query->getRowArray();
     }
 }

@@ -28,7 +28,7 @@
                         </div>
                         <label class="form-label" for="basic-default-fullname">Nomor Permintaan</label>
                         <div class="input-group input-group-merge">
-                            <select class="form-control" name="no_permintaan" id="id_permintaan_material">
+                            <select class="form-control" id="id_permintaan_material" required>
                                 <option value="" disabled selected>Pilih Nomor Permintaan</option>
                                 <?php foreach ($tampildatapermintaanmaterial as $key => $value) : ?>
                                 <option value="<?= $value->id_permintaan_material ?>">
@@ -36,12 +36,7 @@
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                        <!-- Error Validation -->
-                        <?php if ($validation->getError('id_permintaan_material')) { ?>
-                        <div class='alert alert-danger mt-2'>
-                            <?= $error = $validation->getError('id_permintaan_material'); ?>
-                        </div>
-                        <?php } ?>
+                        <input type="hidden" id="no_permintaan" name="no_permintaan" class="form-control" />
                         <br>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Detail Material yang diminta</label>
@@ -49,7 +44,7 @@
                                 data-bs-target="#exampleModal"><i class="bx bx-package"></i>&nbspKlik Disini</button>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-fullname">Nama Admin Wilayah</label>
+                            <label class="form-label" for="basic-default-fullname">Nama Peminta (Admin Wilayah)</label>
                             <input type="text" id="nama" name="nama" class="form-control" readonly />
                         </div>
                         <div class="mb-3">

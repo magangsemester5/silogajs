@@ -11,7 +11,7 @@ class M_Detail_Permintaan_Kabel extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_detail_permintaan_kabel', 'id_permintaan_kabel', 'id_kabel', 'panjang', 'status'
+        'id_permintaan_kabel', 'id_kabel', 'panjang', 'status'
     ];
 
     function getAllRelation($id)
@@ -22,14 +22,5 @@ class M_Detail_Permintaan_Kabel extends Model
         $builder->where('permintaan_kabel.id_permintaan_kabel', $id);
         $query = $builder->get();
         return $query->getResult();
-    }
-
-    function countKabelKeluar()
-    {
-        $builder = $this->db->table('detail_permintaan_kabel');
-        $builder->selectCount('id_kabel as kabel_keluar');
-        $builder->where('status = 4');
-        $query = $builder->countAllResults();
-        return $query;
     }
 }

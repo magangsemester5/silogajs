@@ -14,13 +14,6 @@ class M_Material_Keluar extends Model
         'no_permintaan', 'nama', 'wilayah', 'tanggal_keluar', 'foto_penerima'
     ];
 
-    function getAll()
-    {
-        $builder = $this->db->table('material_keluar');
-        $query = $builder->get();
-        return $query->getResult();
-    }
-
     function getRelasi($id)
     {
         $builder = $this->db->table('material_keluar');

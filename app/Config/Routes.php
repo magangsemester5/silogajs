@@ -84,8 +84,10 @@ $routes->get('tampil-materialkeluar', 'C_Material_Keluar::index', ['filter' => '
 $routes->get('autotampildatamaterialkeluar/(:num)', 'C_Material_Keluar::tampil_otomatis_data_material_keluar/$1', ['filter' => 'auth']);
 $routes->get('autotampildatapermintaanmaterial/(:num)', 'C_Material_Keluar::tampil_otomatis_data_wilayah_material_keluar/$1', ['filter' => 'auth']);
 $routes->get('autotampildetaildatamaterialkeluar/(:num)', 'C_Material_Keluar::tampil_data_detail_material_keluar/$1', ['filter' => 'auth']);
+
 $routes->get('autotampildatausermaterialkeluarsetelahdikirim/(:num)', 'C_Material_Keluar::tampil_data_user_setelah_dikirim/$1', ['filter' => 'auth']);
 $routes->get('autotampildetaildatamaterialkeluarsetelahdikirim/(:num)', 'C_Material_Keluar::tampil_data_detail_material_keluar_setelah_dikirim/$1', ['filter' => 'auth']);
+
 $routes->get('detail-materialkeluar/(:num)', 'C_Material_Keluar::detail/$1', ['filter' => 'auth']);
 $routes->get('tambah-materialkeluar', 'C_Material_Keluar::tambah', ['filter' => 'auth']);
 $routes->post('prosestambah-materialkeluar', 'C_Material_Keluar::proses_tambah', ['filter' => 'auth']);
@@ -101,9 +103,12 @@ $routes->get('hapus-kabelmasuk/(:num)', 'C_Kabel_Masuk::hapus/$1', ['filter' => 
 
 // Kabel Keluar
 $routes->get('tampil-kabelkeluar', 'C_Kabel_Keluar::index', ['filter' => 'auth']);
+
 $routes->get('autotampildatakabelkeluar/(:num)', 'C_Kabel_Keluar::tampil_otomatis_data_kabel_keluar/$1', ['filter' => 'auth']);
 $routes->get('autotampildatapermintaankabel/(:num)', 'C_Kabel_Keluar::tampil_otomatis_data_wilayah_kabel_keluar/$1', ['filter' => 'auth']);
 $routes->get('autotampildetaildatakabelkeluar/(:num)', 'C_Kabel_Keluar::tampil_data_detail_kabel_keluar/$1', ['filter' => 'auth']);
+$routes->get('autotampildatauserkabelkeluarsetelahdikirim/(:num)', 'C_kabel_Keluar::tampil_data_user_setelah_dikirim/$1', ['filter' => 'auth']);
+$routes->get('autotampildetaildatakabelkeluarsetelahdikirim/(:num)', 'C_kabel_Keluar::tampil_data_detail_kabel_keluar_setelah_dikirim/$1', ['filter' => 'auth']);
 $routes->get('detail-kabelkeluar/(:num)', 'C_Kabel_Keluar::detail/$1', ['filter' => 'auth']);
 $routes->get('tambah-kabelkeluar', 'C_Kabel_Keluar::tambah', ['filter' => 'auth']);
 $routes->post('prosestambah-kabelkeluar', 'C_Kabel_Keluar::proses_tambah', ['filter' => 'auth']);
@@ -140,6 +145,7 @@ $routes->get('detailpermintaan-material/(:num)', 'C_Permintaan::detail_permintaa
 $routes->get('approvedetailpermintaan-material/(:num)', 'C_Permintaan::approve_detail_permintaan_material/$1', ['filter' => 'auth']);
 // Permintaan Kabel
 $routes->get('tampilpermintaan-kabel', 'C_Permintaan::permintaan_kabel', ['filter' => 'auth']);
+$routes->post('tambahpermintaankabel', 'C_Permintaan::tambah_permintaan_kabel', ['filter' => 'auth']);
 $routes->get('detailpermintaan-kabel/(:num)', 'C_Permintaan::detail_permintaan_kabel/$1', ['filter' => 'auth']);
 $routes->get('approvedetailpermintaan-kabel/(:num)', 'C_Permintaan::approve_detail_permintaan_kabel/$1', ['filter' => 'auth']);
 /*

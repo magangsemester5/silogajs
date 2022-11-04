@@ -28,7 +28,7 @@
                         </div>
                         <label class="form-label" for="basic-default-fullname">Nomor Permintaan</label>
                         <div class="input-group input-group-merge">
-                            <select class="form-control" name="id_permintaan_kabel" id="id_permintaan_kabel">
+                            <select class="form-control" id="id_permintaan_kabel" required>
                                 <option value="" disabled selected>Pilih Nomor Permintaan</option>
                                 <?php foreach ($tampildatapermintaankabel as $key => $value) : ?>
                                 <option value="<?= $value->id_permintaan_kabel ?>">
@@ -36,12 +36,7 @@
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                        <!-- Error Validation -->
-                        <?php if ($validation->getError('id_permintaan_kabel')) { ?>
-                        <div class='alert alert-danger mt-2'>
-                            <?= $error = $validation->getError('id_permintaan_kabel'); ?>
-                        </div>
-                        <?php } ?>
+                        <input type="hidden" id="no_permintaan" name="no_permintaan" class="form-control" />
                         <br>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Detail Kabel yang diminta</label>
@@ -49,12 +44,12 @@
                                 data-bs-target="#exampleModal"><i class="bx bx-package"></i>&nbspKlik Disini</button>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-fullname">Nama Admin Wilayah</label>
-                            <input type="text" id="nama" class="form-control" readonly />
+                            <label class="form-label" for="basic-default-fullname">Nama Peminta (Admin Wilayah)</label>
+                            <input type="text" id="nama" class="form-control" name="nama" readonly />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Wilayah</label>
-                            <input readonly="readonly" id="wilayah" type="text" class="form-control">
+                            <input readonly="readonly" id="wilayah" name="wilayah" type="text" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label class="custom-file-label">Foto Penerima</label>

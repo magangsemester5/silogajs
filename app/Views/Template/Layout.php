@@ -1318,7 +1318,7 @@
 
     <!-- Delete Confirm Data Material Keluar -->
     <script>
-    function  deletedatamaterialkeluar($id) 
+    function deletedatamaterialkeluar($id) 
     { 
       swal({
             title:"Anda Yakin ?",
@@ -1390,6 +1390,7 @@
           let foto_penerima = $('#foto_penerima');
           let nama = $('#nama');
           let no_drum = $('#no_drum');
+          let no_permintaan = $('#no_permintaan');
           let core = $('#core');
           let stok = $('#stok');
           let total_stok = $('#total_stok');
@@ -1411,6 +1412,7 @@
               success: function(data) {
                 wilayah.val(data.wilayah);
                 nama.val(data.nama);
+                no_permintaan.val(data.no_permintaan);
                 $.ajax({
                   url: "<?php echo base_url('autotampildetaildatamaterialkeluar'); ?>" + "/" + id,
                   method: "GET",
@@ -1423,7 +1425,7 @@
                       str += "<td>"+ count++ +"</td>";
                       str += '<input type="text" name="id_material[]" value="'+ data[i].id_material +'" hidden />';
                       str += '<td><input type="text" style="width:75px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="nama_material[]" value="'+ data[i].nama_material +'"/></td>';
-                      str += '<td><input type="text" hidden name="nama_satuan[]" value="'+ data[i].nama_satuan +'"/></td>';
+                      str += '<td style="display: none;"><input type="text" hidden name="nama_satuan[]" value="'+ data[i].nama_satuan +'"/></td>';
                       str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="dpmj[]" value="'+ data[i].dpmj +" "+ data[i].nama_satuan +'"/></td>';
                       str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="total_keluar[]" value="'+ parseInt(data[i].ms - data[i].dpmj)+'"/>'+data[i].nama_satuan+'</td>';
                       str += "</tr>";
@@ -1478,6 +1480,7 @@
               success: function(data) {
                 wilayah.val(data.wilayah);
                 nama.val(data.nama);
+                no_permintaan.val(data.no_permintaan);
                 $.ajax({
                   url: "<?php echo base_url('autotampildetaildatakabelkeluar'); ?>" + "/" + id,
                   method: "GET",
@@ -1492,6 +1495,7 @@
                       str += '<td><input type="text" style="width:75px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="no_drum[]" value="'+ data[i].no_drum +'"/></td>';
                       str += '<td><input type="text" style="width:30px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="core[]" value="'+ data[i].core +'"/></td>';
                       str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="dpkp[]" value="'+ data[i].dpkp +" "+ data[i].nama_satuan +'"/></td>';
+                      str += '<td style="display: none;"><input type="text" hidden name="nama_satuan[]" value="'+ data[i].nama_satuan +'"/></td>';
                       str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="total_panjang[]" value="'+ parseInt(data[i].kp - data[i].dpkp)+'"/>'+data[i].nama_satuan+'</td>';
                       str += "</tr>";
                     }
@@ -1507,14 +1511,14 @@
           var id = $(this).attr('data-id');
          
           $.ajax({
-              url: "<?php echo base_url('autotampildatapermintaankabel'); ?>" + "/" + id,
+              url: "<?php echo base_url('autotampildatauserkabelkeluarsetelahdikirim'); ?>" + "/" + id,
               method: "GET",
               dataType: 'json',
               success: function(data) {
                 wilayah.val(data.wilayah);
                 foto_penerima.html("<img src='../uploads/" + data.foto_penerima + "'width='200px' height='200px'>");
                 $.ajax({
-                  url: "<?php echo base_url('autotampildetaildatakabelkeluar'); ?>" + "/" + id,
+                  url: "<?php echo base_url('autotampildetaildatakabelkeluarsetelahdikirim'); ?>" + "/" + id,
                   method: "GET",
                   dataType: 'json',
                   success: function(data) {
@@ -1525,8 +1529,7 @@
                       str += "<td>"+ count++ +"</td>";
                       str += '<td>'+ data[i].no_drum +'</td>';
                       str += '<td>'+ data[i].core +'</td>';
-                      str += '<td>'+ data[i].dpkp +" "+ data[i].nama_satuan +'</td>';
-                      str += '<td>'+ data[i].serial_number +'</td>';
+                      str += '<td>'+ data[i].panjang +" "+ data[i].nama_satuan +'</td>';
                       str += "</tr>";
                     }
                     document.querySelector('#isitabeldetailkabelkeluar').innerHTML = str;
@@ -1553,18 +1556,58 @@
     </script>
     <script>
       $(document).ready(function() {
-      setInterval( function() {
-      var hours = new Date().getHours();
-      $(".hours").html(( hours < 10 ? "0" : "" ) + hours);
+        setInterval( function() {
+        var hours = new Date().getHours();
+        $(".hours").html(( hours < 10 ? "0" : "" ) + hours);
       }, 1000);
       setInterval( function() {
-      var minutes = new Date().getMinutes();
-      $(".min").html(( minutes < 10 ? "0" : "" ) + minutes);
+        var minutes = new Date().getMinutes();
+        $(".min").html(( minutes < 10 ? "0" : "" ) + minutes);
       },1000);
       setInterval( function() {
-      var seconds = new Date().getSeconds();
-      $(".sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+        var seconds = new Date().getSeconds();
+        $(".sec").html(( seconds < 10 ? "0" : "" ) + seconds);
       },1000);
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        $(".add_item_btn").click(function (e) { 
+          e.preventDefault();
+          $("#show_item").prepend(`<div class="row mt-3 append_item">
+                                <div class="col">
+                                    <input type="text" class="form-control" name="no_drum[]" placeholder="Pilih Nomor Drum"
+                                        aria-label="Pilih Nomor Drum">
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" name="panjang[]" placeholder="Masukan Panjang Kabel"
+                                        aria-label="Masukan Panjang Kabel">
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-danger remove_item_btn">Remove</button>
+                                </div>
+                                </div>`);
+          
+         });
+         $(document).on('click', '.remove_item_btn', function(e){
+            e.preventDefault();
+            let row_item = $(this).parent().parent();
+            $(row_item).remove(); 
+         });
+         $("#add_form").submit(function(e){
+          e.preventDefault();
+          $("#add_btn").val('Adding...');
+          $.ajax({
+            url:'<?php echo base_url('tambahpermintaankabel'); ?>',
+            method: 'post',
+            data : $(this).serialize(),
+            success: function(response){
+              $("#add_btn").val('Add');
+              $("#add_form")[0].reset();
+              $(".append_item").remove();
+            }
+          })
+         })
       });
     </script>
     <!-- Picker Tanggal -->

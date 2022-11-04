@@ -15,10 +15,17 @@ class KabelKeluar extends Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'id_permintaan_kabel' => [
-                'type' => 'int',
-                'constraint' => '12',
-                'unsigned' => TRUE
+            'no_permintaan' => [
+                'type' => 'varchar',
+                'constraint' => '50'
+            ],
+            'nama' => [
+                'type' => 'varchar',
+                'constraint' => '50'
+            ],
+            'wilayah' => [
+                'type' => 'varchar',
+                'constraint' => '50'
             ],
             'tanggal_keluar' => [
                 'type' => 'date'
@@ -28,9 +35,8 @@ class KabelKeluar extends Migration
                 'constraint' => '50'
             ]
         ]);
-        
+
         $this->forge->addPrimaryKey('id_kabel_keluar');
-        $this->forge->addForeignKey('id_permintaan_kabel', 'permintaan_kabel', 'id_permintaan_kabel');
         $this->forge->createTable('kabel_keluar');
     }
 

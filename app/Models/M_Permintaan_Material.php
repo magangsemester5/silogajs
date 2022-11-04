@@ -11,7 +11,7 @@ class M_Permintaan_Material extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_permintaan', 'id', 'no_permintaan', 'wilayah'
+        'id', 'no_permintaan'
     ];
 
     function getAll()
