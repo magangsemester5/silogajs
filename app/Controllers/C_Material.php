@@ -43,9 +43,10 @@ class C_material extends BaseController
             ],
             'nama_material' => [
                 'label' => "Nama material",
-                'rules' => "required",
+                'rules' => "required|is_unique[material.nama_material]",
                 'errors' => [
-                    'required' => "{field} harus diisi"
+                    'required' => "{field} harus diisi",
+                    'is_unique' => "{field} yang dimasukan Sudah ada"
                 ]
             ],
             'stok' => [
@@ -57,9 +58,10 @@ class C_material extends BaseController
             ],
             'serial_number' => [
                 'label' => "Serial Number",
-                'rules' => "required",
+                'rules' => "required|is_unique[material.serial_number]",
                 'errors' => [
-                    'required' => "{field} harus diisi"
+                    'required' => "{field} harus diisi",
+                    'is_unique' => "{field} yang dimasukan Sudah ada"
                 ]
             ],
             'image' => [
@@ -75,13 +77,14 @@ class C_material extends BaseController
         ];
         if ($this->validate($rules)) {
             $image = $this->request->getFile('image');
-            $image->move(ROOTPATH . 'public/uploads');
+            $imageName = $image->getRandomName();
+            $image->move('uploads/', $imageName);
             $data = [
                 'id_satuan' => $this->request->getVar('id_satuan'),
                 'nama_material' => $this->request->getVar('nama_material'),
                 'stok' => $this->request->getVar('stok'),
                 'serial_number' => $this->request->getVar('serial_number'),
-                'foto_serial_number' => $image->getClientName(),
+                'foto_serial_number' => $imageName,
             ];
             session()->setFlashdata('status', 'Data material berhasil ditambahkan');
             $this->material->insert($data);
@@ -151,35 +154,16 @@ class C_material extends BaseController
 
     public function hapus($id)
     {
-        $where = [
-            'id_satuan' => $id
-        ];
-        $cek_material = count((array) $this->material->cek_data_direlasi('detail_material_keluar', 'detail_material_masuk', $where));
-        if ($cek_material > 0) {
-            session()->setFlashdata('status', 'Cek data Pada tabel material keluar dan material masuk pastikan material yang terkait sudah tidak ada');
-            return redirect()
-                ->to(base_url('tampil-material'))
-                ->with('status_icon', 'warning')
-                ->with('status_text', 'Data Gagal dihapus');
-        } else {
-            $data = $this->material->find($id);
-            $foto = $data->foto_serial_number;
-            if (file_exists('uploads/' . $foto)) {
+        $data = $this->material->find($id);
+        $foto = $data->foto_serial_number;
+        if (file_exists('uploads/' . $foto)) {
                 unlink('uploads/' . $foto);
-            }
-            $this->material->delete($id);
-            session()->setFlashdata('status', 'Data material berhasil dihapus');
-            return redirect()
-                ->to(base_url('tampil-material'))
-                ->with('status_icon', 'success')
-                ->with('status_text', 'Data Berhasil dihapus');
         }
-    }
-
-    public function cek_stok($id_cek)
-    {
-        $id = encode_php_tags($id_cek);
-        $query = $this->admin->cekStok($id);
-        $this->response->setJSON($query);
+        $this->material->delete($id);
+        session()->setFlashdata('status', 'Data material berhasil dihapus');
+        return redirect()
+            ->to(base_url('tampil-material'))
+            ->with('status_icon', 'success')
+            ->with('status_text', 'Data Berhasil dihapus');
     }
 }

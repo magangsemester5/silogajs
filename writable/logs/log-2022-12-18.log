@@ -1,0 +1,1258 @@
+ERROR - 2022-12-18 18:50:52 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'logistikptajs', 3306, '', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(16): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(48): App\Models\M_Auth->query_validasi_id_user('AWM001')
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->proses_login()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(16): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(48): App\Models\M_Auth->query_validasi_id_user('AWM001')
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->proses_login()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#9 {main}
+CRITICAL - 2022-12-18 18:50:52 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Models\M_Auth.php(16): CodeIgniter\Database\BaseConnection->query('SELECT * FROM user WHERE id_user=\'AWM001\'')
+ 3 APPPATH\Controllers\C_Auth.php(48): App\Models\M_Auth->query_validasi_id_user('AWM001')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->proses_login()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 18:57:16 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(119): App\Models\M_Detail_Permintaan_Material->updateStatus(Array, '01/LOG/MT/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 18:57:16 --> Unknown column 'no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_material` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/MT/Medan/19/XII/2022\'
+AND `status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_material` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/MT/Medan/19/XII/2022\'
+AND `status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_material` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/MT/Medan/19/XII/2022\'
+AND `status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_material` SET `status` = :status.1:
+WHERE `no_permintaan` = :no_permintaan:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Material.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Material_Keluar.php(119): App\Models\M_Detail_Permintaan_Material->updateStatus([...], '01/LOG/MT/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 18:57:20 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(119): App\Models\M_Detail_Permintaan_Material->updateStatus(Array, '01/LOG/MT/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 18:57:20 --> Unknown column 'no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_material` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/MT/Medan/19/XII/2022\'
+AND `status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_material` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/MT/Medan/19/XII/2022\'
+AND `status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_material` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/MT/Medan/19/XII/2022\'
+AND `status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_material` SET `status` = :status.1:
+WHERE `no_permintaan` = :no_permintaan:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Material.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Material_Keluar.php(119): App\Models\M_Detail_Permintaan_Material->updateStatus([...], '01/LOG/MT/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 18:57:26 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(119): App\Models\M_Detail_Permintaan_Material->updateStatus(Array, '01/LOG/MT/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-18 18:57:26 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `de...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(41): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(123): App\Models\M_Detail_Permintaan_Material->deleteData(Array, '01/LOG/MT/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-18 19:10:40 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '01/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 19:10:40 --> Unknown column 'no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status.1:
+WHERE `no_permintaan` = :no_permintaan:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '01/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 19:14:52 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '01/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 19:14:52 --> Unknown column 'no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'01/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status.1:
+WHERE `no_permintaan` = :no_permintaan:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '01/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 19:23:42 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '01/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-18 19:23:42 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `de...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(41): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(125): App\Models\M_Detail_Permintaan_Kabel->deleteData(Array, '01/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-18 19:23:42 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '01/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-18 19:23:42 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `de...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(41): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(125): App\Models\M_Detail_Permintaan_Kabel->deleteData(Array, '01/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 20:03:09 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 71.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Headers already sent. You cannot change the session module\'s ini settings at this time', 'SYSTEMPATH\\Session\\Handlers\\FileHandler.php', 71, [...])
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(71): ini_set('session.save_path', 'ROOTPATH\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(658): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(637): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::session()
+ 8 APPPATH\Controllers\C_Auth.php(14): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 SYSTEMPATH\CodeIgniter.php(866): App\Controllers\C_Auth->__construct()
+10 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-18 20:03:10 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 71.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Headers already sent. You cannot change the session module\'s ini settings at this time', 'SYSTEMPATH\\Session\\Handlers\\FileHandler.php', 71, [...])
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(71): ini_set('session.save_path', 'ROOTPATH\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(658): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(637): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::session()
+ 8 APPPATH\Controllers\C_Auth.php(14): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 SYSTEMPATH\CodeIgniter.php(866): App\Controllers\C_Auth->__construct()
+10 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-18 20:03:11 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 71.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Headers already sent. You cannot change the session module\'s ini settings at this time', 'SYSTEMPATH\\Session\\Handlers\\FileHandler.php', 71, [...])
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(71): ini_set('session.save_path', 'ROOTPATH\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(658): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(637): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::session()
+ 8 APPPATH\Controllers\C_Auth.php(14): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 SYSTEMPATH\CodeIgniter.php(866): App\Controllers\C_Auth->__construct()
+10 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-18 20:03:12 --> ini_set(): Headers already sent. You cannot change the session module's ini settings at this time
+in SYSTEMPATH\Session\Handlers\FileHandler.php on line 71.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'ini_set(): Headers already sent. You cannot change the session module\'s ini settings at this time', 'SYSTEMPATH\\Session\\Handlers\\FileHandler.php', 71, [...])
+ 2 SYSTEMPATH\Session\Handlers\FileHandler.php(71): ini_set('session.save_path', 'ROOTPATH\\writable\\session')
+ 3 SYSTEMPATH\Config\Services.php(658): CodeIgniter\Session\Handlers\FileHandler->__construct(Object(Config\App), '::1')
+ 4 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::session(Object(Config\App), false)
+ 5 SYSTEMPATH\Config\BaseService.php(194): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 6 SYSTEMPATH\Config\Services.php(637): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 7 SYSTEMPATH\Config\BaseService.php(253): CodeIgniter\Config\Services::session()
+ 8 APPPATH\Controllers\C_Auth.php(14): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 9 SYSTEMPATH\CodeIgniter.php(866): App\Controllers\C_Auth->__construct()
+10 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 20:04:55 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 20:04:55 --> Unknown column 'no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status.1:
+WHERE `no_permintaan` = :no_permintaan:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 20:06:16 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(122): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 20:06:16 --> Unknown column 'no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status.1:
+WHERE `no_permintaan` = :no_permintaan:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(122): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 20:06:20 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(122): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 20:06:20 --> Unknown column 'no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status.1:
+WHERE `no_permintaan` = :no_permintaan:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(122): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 20:07:27 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 20:07:27 --> Unknown column 'no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status.1:
+WHERE `no_permintaan` = :no_permintaan:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 20:07:37 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 20:07:37 --> Unknown column 'no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status.1:
+WHERE `no_permintaan` = :no_permintaan:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 20:44:15 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 20:44:15 --> Unknown column 'no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status.1:
+WHERE `no_permintaan` = :no_permintaan:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 20:48:25 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 20:48:25 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 20:51:21 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 20:51:21 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(32): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:08:13 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(33): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:08:13 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(33): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:08:22 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(33): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:08:22 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(33): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:11:18 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:11:18 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:11:21 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:11:21 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:11:24 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:11:24 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:11:45 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:11:45 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:12:00 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:12:00 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:12:32 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:12:32 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:12:50 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:12:50 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(34): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-18 21:15:39 --> Call to a member function join() on null
+in APPPATH\Models\M_Detail_Permintaan_Kabel.php on line 35.
+ 1 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:16:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 2 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(37): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:16:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IS NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE  IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE  IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = 5
+WHERE  IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE  IS NULL', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(37): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-18 21:16:36 --> Call to a member function join() on null
+in APPPATH\Models\M_Detail_Permintaan_Kabel.php on line 35.
+ 1 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:18:19 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(37): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:18:19 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(37): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:18:23 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(37): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:18:23 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(37): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:18:36 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(37): CodeIgniter\Database\BaseBuilder->update()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:18:36 --> Unknown column 'no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_permintaan_kabel` SET `status` = (5)
+WHERE `no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `status` = 4')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_permintaan_kabel` SET `status` = :status:
+WHERE `no_permintaan` = :no_permintaan:
+AND `status` = :status.1:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(37): CodeIgniter\Database\BaseBuilder->update()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(121): App\Models\M_Detail_Permintaan_Kabel->updateStatus([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:18:41 --> mysqli_sql_exception: Unknown column 'permintaan_kabel.no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `de...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(45): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(125): App\Models\M_Detail_Permintaan_Kabel->deleteData(Array, '02/LOG/KB/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:18:41 --> Unknown column 'permintaan_kabel.no_permintaan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `detail_permintaan_kabel`
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 5
+AND `status` = 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `detail_permintaan_kabel`
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 5
+AND `status` = 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `detail_permintaan_kabel`
+WHERE `permintaan_kabel`.`no_permintaan` = \'02/LOG/KB/Medan/19/XII/2022\'
+AND `detail_permintaan_kabel`.`status` = 5
+AND `status` = 5')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `detail_permintaan_kabel`
+WHERE `permintaan_kabel`.`no_permintaan` = :permintaan_kabel.no_permintaan:
+AND `detail_permintaan_kabel`.`status` = :detail_permintaan_kabel.status:
+AND `status` = :status:', [...], false)
+ 5 APPPATH\Models\M_Detail_Permintaan_Kabel.php(45): CodeIgniter\Database\BaseBuilder->delete([...])
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(125): App\Models\M_Detail_Permintaan_Kabel->deleteData([...], '02/LOG/KB/Medan/19/XII/2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-18 21:27:05 --> unlink(uploads/): Is a directory
+in APPPATH\Controllers\C_Kabel_Keluar.php on line 173.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/): Is a directory', 'APPPATH\\Controllers\\C_Kabel_Keluar.php', 173, [...])
+ 2 APPPATH\Controllers\C_Kabel_Keluar.php(173): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->hapus('29')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-18 21:27:21 --> unlink(uploads/): Is a directory
+in APPPATH\Controllers\C_Kabel_Keluar.php on line 173.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(uploads/): Is a directory', 'APPPATH\\Controllers\\C_Kabel_Keluar.php', 173, [...])
+ 2 APPPATH\Controllers\C_Kabel_Keluar.php(173): unlink('FCPATH\\uploads')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->hapus('15')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 21:38:26 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`logistikptajs`.`detail_permintaan_kabel`, CONSTRAINT `detail_permintaan_kabel_id_permintaan_kabel_foreign` FOREIGN KEY (`id_permintaan_kabel`) REFERENCES `permintaan_kabel` (`id_permintaan_ka) in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `pe...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `pe...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `pe...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pe...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Permintaan_Kabel.php(55): CodeIgniter\Database\BaseBuilder->delete()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(126): App\Models\M_Permintaan_Kabel->deleteData('6')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-18 21:38:26 --> Cannot delete or update a parent row: a foreign key constraint fails (`logistikptajs`.`detail_permintaan_kabel`, CONSTRAINT `detail_permintaan_kabel_id_permintaan_kabel_foreign` FOREIGN KEY (`id_permintaan_kabel`) REFERENCES `permintaan_kabel` (`id_permintaan_ka)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `permintaan_kabel`
+WHERE `id_permintaan_kabel` = \'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `permintaan_kabel`
+WHERE `id_permintaan_kabel` = \'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `permintaan_kabel`
+WHERE `id_permintaan_kabel` = \'6\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `permintaan_kabel`
+WHERE `id_permintaan_kabel` = :id_permintaan_kabel:', [...], false)
+ 5 APPPATH\Models\M_Permintaan_Kabel.php(55): CodeIgniter\Database\BaseBuilder->delete()
+ 6 APPPATH\Controllers\C_Kabel_Keluar.php(126): App\Models\M_Permintaan_Kabel->deleteData('6')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 22:25:29 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`logistikptajs`.`detail_permintaan_kabel`, CONSTRAINT `detail_permintaan_kabel_id_kabel_foreign` FOREIGN KEY (`id_kabel`) REFERENCES `kabel` (`id_kabel`)) in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `ka...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ka...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ka...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ka...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Model.php(400): CodeIgniter\Database\BaseBuilder->delete()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\BaseModel.php(963): CodeIgniter\Model->doDelete(Array, false)
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel.php(172): CodeIgniter\BaseModel->delete(Array)
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Kabel->hapus('2')
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kabel))
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#12 {main}
+CRITICAL - 2022-12-18 22:25:29 --> Cannot delete or update a parent row: a foreign key constraint fails (`logistikptajs`.`detail_permintaan_kabel`, CONSTRAINT `detail_permintaan_kabel_id_kabel_foreign` FOREIGN KEY (`id_kabel`) REFERENCES `kabel` (`id_kabel`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `kabel`
+WHERE `id_kabel` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `kabel`
+WHERE `id_kabel` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `kabel`
+WHERE `id_kabel` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `kabel`
+WHERE `id_kabel` IN :id_kabel:', [...], false)
+ 5 SYSTEMPATH\Model.php(400): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(963): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\C_Kabel.php(172): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Kabel->hapus('2')
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kabel))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 22:25:35 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`logistikptajs`.`detail_permintaan_kabel`, CONSTRAINT `detail_permintaan_kabel_id_kabel_foreign` FOREIGN KEY (`id_kabel`) REFERENCES `kabel` (`id_kabel`)) in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `ka...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ka...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ka...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ka...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Model.php(400): CodeIgniter\Database\BaseBuilder->delete()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\BaseModel.php(963): CodeIgniter\Model->doDelete(Array, false)
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel.php(172): CodeIgniter\BaseModel->delete(Array)
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Kabel->hapus('2')
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kabel))
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#12 {main}
+CRITICAL - 2022-12-18 22:25:35 --> Cannot delete or update a parent row: a foreign key constraint fails (`logistikptajs`.`detail_permintaan_kabel`, CONSTRAINT `detail_permintaan_kabel_id_kabel_foreign` FOREIGN KEY (`id_kabel`) REFERENCES `kabel` (`id_kabel`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `kabel`
+WHERE `id_kabel` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `kabel`
+WHERE `id_kabel` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `kabel`
+WHERE `id_kabel` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `kabel`
+WHERE `id_kabel` IN :id_kabel:', [...], false)
+ 5 SYSTEMPATH\Model.php(400): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(963): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\C_Kabel.php(172): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Kabel->hapus('2')
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kabel))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-18 22:25:46 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`logistikptajs`.`detail_permintaan_kabel`, CONSTRAINT `detail_permintaan_kabel_id_kabel_foreign` FOREIGN KEY (`id_kabel`) REFERENCES `kabel` (`id_kabel`)) in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `ka...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ka...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ka...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ka...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Model.php(400): CodeIgniter\Database\BaseBuilder->delete()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\BaseModel.php(963): CodeIgniter\Model->doDelete(Array, false)
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel.php(172): CodeIgniter\BaseModel->delete(Array)
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Kabel->hapus('2')
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kabel))
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#12 {main}
+CRITICAL - 2022-12-18 22:25:46 --> Cannot delete or update a parent row: a foreign key constraint fails (`logistikptajs`.`detail_permintaan_kabel`, CONSTRAINT `detail_permintaan_kabel_id_kabel_foreign` FOREIGN KEY (`id_kabel`) REFERENCES `kabel` (`id_kabel`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `kabel`
+WHERE `id_kabel` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `kabel`
+WHERE `id_kabel` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `kabel`
+WHERE `id_kabel` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `kabel`
+WHERE `id_kabel` IN :id_kabel:', [...], false)
+ 5 SYSTEMPATH\Model.php(400): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(963): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\C_Kabel.php(172): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Kabel->hapus('2')
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Kabel))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

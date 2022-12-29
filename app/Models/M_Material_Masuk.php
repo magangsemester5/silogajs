@@ -11,31 +11,21 @@ class M_Material_Masuk extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_material','id_satuan','tanggal_masuk', 'no_delivery_order', 'jumlah_masuk','gudang','foto_penerima'
+        'tanggal_masuk', 'no_delivery_order', 'nama_material', 'jumlah_masuk', 'nama_satuan', 'gudang', 'foto_penerima'
     ];
 
-    function getAll()
+    function generateCode()
     {
-        $builder = $this->db->table('material_masuk');
-        $builder->join('material', 'material.id_material = material_masuk.id_material');
-        $query = $builder->get();
-        return $query->getResult();
+        $query = $this->db->query("SELECT MAX(no_delivery_order) as no_delivery_order from material_masuk");
+        $query = $query->getRow();
+        return $query->no_delivery_order;
     }
-
-    function getRelasi($id)
-    {
-        $builder = $this->db->table('material_masuk');
-        $builder->join('material', 'material.id_material = material_masuk.id_material');
-        $builder->where('id_material_masuk', $id);
-        $query = $builder->get();
-        return $query->getResult();
-    }
-
+    
     public function cekStok($id = null)
     {
-        $builder = $this->db->table('material_masuk');                                                              
-        $builder->join('material', 'material.id_material = material_masuk.id_material');
-        $builder->where('id_material_masuk', $id);
+        $builder = $this->db->table('material');
+        $builder->join('satuan', 'satuan.id_satuan = material.id_satuan');
+        $builder->where('id_material', $id);
         $query = $builder->get();
         return $query->getRowArray();
     }

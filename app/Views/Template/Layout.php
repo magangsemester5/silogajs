@@ -32,19 +32,19 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../template/assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../template/assets/img/favicon/logo.ico" />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <link href="../template/assets/css/font-web.css" rel="stylesheet"/>
     <!-- Data Tables -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../template/assets/css/dataTable/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../template/assets/css/dataTable/buttons.dataTables.min.css">
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../template/assets/vendor/fonts/boxicons.css" />
     <!-- Picker Tanggal -->
-    <link rel="stylesheet" href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/assets/vendor/libs/flatpickr/flatpickr.css" />
+    <link rel="stylesheet" href="../template/assets/css/flatpickr.css" />
     <!-- Core CSS -->
     <link rel="stylesheet" href="../template/assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../template/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
@@ -61,6 +61,7 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../template/assets/js/config.js"></script>
+    <link rel="manifest" href="../manifest.json">
     <!-- Confirm Delete -->
   </head>
 
@@ -106,7 +107,8 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman Permintaan material | SILOG AJS'
+                $title == 'Halaman Permintaan material | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan material | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -117,7 +119,8 @@
               </a>
               </li>
               <?php if (
-                $title == 'Halaman Permintaan kabel | SILOG AJS'
+                $title == 'Halaman Permintaan kabel | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan kabel | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -268,7 +271,8 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman Permintaan material | SILOG AJS'
+                $title == 'Halaman Permintaan material | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan material | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -279,7 +283,8 @@
               </a>
               </li>
               <?php if (
-                $title == 'Halaman Permintaan kabel | SILOG AJS'
+                $title == 'Halaman Permintaan kabel | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan kabel | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -292,7 +297,8 @@
               </ul>
               </li>
               <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
-              <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
+              <?php if ($title == 'Halaman Manajemen User | SILOG AJS' || $title == 'Halaman Tambah Manajemen User | SILOG AJS' ||
+                $title == 'Halaman Edit Manajemen User | SILOG AJS') : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
@@ -368,7 +374,8 @@
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">Transaksi</div>
+                <div data-i18n="Account Settings">Transaksi&nbsp</div>
+                <!-- <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span> -->
               </a>
               <ul class="menu-sub">
               <?php if (
@@ -441,7 +448,8 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman Permintaan material | SILOG AJS'
+                $title == 'Halaman Permintaan material | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan material | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -452,7 +460,8 @@
               </a>
               </li>
               <?php if (
-                $title == 'Halaman Permintaan kabel | SILOG AJS'
+                $title == 'Halaman Permintaan kabel | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan kabel | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -465,7 +474,8 @@
               </ul>
               </li>
               <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
-              <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
+              <?php if ($title == 'Halaman Manajemen User | SILOG AJS' || $title == 'Halaman Tambah Manajemen User | SILOG AJS' ||
+                $title == 'Halaman Edit Manajemen User | SILOG AJS') : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
@@ -614,7 +624,8 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman Permintaan material | SILOG AJS'
+                $title == 'Halaman Permintaan material | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan material | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -625,7 +636,8 @@
               </a>
               </li>
               <?php if (
-                $title == 'Halaman Permintaan kabel | SILOG AJS'
+                $title == 'Halaman Permintaan kabel | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan kabel | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -638,7 +650,8 @@
               </ul>
               </li>
               <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
-              <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
+              <?php if ($title == 'Halaman Manajemen User | SILOG AJS' || $title == 'Halaman Tambah Manajemen User | SILOG AJS' ||
+                $title == 'Halaman Edit Manajemen User | SILOG AJS') : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
@@ -786,7 +799,8 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman Permintaan material | SILOG AJS'
+                $title == 'Halaman Permintaan material | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan material | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -797,7 +811,8 @@
               </a>
               </li>
               <?php if (
-                $title == 'Halaman Permintaan kabel | SILOG AJS'
+                $title == 'Halaman Permintaan kabel | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan kabel | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -810,7 +825,8 @@
               </ul>
               </li>
               <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
-              <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
+              <?php if ($title == 'Halaman Manajemen User | SILOG AJS' || $title == 'Halaman Tambah Manajemen User | SILOG AJS' ||
+                $title == 'Halaman Edit Manajemen User | SILOG AJS') : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
@@ -959,7 +975,8 @@
               </a>
               <ul class="menu-sub">
               <?php if (
-                $title == 'Halaman Permintaan material | SILOG AJS'
+                $title == 'Halaman Permintaan material | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan material | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -970,7 +987,8 @@
               </a>
               </li>
               <?php if (
-                $title == 'Halaman Permintaan kabel | SILOG AJS'
+                $title == 'Halaman Permintaan kabel | SILOG AJS' ||
+                $title == 'Halaman Detail Permintaan kabel | SILOG AJS'
               ) : ?>
               <li class="menu-item active">
               <?php else : ?>
@@ -983,7 +1001,8 @@
               </ul>
               </li>
               <li class="menu-header small text-uppercase"><span class="menu-header-text">LAINNYA</span></li>
-              <?php if ($title == 'Halaman Manajemen User | SILOG AJS') : ?>
+              <?php if ($title == 'Halaman Manajemen User | SILOG AJS' || $title == 'Halaman Tambah Manajemen User | SILOG AJS' ||
+                $title == 'Halaman Edit Manajemen User | SILOG AJS') : ?>
               <li class="menu-item active">
               <?php else : ?>
               <li class="menu-item">
@@ -1028,7 +1047,6 @@
                 <i class="bx bx-menu bx-sm"></i>
               </a>
             </div>
-
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
               <!-- Search -->
               <!-- Search -->
@@ -1045,7 +1063,11 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="<?= base_url('') ?>/uploads/<?= session()->get('foto_user'); ?>" alt class="w-px-40 h-auto rounded-circle" />
+                      <?php if(session()->get('foto_user') == null) { ?> 
+                      <img src="<?= base_url('') ?>/uploads/blank_profile_picture.jpeg" alt class="w-px-40 h-px-40 rounded-circle" />
+                      <?php }else if(!empty(session()->get('foto_user'))){?>
+                      <img src="<?= base_url('') ?>/uploads/<?= session()->get('foto_user'); ?>" alt class="w-px-40 h-px-40 rounded-circle" />
+                      <?php } ?>
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -1113,12 +1135,12 @@
     <!-- Page JS -->
     <!-- <script src="../template/assets/js/dashboards-analytics.js"></script> -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> -->
 
     <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="../template/assets/js/buttons.js"></script>
     <!-- Sweet Alert -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../template/assets/js/sweetalert.min.js"></script>
     <script src="../template/js/jquery-3.6.0.js"></script>
     <script>
     $(document).ready(function () {
@@ -1288,6 +1310,33 @@
        });
     }
     </script>
+    <!-- Delete Confirm Data Kabel Masuk -->
+    <script>
+    function deletedatakabelmasuk($id) 
+    { 
+      swal({
+            title:"Anda Yakin ?",
+            text: "Data Akan dihapus Secara Permanen!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+      })
+      .then((willDelete) => {
+         if (willDelete) {
+            $.ajax({
+              url: "<?php echo base_url('hapus-kabelmasuk'); ?>" + "/" + $id,
+              method: "GET",
+              success: function() {
+                swal({    
+                    icon: "success",
+                });
+              }
+            });
+            location.reload();
+          }
+       });
+    }
+    </script>
     <!-- Delete Confirm Data Kabel Keluar -->
     <script>
     function deletedatakabelkeluar($id) 
@@ -1315,7 +1364,33 @@
        });
     }
     </script>
-
+ <!-- Delete Confirm Data Material Masuk -->
+ <script>
+    function deletedatamaterialmasuk($id) 
+    { 
+      swal({
+            title:"Anda Yakin ?",
+            text: "Data Akan dihapus Secara Permanen!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+      })
+      .then((willDelete) => {
+         if (willDelete) {
+            $.ajax({
+              url: "<?php echo base_url('hapus-materialmasuk'); ?>" + "/" + $id,
+              method: "GET",
+              success: function() {
+                swal({    
+                    icon: "success",
+                });
+              }
+            });
+            location.reload();
+          }
+       });
+    }
+    </script>
     <!-- Delete Confirm Data Material Keluar -->
     <script>
     function deletedatamaterialkeluar($id) 
@@ -1331,6 +1406,60 @@
          if (willDelete) {
             $.ajax({
               url: "<?php echo base_url('hapus-materialkeluar'); ?>" + "/" + $id,
+              method: "GET",
+              success: function() {
+                swal({    
+                    icon: "success",
+                });
+              }
+            });
+            location.reload();
+          }
+       });
+    }
+    </script>
+    <!-- Delete Confirm Data History Permintaan Material -->
+    <script>
+    function deletedatahistorypermintaanmaterial($id) 
+    { 
+      swal({
+            title:"Anda Yakin ?",
+            text: "Data Akan dihapus Secara Permanen!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+      })
+      .then((willDelete) => {
+         if (willDelete) {
+            $.ajax({
+              url: "<?php echo base_url('deletedatahistorypermintaanmaterial'); ?>" + "/" + $id,
+              method: "GET",
+              success: function() {
+                swal({    
+                    icon: "success",
+                });
+              }
+            });
+            location.reload();
+          }
+       });
+    }
+    </script>
+    <!-- Delete Confirm Data History Permintaan Kabel -->
+    <script>
+    function deletedatahistorypermintaankabel($id) 
+    { 
+      swal({
+            title:"Anda Yakin ?",
+            text: "Data Akan dihapus Secara Permanen!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+      })
+      .then((willDelete) => {
+         if (willDelete) {
+            $.ajax({
+              url: "<?php echo base_url('deletedatahistorypermintaankabel'); ?>" + "/" + $id,
               method: "GET",
               success: function() {
                 swal({    
@@ -1379,29 +1508,102 @@
                     $(".alert").text(text).addClass("loadAnimate");
                 }  
     </script>
-        <!-- Mendapatkan Kalkulasi Total Stok Material Keluar -->
+    <!-- Mendapatkan Kalkulasi Total Stok Material Keluar -->
     <script type="text/javascript">
-          <?php $request = \Config\Services::request(); ?>
-          let hal = '<?= $request->uri->getSegment(1) ?>';
-          let hal_panjang_keluar = '<?= $request->uri->getSegment(1) ?>';
-          let serial_number = $('#serial_number');
-          let nama_material = $('#nama_material');
-          let nama_satuan = $('#nama_satuan');
-          let foto_penerima = $('#foto_penerima');
-          let nama = $('#nama');
-          let no_drum = $('#no_drum');
-          let no_permintaan = $('#no_permintaan');
-          let core = $('#core');
-          let stok = $('#stok');
-          let total_stok = $('#total_stok');
-          let foto_serial_number = $('#foto_serial_number');
-          let jumlah = hal == 'tampil-materialkeluar' ? $('#jumlah_masuk') : $('#jumlah_keluar');
-          let panjang = $('#panjang');
-          let total_panjang = $('#total_panjang');
-          let panjang_keluar = hal_panjang_keluar == 'tampil-kabelkeluar' ? $('#panjang_masuk') : $('#panjang_keluar');
-          let wilayah = $('#wilayah');
+        <?php $request = \Config\Services::request(); ?>
+        let hal = '<?= $request->uri->getSegment(1) ?>';
+        let serial_number = $('#serial_number');
+        let nama_material = $('#nama_material');
+        let nama_satuan = $('#nama_satuan');
+        let foto_penerima = $('#foto_penerima');
+        let no_telepon = $('#no_telepon');
+        let nama = $('#nama');
+        let no_drum = $('#no_drum');
+        let no_hasbell = $('#no_hasbell');
+        let merek = $('#merek');
+        let no_permintaan = $('#no_permintaan');
+        let core = $('#core');
+        let stok = $('#stok');
+        let total_stok = $('#total_stok');
+        let foto_serial_number = $('#foto_serial_number');
+        let jumlah_masuk = hal == 'tampil-materialmasuk' ? $('#jumlah_masuk') : $('#jumlah_keluar');
+        let panjang = $('#panjang');
+        let total_panjang = $('#total_panjang');
+        let panjang_masuk = hal == 'tampil-kabelmasuk' ? $('#panjang_masuk') : $('#panjang_keluar');
+        let wilayah = $('#wilayah');
 
-        // Mendapatkan Kalkulasi Target Nama Material
+        // Menampilkan data otomatis pada material masuk
+        $(document).on('change', '#nama_material_masuk', function() {
+          var id = $(this).val();
+          $.ajax({
+              url: "<?php echo base_url('autotampildatamaterialmasuk'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                nama_material.val(data.nama_material);
+                nama_satuan.val(data.nama_satuan);
+                stok.val(data.stok);
+                total_stok.val(data.stok);
+                jumlah_masuk.focus();
+              }
+            });
+        });
+
+        // Menampilkan detail material masuk
+        $(document).on('click', 'button[data-bs-target="#detaildatamaterialmasuk"]', function() {
+          var id = $(this).attr('data-id');
+         
+          $.ajax({
+              url: "<?php echo base_url('autotampildatadetailmaterialmasuk'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                foto_penerima.html("<img src='../uploads/" + data.foto_penerima + "'width='200px' height='200px'>");
+                nama_material.html(data.nama_material);
+                jumlah_masuk.html(data.jumlah_masuk);
+                nama_satuan.html(data.nama_satuan);
+              }
+            });
+        });
+
+        // Menampilkan data otomatis pada kabel masuk
+        $(document).on('change', '#no_drum_masuk', function() {
+          var id = $(this).val();
+          $.ajax({
+              url: "<?php echo base_url('autotampildatakabelmasuk'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                no_drum.val(data.no_drum);
+                nama_satuan.val(data.nama_satuan);
+                panjang.val(data.panjang);
+                total_panjang.val(data.panjang);
+                core.val(data.core);
+                panjang_masuk.focus();
+              }
+            });
+        });
+
+        // Menampilkan detail kabel masuk
+        $(document).on('click', 'button[data-bs-target="#detaildatakabelmasuk"]', function() {
+          var id = $(this).attr('data-id');
+         
+          $.ajax({
+              url: "<?php echo base_url('autotampildatadetailkabelmasuk'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                foto_penerima.html("<img src='../uploads/" + data.foto_penerima + "'width='200px' height='200px'>");
+                no_hasbell.html(data.no_hasbell);
+                core.html(data.core);
+                panjang_masuk.html(data.panjang_masuk);
+                nama_satuan.html(data.nama_satuan);
+                merek.html(data.merek);
+              }
+            });
+        });
+        
+        // Mendapatkan Kalkulasi Target Nama Material Keluar
         $(document).on('change', '#id_permintaan_material', function() {
           var id = $(this).val();
             
@@ -1413,6 +1615,7 @@
                 wilayah.val(data.wilayah);
                 nama.val(data.nama);
                 no_permintaan.val(data.no_permintaan);
+                no_telepon.val(data.no_telepon);
                 $.ajax({
                   url: "<?php echo base_url('autotampildetaildatamaterialkeluar'); ?>" + "/" + id,
                   method: "GET",
@@ -1421,14 +1624,14 @@
                     var str = "";
                     var count = 1;
                     for (var i = 0; i < data.length; i++) {
-                      str += "<tr>";
-                      str += "<td>"+ count++ +"</td>";
-                      str += '<input type="text" name="id_material[]" value="'+ data[i].id_material +'" hidden />';
-                      str += '<td><input type="text" style="width:75px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="nama_material[]" value="'+ data[i].nama_material +'"/></td>';
-                      str += '<td style="display: none;"><input type="text" hidden name="nama_satuan[]" value="'+ data[i].nama_satuan +'"/></td>';
-                      str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="dpmj[]" value="'+ data[i].dpmj +" "+ data[i].nama_satuan +'"/></td>';
-                      str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="total_keluar[]" value="'+ parseInt(data[i].ms - data[i].dpmj)+'"/>'+data[i].nama_satuan+'</td>';
-                      str += "</tr>";
+                        str += "<tr>";
+                        str += "<td>"+ count++ +"</td>";
+                        str += '<input type="text" name="id_material[]" value="'+ data[i].id_material +'" hidden />';
+                        str += '<td><input type="text" style="width:75px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="nama_material[]" value="'+ data[i].nama_material +'"/></td>';
+                        str += '<td style="display: none;"><input type="text" hidden name="nama_satuan[]" value="'+ data[i].nama_satuan +'"/></td>';
+                        str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="dpmj[]" value="'+ data[i].dpmj +" "+ data[i].nama_satuan +'"/></td>';
+                        str += '<td><input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;" readonly name="total_keluar[]" value="'+ parseInt(data[i].ms - data[i].dpmj)+'"/>'+data[i].nama_satuan+'</td>';
+                        str += "</tr>";
                     }
                     document.querySelector('#showdetailmaterialkeluar').innerHTML = str;
                   }
@@ -1469,7 +1672,7 @@
             });
           });
 
-          // Menampilkan detail laman kabel keluar
+        // Menampilkan detail laman kabel keluar
         $(document).on('change', '#id_permintaan_kabel', function() {
           var id = $(this).val();
             
@@ -1481,6 +1684,7 @@
                 wilayah.val(data.wilayah);
                 nama.val(data.nama);
                 no_permintaan.val(data.no_permintaan);
+                no_telepon.val(data.no_telepon);
                 $.ajax({
                   url: "<?php echo base_url('autotampildetaildatakabelkeluar'); ?>" + "/" + id,
                   method: "GET",
@@ -1517,6 +1721,7 @@
               success: function(data) {
                 wilayah.val(data.wilayah);
                 foto_penerima.html("<img src='../uploads/" + data.foto_penerima + "'width='200px' height='200px'>");
+                no_telepon.val(data.no_telepon);
                 $.ajax({
                   url: "<?php echo base_url('autotampildetaildatakabelkeluarsetelahdikirim'); ?>" + "/" + id,
                   method: "GET",
@@ -1539,18 +1744,122 @@
             });
           });
         
+        
+        // // Menampilkan data otomatis permintaan material
+        // $(document).on('change', '#id_request_permintaan_material', function() {
+        //     var id = $(this).val();
+        //     $.ajax({
+        //         url: "<?php #echo base_url('autotampildatarequestpermintaanmaterial'); ?>" + "/" + id,
+        //         method: "GET",
+        //         dataType: 'json',
+        //         success: function(data) {
+        //             stok.val(data.stok);
+        //         }
+        //     });
+        // });
+
+        //  // Menampilkan data otomatis permintaan material
+        //  $(document).on('change', '#id_multi_request_permintaan_material', function(e) {
+        //     e.preventDefault();
+        //     let multi_stok = $('#multi_stok');
+        //     var id = $(this).val();
+        //     $.ajax({
+        //         url: "<?php #echo base_url('autotampildatarequestpermintaanmaterial'); ?>" +
+        //             "/" + id,
+        //         method: "GET",
+        //         dataType: 'json',
+        //         success: function(data) {
+        //             multi_stok.val(data.stok);
+        //         }
+        //     });
+        // });
+        
+        // Menampilkan Detail History Permintaan Material
+        $(document).on('click', 'button[data-bs-target="#detailhistorydatapermintaanmaterial"]', function() {
+          var id = $(this).attr('data-id');
+         
+          $.ajax({
+              url: "<?php echo base_url('autotampildatauserhistorypermintaanmaterial'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                wilayah.val(data.wilayah);
+                no_telepon.val(data.no_telepon);
+                $.ajax({
+                  url: "<?php echo base_url('autotampildetaildatahistorypermintaanmaterial'); ?>" + "/" + id,
+                  method: "GET",
+                  dataType: 'json',
+                  success: function(data) {
+                    var str = "";
+                    var count = 1;
+                    for (var i = 0; i < data.length; i++) {
+                      str += "<tr>";
+                      str += "<td>"+ count++ +"</td>";
+                      str += '<td>'+ data[i].nama_material +'</td>';
+                      str += '<td>'+ data[i].jumlah +'</td>';
+                      str += "</tr>";
+                    }
+                    document.querySelector('#isitabeldetailhistorypermintaanmaterial').innerHTML = str;
+                  }
+                })
+              }
+            });
+          });
+
+        // Menampilkan Detail History Permintaan Kabel
+        $(document).on('click', 'button[data-bs-target="#detailhistorydatapermintaankabel"]', function() {
+          var id = $(this).attr('data-id');
+         
+          $.ajax({
+              url: "<?php echo base_url('autotampildatauserhistorypermintaankabel'); ?>" + "/" + id,
+              method: "GET",
+              dataType: 'json',
+              success: function(data) {
+                wilayah.val(data.wilayah);
+                no_telepon.val(data.no_telepon);
+                $.ajax({
+                  url: "<?php echo base_url('autotampildetaildatahistorypermintaankabel'); ?>" + "/" + id,
+                  method: "GET",
+                  dataType: 'json',
+                  success: function(data) {
+                    var str = "";
+                    var count = 1;
+                    for (var i = 0; i < data.length; i++) {
+                      str += "<tr>";
+                      str += "<td>"+ count++ +"</td>";
+                      str += '<td>'+ data[i].no_drum +'</td>';
+                      str += '<td>'+ data[i].core +'</td>';
+                      str += '<td>'+ data[i].panjang +'</td>';
+                      str += "</tr>";
+                    }
+                    document.querySelector('#isitabeldetailhistorypermintaankabel').innerHTML = str;
+                  }
+                })
+              }
+            });
+          });
+
+        // Auto detect by jabatan
+        // $(document).ready(function() {
+        //   $("#jabatan" ).on("click", function(e) {
+        //   e.preventDefault();
+        //   var jabatan = $(this).val();
+        //   if(jabatan == ('Admin Pusat' || 'PM' || 'Direktur' || 'Management')){
+        //     $("#tampilwilayahbyjabatan").prepend("<select name='wilayah' id='wilayah' class='form-control' placeholder='Masukan Wilayah'><option value='Jakarta'>Jakarta</option></select>");
+        //   }else if(jabatan == ('Rpm' || 'Admin Wilayah')){
+        //     $("#tampilwilayahbyjabatan").prepend("<select name='wilayah' id='wilayah' class='form-control' placeholder='Masukan Wilayah'><option value='Jakarta'>Jakarta</option><option value='Padang'>Padang</option><option value='Jawa Barat'>Jawa Barat</option><option value='Yogyakarta'>Yogyakarta</option><option value='Pasuruan'>Pasuruan</option><option value='Sulawesi'>Sulawesi</option></select>");
+        //     let len = $("#tampilwilayahbyjabatan").length;
+        //   }
+        // });
+        // });
+        
         $(document).on('keyup', '#panjang_masuk', function() {
-            let totalPanjang = parseInt(panjang.val()) + data[i].panjang;
+            let totalPanjang = parseInt(panjang.val()) + parseInt(this.value);
             total_panjang.val(Number(totalPanjang));
         });
 
         $(document).on('keyup', '#jumlah_masuk', function() {
             let totalStok = parseInt(stok.val()) + parseInt(this.value);
-            total_stok.val(Number(totalStok));
-        });
-
-        $(document).on('keyup', '#jumlah_keluar', function() {
-            let totalStok = parseInt(stok.val()) - parseInt(this.value);
             total_stok.val(Number(totalStok));
         });
     </script>
@@ -1570,56 +1879,50 @@
       },1000);
       });
     </script>
+    <!-- Load PWA -->
     <script>
-      $(document).ready(function(){
-        $(".add_item_btn").click(function (e) { 
-          e.preventDefault();
-          $("#show_item").prepend(`<div class="row mt-3 append_item">
-                                <div class="col">
-                                    <input type="text" class="form-control" name="no_drum[]" placeholder="Pilih Nomor Drum"
-                                        aria-label="Pilih Nomor Drum">
-                                </div>
-                                <div class="col">
-                                    <input type="number" class="form-control" name="panjang[]" placeholder="Masukan Panjang Kabel"
-                                        aria-label="Masukan Panjang Kabel">
-                                </div>
-                                <div class="col">
-                                    <button class="btn btn-danger remove_item_btn">Remove</button>
-                                </div>
-                                </div>`);
-          
-         });
-         $(document).on('click', '.remove_item_btn', function(e){
-            e.preventDefault();
-            let row_item = $(this).parent().parent();
-            $(row_item).remove(); 
-         });
-         $("#add_form").submit(function(e){
-          e.preventDefault();
-          $("#add_btn").val('Adding...');
-          $.ajax({
-            url:'<?php echo base_url('tambahpermintaankabel'); ?>',
-            method: 'post',
-            data : $(this).serialize(),
-            success: function(response){
-              $("#add_btn").val('Add');
-              $("#add_form")[0].reset();
-              $(".append_item").remove();
-            }
-          })
-         })
+     window.onload = () => {
+        'use strict';
+
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker
+                  .register('../serviceworker.js');
+        }
+    }
+    </script>
+    <script>
+    $(document).ready(function () {
+      $("#AddOnTabel").DataTable({
+          // order: [[, 'asc']],
+          dom: 'Bfrtip',
+          responsive: true,
+          buttons: [
+              {
+                  extend: 'pdfHtml5',
+                  exportOptions: {
+                      columns: [0, 1, 2, 3]
+                  },
+              },
+              {
+                  extend: 'excelHtml5',
+                  exportOptions: {
+                      columns: [0, 1, 2, 3]
+                  }
+              },
+          ]
       });
+    });
     </script>
     <!-- Picker Tanggal -->
-    <script src="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/assets/vendor/libs/flatpickr/flatpickr.js"></script>
+    <script src="../template/assets/js/flatpickr.js"></script>
     <!-- Data Tables -->
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="../template/assets/js/dataTable/jquery.dataTables.js"></script>
+    <script src="../template/assets/js/dataTable/dataTables.buttons.min.js"></script>
+    <script src="../template/assets/js/dataTable/jszip.min.js"></script>
+    <script src="../template/assets/js/dataTable/pdfmake.min.js"></script>
+    <script src="../template/assets/js/dataTable/vfs_fonts.js"></script>
+    <script src="../template/assets/js/dataTable/buttons.html5.min.js"></script>
+    <script src="../template/assets/js/dataTable/buttons.print.min.js"></script>
     <!-- Page level custom scripts -->
     <script src="../template/assets/vendor/demo/datatables-demo.js"></script>
     <script>

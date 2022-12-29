@@ -43,6 +43,11 @@ $routes->post('proses_login', 'C_Auth::proses_login');
 $routes->get('halaman_login', 'C_Auth::index');
 $routes->get('tampil_dashboard', 'C_Dashboard::index', ['filter' => 'auth']);
 
+// Routing Forgot Password
+$routes->get('tampil-forgotpassword', 'C_Auth::tampil_forgot_password');
+$routes->post('proses-resetpassword', 'C_Auth::validasi_forgot_password');
+$routes->get('tampil-formforgotpassword/(:num)', 'C_Auth::tampil_form_forgot_password/$1');
+$routes->post('proses-gantipasswordbaru', 'C_Auth::proses_form_forgot_password');
 // Routing Logout
 $routes->get('logout', 'C_Auth::logout');
 
@@ -74,6 +79,7 @@ $routes->get('hapus-kabel/(:num)', 'C_Kabel::hapus/$1', ['filter' => 'auth']);
 // Material Masuk
 $routes->get('tampil-materialmasuk', 'C_Material_Masuk::index', ['filter' => 'auth']);
 $routes->get('autotampildatamaterialmasuk/(:num)', 'C_Material_Masuk::tampil_otomatis_data_material_masuk/$1', ['filter' => 'auth']);
+$routes->get('autotampildatadetailmaterialmasuk/(:num)', 'C_Material_Masuk::tampil_otomatis_detail_data_material_masuk/$1', ['filter' => 'auth']);
 $routes->get('detail-materialmasuk/(:num)', 'C_Material_Masuk::detail/$1', ['filter' => 'auth']);
 $routes->get('tambah-materialmasuk', 'C_Material_Masuk::tambah', ['filter' => 'auth']);
 $routes->post('prosestambah-materialmasuk', 'C_Material_Masuk::proses_tambah', ['filter' => 'auth']);
@@ -92,10 +98,12 @@ $routes->get('detail-materialkeluar/(:num)', 'C_Material_Keluar::detail/$1', ['f
 $routes->get('tambah-materialkeluar', 'C_Material_Keluar::tambah', ['filter' => 'auth']);
 $routes->post('prosestambah-materialkeluar', 'C_Material_Keluar::proses_tambah', ['filter' => 'auth']);
 $routes->get('hapus-materialkeluar/(:num)', 'C_Material_Keluar::hapus/$1', ['filter' => 'auth']);
+$routes->get('cetaksuratjalan-materialkeluar/(:num)', 'C_Material_Keluar::surat_jalan/$1', ['filter' => 'auth']);
 
 // Kabel Masuk
 $routes->get('tampil-kabelmasuk', 'C_Kabel_Masuk::index', ['filter' => 'auth']);
 $routes->get('autotampildatakabelmasuk/(:num)', 'C_Kabel_Masuk::tampil_otomatis_data_kabel_masuk/$1', ['filter' => 'auth']);
+$routes->get('autotampildatadetailkabelmasuk/(:num)', 'C_Kabel_Masuk::tampil_otomatis_detail_data_kabel_masuk/$1', ['filter' => 'auth']);
 $routes->get('detail-kabelmasuk/(:num)', 'C_Kabel_Masuk::detail/$1', ['filter' => 'auth']);
 $routes->get('tambah-kabelmasuk', 'C_Kabel_Masuk::tambah', ['filter' => 'auth']);
 $routes->post('prosestambah-kabelmasuk', 'C_Kabel_Masuk::proses_tambah', ['filter' => 'auth']);
@@ -103,7 +111,6 @@ $routes->get('hapus-kabelmasuk/(:num)', 'C_Kabel_Masuk::hapus/$1', ['filter' => 
 
 // Kabel Keluar
 $routes->get('tampil-kabelkeluar', 'C_Kabel_Keluar::index', ['filter' => 'auth']);
-
 $routes->get('autotampildatakabelkeluar/(:num)', 'C_Kabel_Keluar::tampil_otomatis_data_kabel_keluar/$1', ['filter' => 'auth']);
 $routes->get('autotampildatapermintaankabel/(:num)', 'C_Kabel_Keluar::tampil_otomatis_data_wilayah_kabel_keluar/$1', ['filter' => 'auth']);
 $routes->get('autotampildetaildatakabelkeluar/(:num)', 'C_Kabel_Keluar::tampil_data_detail_kabel_keluar/$1', ['filter' => 'auth']);
@@ -113,6 +120,7 @@ $routes->get('detail-kabelkeluar/(:num)', 'C_Kabel_Keluar::detail/$1', ['filter'
 $routes->get('tambah-kabelkeluar', 'C_Kabel_Keluar::tambah', ['filter' => 'auth']);
 $routes->post('prosestambah-kabelkeluar', 'C_Kabel_Keluar::proses_tambah', ['filter' => 'auth']);
 $routes->get('hapus-kabelkeluar/(:num)', 'C_Kabel_Keluar::hapus/$1', ['filter' => 'auth']);
+$routes->get('cetaksuratjalan-kabelkeluar/(:num)', 'C_Kabel_Keluar::surat_jalan/$1', ['filter' => 'auth']);
 
 // Data Manajemen User
 $routes->get('tampil-user', 'C_User::index', ['filter' => 'auth']);
@@ -131,8 +139,6 @@ $routes->get('edit-satuan/(:num)', 'C_Satuan::edit/$1', ['filter' => 'auth']);
 $routes->post('prosesedit-satuan', 'C_Satuan::proses_edit', ['filter' => 'auth']);
 $routes->get('hapus-satuan/(:num)', 'C_Satuan::hapus/$1', ['filter' => 'auth']);
 
-$routes->get('cekstok/(:num)', 'C_Material::cek_stok/$1', ['filter' => 'auth']);
-
 // Profil
 $routes->get('tampil-profil', 'C_User::profil', ['filter' => 'auth']);
 $routes->post('prosesedit-profil', 'C_User::proses_edit_profil', ['filter' => 'auth']);
@@ -141,13 +147,22 @@ $routes->post('prosesgantipassword-profil', 'C_User::proses_ganti_password_profi
 
 // Permintaan Material
 $routes->get('tampilpermintaan-material', 'C_Permintaan::permintaan_material', ['filter' => 'auth']);
+$routes->post('tambahpermintaanmaterial', 'C_Permintaan::tambah_permintaan_material', ['filter' => 'auth']);
 $routes->get('detailpermintaan-material/(:num)', 'C_Permintaan::detail_permintaan_material/$1', ['filter' => 'auth']);
+$routes->get('autotampildatauserhistorypermintaanmaterial/(:num)', 'C_Permintaan::tampil_data_history_permintaan_material_user/$1', ['filter' => 'auth']);
+$routes->get('autotampildetaildatahistorypermintaanmaterial/(:num)', 'C_Permintaan::tampil_data_detail_history_permintaan_material/$1', ['filter' => 'auth']);
 $routes->get('approvedetailpermintaan-material/(:num)', 'C_Permintaan::approve_detail_permintaan_material/$1', ['filter' => 'auth']);
+$routes->get('rejectdetailpermintaan-material/(:num)', 'C_Permintaan::reject_detail_permintaan_material/$1', ['filter' => 'auth']);
+$routes->get('deletedatahistorypermintaanmaterial/(:num)', 'C_Permintaan::delete_history_permintaan_material/$1', ['filter' => 'auth']);
 // Permintaan Kabel
 $routes->get('tampilpermintaan-kabel', 'C_Permintaan::permintaan_kabel', ['filter' => 'auth']);
 $routes->post('tambahpermintaankabel', 'C_Permintaan::tambah_permintaan_kabel', ['filter' => 'auth']);
 $routes->get('detailpermintaan-kabel/(:num)', 'C_Permintaan::detail_permintaan_kabel/$1', ['filter' => 'auth']);
+$routes->get('autotampildatauserhistorypermintaankabel/(:num)', 'C_Permintaan::tampil_data_history_permintaan_kabel_user/$1', ['filter' => 'auth']);
+$routes->get('autotampildetaildatahistorypermintaankabel/(:num)', 'C_Permintaan::tampil_data_detail_history_permintaan_kabel/$1', ['filter' => 'auth']);
 $routes->get('approvedetailpermintaan-kabel/(:num)', 'C_Permintaan::approve_detail_permintaan_kabel/$1', ['filter' => 'auth']);
+$routes->get('rejectdetailpermintaan-kabel/(:num)', 'C_Permintaan::reject_detail_permintaan_kabel/$1', ['filter' => 'auth']);
+$routes->get('deletedatahistorypermintaankabel/(:num)', 'C_Permintaan::delete_history_permintaan_kabel/$1', ['filter' => 'auth']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

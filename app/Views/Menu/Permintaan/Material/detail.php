@@ -24,7 +24,7 @@
                             <thead>
                                 <tr>
                                     <td>No</td>
-                                    <td>Nama Admin Wilayah</td>
+                                    <td>Nama Peminta</td>
                                     <th>Nama Material</th>
                                     <th>Qty</th>
                                     <th>Keterangan</th>
@@ -39,12 +39,15 @@
                                     <td><?= $no++ ?></td>
                                     <td><?= $td1->nama ?></td>
                                     <td><?= $td->nama_material ?></td>
-                                    <td><?= $td->qty ?></td>
+                                    <td><?= $td->jumlah ?></td>
                                     <?php if ($td->status == 0) { ?>
-                                    <td><span class="btn btn-warning btn-sm">Belum di Approve Semua</span></td>
-                                    <?php if (session()->get('jabatan') == 'RPM') { ?>
+                                    <td><span class="btn btn-success btn-sm">Belum di Approve Semua</span></td>
+                                    <?php if (session()->get('jabatan') == 'Rpm') { ?>
                                     <td><a class="btn btn-success btn-sm"
                                             href="<?= base_url("approvedetailpermintaan-material/$td->id_detail_permintaan_material"); ?>">Approve
+                                            Disini</a></td>
+                                    <td><a class="btn btn-danger btn-sm"
+                                            href="<?= base_url("rejectdetailpermintaan-material/$td->id_detail_permintaan_material"); ?>">Reject
                                             Disini</a></td>
                                     <?php } ?>
                                     <?php } else if ($td->status == 1) { ?>
@@ -53,12 +56,18 @@
                                     <td><a class="btn btn-success btn-sm"
                                             href="<?= base_url("approvedetailpermintaan-material/$td->id_detail_permintaan_material"); ?>">Approve
                                             Disini</a></td>
+                                    <td><a class="btn btn-danger btn-sm"
+                                            href="<?= base_url("rejectdetailpermintaan-material/$td->id_detail_permintaan_material"); ?>">Reject
+                                            Disini</a></td>
                                     <?php } ?>
                                     <?php } else if ($td->status == 2) { ?>
                                     <td><span class="btn btn-success btn-sm">Sudah di Approve Admin Pusat</span></td>
                                     <?php if (session()->get('jabatan') == 'PM') { ?>
                                     <td><a class="btn btn-success btn-sm"
                                             href="<?= base_url("approvedetailpermintaan-material/$td->id_detail_permintaan_material"); ?>">Approve
+                                            Disini</a></td>
+                                    <td><a class="btn btn-danger btn-sm"
+                                            href="<?= base_url("rejectdetailpermintaan-material/$td->id_detail_permintaan_material"); ?>">Reject
                                             Disini</a></td>
                                     <?php } ?>
                                     <?php } else if ($td->status == 3) { ?>
@@ -67,9 +76,17 @@
                                     <td><a class="btn btn-success btn-sm"
                                             href="<?= base_url("approvedetailpermintaan-material/$td->id_detail_permintaan_material"); ?>">Approve
                                             Disini</a></td>
+                                    <td><a class="btn btn-danger btn-sm"
+                                            href="<?= base_url("rejectdetailpermintaan-material/$td->id_detail_permintaan_material"); ?>">Reject
+                                            Disini</a></td>
                                     <?php } ?>
                                     <?php } else if ($td->status == 4) { ?>
                                     <td><span class="btn btn-success btn-sm">Sudah di Approve Direktur</span></td>
+                                    <?php } else if ($td->status == 5) { ?>
+                                    <td><span class="btn btn-info btn-sm">Sudah Selesai diproses dan dikirim</span>
+                                    </td>
+                                    <?php }else if($td->status == 6) { ?>
+                                    <td><span class="btn btn-danger btn-sm">Ditolak</span></td>
                                     <?php } ?>
                                 </tr>
                                 <?php endforeach; ?>

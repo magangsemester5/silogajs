@@ -19,6 +19,10 @@ class User extends Migration
                 'type' => 'varchar',
                 'constraint' => '50'
             ],
+            'email' => [
+                'type' => 'varchar',
+                'constraint' => '50'
+            ],
             'password' => [
                 'type' => 'varchar',
                 'constraint' => '100'

@@ -10,7 +10,7 @@
             <!-- Basic Bootstrap Table -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="fw-bold">Data Satuan</h6>
+                    <h6 class="fw-bold">Data satuan</h6>
                 </div>
                 <!-- <div class="row mt-2 ml-md-2 text-center"> -->
                 <!-- <div class="col-md-1"> -->
@@ -23,7 +23,7 @@
                         <span class="icon text-green-50">
                             <i class="bx bx-plus-circle me-1"></i>
                         </span>
-                        <span class="text">Tambah Satuan Barang</span>
+                        <span class="text">Tambah satuan</span>
                     </a>
                     <?php } ?>
                     <div class="table-responsive">

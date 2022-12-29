@@ -1,0 +1,24 @@
+CRITICAL - 2022-12-04 23:59:33 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\C_Auth.php on line 48.
+ 1 APPPATH\Controllers\C_Auth.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\C_Auth.php', 48, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->proses_login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-04 23:59:39 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\C_Auth.php on line 48.
+ 1 APPPATH\Controllers\C_Auth.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\C_Auth.php', 48, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->proses_login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-04 23:59:52 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\C_Auth.php on line 48.
+ 1 APPPATH\Controllers\C_Auth.php(48): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\C_Auth.php', 48, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->proses_login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

@@ -17,7 +17,7 @@
   class="light-style customizer-hide"
   dir="ltr"
   data-theme="theme-default"
-  data-template/assets-path="../template/assets/"
+  data-template-assets-path="../template/assets/"
   data-template="vertical-menu-template-free"
 >
   <head>
@@ -32,16 +32,13 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../template/assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../template/assets/img/favicon/logo.ico" />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+    <link href="../template/assets/css/font-web.css" rel="stylesheet"/>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../template/assets/vendor/fonts/boxicons.css" />
 
@@ -58,7 +55,7 @@
     <link rel="stylesheet" href="../template/assets/vendor/css/pages/page-auth.css" />
     <!-- Helpers -->
     <script src="../template/assets/vendor/js/helpers.js"></script>
-
+    <link rel="manifest" href="../manifest.json">
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../template/assets/js/config.js"></script>
@@ -79,20 +76,26 @@
               </div>
               <!-- /Logo -->
               <h4 class="mb-2">Login Aplikasi Silog AJS</h4>
-              <p class="mb-4">Please sign-in to your account and start the work</p>
+              <p class="mb-4">Silakan masuk ke akun Anda dan mulai bekerja</p>
  
               <form method="post" class="mb-3" action="<?= base_url('proses_login'); ?>">
                 <div class="mb-3">
                   <label for="id" class="form-label">ID</label>
-                  <input type="text" name="id_user" id="id_user" placeholder="Masukan ID anda" class="form-control" required autofocus>
+                  <input type="text" name="id_user" id="id_user" placeholder="Masukan ID Anda" class="form-control" required autofocus>
                 </div>
                 <div class="mb-3 form-password-toggle">
-                <label for="password" class="form-label">PASSWORD</label>
+                <div class="d-flex justify-content-between">
+                    <label class="form-label" for="password">Password</label>
+                    <a href="<?= base_url('tampil-forgotpassword') ?>">
+                      <small>Lupa Password ?</small>
+                    </a>
+                </div>
                   <div class="input-group input-group-merge">
-                  <input type="password" name="password" id="password" placeholder="Masukan Password anda" class="form-control" required autofocus>
+                  <input type="password" name="password" id="password" placeholder="Masukan password Anda" class="form-control" required autofocus>
                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                   </div>
                 </div>
+                <div class="g-recaptcha mt-3 mb-3" data-sitekey="6LcYuisjAAAAAPLFgwZIcari9MRqli1oQMZ7iYgz"></div>  
                 <div class="mb-3">
                   <button class="btn btn-primary d-grid w-100" type="submit">Login</button>
                 </div>
@@ -122,9 +125,9 @@
     <!-- Page JS -->
 
     <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async defer src="../template/assets/js/buttons-io.js"></script>
     <!-- Sweet Alert -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../template/assets/js/sweetalert2.min.js"></script>
     <script src="../template/js/jquery-3.6.0.js"></script>
     <script>
     $(document).ready(function () {
@@ -137,6 +140,17 @@
       });
       <?php } ?>
       });
+    </script>
+    <!-- Load PWA -->
+    <script>
+     window.onload = () => {
+        'use strict';
+
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker
+                  .register('../serviceworker.js');
+        }
+    }
     </script>
   </body>
 </html>

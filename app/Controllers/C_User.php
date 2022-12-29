@@ -21,15 +21,6 @@ class C_User extends BaseController
         return view('Menu/User/index', $data);
     }
 
-    public function profil()
-    {
-        $data = [
-            'title' => 'Halaman Manajemen User | SILOG AJS',
-            'tampildata' => $this->user->findAll(),
-        ];
-        return view('Profil/index', $data);
-    }
-
     public function tambah()
     {
         $data = [
@@ -40,19 +31,99 @@ class C_User extends BaseController
 
     public function proses_tambah()
     {
-        $image = $this->request->getFile('foto_user');
-        $image->move(ROOTPATH . 'public/uploads');
-        $data = [
-            'nama' => $this->request->getVar('nama'),
-            'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
-            'id_user' => $this->request->getVar('id_user'),
-            'jabatan' => $this->request->getVar('jabatan'),
-            'kriteria' => $this->request->getVar('kriteria'),
-            'foto_user' => $image->getClientName(),
+        $rules = [
+            'nama' => [
+                'label' => "Nama",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'email' => [
+                'label' => "Email",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'password' => [
+                'label' => "Password",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'jabatan' => [
+                'label' => "Jabatan",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'id_user' => [
+                'label' => "ID User",
+                'rules' => "required|is_unique[user.id_user]",
+                'errors' => [
+                    'required' => "{field} harus diisi",
+                    'is_unique' => "{field} yang dimasukan Sudah ada"
+                ]
+            ],
+            'kriteria' => [
+                'label' => "Kriteria",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'image' => [
+                'label' => "Foto",
+                'rules' => "uploaded[image]|mime_in[image,image/png,image/jpeg]|max_size[image,2048]",
+                'errors' => [
+                    'uploaded' => "Foto yang diupload sudah pernah diupload",
+                    'mime_in' => "File yang diupload harus berupa PNG/JPG",
+                    'max_size' => "Foto yang diupload maximal harus berukuran 2Mb"
+                ]
+
+            ],
+            'wilayah' => [
+                'label' => "Wilayah",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
+            'no_telepon' => [
+                'label' => "Nomor Telepon",
+                'rules' => "required",
+                'errors' => [
+                    'required' => "{field} harus diisi"
+                ]
+            ],
         ];
-        session()->setFlashdata('status', 'Data Manajemen User berhasil ditambahkan');
-        $this->user->insert($data);
-        return redirect()->to(base_url('tampil-user'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil ditambah');
+        if ($this->validate($rules)) {
+            $image = $this->request->getFile('image');
+            $imageName = $image->getRandomName();
+            $image->move('uploads/', $imageName);
+            $data = [
+                'nama' => $this->request->getVar('nama'),
+                'email' => $this->request->getVar('email'),
+                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+                'id_user' => $this->request->getVar('id_user'),
+                'jabatan' => $this->request->getVar('jabatan'),
+                'kriteria' => $this->request->getVar('kriteria'),
+                'wilayah' => $this->request->getVar('wilayah'),
+                'no_telepon' => $this->request->getVar('no_telepon'),
+                'foto_user' => $imageName,
+            ];
+            session()->setFlashdata('status', 'Data Manajemen User berhasil ditambahkan');
+            $this->user->insert($data);
+            return redirect()->to(base_url('tampil-user'))->with('status_icon', 'success')->with('status_text', 'Data Berhasil ditambah');
+        } else {
+            $data = [
+                'title' => 'Halaman Tambah Manajemen User | SILOG AJS',
+            ];
+            return view("Menu/User/tambah", $data);
+        }
     }
 
     public function edit($id = null)
@@ -68,7 +139,7 @@ class C_User extends BaseController
     {
         $loadmodel = $this->request->getVar('id');
         $dataId = $this->user->find($loadmodel);
-        $image = $this->request->getFile('foto_user');
+        $image = $this->request->getFile('image');
         if ($image->isValid() && !$image->hasMoved()) {
             $foto = $dataId->foto_user;
             if (file_exists('uploads/' . $foto)) {
@@ -78,10 +149,12 @@ class C_User extends BaseController
             $image->move('uploads/', $imageName);
             $data = [
                 'nama' => $this->request->getVar('nama'),
-                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+                'email' => $this->request->getVar('email'),
                 'id_user' => $this->request->getVar('id_user'),
                 'jabatan' => $this->request->getVar('jabatan'),
                 'kriteria' => $this->request->getVar('kriteria'),
+                'wilayah' => $this->request->getVar('wilayah'),
+                'no_telepon' => $this->request->getVar('no_telepon'),
                 'foto_user' => $imageName,
             ];
             session()->setFlashdata('status', 'Data Manajemen User berhasil diupdate');
@@ -93,10 +166,12 @@ class C_User extends BaseController
         } else {
             $data = [
                 'nama' => $this->request->getVar('nama'),
-                'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+                'email' => $this->request->getVar('email'),
                 'id_user' => $this->request->getVar('id_user'),
                 'jabatan' => $this->request->getVar('jabatan'),
                 'kriteria' => $this->request->getVar('kriteria'),
+                'wilayah' => $this->request->getVar('wilayah'),
+                'no_telepon' => $this->request->getVar('no_telepon'),
             ];
             session()->setFlashdata('status', 'Data Manajemen User berhasil diupdate');
             $this->user->update($loadmodel, $data);
@@ -105,6 +180,16 @@ class C_User extends BaseController
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil diupdate');
         }
+    }
+
+    public function profil()
+    {
+        $id = session()->get('id');
+        $data = [
+            'title' => 'Halaman Manajemen User | SILOG AJS',
+            'tampildata' => $this->user->where('id', $id)->first()
+        ];
+        return view('Profil/index', $data);
     }
 
     public function proses_edit_profil()
@@ -121,26 +206,34 @@ class C_User extends BaseController
             $image->move('uploads/', $imageName);
             $data = [
                 'nama' => $this->request->getVar('nama'),
+                'email' => $this->request->getVar('email'),
                 'id_user' => $this->request->getVar('id_user'),
+                'jabatan' => $this->request->getVar('jabatan'),
+                'kriteria' => $this->request->getVar('kriteria'),
+                'wilayah' => $this->request->getVar('wilayah'),
                 'no_telepon' => $this->request->getVar('no_telepon'),
                 'foto_user' => $imageName,
             ];
             session()->setFlashdata('status', 'Data Profil berhasil diupdate');
             $this->user->update($loadmodel, $data);
             return redirect()
-                ->to(base_url('tampil_dashboard'))
+                ->to(base_url('tampil-profil'))
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil diupdate');
         } else {
             $data = [
                 'nama' => $this->request->getVar('nama'),
-                'no_telepon' => $this->request->getVar('no_telepon'),
+                'email' => $this->request->getVar('email'),
                 'id_user' => $this->request->getVar('id_user'),
+                'jabatan' => $this->request->getVar('jabatan'),
+                'kriteria' => $this->request->getVar('kriteria'),
+                'wilayah' => $this->request->getVar('wilayah'),
+                'no_telepon' => $this->request->getVar('no_telepon'),
             ];
             session()->setFlashdata('status', 'Data Profil berhasil diupdate');
             $this->user->update($loadmodel, $data);
             return redirect()
-                ->to(base_url('tampil_dashboard'))
+                ->to(base_url('tampil-profil'))
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil diupdate');
         }
@@ -177,7 +270,7 @@ class C_User extends BaseController
                 'rules' => "required|matches[password_baru]",
                 'errors' => [
                     'required' => "{field} harus diisi",
-                    'matches' => "{field} dengan         password baru yang dimasukan harus sama",
+                    'matches' => "{field} dengan password baru yang dimasukan harus sama",
                 ]
             ]
         ];

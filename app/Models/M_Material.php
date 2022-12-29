@@ -29,31 +29,10 @@ class M_Material extends Model
         return $query->getRowArray();
     }
 
-    // public function chartmaterialMasuk()
-    // {
-    //     return $this->db->table('material_masuk')->select('count(*) as jumlah, id_material')->groupBy('id_material')->get()->getResultArray();
-    // }
-
-    // public function chartmaterialKeluar()
-    // {
-    //     return $this->db->table('material_keluar')->select('count(*) as jumlah, id_material')->groupBy('id_material')->get()->getResultArray();
-    // }
-
     function count($table)
     {
         $builder = $this->db->table($table);
         $query = $builder->countAllResults();
         return $query;
-    }
-
-    function cek_data_direlasi($table, $table2, $where)
-    {
-        $builder = $this->db->table($table);
-        $builder = $this->db->table($table2);
-        $builder->where($table, $where);
-        $builder->where($table2, $where);
-        $builder->countAllResults();
-        $query = $builder->get();
-        return $query->getResult();
     }
 }

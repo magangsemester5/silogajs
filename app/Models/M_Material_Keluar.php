@@ -11,15 +11,14 @@ class M_Material_Keluar extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'no_permintaan', 'nama', 'wilayah', 'tanggal_keluar', 'foto_penerima'
+        'no_permintaan', 'nama', 'wilayah', 'no_telepon' ,'tanggal_keluar', 'foto_penerima'
     ];
 
     function getRelasi($id)
     {
         $builder = $this->db->table('material_keluar');
-        $builder->join('material', 'material.id_material = material_keluar.id_material');
-        $builder->join('permintaan_material', 'permintaan_material.id_permintaan_material = material_keluar.id_permintaan_material');
-        $builder->where('id_material_keluar', $id);
+        $builder->join('detail_material_keluar', 'detail_material_keluar.id_material_keluar = material_keluar.id_material_keluar');
+        $builder->where('material_keluar.id_material_keluar', $id);
         $query = $builder->get();
         return $query->getResult();
     }
@@ -38,10 +37,10 @@ class M_Material_Keluar extends Model
     public function cekdetailmaterialkeluar($id = null)
     {
         $builder = $this->db->table('detail_permintaan_material');
-        $builder->select('material.nama_material,detail_permintaan_material.jumlah as dpmj, material.serial_number, material.id_material, material.stok as ms, satuan.nama_satuan');
+        $builder->select('material.nama_material,detail_permintaan_material.jumlah as dpmj, material.serial_number, material.id_material, material.stok as ms, detail_permintaan_material.status, satuan.nama_satuan');
         $builder->join('material', 'material.id_material = detail_permintaan_material.id_material');
         $builder->join('satuan', 'satuan.id_satuan = material.id_satuan');
-        $builder->join('permintaan_material', 'permintaan_material.id_permintaan_material = permintaan_material.id_permintaan_material');
+        $builder->join('permintaan_material', 'permintaan_material.id_permintaan_material = detail_permintaan_material.id_permintaan_material');
         $builder->join('user', 'user.id = permintaan_material.id');
         $where = array('permintaan_material.id_permintaan_material' => $id, 'detail_permintaan_material.status' => 4);
         $builder->where($where);

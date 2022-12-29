@@ -23,6 +23,9 @@ class PermintaanMaterial extends Migration
             'no_permintaan' => [
                 'type' => 'varchar',
                 'constraint' => '50'
+            ],
+            'tanggal' => [
+                'type' => 'date'
             ]
         ]);
 

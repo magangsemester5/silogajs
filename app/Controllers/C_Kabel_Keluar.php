@@ -7,7 +7,10 @@ use App\Models\M_Detail_Kabel_Keluar;
 use App\Models\M_Kabel_Keluar;
 use App\Models\M_Kabel;
 use App\Models\M_Permintaan_Kabel;
+use App\Models\M_History_Permintaan_Kabel;
+use App\Models\M_Detail_Permintaan_Kabel;
 use App\Models\M_User;
+use TCPDF;
 
 class C_kabel_Keluar extends BaseController
 {
@@ -15,8 +18,10 @@ class C_kabel_Keluar extends BaseController
     {
         $this->kabel_keluar = new M_Kabel_Keluar();
         $this->detail_kabel_keluar = new M_Detail_Kabel_Keluar();
+        $this->detail_permintaan_kabel = new M_Detail_Permintaan_Kabel();
         $this->kabel = new M_Kabel();
         $this->permintaan_kabel = new M_Permintaan_Kabel();
+        $this->history_permintaan_kabel = new M_History_Permintaan_Kabel();
         $this->user = new M_User();
     }
     public function index()
@@ -30,11 +35,12 @@ class C_kabel_Keluar extends BaseController
 
     public function tambah()
     {
+        $getGenerate = $this->history_permintaan_kabel->generateCodeReqID();
+        $reqidgenereate = $getGenerate + 1;
         $data = [
             'title' => 'Halaman Tambah kabel Keluar | SILOG AJS',
-            'tampildatakabel' => $this->kabel->findAll(),
-            'tampildatapermintaankabel' => $this->permintaan_kabel->findAll(),
-            'tampildataadminwilayah' => $this->user->findAll(),
+            'tampildatapermintaankabel' => $this->permintaan_kabel->getDataPermintaanKabelByStatus(),
+            'req_id' => $reqidgenereate,
             'validation' => \Config\Services::validation()
         ];
         return view('Menu/kabel_Keluar/tambah', $data);
@@ -42,7 +48,6 @@ class C_kabel_Keluar extends BaseController
 
     public function proses_tambah()
     {
-        // $total_panjang = $this->request->getVar('total_panjang');
         $rules = [
             'tanggal_keluar' => [
                 'label' => "Tanggal Keluar",
@@ -64,13 +69,22 @@ class C_kabel_Keluar extends BaseController
         ];
         if ($this->validate($rules)) {
             $image = $this->request->getFile('image');
-            $image->move(ROOTPATH . 'public/uploads');
+            $imageName = $image->getRandomName();
+            $image->move('uploads/', $imageName);
+            $no_permintaan = $this->request->getVar('no_permintaan');
+            $id_permintaan_kabel = $this->request->getVar('id_permintaan_kabel');
+            $nama = $this->request->getVar('nama');
+            $wilayah = $this->request->getVar('wilayah');
+            $no_telepon = $this->request->getVar('no_telepon');
+            $tanggal = $this->request->getVar('tanggal_keluar');
+            $req_id = $this->request->getVar('req_id');
             $data = [
-                'no_permintaan' => $this->request->getVar('no_permintaan'),
-                'nama' => $this->request->getVar('nama'),
-                'wilayah' => $this->request->getVar('wilayah'),
-                'tanggal_keluar' => $this->request->getVar('tanggal_keluar'),
-                'foto_penerima' => $image->getClientName(),
+                'no_permintaan' => $no_permintaan,
+                'nama' => $nama,
+                'wilayah' => $wilayah,
+                'no_telepon' => $no_telepon,
+                'tanggal_keluar' => $tanggal,
+                'foto_penerima' => $imageName,
             ];
             $this->kabel_keluar->insert($data);
             $id_kabel_keluar  = $this->kabel_keluar->getInsertID();
@@ -101,6 +115,26 @@ class C_kabel_Keluar extends BaseController
             }
             $this->detail_kabel_keluar->table('detail_kabel_keluar')->insertBatch($data1);
             $this->kabel->table('kabel')->updateBatch($data2, 'id_kabel');
+            $this->detail_permintaan_kabel->updateStatus($id_permintaan_kabel);
+            $this->detail_permintaan_kabel->deleteData($id_permintaan_kabel);
+            $this->permintaan_kabel->deleteData($id_permintaan_kabel);
+            $data3 = array();
+            for ($i = 0; $i < $jumlah_kabel; $i++) {
+                $data3[] = array(
+                    'no_permintaan' => $no_permintaan,
+                    'req_id' => $req_id,
+                    'nama' => $nama,
+                    'tanggal' => $tanggal,
+                    'wilayah' => $wilayah,
+                    'no_telepon' => $no_telepon,
+                    'no_drum' => $no_drum[$i],
+                    'core' => $core[$i],
+                    'panjang' => $panjang[$i],
+                    'nama_satuan' => $nama_satuan[$i],
+                    'status' => 5
+                );
+            }
+            $this->history_permintaan_kabel->table('history_permintaan_kabel')->insertBatch($data3);
             session()->setFlashdata(
                 'status',
                 'Data kabel Keluar berhasil ditambahkan'
@@ -117,7 +151,7 @@ class C_kabel_Keluar extends BaseController
                 'tampildataadminwilayah' => $this->user->findAll(),
                 'validation' => $this->validator
             ];
-            return view('Menu/kabel_Keluar/tambah', $data);
+            return view('Menu/Kabel_Keluar/tambah', $data);
         }
     }
 
@@ -126,7 +160,7 @@ class C_kabel_Keluar extends BaseController
         $id_kabel_keluar = array(
             'id_kabel_keluar' => $id
         );
-        $this->detail_kabel_keluar->delete_detail_material_keluar($id_kabel_keluar);
+        $this->detail_kabel_keluar->delete_detail_kabel_keluar($id_kabel_keluar);
         $data = $this->kabel_keluar->find($id);
         $foto = $data->foto_penerima;
         if (file_exists('uploads/' . $foto)) {
@@ -141,6 +175,34 @@ class C_kabel_Keluar extends BaseController
             ->to(base_url('tampil-kabelkeluar'))
             ->with('status_icon', 'success')
             ->with('status_text', 'Data Berhasil dihapus');
+    }
+
+    public function surat_jalan($id)
+    {
+        $transaksi = $this->kabel_keluar->find($id);
+        $getGenerate = $this->permintaan_kabel->generateCode();
+        $nourut = substr($getGenerate, 1, 1);
+        $kodeGenerate = $nourut + 1;
+        $datakabelkeluar = $this->kabel_keluar->getRelasi($id);
+        $html = view('Menu/Kabel_Keluar/surat_jalan', [
+            'transaksi' => $transaksi,
+            'datakabelkeluar' => $datakabelkeluar,
+            'no_permintaan' => $kodeGenerate
+        ]);
+
+        $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+        $pdf->SetPrintHeader(false);
+        $pdf->SetTitle('Halaman Cetak Surat Jalan Kabel Keluar | SILOG AJS');
+        // set header and footer fonts
+        $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+        $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+        $pdf->addPage();
+        // output the HTML content
+        $pdf->writeHTML($html);
+        //line ini penting
+        $this->response->setContentType('application/pdf');
+        //Close and output PDF document
+        $pdf->Output('invoice.pdf', 'I');
     }
 
     public function tampil_otomatis_data_kabel_keluar($id = null)

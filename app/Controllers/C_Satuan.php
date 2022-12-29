@@ -35,9 +35,11 @@ class C_Satuan extends BaseController
         $rules = [
             'nama_satuan' => [
                 'label' => "Nama Satuan",
-                'rules' => "required",
+                'rules' => "required|is_unique[satuan.nama_satuan]|regex_match[/^([a-z ])+$/i]",
                 'errors' => [
-                    'required' => "{field} harus diisi"
+                    'required' => "{field} harus diisi",
+                    'is_unique' => "{field} yang dimasukan Sudah ada",
+                    'regex_match' => "{field} yang dimasukan harus berupa alphabet"
                 ]
             ]
         ];
@@ -84,14 +86,6 @@ class C_Satuan extends BaseController
         $where = [
             'id_satuan' => $id
         ];
-        $cek_satuan = count((array) $this->satuan->cek_data_direlasi('material', 'kabel', $where));
-        if ($cek_satuan > 0) {
-            session()->setFlashdata('status', 'Cek data Pada tabel material dan kabel pastikan satuan yang terkait sudah tidak ada');
-            return redirect()
-                ->to(base_url('tampil-satuan'))
-                ->with('status_icon', 'warning')
-                ->with('status_text', 'Data Gagal Dihapus');
-        } else {
             $this->satuan->delete($id);
             session()->setFlashdata('status', 'Data Satuan berhasil dihapus');
             return redirect()
@@ -99,5 +93,4 @@ class C_Satuan extends BaseController
                 ->with('status_icon', 'success')
                 ->with('status_text', 'Data Berhasil dihapus');
         }
-    }
 }

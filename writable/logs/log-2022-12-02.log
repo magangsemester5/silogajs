@@ -1,0 +1,1308 @@
+ERROR - 2022-12-02 00:17:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 00:19:40 --> Undefined variable: validation
+in APPPATH\Views\Menu\User\tambah.php on line 19.
+ 1 APPPATH\Views\Menu\User\tambah.php(19): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: validation', 'APPPATH\\Views\\Menu\\User\\tambah.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\User\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/User/tambah', [], true)
+ 5 APPPATH\Controllers\C_User.php(38): view('Menu/User/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:07:38 --> Undefined property: stdClass::$status
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 35.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$status', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(48): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:08:46 --> Undefined variable: tampildatadetailpermintaanmaterial
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 35.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tampildatadetailpermintaanmaterial', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(48): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:09:13 --> Undefined variable: tampildatadetailpermintaanmaterial
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tampildatadetailpermintaanmaterial', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(48): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:10:42 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:11:05 --> syntax error, unexpected end of file
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 157.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 3 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:11:21 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:11:50 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:11:51 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:12:08 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:12:14 --> syntax error, unexpected 'null' (T_STRING)
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 3 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:12:28 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:12:35 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:13:03 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:13:14 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:13:29 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:14:52 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:15:11 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 01:16:08 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(49): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:22:35 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:22:35 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 34.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 34, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:24:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:25:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:25:25 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 35.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:25:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:25:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 35.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:26:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:26:07 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 35.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:26:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:26:08 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 35.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:26:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:26:09 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 35.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:26:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:26:17 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 35.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:27:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:27:23 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 35.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:27:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:28:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:28:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:28:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:29:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:29:06 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 33.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:29:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:32:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:32:01 --> syntax error, unexpected end of file
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 157.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 3 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:34:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:34:42 --> syntax error, unexpected end of file
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 157.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 3 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:35:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:35:09 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 39.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 39, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:35:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 01:35:19 --> Trying to access array offset on value of type null
+in APPPATH\Views\Menu\Material_Keluar\tambah.php on line 39.
+ 1 APPPATH\Views\Menu\Material_Keluar\tambah.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php', 39, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Material_Keluar\\tambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/material_Keluar/tambah', [], true)
+ 5 APPPATH\Controllers\C_Material_Keluar.php(50): view('Menu/material_Keluar/tambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 01:35:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:37:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:37:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:37:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:37:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:37:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:38:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:38:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:40:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(44): App\Models\M_Detail_Permintaan_Kabel->cekDataPermintaanKabel()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:43:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(44): App\Models\M_Detail_Permintaan_Kabel->cekDataPermintaanKabel()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:43:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(44): App\Models\M_Detail_Permintaan_Kabel->cekDataPermintaanKabel()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:44:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(44): App\Models\M_Detail_Permintaan_Kabel->cekDataPermintaanKabel()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:45:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:45:56 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(39): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(122): App\Models\M_Detail_Permintaan_Material->updateStatus(Array, '01/LOG/MT/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:45:56 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `de...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(61): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(126): App\Models\M_Detail_Permintaan_Material->deleteData(Array, '01/LOG/MT/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:46:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(44): App\Models\M_Detail_Permintaan_Kabel->cekDataPermintaanKabel()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:46:42 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(39): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(124): App\Models\M_Detail_Permintaan_Kabel->updateStatus(Array, '01/LOG/KB/Padan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 01:46:42 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `de...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Kabel.php(61): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Kabel_Keluar.php(128): App\Models\M_Detail_Permintaan_Kabel->deleteData(Array, '01/LOG/KB/Padan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_kabel_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_kabel_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 02:00:48 --> Undefined property: stdClass::$tanggal
+in APPPATH\Views\Menu\Permintaan\Material\index.php on line 150.
+ 1 APPPATH\Views\Menu\Permintaan\Material\index.php(150): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$tanggal', 'APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php', 150, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Permintaan/Material/index', [], true)
+ 5 APPPATH\Controllers\C_Permintaan.php(41): view('Menu/Permintaan/Material/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:00:58 --> Undefined property: stdClass::$tanggal
+in APPPATH\Views\Menu\Permintaan\Material\index.php on line 150.
+ 1 APPPATH\Views\Menu\Permintaan\Material\index.php(150): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$tanggal', 'APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php', 150, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Permintaan/Material/index', [], true)
+ 5 APPPATH\Controllers\C_Permintaan.php(41): view('Menu/Permintaan/Material/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:01:00 --> Undefined property: stdClass::$tanggal
+in APPPATH\Views\Menu\Permintaan\Kabel\index.php on line 140.
+ 1 APPPATH\Views\Menu\Permintaan\Kabel\index.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$tanggal', 'APPPATH\\Views\\Menu\\Permintaan\\Kabel\\index.php', 140, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Permintaan\\Kabel\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Permintaan/Kabel/index', [], true)
+ 5 APPPATH\Controllers\C_Permintaan.php(212): view('Menu/Permintaan/Kabel/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_kabel()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:01:07 --> Undefined property: stdClass::$tanggal
+in APPPATH\Views\Menu\Permintaan\Material\index.php on line 150.
+ 1 APPPATH\Views\Menu\Permintaan\Material\index.php(150): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$tanggal', 'APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php', 150, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Permintaan/Material/index', [], true)
+ 5 APPPATH\Controllers\C_Permintaan.php(41): view('Menu/Permintaan/Material/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:01:11 --> Undefined property: stdClass::$tanggal
+in APPPATH\Views\Menu\Permintaan\Kabel\index.php on line 140.
+ 1 APPPATH\Views\Menu\Permintaan\Kabel\index.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$tanggal', 'APPPATH\\Views\\Menu\\Permintaan\\Kabel\\index.php', 140, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Permintaan\\Kabel\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Permintaan/Kabel/index', [], true)
+ 5 APPPATH\Controllers\C_Permintaan.php(212): view('Menu/Permintaan/Kabel/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_kabel()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:02:37 --> Undefined property: stdClass::$tanggal
+in APPPATH\Views\Menu\Permintaan\Kabel\index.php on line 140.
+ 1 APPPATH\Views\Menu\Permintaan\Kabel\index.php(140): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$tanggal', 'APPPATH\\Views\\Menu\\Permintaan\\Kabel\\index.php', 140, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Permintaan\\Kabel\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Permintaan/Kabel/index', [], true)
+ 5 APPPATH\Controllers\C_Permintaan.php(212): view('Menu/Permintaan/Kabel/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_kabel()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:04:09 --> Undefined property: stdClass::$tanggal
+in APPPATH\Views\Menu\Permintaan\Material\index.php on line 150.
+ 1 APPPATH\Views\Menu\Permintaan\Material\index.php(150): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$tanggal', 'APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php', 150, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Menu\\Permintaan\\Material\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('Menu/Permintaan/Material/index', [], true)
+ 5 APPPATH\Controllers\C_Permintaan.php(41): view('Menu/Permintaan/Material/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 02:06:09 --> mysqli_sql_exception: Unknown column 'tanggal' in 'field list' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT distinct...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT distinct...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT distinct...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT distinct...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_History_Permintaan_Material.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Permintaan.php(38): App\Models\M_History_Permintaan_Material->getGroupReqID()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 02:06:09 --> Call to a member function getResult() on bool
+in APPPATH\Models\M_History_Permintaan_Material.php on line 43.
+ 1 APPPATH\Controllers\C_Permintaan.php(38): App\Models\M_History_Permintaan_Material->getGroupReqID()
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:23:25 --> Undefined property: App\Controllers\C_User::$satuan
+in APPPATH\Controllers\C_User.php on line 125.
+ 1 APPPATH\Controllers\C_User.php(125): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\C_User::$satuan', 'APPPATH\\Controllers\\C_User.php', 125, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_tambah()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:29:54 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\C_User.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_tambah()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:30:10 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\C_User.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_tambah()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:30:23 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\C_User.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_tambah()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:30:26 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\C_User.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_tambah()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:30:48 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\C_User.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_tambah()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:32:01 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\C_User.php on line 113.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_tambah()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 02:33:21 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 02:34:59 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(46): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(44): App\Models\M_Detail_Permintaan_Material->cekDataPermintaanMaterial()
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 02:35:16 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(39): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(123): App\Models\M_Detail_Permintaan_Material->updateStatus(Array, '01/LOG/MT/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 02:35:16 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `de...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(61): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(127): App\Models\M_Detail_Permintaan_Material->deleteData(Array, '01/LOG/MT/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 02:58:58 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 151.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 02:59:26 --> Call to a member function isValid() on null
+in APPPATH\Controllers\C_User.php on line 151.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_User->proses_edit()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_User))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-02 03:01:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('fahrun2002@gmai...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 03:03:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('efwfwe@gm')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 03:04:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdwqqwd@gmege')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 03:04:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdwqqwd@gmege')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 03:05:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdwqqwd@gmege')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 03:06:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('arafihanif@yaho...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 03:07:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('wqwqd@geef')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-02 03:08:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('efwfew@mgia')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-02 03:08:48 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::getWhere() must be of the type int or null, string given, called in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php on line 29
+in SYSTEMPATH\Database\BaseBuilder.php on line 1706.
+ 1 APPPATH\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere('email', 'efwfew@mgia')
+ 2 APPPATH\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('efwfew@mgia')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-02 03:08:57 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::getWhere() must be of the type int or null, string given, called in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php on line 29
+in SYSTEMPATH\Database\BaseBuilder.php on line 1706.
+ 1 APPPATH\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere('email', 'efwfew@mgia')
+ 2 APPPATH\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('efwfew@mgia')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

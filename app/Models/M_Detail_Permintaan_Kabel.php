@@ -13,7 +13,7 @@ class M_Detail_Permintaan_Kabel extends Model
     protected $allowedFields    = [
         'id_permintaan_kabel', 'id_kabel', 'panjang', 'status'
     ];
-
+    
     function getAllRelation($id)
     {
         $builder = $this->db->table('kabel');
@@ -22,5 +22,19 @@ class M_Detail_Permintaan_Kabel extends Model
         $builder->where('permintaan_kabel.id_permintaan_kabel', $id);
         $query = $builder->get();
         return $query->getResult();
+    }
+
+    function updateStatus($id_permintaan_kabel)
+    {
+        $builder = $this->db->table('detail_permintaan_kabel');
+        $array = ['id_permintaan_kabel' => $id_permintaan_kabel,  'status' =>  4];
+        $builder->join('permintaan_kabel', 'detail_permintaan_kabel.id_permintaan_kabel = permintaan_kabel.id_permintaan_kabel')->set('status', 5)->where($array)->update();
+    }
+
+    function deleteData($id_permintaan_kabel)
+    {
+        $builder = $this->db->table('detail_permintaan_kabel');
+        $array = ['id_permintaan_kabel' => $id_permintaan_kabel, 'status' => 5];
+        $builder->join('permintaan_kabel', 'detail_permintaan_kabel.id_permintaan_kabel = permintaan_kabel.id_permintaan_kabel')->where($array)->delete();
     }
 }

@@ -15,15 +15,13 @@ class MaterialMasuk extends Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'id_material' => [
-                'type' => 'int',
-                'constraint' => '12',
-                'unsigned' => TRUE
+            'nama_material' => [
+                'type' => 'varchar',
+                'constraint' => '50'
             ],
-            'id_satuan' => [
-                'type' => 'int',
-                'constraint' => '12',
-                'unsigned' => TRUE
+            'nama_satuan' => [
+                'type' => 'varchar',
+                'constraint' => '50'
             ],
             'tanggal_masuk' => [
                 'type' => 'date'
@@ -47,8 +45,6 @@ class MaterialMasuk extends Migration
         ]);
 
         $this->forge->addPrimaryKey('id_material_masuk');
-        $this->forge->addForeignKey('id_material', 'material', 'id_material');
-        $this->forge->addForeignKey('id_satuan', 'satuan', 'id_satuan');
         $this->forge->createTable('material_masuk');
     }
 

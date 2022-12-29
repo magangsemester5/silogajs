@@ -1,21 +1,18 @@
 // Call the dataTables jQuery plugin
 $(document).ready(function () {
-	$("#dataTable").DataTable({
+    $("#dataTable").DataTable({
         // order: [[, 'asc']],
-		dom: 'Bfrtip',
+        dom: 'Bfrtip',
+        responsive: true,
         buttons: [
             {
                 extend: 'pdfHtml5',
-                exportOptions: {
-                    columns: [ 0, 1, 2, 3]
-                },
+                className: 'nectar-button medium regular extra-color-1 regular-button tableBtn',
             },
             {
                 extend: 'excelHtml5',
-                exportOptions: {
-                    columns: ':visible'
-                }
+                className: 'nectar-button medium regular extra-color-1 regular-button tableBtn',
             },
         ]
-	});
+    });
 });

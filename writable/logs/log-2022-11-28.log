@@ -1,0 +1,146 @@
+ERROR - 2022-11-28 01:26:05 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(39): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(119): App\Models\M_Detail_Permintaan_Material->updateStatus(Array, '01/LOG/Medan/28...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-11-28 01:26:05 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `de...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(48): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(123): App\Models\M_Detail_Permintaan_Material->deleteData(Array, '01/LOG/Medan/28...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-11-28 02:54:11 --> Undefined index: cols
+in VENDORPATH\tecnickcom\tcpdf\tcpdf.php on line 17082.
+ 1 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(17082): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: cols', 'VENDORPATH\\tecnickcom\\tcpdf\\tcpdf.php', 17082, [...])
+ 2 VENDORPATH\tecnickcom\tcpdf\tcpdf.php(17354): TCPDF->getHtmlDomArray('<body>&nbsp;<img src="/uploads/logo.png" width="80px" height="80px" /><span><marker style="font-size:0"/></span>&nbsp; <div style="font-size:20px;text-align:center;">Surat Jalan<br><span style="font-size:10px;">No : 001/LOG</span> &nbsp;</div><br><br>&nbsp; <table style=\'width:650; font-size:7pt; padding-top: 20px;\' cellspacing=\'2\'><tr><td width=\'70%\' align=\'left\' style=\'padding-right:80px; vertical-align:top\'><span style=\'font-size:12pt\'>Nama&nbsp;&nbsp;&nbsp; : Nur Muhammad Yahya</span><br>Tanggal : 2022-11-02<br>Telp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<marker style="font-size:0"/></td><td width=\'70%\' align=\'left\' style=\'padding-right:80px; vertical-align:top\'><span style=\'font-size:12pt\'>Wilayah &nbsp;&nbsp;&nbsp;&nbsp;: Medan</span><br>Nomor PO : 01/LOG/Medan/28/XI/2022<marker style="font-size:0"/></td></tr></table><p></p><table cellpadding="6" border="1" align="center"><th width="50px"><strong>No</strong><marker style="font-size:0"/></th><th><strong>Material</strong><marker style="font-size:0"/></th><th><strong>Jumlah</strong><marker style="font-size:0"/></th><th><strong>Satuan</strong><marker style="font-size:0"/></th></tr><td width="50px">1<marker style="font-size:0"/></td><td>RJ-75<marker style="font-size:0"/></td><td>61<marker style="font-size:0"/></td><td>Meter<marker style="font-size:0"/></td></tr><td width="50px">2<marker style="font-size:0"/></td><td>RJ-75<marker style="font-size:0"/></td><td>63<marker style="font-size:0"/></td><td>Meter<marker style="font-size:0"/></td></tr><td width="50px">3<marker style="font-size:0"/></td><td>RJ-75<marker style="font-size:0"/></td><td>67<marker style="font-size:0"/></td><td>Meter<marker style="font-size:0"/></td></tr></table></body> <div class="footer-container">&nbsp; <table cellpadding="6" style=\'width:550px; font-size:8pt; font-family:calibri; border-collapse: collapse;\' border=\'0\'><tr><td align="center">Penerima<br><br><br>(.........................)<marker style="font-size:0"/></td><td align="center">Pengirim<br><br><br>(.........................)<marker style="font-size:0"/></td><td align="center">Logistik<br><br><br>(.........................)<marker style="font-size:0"/></td></tr></table></div>')
+ 3 APPPATH\Controllers\C_Material_Keluar.php(204): TCPDF->writeHTML('<!-- DEBUG-VIEW START 1 APPPATH\\Views\\Menu\\Material_Keluar\\surat_jalan.php -->
+<html>
+
+<head>
+    <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+    </style>
+</head>
+
+<body>
+    <img src="/uploads/logo.png" width="80px" height="80px" />
+    <div style="font-size:20px;text-align:center;">Surat Jalan<br><span style="font-size:10px;">No :
+            001/LOG</span>
+    </div>
+    <br>
+    <br>
+    <table style=\'width:650; font-size:7pt; padding-top: 20px;\' cellspacing=\'2\'>
+        <tr>
+            <td width=\'70%\' align=\'left\' style=\'padding-right:80px; vertical-align:top\'><span
+                    style=\'font-size:12pt\'>Nama&nbsp;&nbsp;&nbsp; : Nur Muhammad Yahya</span><br>Tanggal :
+                2022-11-02<br>Telp
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                            </td>
+            <td width=\'70%\' align=\'left\' style=\'padding-right:80px; vertical-align:top\'><span
+                    style=\'font-size:12pt\'>Wilayah &nbsp;&nbsp;&nbsp;&nbsp;:
+                    Medan</span><br>Nomor PO : 01/LOG/Medan/28/XI/2022</td>
+        </tr>
+    </table>
+    <p></p>
+    <table cellpadding="6" border="1" align="center">
+        <tralign="center">
+            <th width="50px"><strong>No</strong></th>
+            <th><strong>Material</strong></th>
+            <th><strong>Jumlah</strong></th>
+            <th><strong>Satuan</strong></th>
+            </tr>
+                        <tralign="center">
+                <td width="50px">1</td>
+                <td>RJ-75</td>
+                <td>61</td>
+                <td>Meter</td>
+                </tr>
+                            <tralign="center">
+                <td width="50px">2</td>
+                <td>RJ-75</td>
+                <td>63</td>
+                <td>Meter</td>
+                </tr>
+                            <tralign="center">
+                <td width="50px">3</td>
+                <td>RJ-75</td>
+                <td>67</td>
+                <td>Meter</td>
+                </tr>
+                    </table>
+</body>
+<footer>
+    <div class="footer-container">
+        <table cellpadding="6" style=\'width:550px; font-size:8pt; font-family:calibri; border-collapse: collapse;\'
+            border=\'0\'>
+            <tr>
+                <td align="center">Penerima<br><br><br>(.........................)</td>
+                <td align="center">Pengirim<br><br><br>(.........................)</td>
+                <td align="center">Logistik<br><br><br>(.........................)</td>
+            </tr>
+        </table>
+    </div>
+</footer>
+
+</html>
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\Menu\\Material_Keluar\\surat_jalan.php -->
+')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_material_Keluar->surat_jalan('1')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 07:55:17 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2078): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(39): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(119): App\Models\M_Detail_Permintaan_Material->updateStatus(Array, '02/LOG/MT/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-11-28 07:55:17 --> mysqli_sql_exception: Unknown column 'no_permintaan' in 'where clause' in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `de...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `de...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `de...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(2390): CodeIgniter\Database\BaseConnection->query('DELETE FROM `de...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Detail_Permintaan_Material.php(48): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Material_Keluar.php(123): App\Models\M_Detail_Permintaan_Material->deleteData(Array, '02/LOG/MT/Medan...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_material_Keluar->proses_tambah()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_material_Keluar))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}

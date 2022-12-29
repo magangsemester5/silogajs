@@ -15,11 +15,6 @@ class KabelMasuk extends Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'id_kabel' => [
-                'type' => 'int',
-                'constraint' => '12',
-                'unsigned' => TRUE
-            ],
             'tanggal_masuk' => [
                 'type' => 'date'
             ],
@@ -28,7 +23,15 @@ class KabelMasuk extends Migration
                 'constraint' => '50'
             ],
             'no_hasbell' => [
+                'type' => 'varchar',
+                'constraint' => '50'
+            ],
+            'core' => [
                 'type' => 'int',
+                'constraint' => '50'
+            ],
+            'nama_satuan' => [
+                'type' => 'varchar',
                 'constraint' => '50'
             ],
             'gudang' => [
@@ -50,7 +53,6 @@ class KabelMasuk extends Migration
         ]);
 
         $this->forge->addPrimaryKey('id_kabel_masuk');
-        $this->forge->addForeignKey('id_kabel', 'kabel', 'id_kabel');
         $this->forge->createTable('kabel_masuk');
     }
 

@@ -1,0 +1,21 @@
+CRITICAL - 2022-12-23 04:17:08 --> Unsupported operand types: string + int
+in APPPATH\Controllers\C_Permintaan.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 04:17:10 --> Unsupported operand types: string + int
+in APPPATH\Controllers\C_Permintaan.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-23 04:17:11 --> Unsupported operand types: string + int
+in APPPATH\Controllers\C_Permintaan.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Permintaan->permintaan_material()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Permintaan))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

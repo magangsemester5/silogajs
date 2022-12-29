@@ -31,14 +31,12 @@ class C_Dashboard extends BaseController
             'title' => "Halaman Dashboard | SILOG AJS",
             'data_material' => $this->material->count('material'),
             'data_kabel' => $this->kabel->count('kabel'),
-            // 'material_masuk' => $this->material->count('material_masuk'),
+            'material_masuk' => $this->user->count('material_masuk'),
             'material_keluar' => $this->detail_material_keluar->countMaterialKeluar(),
-            // 'kabel_masuk' => $this->kabel->count('kabel_masuk'),
+            'kabel_masuk' => $this->user->count('kabel_masuk'),
             'kabel_keluar' => $this->detail_kabel_keluar->countKabelKeluar(),
             'user_keseluruhan' => $this->material->count('user'),
             'user_admin_wilayah' => $this->user->count_where_location(),
-            // 'nama_material_masuk' => $this->material->chartMaterialMasuk(),
-            // 'nama_material_keluar' => $this->material->chartMaterialKeluar()
         ];
         return view("Dashboard/index", $data);
     }

@@ -26,13 +26,13 @@
                             </div>
                             <?php } ?>
                         </div>
+                        <input type="hidden" name="req_id" id="req_id" value="<?= sprintf('%01s', $req_id) ?>" />
                         <label class="form-label" for="basic-default-fullname">Nomor Permintaan</label>
                         <div class="input-group input-group-merge">
-                            <select class="form-control" id="id_permintaan_kabel" required>
+                            <select class="form-control" name="id_permintaan_kabel" id="id_permintaan_kabel" required>
                                 <option value="" disabled selected>Pilih Nomor Permintaan</option>
                                 <?php foreach ($tampildatapermintaankabel as $key => $value) : ?>
-                                <option value="<?= $value->id_permintaan_kabel ?>">
-                                    <?= $value->no_permintaan ?></option>
+                                <option value="<?= $value->id_permintaan_kabel ?>"><?= $value->no_permintaan ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
@@ -50,6 +50,10 @@
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Wilayah</label>
                             <input readonly="readonly" id="wilayah" name="wilayah" type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-fullname">Nomor Telepon</label>
+                            <input type="text" id="no_telepon" class="form-control" name="no_telepon" readonly />
                         </div>
                         <div class="mb-3">
                             <label class="custom-file-label">Foto Penerima</label>

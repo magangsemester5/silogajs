@@ -11,14 +11,21 @@ class M_User extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'nama', 'password', 'id_user', 'jabatan', 'kriteria', 'foto_user', 'wilayah', 'no_telepon'
+        'nama', 'email', 'password', 'id_user', 'jabatan', 'kriteria', 'foto_user', 'wilayah', 'no_telepon'
     ];
-
+    
     function count_where_location()
     {
         $builder = $this->db->table('user');
         $builder->where('jabatan="Admin Wilayah"');
         $query = $builder->countAllResults();;
+        return $query;
+    }
+    
+    function count($table)
+    {
+        $builder = $this->db->table($table);
+        $query = $builder->countAllResults();
         return $query;
     }
 }

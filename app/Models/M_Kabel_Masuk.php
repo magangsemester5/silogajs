@@ -11,31 +11,21 @@ class M_Kabel_Masuk extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = "object";
     protected $allowedFields    = [
-        'id_kabel','id_satuan','tanggal_masuk', 'no_delivery_order', 'jumlah_masuk','gudang','foto_penerima'
+        'no_hasbell', 'core', 'nama_satuan', 'tanggal_masuk', 'no_delivery_order', 'panjang_masuk', 'gudang', 'merek', 'foto_penerima'
     ];
 
-    function getAll()
+    function generateCode()
     {
-        $builder = $this->db->table('kabel_masuk');
-        $builder->join('kabel', 'kabel.id_kabel = kabel_masuk.id_kabel');
-        $query = $builder->get();
-        return $query->getResult();
-    }
-
-    function getRelasi($id)
-    {
-        $builder = $this->db->table('kabel_masuk');
-        $builder->join('kabel', 'kabel.id_kabel = kabel_masuk.id_kabel');
-        $builder->where('id_kabel_masuk', $id);
-        $query = $builder->get();
-        return $query->getResult();
+        $query = $this->db->query("SELECT MAX(no_delivery_order) as no_delivery_order from kabel_masuk");
+        $query = $query->getRow();
+        return $query->no_delivery_order;
     }
 
     public function cekStok($id = null)
     {
-        $builder = $this->db->table('kabel_masuk');                                                              
-        $builder->join('kabel', 'kabel.id_kabel = kabel_masuk.id_kabel');
-        $builder->where('id_kabel_masuk', $id);
+        $builder = $this->db->table('kabel');
+        $builder->join('satuan', 'satuan.id_satuan = kabel.id_satuan');
+        $builder->where('id_kabel', $id);
         $query = $builder->get();
         return $query->getRowArray();
     }

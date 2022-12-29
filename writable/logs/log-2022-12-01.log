@@ -1,0 +1,1197 @@
+ERROR - 2022-12-01 02:38:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(177): App\Models\M_Auth->verifikasi_email('regreg')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:39:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(177): App\Models\M_Auth->verifikasi_email('fdbhdfh')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:39:14 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(177): App\Models\M_Auth->verifikasi_email('regregreg')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:49:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('dfewfe')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-01 02:49:41 --> Undefined property: App\Controllers\C_Auth::$material
+in APPPATH\Controllers\C_Auth.php on line 210.
+ 1 APPPATH\Controllers\C_Auth.php(210): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\C_Auth::$material', 'APPPATH\\Controllers\\C_Auth.php', 210, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-01 02:49:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('dfewfe')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:49:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('greg')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:50:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('regregregregreg...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:51:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:51:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('34t34t34t34t')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:51:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('34f34f34f34@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:52:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('wdqwdqw')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:52:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('rafi@gmail.com')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:54:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('feewfw')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 02:55:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:01:26 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:01:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:02:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-01 03:02:42 --> Call to a member function getResultArray() on bool
+in APPPATH\Models\M_Auth.php on line 31.
+ 1 APPPATH\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-01 03:02:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:03:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:04:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:05:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:06:16 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:06:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('baskara@gmail.c...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:06:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:06:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:06:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('mfajrinnurrahma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:07:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi12@gm...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:07:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi12@gm...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-01 03:07:40 --> Function name must be a string
+in APPPATH\Models\M_Auth.php on line 35.
+ 1 APPPATH\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi12@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-01 03:07:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi12@gm...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:08:14 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi12@gm...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-01 03:08:14 --> Illegal string offset 'id'
+in APPPATH\Controllers\C_Auth.php on line 182.
+ 1 APPPATH\Controllers\C_Auth.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'id\'', 'APPPATH\\Controllers\\C_Auth.php', 182, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-01 03:08:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi12@gm...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:08:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qwqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:09:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:09:16 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:09:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-01 03:09:54 --> count() expects at least 1 parameter, 0 given
+in APPPATH\Models\M_Auth.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count() expects at least 1 parameter, 0 given', 'APPPATH\\Models\\M_Auth.php', 35, [...])
+ 2 APPPATH\Models\M_Auth.php(35): count()
+ 3 APPPATH\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-01 03:10:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-01 03:10:00 --> Use of undefined constant count - assumed 'count' (this will throw an Error in a future version of PHP)
+in APPPATH\Models\M_Auth.php on line 35.
+ 1 APPPATH\Models\M_Auth.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant count - assumed \'count\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Models\\M_Auth.php', 35, [...])
+ 2 APPPATH\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-01 03:10:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:10:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:10:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:11:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:11:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:11:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 03:11:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 05:56:53 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 05:57:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:05:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:07:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:07:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:07:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('qdqwdwq')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:07:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('fewfewf')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:08:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('fewfewf')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:11:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('fewfewf')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:11:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:12:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:15:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-01 06:15:39 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\C_Auth.php on line 182.
+ 1 APPPATH\Controllers\C_Auth.php(182): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type bool', 'APPPATH\\Controllers\\C_Auth.php', 182, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-01 06:15:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-01 06:15:48 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\C_Auth.php on line 182.
+ 1 APPPATH\Controllers\C_Auth.php(182): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type bool', 'APPPATH\\Controllers\\C_Auth.php', 182, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-01 06:16:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-01 06:16:02 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\C_Auth.php on line 182.
+ 1 APPPATH\Controllers\C_Auth.php(182): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type bool', 'APPPATH\\Controllers\\C_Auth.php', 182, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-01 06:16:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:20:04 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 06:57:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:11:30 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:11:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:13:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:14:29 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:17:31 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:18:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:19:27 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:21:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+CRITICAL - 2022-12-01 07:30:45 --> Undefined variable: title
+in APPPATH\Views\V_Form_Ganti_Password.php on line 30.
+ 1 APPPATH\Views\V_Form_Ganti_Password.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\V_Form_Ganti_Password.php', 30, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\V_Form_Ganti_Password.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('V_Form_Ganti_Password', [], true)
+ 5 APPPATH\Controllers\C_Auth.php(228): view('V_Form_Ganti_Password', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\C_Auth->tampil_form_forgot_password('1')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-01 07:40:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:43:16 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:44:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:51:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:53:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi7@gma...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}
+ERROR - 2022-12-01 07:54:47 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':0:
+AND 1 = :1:' at line 3 in E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Database\BaseBuilder.php(1718): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Models\M_Auth.php(29): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\app\Controllers\C_Auth.php(178): App\Models\M_Auth->verifikasi_email('hanifarafi10@gm...')
+#6 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(904): App\Controllers\C_Auth->validasi_forgot_password()
+#7 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\C_Auth))
+#8 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 E:\Kuliah\Kumpulan Tugas Kuliah\UNS-D3 TI\SEMESTER 5\Magang\CV. Anugrah\Project Magang\silogajs\system\Commands\Server\rewrite.php(43): require_once('E:\\Kuliah\\Kumpu...')
+#11 {main}

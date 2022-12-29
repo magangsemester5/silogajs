@@ -43,9 +43,10 @@ class C_Kabel extends BaseController
             ],
             'no_drum' => [
                 'label' => "Nomor Drum",
-                'rules' => "required",
+                'rules' => "required|is_unique[kabel.no_drum]",
                 'errors' => [
-                    'required' => "{field} harus diisi"
+                    'required' => "{field} harus diisi",
+                    'is_unique' => "{field} yang dimasukan Sudah ada"
                 ]
             ],
             'core' => [
@@ -64,9 +65,10 @@ class C_Kabel extends BaseController
             ],
             'serial_number' => [
                 'label' => "Serial Number",
-                'rules' => "required",
+                'rules' => "required|is_unique[kabel.serial_number]",
                 'errors' => [
-                    'required' => "{field} harus diisi"
+                    'required' => "{field} harus diisi",
+                    'is_unique' => "{field} yang dimasukan Sudah ada"
                 ]
             ],
             'image' => [
@@ -82,14 +84,15 @@ class C_Kabel extends BaseController
         ];
         if ($this->validate($rules)) {
             $image = $this->request->getFile('image');
-            $image->move(ROOTPATH . 'public/uploads');
+            $imageName = $image->getRandomName();
+            $image->move('uploads/', $imageName);
             $data = [
                 'id_satuan' => $this->request->getVar('id_satuan'),
                 'no_drum' => $this->request->getVar('no_drum'),
                 'core' => $this->request->getVar('core'),
                 'panjang' => $this->request->getVar('panjang'),
                 'serial_number' => $this->request->getVar('serial_number'),
-                'foto_serial_number' => $image->getClientName(),
+                'foto_serial_number' => $imageName,
             ];
             session()->setFlashdata('status', 'Data kabel berhasil ditambahkan');
             $this->kabel->insert($data);

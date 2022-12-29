@@ -11,89 +11,111 @@
                 </div>
                 <div class="card-body">
                     <?php $validation = \Config\Services::validation(); ?>
-                    <form method="POST" action="<?= base_url('prosestambah-kabelmasuk') ?>" enctype="multipart/form-data">
+                    <form method="POST" action="<?= base_url('prosestambah-kabelmasuk') ?>"
+                        enctype="multipart/form-data">
                         <div class="mb-3">
                             <label class="form-label" for="tanggal_masuk">Tanggal Masuk</label>
                             <div class="col-md-2">
-                                <input type="text" id="flatpickrdate" name="tanggal_masuk" class="form-control date" placeholder="Tanggal Masuk" readonly>
+                                <input type="text" id="flatpickrdate" name="tanggal_masuk" class="form-control date"
+                                    placeholder="Tanggal masuk" readonly>
                             </div>
                             <!-- Error Validation -->
                             <?php if ($validation->getError('tanggal_masuk')) { ?>
-                                <div class='alert alert-danger mt-2'>
-                                    <?= $error = $validation->getError('tanggal_masuk'); ?>
-                                </div>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('tanggal_masuk'); ?>
+                            </div>
                             <?php } ?>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-phone">No Delivery Order</label>
-                            <input type="text" name="nama" id="basic-default-phone" class="form-control phone-mask" />
+                            <label class="form-label" for="no_delivery_order">No Delivery Order</label>
+                            <input type="text" name="no_delivery_order" id="no_delivery_order"
+                                class="form-control phone-mask" readonly
+                                value="KBM<?= sprintf('%04s', $kode_delivery_order) ?>" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="nama_kabel">Nomor Drum</label>
+                            <label class="form-label" for="no_drum_masuk">Nomor Hasbell</label>
                             <div class="input-group input-group-merge">
-                                <select name="id_kabel" class="form-control" id="nama_kabel">
-                                    <option value="" disabled selected>Pilih Nomor Drum</option>
+                                <select class="form-control" name="id_kabel" id="no_drum_masuk">
+                                    <option value="" disabled selected>Pilih nomor hasbell</option>
                                     <?php foreach ($tampildatakabel as $key => $value) : ?>
-                                        <option value="<?= $value->id_kabel ?>"><?= $value->nama_kabel ?></option>
+                                    <option value="<?= $value->id_kabel ?>"><?= $value->no_drum ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                             <!-- Error Validation -->
                             <?php if ($validation->getError('id_kabel')) { ?>
-                                <div class='alert alert-danger mt-2'>
-                                    <?= $error = $validation->getError('id_kabel'); ?>
-                                </div>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('id_kabel'); ?>
+                            </div>
                             <?php } ?>
                         </div>
+                        <input type="hidden" id="no_drum" name="no_hasbell" class="form-control" />
+                        <input type="hidden" id="core" name="core" class="form-control" />
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Gudang</label>
-                            <select name="jabatan" id="jabatan" class="form-control" required>
-                            <option value="">Pilih Gudang</option>
-                            <option value="Jakarta">Jakarta</option>
+                            <select name="gudang" id="gudang" class="form-control">
+                                <option value="">Pilih gudang</option>
+                                <option value="Jakarta">Jakarta</option>
                             </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="stok" for="stok">Stok</label>
-                            <div class="input-group">
-                                <input readonly="readonly" id="stok" name="stok" type="number" class="form-control">
+                            <!-- Error Validation -->
+                            <?php if ($validation->getError('gudang')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('gudang'); ?>
                             </div>
+                            <?php } ?>
                         </div>
-                        <label class="col-md-4 text-md-right" for="jumlah_masuk">Jumlah kabel Masuk</label>
+                        <label class="col-md-4 text-md-right" for="panjang">Stok</label>
                         <div class="form-password-toggle col-md-3">
                             <div class="input-group">
-                                <input value="<?= set_value('jumlah_masuk'); ?>" name="jumlah_masuk" id="jumlah_masuk" type="number" class="form-control" placeholder="Jumlah Masuk...">
-                                <input id="nama_satuan" class="input-group-text col-md-4" disabled>
+                                <input value="<?= set_value('panjang'); ?>" readonly name="panjang" id="panjang"
+                                    type="number" class="form-control">
+                                <input id="nama_satuan" name="nama_satuan" class="input-group-text col-md-4" hidden>
+                            </div>
+                        </div>
+                        <label class="col-md-4 mt-3 text-md-right" for="panjang_masuk">Jumlah kabel Masuk</label>
+                        <div class="form-password-toggle col-md-3">
+                            <div class="input-group">
+                                <input value="<?= set_value('panjang_masuk'); ?>" name="panjang_masuk"
+                                    id="panjang_masuk" type="number" class="form-control"
+                                    placeholder="Masukan jumlah masuk">
+                                <!-- <input id="nama_satuan" class="input-group-text col-md-4" disabled> -->
                             </div>
                         </div>
                         <!-- Error Validation -->
-                        <?php /* if ($validation->getError('jumlah_masuk')) { ?> 
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('jumlah_masuk'); ?>
+                        <?php if ($validation->getError('panjang_masuk')) { ?>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('panjang_masuk'); ?>
+                        </div>
+                        <?php } ?>
+                        <div class="mb-3 mt-3">
+                            <label class="total_panjang" for="total_panjang">Total Stok</label>
+                            <div class="input-group">
+                                <input readonly id="total_panjang" value="<?= set_value('total_panjang'); ?>"
+                                    name="total_panjang" type="number" class="form-control">
                             </div>
-                        <?php } */ ?>
+                        </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Merek</label>
-                            <input type="text" name="nama" id="basic-default-phone" class="form-control phone-mask" />
+                            <input type="text" name="merek" id="basic-default-phone" class="form-control phone-mask"
+                                placeholder="Masukan nama merek" />
                         </div>
-                        <div class="mb-3">
-                            <label class="total_stok" for="total_stok">Total Stok</label>
-                            <div class="input-group">
-                                <input readonly id="total_stok" value="<?= set_value('total_stok'); ?>" name="total_stok" type="number" class="form-control">
-                            </div>
+                        <!-- Error Validation -->
+                        <?php if ($validation->getError('merek')) { ?>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('merek'); ?>
                         </div>
+                        <?php } ?>
                         <div class="mb-3">
-                            <label class="serial_number">Serial Number</label>
-                            <input type="text" id="serial_number" class="form-control" readonly />
-                        </div>
-                        <div class="mb-3">
-                            <label class="serial_number">Foto Serial Number</label>
-                            <div id="foto_serial_number">
-                            </div>
-                            <br>
                             <div class="mb-3">
-                                <label class="custom-file-label">Foto Pengantaran kabel</label>
-                                <input type="file" name="foto_pengantaran_kabel" id="inputFile" class="form-control" required>
+                                <label class="custom-file-label">Foto Penerima</label>
+                                <input type="file" name="image" id="inputFile" class="form-control">
                             </div>
+                            <!-- Error Validation -->
+                            <?php if ($validation->getError('image')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('image'); ?>
+                            </div>
+                            <?php } ?>
                             <div class="col-md-3">
                                 <label>Preview Foto Penerima</label>
                                 <img src="" id="imgView" class="card-img-top img-fluid">

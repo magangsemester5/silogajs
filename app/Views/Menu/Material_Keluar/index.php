@@ -6,11 +6,11 @@
     <div class="content-wrapper">
         <!-- Content -->
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span>Halaman material Keluar</h4>
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span>Halaman material keluar</h4>
             <!-- Basic Bootstrap Table -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="fw-bold">Data material Keluar</h6>
+                    <h6 class="fw-bold">Data material keluar</h6>
                 </div>
                 <!-- <div class="row mt-2 ml-md-2 text-center"> -->
                 <!-- <div class="col-md-1"> -->
@@ -23,7 +23,7 @@
                         <span class="icon text-green-50">
                             <i class="bx bx-plus-circle me-1"></i>
                         </span>
-                        <span class="text">Tambah material Keluar</span>
+                        <span class="text">Tambah material keluar</span>
                     </a>
                     <?php } ?>
                     <div class="table-responsive">
@@ -40,6 +40,7 @@
                             <tbody class="table-border-bottom-0">
                                 <?php $no = 1;
                                 foreach ($tampildata as $td) : ?>
+                                <?php if (session()->get('jabatan') == 'Rpm' && session()->get('wilayah') == $td->wilayah) { ?>
                                 <tr>
                                     <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
                                         <strong><?= $no++ ?></strong>
@@ -62,6 +63,9 @@
                                         <a class="btn btn-danger btn-sm" style="color:white"
                                             onclick="deletedatamaterialkeluar(<?= $td->id_material_keluar ?>)"><i
                                                 class="bx bx-trash"></i>Hapus History</a>
+                                        <a class="btn btn-success btn-sm" style="color:white"
+                                            href="<?= base_url('cetaksuratjalan-materialkeluar/' . $td->id_material_keluar) ?>"><i
+                                                class="bx bx-file"></i>Surat Jalan</a>
                                         <?php } ?>
                                         <?php if (session()->get('jabatan') == 'PM') { ?>
                                         <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
@@ -83,6 +87,54 @@
                                         <?php } ?>
                                     </td>
                                 </tr>
+                                <?php } else if (session()->get('jabatan') == ('Management' || 'Direktur' || 'PM' || 'Admin Pusat') && session()->get('wilayah') == 'Jakarta') { ?>
+                                <tr>
+                                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
+                                        <strong><?= $no++ ?></strong>
+                                    </td>
+                                    <td><?= $td->tanggal_keluar ?></td>
+                                    <td><?= $td->no_permintaan ?></td>
+                                    <td><?= $td->nama ?></td>
+                                    <td>
+                                        <?php if (session()->get('jabatan') == 'Rpm') { ?>
+                                        <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#detaildatamaterialkeluar"
+                                            data-id="<?= $td->id_material_keluar ?>"><i
+                                                class="bx bx-show-alt"></i>Detail</button>
+                                        <?php } ?>
+                                        <?php if (session()->get('jabatan') == 'Admin Pusat') { ?>
+                                        <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#detaildatamaterialkeluar"
+                                            data-id="<?= $td->id_material_keluar ?>"><i
+                                                class="bx bx-show-alt"></i>Detail</button>
+                                        <a class="btn btn-danger btn-sm" style="color:white"
+                                            onclick="deletedatamaterialkeluar(<?= $td->id_material_keluar ?>)"><i
+                                                class="bx bx-trash"></i>Hapus History</a>
+                                        <a class="btn btn-success btn-sm" style="color:white"
+                                            href="<?= base_url('cetaksuratjalan-materialkeluar/' . $td->id_material_keluar) ?>"><i
+                                                class="bx bx-file"></i>Surat Jalan</a>
+                                        <?php } ?>
+                                        <?php if (session()->get('jabatan') == 'PM') { ?>
+                                        <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#detaildatamaterialkeluar"
+                                            data-id="<?= $td->id_material_keluar ?>"><i
+                                                class="bx bx-show-alt"></i>Detail</button>
+                                        <?php } ?>
+                                        <?php if (session()->get('jabatan') == 'Direktur') { ?>
+                                        <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#detaildatamaterialkeluar"
+                                            data-id="<?= $td->id_material_keluar ?>"><i
+                                                class="bx bx-show-alt"></i>Detail</button>
+                                        <?php } ?>
+                                        <?php if (session()->get('jabatan') == 'Management') { ?>
+                                        <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal"
+                                            data-bs-target="#detaildatamaterialkeluar"
+                                            data-id="<?= $td->id_material_keluar ?>"><i
+                                                class="bx bx-show-alt"></i>Detail</button>
+                                        <?php } ?>
+                                    </td>
+                                </tr>
+                                <?php } ?>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>

@@ -21,13 +21,13 @@ class M_Detail_Kabel_Keluar extends Model
         $builder->where('kabel_keluar.id_kabel_keluar', $id);
         $query = $builder->get();
         return $query->getResultArray();
-    }
+    }   
 
     function countKabelKeluar()
     {
-        $builder = $this->db->table('detail_permintaan_kabel');
+        $builder = $this->db->table('detail_kabel_keluar');
         $builder->selectCount('id_kabel as kabel_keluar');
-        $builder->where('status = 4');
+        // $builder->where('status = 4');
         $query = $builder->countAllResults();
         return $query;
     }

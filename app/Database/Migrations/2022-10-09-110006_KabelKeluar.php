@@ -23,6 +23,10 @@ class KabelKeluar extends Migration
                 'type' => 'varchar',
                 'constraint' => '50'
             ],
+            'no_telepon' => [
+                'type' => 'varchar',
+                'constraint' => '50'
+            ],
             'wilayah' => [
                 'type' => 'varchar',
                 'constraint' => '50'

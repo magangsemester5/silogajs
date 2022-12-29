@@ -17,7 +17,7 @@
                             <label class="form-label" for="tanggal_masuk">Tanggal Masuk</label>
                             <div class="col-md-2">
                                 <input type="text" id="flatpickrdate" name="tanggal_masuk" class="form-control date"
-                                    placeholder="Tanggal Masuk" readonly>
+                                    placeholder="Tanggal masuk" readonly>
                             </div>
                             <!-- Error Validation -->
                             <?php if ($validation->getError('tanggal_masuk')) { ?>
@@ -27,14 +27,16 @@
                             <?php } ?>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-phone">No Delivery Order</label>
-                            <input type="text" name="nama" id="basic-default-phone" class="form-control phone-mask" />
+                            <label class="form-label" for="no_delivery_order">No Delivery Order</label>
+                            <input type="text" name="no_delivery_order" id="no_delivery_order"
+                                class="form-control phone-mask" readonly
+                                value="MTM<?= sprintf('%04s', $kode_delivery_order) ?>" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="nama_material">Nama material</label>
+                            <label class="form-label" for="nama_material_masuk">Nama Material</label>
                             <div class="input-group input-group-merge">
-                                <select name="id_material" class="form-control" id="nama_material">
-                                    <option value="" disabled selected>Pilih Nama material</option>
+                                <select class="form-control" name="id_material" id="nama_material_masuk">
+                                    <option value="" disabled selected>Pilih nama material</option>
                                     <?php foreach ($tampildatamaterial as $key => $value) : ?>
                                     <option value="<?= $value->id_material ?>"><?= $value->nama_material ?></option>
                                     <?php endforeach; ?>
@@ -47,34 +49,43 @@
                             </div>
                             <?php } ?>
                         </div>
+                        <input type="hidden" id="nama_material" name="nama_material" class="form-control" />
                         <div class="mb-3">
-                            <label class="stok" for="stok">Stok</label>
+                            <label class="form-label" for="basic-default-phone">Gudang</label>
+                            <select name="gudang" id="gudang" class="form-control">
+                                <option value="">Pilih gudang</option>
+                                <option value="Jakarta">Jakarta</option>
+                            </select>
+                            <!-- Error Validation -->
+                            <?php if ($validation->getError('gudang')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('gudang'); ?>
+                            </div>
+                            <?php } ?>
+                        </div>
+                        <label class="col-md-4 text-md-right" for="panjang">Stok</label>
+                        <div class="form-password-toggle col-md-3">
                             <div class="input-group">
-                                <input readonly="readonly" id="stok" name="stok" type="number" class="form-control">
+                                <input value="<?= set_value('stok'); ?>" readonly name="stok" id="stok" type="number"
+                                    class="form-control">
+                                <input id="nama_satuan" name="nama_satuan" class="input-group-text col-md-4" hidden>
                             </div>
                         </div>
-                        <label class="col-md-4 text-md-right" for="jumlah_masuk">Jumlah material Masuk</label>
+                        <label class="col-md-4 mt-3 text-md-right" for="jumlah_masuk">Jumlah material Masuk</label>
                         <div class="form-password-toggle col-md-3">
                             <div class="input-group">
                                 <input value="<?= set_value('jumlah_masuk'); ?>" name="jumlah_masuk" id="jumlah_masuk"
-                                    type="number" class="form-control" placeholder="Jumlah Masuk...">
-                                <input id="nama_satuan" class="input-group-text col-md-4" disabled>
+                                    type="number" class="form-control" placeholder="Masukan jumlah masuk">
+                                <!-- <input id="nama_satuan" class="input-group-text col-md-4" disabled> -->
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="basic-default-phone">Gudang</label>
-                            <select name="jabatan" id="jabatan" class="form-control" required>
-                            <option value="">Pilih Gudang</option>
-                            <option value="Jakarta">Jakarta</option>
-                            </select>
-                        </div>
                         <!-- Error Validation -->
-                        <?php /* if ($validation->getError('jumlah_masuk')) { ?>
+                        <?php if ($validation->getError('jumlah_masuk')) { ?>
                         <div class='alert alert-danger mt-2'>
                             <?= $error = $validation->getError('jumlah_masuk'); ?>
                         </div>
-                        <?php } */ ?>
-                        <div class="mb-3">
+                        <?php } ?>
+                        <div class="mb-3 mt-3">
                             <label class="total_stok" for="total_stok">Total Stok</label>
                             <div class="input-group">
                                 <input readonly id="total_stok" value="<?= set_value('total_stok'); ?>"
@@ -82,19 +93,16 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label class="serial_number">Serial Number</label>
-                            <input type="text" id="serial_number" class="form-control" readonly />
-                        </div>
-                        <div class="mb-3">
-                            <label class="serial_number">Foto Serial Number</label>
-                            <div id="foto_serial_number">
-                            </div>
-                            <br>
                             <div class="mb-3">
-                                <label class="custom-file-label">Foto Pengantaran material</label>
-                                <input type="file" name="foto_pengantaran_material" id="inputFile" class="form-control"
-                                    required>
+                                <label class="custom-file-label">Foto Penerima</label>
+                                <input type="file" name="image" id="inputFile" class="form-control">
                             </div>
+                            <!-- Error Validation -->
+                            <?php if ($validation->getError('image')) { ?>
+                            <div class='alert alert-danger mt-2'>
+                                <?= $error = $validation->getError('image'); ?>
+                            </div>
+                            <?php } ?>
                             <div class="col-md-3">
                                 <label>Preview Foto Penerima</label>
                                 <img src="" id="imgView" class="card-img-top img-fluid">

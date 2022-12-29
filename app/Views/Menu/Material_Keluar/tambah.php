@@ -26,9 +26,11 @@
                             </div>
                             <?php } ?>
                         </div>
+                        <input type="hidden" name="req_id" id="req_id" value="<?= sprintf('%01s', $req_id) ?>" />
                         <label class="form-label" for="basic-default-fullname">Nomor Permintaan</label>
                         <div class="input-group input-group-merge">
-                            <select class="form-control" id="id_permintaan_material" required>
+                            <select class="form-control" name="id_permintaan_material" id="id_permintaan_material"
+                                required>
                                 <option value="" disabled selected>Pilih Nomor Permintaan</option>
                                 <?php foreach ($tampildatapermintaanmaterial as $key => $value) : ?>
                                 <option value="<?= $value->id_permintaan_material ?>">
@@ -52,6 +54,10 @@
                             <input readonly="readonly" id="wilayah" name="wilayah" type="text" class="form-control">
                         </div>
                         <div class="mb-3">
+                            <label class="form-label" for="basic-default-fullname">Nomor Telepon</label>
+                            <input type="text" id="no_telepon" class="form-control" name="no_telepon" readonly />
+                        </div>
+                        <div class="mb-3">
                             <label class="custom-file-label">Foto Penerima</label>
                             <input type="file" name="image" id="inputFile" class="form-control">
                         </div>
@@ -72,7 +78,8 @@
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Material yang diminta
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Detail Material yang
+                                            diminta
                                         </h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
@@ -128,7 +135,8 @@
 
                                             <div class="content-backdrop fade"></div>
                                         </div>
-                                        <h8>Data meterial yang ada pada tabel diatas ialah data yang sudah diapprove
+                                        <h8>Data meterial yang ada pada tabel diatas ialah data yang sudah
+                                            diapprove
                                             oleh
                                             Direktur</h8>
                                     </div>

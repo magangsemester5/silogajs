@@ -12,15 +12,4 @@ class M_Satuan extends Model
     protected $allowedFields    = [
         'nama_satuan'
     ];
-
-    function cek_data_direlasi($table, $table2, $where)
-    {
-        $builder = $this->db->table($table);
-        $builder = $this->db->table($table2);
-        $builder->where($table, $where);
-        $builder->where($table2, $where);
-        $builder->countAllResults();
-        $query = $builder->get();
-        return $query->getResult();
-    }
 }

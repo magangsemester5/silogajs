@@ -11,63 +11,146 @@
                 </div>
                 <div class="card-body">
                     <form method="POST" action="<?= base_url("prosesedit-user") ?>" enctype="multipart/form-data">
-                    <input type="hidden" name="id" class="form-control" id="id" value="<?php echo $tampildata->id ?>">
+                        <input type="hidden" name="id" class="form-control" id="id"
+                            value="<?php echo $tampildata->id ?>">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Nama</label>
-                            <input type="text" name="nama" class="form-control" id="nama" value="<?php echo $tampildata->nama ?>">
+                            <input type="text" name="nama" class="form-control" id="nama"
+                                value="<?php echo $tampildata->nama ?>">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-phone">Email</label>
+                            <input type="email" name="email" id="basic-default-phone" class="form-control phone-mask"
+                                placeholder="Masukan Email" value="<?php echo $tampildata->email ?>">
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Id User</label>
-                            <input type="text" name="id_user" class="form-control" id="basic-default-company" value="<?= $tampildata->id_user ?>" />
+                            <input type="text" name="id_user" class="form-control" id="basic-default-company"
+                                value="<?= $tampildata->id_user ?>" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Jabatan</label>
-                            <select name="jabatan" id="jabatan" class="form-control" required>
-                            <option value="">-- Silahkan Pilih --</option>
-                            <option value="Admin Pusat">Admin Pusat</option>
-                            <option value="Admin Wilayah">Admin Wilayah</option>
-                            <option value="Rpm">Rpm</option>
-                            <option value="PM">PM</option>
-                            <option value="Direktur">Direktur</option>
-                            <option value="Management">Management</option>
+                            <select name="jabatan" id="jabatan" class="form-control">
+                                <option value="">-- Silahkan Pilih --</option>
+                                <option value="Admin Pusat"
+                                    <?php if($tampildata->jabatan == "Admin Pusat"){ echo 'selected="selected"';}?>>
+                                    Admin Pusat</option>
+                                <option value="Admin Wilayah"
+                                    <?php if($tampildata->jabatan == "Admin Wilayah"){ echo 'selected="selected"';}?>>
+                                    Admin Wilayah</option>
+                                <option value="Rpm"
+                                    <?php if($tampildata->jabatan == "Rpm"){ echo 'selected="selected"';}?>>
+                                    Rpm</option>
+                                <option value="PM"
+                                    <?php if($tampildata->jabatan == "PM"){ echo 'selected="selected"';}?>>
+                                    PM</option>
+                                <option value="Direktur"
+                                    <?php if($tampildata->jabatan == "Direktur"){ echo 'selected="selected"';}?>>
+                                    Direktur</option>
+                                <option value="Management"
+                                    <?php if($tampildata->jabatan == "Management"){ echo 'selected="selected"';}?>>
+                                    Management</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Kriteria</label>
-                            <select name="kriteria" id="kriteria" class="form-control" required>
-                            <option value="">-- Silahkan Pilih --</option>
-                            <option value="Admin Pusat">Admin Pusat</option>
-                            <option value="Admin Wilayah">Admin Wilayah</option>
-                            <option value="Rpm">Rpm</option>
-                            <option value="PM">PM</option>
-                            <option value="Direktur">Direktur</option>
-                            <option value="Management">Management</option>
+                            <select name="kriteria" id="kriteria" class="form-control">
+                                <option value="">-- Silahkan Pilih --</option>
+                                <option value="Admin Pusat"
+                                    <?php if($tampildata->kriteria == "Admin Pusat"){ echo 'selected="selected"';}?>>
+                                    Admin Pusat</option>
+                                <option value="Admin Wilayah"
+                                    <?php if($tampildata->kriteria == "Admin Wilayah"){ echo 'selected="selected"';}?>>
+                                    Admin Wilayah</option>
+                                <option value="Rpm"
+                                    <?php if($tampildata->kriteria == "Rpm"){ echo 'selected="selected"';}?>>
+                                    Rpm</option>
+                                <option value="PM"
+                                    <?php if($tampildata->kriteria == "PM"){ echo 'selected="selected"';}?>>
+                                    PM</option>
+                                <option value="Direktur"
+                                    <?php if($tampildata->kriteria == "Direktur"){ echo 'selected="selected"';}?>>
+                                    Direktur</option>
+                                <option value="Management"
+                                    <?php if($tampildata->kriteria == "Management"){ echo 'selected="selected"';}?>>
+                                    Management</option>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-company">Wilayah</label>
-                            <select name="wilayah" id="wilayah" class="form-control" required>
-                            <option value="">-- Silahkan Pilih --</option>
-                            <option value="Padang">Padang</option>
-                            <option value="Medan">Medan</option>
-                            <option value="Jawa Barat">Jawa Barat</option>
-                            <option value="Pasuruan">Pasuruan</option>
-                            <option value="Jakarta">Jakarta</option>
-                            <option value="Yogyakarta">Yogyakarta</option>
-                            <option value="Sulawesi">Sulawesi</option>
+                            <label class="form-label" for="basic-default-phone">Wilayah</label>
+                            <?php if($tampildata->jabatan == 'Admin Pusat'){?>
+                            <select name="wilayah" id="wilayah" class="form-control" placeholder="Masukan Wilayah">
+                                <option value="">-- Silahkan Pilih --</option>
+                                <option value="Jakarta"
+                                    <?php if($tampildata->wilayah == "Jakarta"){ echo 'selected="selected"';}?>>
+                                    Jakarta
+                                </option>
                             </select>
+                            <?php } else if($tampildata->jabatan == 'PM'){?>
+                            <select name="wilayah" id="wilayah" class="form-control" placeholder="Masukan Wilayah">
+                                <option value="">-- Silahkan Pilih --</option>
+                                <option value="Jakarta"
+                                    <?php if($tampildata->wilayah == "Jakarta"){ echo 'selected="selected"';}?>>
+                                    Jakarta
+                                </option>
+                            </select>
+                            <?php } else if($tampildata->jabatan == 'Direktur'){?>
+                            <select name="wilayah" id="wilayah" class="form-control" placeholder="Masukan Wilayah">
+                                <option value="">-- Silahkan Pilih --</option>
+                                <option value="Jakarta"
+                                    <?php if($tampildata->wilayah == "Jakarta"){ echo 'selected="selected"';}?>>
+                                    Jakarta
+                                </option>
+                            </select>
+                            <?php } else if($tampildata->jabatan == 'Management'){?>
+                            <select name="wilayah" id="wilayah" class="form-control" placeholder="Masukan Wilayah">
+                                <option value="">-- Silahkan Pilih --</option>
+                                <option value="Jakarta"
+                                    <?php if($tampildata->wilayah == "Jakarta"){ echo 'selected="selected"';}?>>
+                                    Jakarta
+                                </option>
+                            </select>
+                            <?php } else if($tampildata->jabatan == 'Admin Wilayah' || 'Rpm'){?>
+                            <select name="wilayah" id="wilayah" class="form-control" placeholder="Masukan Wilayah">
+                                <option value="">-- Silahkan Pilih --</option>
+                                <option value="Padang"
+                                    <?php if($tampildata->wilayah == "Padang"){ echo 'selected="selected"';}?>>
+                                    Padang
+                                </option>
+                                <option value="Medan"
+                                    <?php if($tampildata->wilayah == "Medan"){ echo 'selected="selected"';}?>>
+                                    Medan</option>
+                                <option value="Jawa Barat"
+                                    <?php if($tampildata->wilayah == "Jawa Barat"){ echo 'selected="selected"';}?>>
+                                    Jawa Barat</option>
+                                <option value="Pasuruan"
+                                    <?php if($tampildata->wilayah == "Pasuruan"){ echo 'selected="selected"';}?>>
+                                    Pasuruan
+                                </option>
+                                <option value="Yogyakarta"
+                                    <?php if($tampildata->wilayah == "Yogyakarta"){ echo 'selected="selected"';}?>>
+                                    Yogyakarta</option>
+                                <option value="Sulawesi"
+                                    <?php if($tampildata->wilayah == "Sulawesi"){ echo 'selected="selected"';}?>>
+                                    Sulawesi
+                                </option>
+                            </select>
+                            <?php } ?>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Nomor Telepon</label>
-                            <input type="number" name="no_telepon" class="form-control" id="basic-default-company" value="<?= $tampildata->kriteria ?>" />
+                            <input type="number" name="no_telepon" class="form-control" id="basic-default-company"
+                                placeholder="Masukan Nomor Telepon" value="<?= $tampildata->no_telepon ?>" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Foto User</label>
-                            <input type="file" name="foto_user" id="inputFile" value="<?= $tampildata->foto_user ?>" class="form-control">
+                            <input type="file" name="image" id="inputFile" value="<?= $tampildata->foto_user ?>"
+                                class="form-control">
                         </div>
                         <div class="col-md-3">
                             <label>Preview Foto User</label>
-                            <img src="<?= base_url("../uploads/$tampildata->foto_user") ?>" width="150" id="imgView" class="card-img-top img-fluid" required>
+                            <img src="<?= base_url("../uploads/$tampildata->foto_user") ?>" width="150" id="imgView"
+                                class="card-img-top img-fluid">
                         </div>
                         <br>
                         <button type="submit" class="btn btn-primary">Edit</button>

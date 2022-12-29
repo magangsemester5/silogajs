@@ -15,7 +15,7 @@
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Nomor Drum</label>
                             <input type="text" name="no_drum" class="form-control" id="basic-default-company"
-                                placeholder="Masukan nomor drum disini" />
+                                placeholder="Masukan nomor drum" />
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('no_drum')) { ?>
@@ -26,7 +26,7 @@
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Core</label>
                             <input type="number" name="core" class="form-control" id="basic-default-company"
-                                placeholder="Masukan jumlah core disini" />
+                                placeholder="Masukan jumlah core" />
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('core')) { ?>
@@ -38,7 +38,7 @@
                             <label class="form-label" for="basic-default-email">Satuan</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_satuan" class="form-control">
-                                    <option value=""></option>
+                                    <option value="">Pilih satuan</option>
                                     <?php foreach ($tampildatasatuan as $key => $value) : ?>
                                     <option value="<?= $value->id_satuan ?>"><?= $value->nama_satuan ?></option>
                                     <?php endforeach; ?>
@@ -54,7 +54,7 @@
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Panjang</label>
                             <input type="number" name="panjang" id="basic-default-phone" class="form-control phone-mask"
-                                placeholder="Masukan Total Panjang Kabel Disini" />
+                                placeholder="Masukan total panjang kabel" />
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('panjang')) { ?>
@@ -65,7 +65,7 @@
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Serial Number</label>
                             <input type="text" name="serial_number" id="basic-default-phone"
-                                class="form-control phone-mask" placeholder="Masukan Serial Number Disini" />
+                                class="form-control phone-mask" placeholder="Masukan serial number" />
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('serial_number')) { ?>

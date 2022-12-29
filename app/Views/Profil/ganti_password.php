@@ -12,36 +12,40 @@
                 <div class="card-body">
                     <?php $validation = \Config\Services::validation(); ?>
                     <form method="POST" action="<?= base_url("prosesgantipassword-profil") ?>">
-                        <input type="hidden" name="id" class="form-control" id="id" value="<?= session()->get('id'); ?>">
+                        <input type="hidden" name="id" class="form-control" id="id"
+                            value="<?= session()->get('id'); ?>">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Password Lama</label>
-                            <input type="password" name="password_lama" class="form-control" id="basic-default-company" placeholder="Masukan password lama disini" />
+                            <input type="password" name="password_lama" class="form-control" id="basic-default-company"
+                                placeholder="Masukan password lama disini" />
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('password_lama')) { ?>
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('password_lama'); ?>
-                            </div>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('password_lama'); ?>
+                        </div>
                         <?php } ?>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Password Baru</label>
-                            <input type="password" name="password_baru" class="form-control" id="basic-default-company" placeholder="Masukan password baru disini" />
+                            <input type="password" name="password_baru" class="form-control" id="basic-default-company"
+                                placeholder="Masukan password baru disini" />
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('password_baru')) { ?>
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('password_baru'); ?>
-                            </div>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('password_baru'); ?>
+                        </div>
                         <?php } ?>
                         <div class="mb-3">
-                            <label class="form-label" for="basic-default-company">Konfirmasi Password</label>
-                            <input type="password" name="konfirmasi_password" class="form-control" id="basic-default-company" placeholder="Masukan konfirmasi password disini" />
+                            <label class="form-label" for="basic-default-company">Konfirmasi Password Baru</label>
+                            <input type="password" name="konfirmasi_password" class="form-control"
+                                id="basic-default-company" placeholder="Masukan konfirmasi password disini" />
                         </div>
                         <!-- Error Validation -->
                         <?php if ($validation->getError('konfirmasi_password')) { ?>
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('konfirmasi_password'); ?>
-                            </div>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('konfirmasi_password'); ?>
+                        </div>
                         <?php } ?>
                         <button type="submit" class="btn btn-primary">Simpan</button>
                         <a href="<?= base_url('tampil_dashboard') ?>" class="btn btn-warning">Cancel</a>
