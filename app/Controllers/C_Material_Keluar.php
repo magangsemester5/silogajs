@@ -85,7 +85,7 @@ class C_material_Keluar extends BaseController
                 'wilayah' => $wilayah,
                 'no_telepon' => $no_telepon,
                 'tanggal_keluar' => $tanggal,
-                'foto_penerima' => $image->getClientName(),
+                'foto_penerima' => $imageName,
             ];
             $this->material_keluar->insert($data);
             $id_material_keluar  = $this->material_keluar->getInsertID();

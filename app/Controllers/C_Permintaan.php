@@ -147,10 +147,10 @@ class C_Permintaan extends BaseController
             );
         }
         $this->detail_permintaan_material->update($id, $data);
-        session()->setFlashdata('status', 'Data permintaan berhasil diupdate');
+        session()->setFlashdata('status', 'Data permintaan material berhasil diapprove');
         return redirect()->to(base_url('tampilpermintaan-material'))
             ->with('status_icon', 'success')
-            ->with('status_text', 'Data Berhasil ditambah');
+            ->with('status_text', 'Data berhasil diapprove');
     }
 
     public function reject_detail_permintaan_material($id)
@@ -159,10 +159,10 @@ class C_Permintaan extends BaseController
                 'status' => 6
         );
         $this->detail_permintaan_material->update($id, $data);
-        session()->setFlashdata('status', 'Data Berhasil direject');
+        session()->setFlashdata('status', 'Data permintaan material berhasil direject');
         return redirect()->to(base_url('tampilpermintaan-material'))
             ->with('status_icon', 'success')
-            ->with('status_text', 'Data Berhasil direject');
+            ->with('status_text', 'Data berhasil direject');
     }
 
     public function delete_history_permintaan_material($id){
@@ -234,10 +234,10 @@ class C_Permintaan extends BaseController
             );
         }
         $this->detail_permintaan_kabel->update($id, $data);
-        session()->setFlashdata('status', 'Data permintaan berhasil diupdate');
+        session()->setFlashdata('status', 'Data permintaan kabel berhasil diapprove');
         return redirect()->to(base_url('tampilpermintaan-kabel'))
             ->with('status_icon', 'success')
-            ->with('status_text', 'Data Berhasil diapprove');
+            ->with('status_text', 'Data berhasil diapprove');
     }
 
     public function reject_detail_permintaan_kabel($id)
@@ -246,10 +246,10 @@ class C_Permintaan extends BaseController
                 'status' => 6
         );
         $this->detail_permintaan_kabel->update($id, $data);
-        session()->setFlashdata('status', 'Data Berhasil direject');
+        session()->setFlashdata('status', 'Data permintaan kabel berhasil direject');
         return redirect()->to(base_url('tampilpermintaan-kabel'))
             ->with('status_icon', 'success')
-            ->with('status_text', 'Data Berhasil direject');
+            ->with('status_text', 'Data berhasil direject');
     }
 
     public function tampil_data_history_permintaan_kabel_user($id = null)

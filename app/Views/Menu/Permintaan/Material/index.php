@@ -358,11 +358,11 @@
                         <div class="content-backdrop fade"></div>
                     </div>
                     <label>Wilayah : </label>
-                    <input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;"
+                    <input type="text" style="width:300px;border:0; background: transparent;outline:none;color:#697A8D;"
                         readonly id="wilayah" />
                     <br>
                     <label>No Telepon : </label>
-                    <input type="text" style="width:90px;border:0; background: transparent;outline:none;color:#697A8D;"
+                    <input type="text" style="width:300px;border:0; background: transparent;outline:none;color:#697A8D;"
                         readonly id="no_telepon" />
                     <br>
                     <h8>Data Permintaan diatas merupakan History permintaan material yang pernah dilakukan (Hanya yang
