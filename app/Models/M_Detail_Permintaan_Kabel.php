@@ -13,7 +13,7 @@ class M_Detail_Permintaan_Kabel extends Model
     protected $allowedFields    = [
         'id_permintaan_kabel', 'id_kabel', 'panjang', 'status'
     ];
-    
+
     function getAllRelation($id)
     {
         $builder = $this->db->table('kabel');
@@ -34,7 +34,8 @@ class M_Detail_Permintaan_Kabel extends Model
     function deleteData($id_permintaan_kabel)
     {
         $builder = $this->db->table('detail_permintaan_kabel');
-        $array = ['id_permintaan_kabel' => $id_permintaan_kabel, 'status' => 5];
-        $builder->join('permintaan_kabel', 'detail_permintaan_kabel.id_permintaan_kabel = permintaan_kabel.id_permintaan_kabel')->where($array)->delete();
+        $array = array('id_permintaan_kabel' => $id_permintaan_kabel);
+        $status = [5, 6];
+        $builder->join('permintaan_kabel', 'detail_permintaan_kabel.id_permintaan_kabel = permintaan_kabel.id_permintaan_kabel')->where($array)->whereIn('status', $status)->delete();
     }
 }

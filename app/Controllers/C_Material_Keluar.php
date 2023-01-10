@@ -45,7 +45,7 @@ class C_material_Keluar extends BaseController
         ];
         return view('Menu/material_Keluar/tambah', $data);
     }
-    
+
     public function proses_tambah()
     {
         // $total_panjang = $this->request->getVar('total_panjang');
@@ -188,7 +188,7 @@ class C_material_Keluar extends BaseController
             'datamaterialkeluar' => $datamaterialkeluar,
             'no_permintaan' => $kodeGenerate
         ]);
- 
+
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
         $pdf->SetPrintHeader(false);
         $pdf->SetTitle('Halaman Cetak Surat Jalan Material Keluar | SILOG AJS');

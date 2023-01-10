@@ -52,6 +52,7 @@ class M_Permintaan_Material extends Model
     function deleteData($id_permintaan_material)
     {
         $builder = $this->db->table('permintaan_material');
-        $builder->where('id_permintaan_material', $id_permintaan_material)->delete();
-    } 
+        $builder->where('id_permintaan_material', $id_permintaan_material);
+        $builder->delete();
+    }
 }
