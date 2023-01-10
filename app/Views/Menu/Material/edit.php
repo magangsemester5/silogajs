@@ -23,7 +23,7 @@
                             <label class="form-label" for="basic-default-phone">Satuan</label>
                             <div class="input-group input-group-merge">
                                 <select name="id_satuan" class="form-control" required>
-                                    <option value=""></option>
+                                    <option value="">Pilih satuan</option>
                                     <?php foreach ($tampildatasatuan as $key => $value) : ?>
                                     <option value="<?= $value->id_satuan ?>"
                                         <?= $tampildata->id_satuan == $value->id_satuan ? 'selected' : null ?>>
