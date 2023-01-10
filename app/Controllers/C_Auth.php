@@ -23,16 +23,16 @@ class C_Auth extends BaseController
     public function proses_login()
     {
         $recaptchaResponse = trim($this->request->getVar('g-recaptcha-response'));
-       
-        $userIp=$this->request->getIPAddress();
-         
-        $secret='6LcYuisjAAAAAF6H8_SutPl0cJFr9YRadbX3htNw';
-       
+
+        $userIp = $this->request->getIPAddress();
+
+        $secret = '6LcYuisjAAAAAF6H8_SutPl0cJFr9YRadbX3htNw';
+
         $credential = array(
             'secret' => $secret,
             'response' => $this->request->getVar('g-recaptcha-response')
         );
- 
+
         $verify = curl_init();
         curl_setopt($verify, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
         curl_setopt($verify, CURLOPT_POST, true);
@@ -40,13 +40,13 @@ class C_Auth extends BaseController
         curl_setopt($verify, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
         $response = curl_exec($verify);
- 
-        $status= json_decode($response, true);
-        
+
+        $status = json_decode($response, true);
+
         $id_user = $this->request->getVar('id_user');
         $password = $this->request->getVar('password');
         $validasi_id_user = $this->auth->query_validasi_id_user($id_user);
-        if($status['success']){ 
+        if ($status['success']) {
             if ($validasi_id_user->getNumRows() > 0) {
                 $validate_ps = $this->auth->where('id_user', $id_user)->first();
                 if (password_verify($password, $validate_ps->password)) {
@@ -156,7 +156,7 @@ class C_Auth extends BaseController
                     ->with('status_icon', 'error')
                     ->with('status_text', 'ID atau Password yang Anda masukan salah');
             }
-        }else{
+        } else {
             session()->setFlashdata('status', 'Gagal Login');
             return redirect()
                 ->to(base_url('halaman_login'))
@@ -165,11 +165,13 @@ class C_Auth extends BaseController
         }
     }
 
-    public function tampil_forgot_password(){
-       return view('V_Forgot_Password');
+    public function tampil_forgot_password()
+    {
+        return view('V_Forgot_Password');
     }
 
-    public function validasi_forgot_password(){
+    public function validasi_forgot_password()
+    {
         $rules = [
             'email' => [
                 'label' => "Email",
@@ -181,46 +183,43 @@ class C_Auth extends BaseController
                 ]
             ],
         ];
-        if($this->validate($rules)){
+        if ($this->validate($rules)) {
             $email = $this->request->getVar('email');
             $userdata = $this->auth->verifikasi_email($email);
-            if(!empty($userdata)){
-                   $to = $email;
-                   $subject = 'Reset Password Link';
-                   $token = $userdata['id'];
-                   $message = 'Hi '.$userdata['nama'].'<br><br>'
-                           . 'Your reset password request has been received. Please click'
-                           . 'the below link to reset your password.<br><br>'
-                           . '<a href="'. base_url().'/tampil-formforgotpassword/'.$token.'">Click here to Reset Password</a><br><br>'
-                           . 'Thanks<br>PT. Arkatama Jaya Sakti';
-                   $email = \Config\Services::email();
-                   $email->setTo($to);
-                   $email->setFrom('silogajs','Team Support Arkatama Jaya Sakti');
-                   $email->setSubject($subject);
-                   $email->setMessage($message);
-                   if($email->send())
-                   {
-                        session()->setFlashdata('status', 'Data Reset Password berhasil dikirim');
-                        return redirect()
+            if (!empty($userdata)) {
+                $to = $email;
+                $subject = 'Atur Ulang Tautan Kata Sandi';
+                $token = $userdata['id'];
+                $message = 'Hi ' . $userdata['nama'] . '<br><br>'
+                    . 'Permintaan setel ulang kata sandi Anda telah diterima. Silakan klik'
+                    . 'tautan di bawah untuk mengatur ulang kata sandi Anda.<br><br>'
+                    . '<a href="' . base_url() . '/tampil-formforgotpassword/' . $token . '">Klik di sini untuk Mereset Kata Sandi</a><br><br>'
+                    . 'Terimakasih<br>PT. Arkatama Jaya Sakti';
+                $email = \Config\Services::email();
+                $email->setTo($to);
+                $email->setFrom('silogajs', 'Team Support Arkatama Jaya Sakti');
+                $email->setSubject($subject);
+                $email->setMessage($message);
+                if ($email->send()) {
+                    session()->setFlashdata('status', 'Data Reset Password berhasil dikirim');
+                    return redirect()
                         ->to(base_url('tampil-forgotpassword'))
                         ->with('status_icon', 'success')
-                        ->with('status_text', 'Tautan reset kata sandi dikirim ke email terdaftar Anda. Harap verifikasi dengan dalam 15 menit');
-                   }
-                   else
-                   {
-                        $data = $email->printDebugger(['headers']);
-                        print_r($data);
-                   }          
-            }else{
+                        ->with('status_text', 'Tautan reset kata sandi dikirim ke email terdaftar Anda. Harap verifikasi segera');
+                } else {
+                    $data = $email->printDebugger(['headers']);
+                    print_r($data);
+                }
+            } else {
                 session()->setFlashdata('status', 'Data Email yang dimasukan Tidak ada');
                 return redirect()
-                ->to(base_url('tampil-forgotpassword'))
-                ->with('status_icon', 'warning')
-                ->with('status_text', 'Email does not exists');
+                    ->to(base_url('tampil-forgotpassword'))
+                    ->with('status_icon', 'warning')
+                    ->with('status_text', 'Email does not exists');
             }
-        }else{
+        } else {
             session()->setFlashdata('status', 'Data Email Harus diisi');
-                return redirect()
+            return redirect()
                 ->to(base_url('tampil-forgotpassword'))
                 ->with('status_icon', 'warning')
                 ->with('status_text', 'Data Email Harus diisi');
@@ -233,7 +232,7 @@ class C_Auth extends BaseController
             'tampildata' => $this->auth->find($id),
             'title' => "Halaman Form Ganti Password | SILOG AJS"
         ];
-        return view('V_Form_Ganti_Password', $data); 
+        return view('V_Form_Ganti_Password', $data);
     }
 
     public function proses_form_forgot_password()
@@ -274,7 +273,7 @@ class C_Auth extends BaseController
             return view("V_Login", $data);
         }
     }
-    
+
     public function logout()
     {
         session_destroy();
