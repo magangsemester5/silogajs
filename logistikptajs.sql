@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 12, 2022 at 03:43 PM
+-- Generation Time: Jan 10, 2023 at 10:43 AM
 -- Server version: 5.7.33
--- PHP Version: 7.4.19
+-- PHP Version: 8.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,6 +36,14 @@ CREATE TABLE `detail_kabel_keluar` (
   `panjang` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `detail_kabel_keluar`
+--
+
+INSERT INTO `detail_kabel_keluar` (`id_detail_kabel_keluar`, `id_kabel_keluar`, `no_drum`, `core`, `nama_satuan`, `panjang`) VALUES
+(1, 1, '22-A2940', 48, 'Meter', 22),
+(2, 1, '22-A2812', 48, 'Meter', 45);
+
 -- --------------------------------------------------------
 
 --
@@ -49,6 +57,14 @@ CREATE TABLE `detail_material_keluar` (
   `nama_satuan` varchar(50) NOT NULL,
   `jumlah` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `detail_material_keluar`
+--
+
+INSERT INTO `detail_material_keluar` (`id_detail_material_keluar`, `id_material_keluar`, `nama_material`, `nama_satuan`, `jumlah`) VALUES
+(3, 2, 'Pigtail SC', 'Pcs', 34),
+(4, 2, 'FAT', 'Pcs', 12);
 
 -- --------------------------------------------------------
 
@@ -64,6 +80,14 @@ CREATE TABLE `detail_permintaan_kabel` (
   `status` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `detail_permintaan_kabel`
+--
+
+INSERT INTO `detail_permintaan_kabel` (`id_detail_permintaan_kabel`, `id_permintaan_kabel`, `id_kabel`, `panjang`, `status`) VALUES
+(3, 2, 2, 56, 0),
+(4, 2, 1, 21, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -77,6 +101,14 @@ CREATE TABLE `detail_permintaan_material` (
   `jumlah` int(12) NOT NULL,
   `status` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `detail_permintaan_material`
+--
+
+INSERT INTO `detail_permintaan_material` (`id_detail_permintaan_material`, `id_permintaan_material`, `id_material`, `jumlah`, `status`) VALUES
+(3, 2, 2, 12, 0),
+(4, 2, 1, 33, 0);
 
 -- --------------------------------------------------------
 
@@ -99,6 +131,14 @@ CREATE TABLE `history_permintaan_kabel` (
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `history_permintaan_kabel`
+--
+
+INSERT INTO `history_permintaan_kabel` (`id_history_permintaan_kabel`, `req_id`, `no_permintaan`, `tanggal`, `nama`, `wilayah`, `no_telepon`, `no_drum`, `core`, `panjang`, `nama_satuan`, `status`) VALUES
+(1, 1, '01/LOG/KB/Medan/10/I/2023', '2023-01-02', 'Nur Muhammad Yahya', 'Medan', '082123298461', '22-A2940', '48', '22 Meter', 'Meter', '5'),
+(2, 1, '01/LOG/KB/Medan/10/I/2023', '2023-01-02', 'Nur Muhammad Yahya', 'Medan', '082123298461', '22-A2812', '48', '45 Meter', 'Meter', '5');
+
 -- --------------------------------------------------------
 
 --
@@ -119,6 +159,14 @@ CREATE TABLE `history_permintaan_material` (
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `history_permintaan_material`
+--
+
+INSERT INTO `history_permintaan_material` (`id_history_permintaan_material`, `req_id`, `no_permintaan`, `tanggal`, `nama`, `wilayah`, `no_telepon`, `nama_material`, `jumlah`, `nama_satuan`, `status`) VALUES
+(3, 1, '02/LOG/MT/Medan/09/I/2023', '2023-01-02', 'Nur Muhammad Yahya', 'Medan', '082123298461', 'Pigtail SC', '34 Pcs', 'Pcs', '5'),
+(4, 1, '02/LOG/MT/Medan/09/I/2023', '2023-01-02', 'Nur Muhammad Yahya', 'Medan', '082123298461', 'FAT', '12 Pcs', 'Pcs', '5');
+
 -- --------------------------------------------------------
 
 --
@@ -135,6 +183,14 @@ CREATE TABLE `kabel` (
   `foto_serial_number` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `kabel`
+--
+
+INSERT INTO `kabel` (`id_kabel`, `id_satuan`, `no_drum`, `core`, `panjang`, `serial_number`, `foto_serial_number`) VALUES
+(1, 1, '22-A2812', 48, 4610, '22A281203012023', '1673346754_37dbe545caf63b832bec.png'),
+(2, 1, '22-A2940', 48, 3978, '22A294003012023', '1673346766_a9717daac4416b04f2bf.png');
+
 -- --------------------------------------------------------
 
 --
@@ -150,6 +206,13 @@ CREATE TABLE `kabel_keluar` (
   `tanggal_keluar` date NOT NULL,
   `foto_penerima` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `kabel_keluar`
+--
+
+INSERT INTO `kabel_keluar` (`id_kabel_keluar`, `no_permintaan`, `nama`, `no_telepon`, `wilayah`, `tanggal_keluar`, `foto_penerima`) VALUES
+(1, '01/LOG/KB/Medan/10/I/2023', 'Nur Muhammad Yahya', '082123298461', 'Medan', '2023-01-02', '1673346910_d6922a6dc05a2a6b4b35.jpg');
 
 -- --------------------------------------------------------
 
@@ -170,6 +233,13 @@ CREATE TABLE `kabel_masuk` (
   `foto_penerima` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `kabel_masuk`
+--
+
+INSERT INTO `kabel_masuk` (`id_kabel_masuk`, `tanggal_masuk`, `no_delivery_order`, `no_hasbell`, `core`, `nama_satuan`, `gudang`, `panjang_masuk`, `merek`, `foto_penerima`) VALUES
+(1, '2023-01-02', 'KBM0001', '22-A2812', 48, 'Meter', 'Jakarta', 655, 'ZTE', '1673347069_3ee0e30549f45b88ac4f.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -184,6 +254,14 @@ CREATE TABLE `material` (
   `serial_number` varchar(50) NOT NULL,
   `foto_serial_number` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `material`
+--
+
+INSERT INTO `material` (`id_material`, `id_satuan`, `nama_material`, `stok`, `serial_number`, `foto_serial_number`) VALUES
+(1, 2, 'FAT', '166', 'FAT03012023', '1673346733_6dc107369fff24c238d7.png'),
+(2, 2, 'Pigtail SC', '111', 'PSC03012023', '1673346744_9c3e1ac8223c0b3b3476.png');
 
 -- --------------------------------------------------------
 
@@ -201,6 +279,13 @@ CREATE TABLE `material_keluar` (
   `foto_penerima` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `material_keluar`
+--
+
+INSERT INTO `material_keluar` (`id_material_keluar`, `no_permintaan`, `nama`, `no_telepon`, `wilayah`, `tanggal_keluar`, `foto_penerima`) VALUES
+(2, '02/LOG/MT/Medan/09/I/2023', 'Nur Muhammad Yahya', '082123298461', 'Medan', '2023-01-02', '1673346711_c02e4ed1a74d4fc2a52f.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -217,6 +302,13 @@ CREATE TABLE `material_masuk` (
   `gudang` varchar(50) NOT NULL,
   `foto_penerima` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `material_masuk`
+--
+
+INSERT INTO `material_masuk` (`id_material_masuk`, `nama_material`, `nama_satuan`, `tanggal_masuk`, `no_delivery_order`, `jumlah_masuk`, `gudang`, `foto_penerima`) VALUES
+(2, 'FAT', 'Pcs', '2023-01-02', 'MTM0001', 45, 'Jakarta', '1673346794_4739723e74bc9305a685.jpg');
 
 -- --------------------------------------------------------
 
@@ -269,6 +361,13 @@ CREATE TABLE `permintaan_kabel` (
   `tanggal` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `permintaan_kabel`
+--
+
+INSERT INTO `permintaan_kabel` (`id_permintaan_kabel`, `id`, `no_permintaan`, `tanggal`) VALUES
+(2, 1, '02/LOG/KB/Medan/10/I/2023', '2023-01-10');
+
 -- --------------------------------------------------------
 
 --
@@ -282,6 +381,13 @@ CREATE TABLE `permintaan_material` (
   `tanggal` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `permintaan_material`
+--
+
+INSERT INTO `permintaan_material` (`id_permintaan_material`, `id`, `no_permintaan`, `tanggal`) VALUES
+(2, 1, '03/LOG/MT/Medan/10/I/2023', '2023-01-10');
+
 -- --------------------------------------------------------
 
 --
@@ -292,6 +398,14 @@ CREATE TABLE `satuan` (
   `id_satuan` int(12) UNSIGNED NOT NULL,
   `nama_satuan` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `satuan`
+--
+
+INSERT INTO `satuan` (`id_satuan`, `nama_satuan`) VALUES
+(1, 'Meter'),
+(2, 'Pcs');
 
 -- --------------------------------------------------------
 
@@ -332,7 +446,7 @@ INSERT INTO `user` (`id`, `nama`, `email`, `password`, `jabatan`, `id_user`, `kr
 (15, 'Lisa Aviana Sulistyanto', 'lisa@gmail.com', '$2y$10$TmOnOt6R6bo4bOT2phleH.EGZR7luiW61ndSwEAHC1JK3JXrr2Mfq', 'PM', 'PM001', 'PM', '13.jpeg', 'Jakarta', '0821232984613'),
 (16, 'Roro Widya Adi Kusuma', 'roro@gmail.com', '$2y$10$n4poZmrQfzL0MZl/yOv3dOeJWP2sKS2M2vatin8s1ddQ2UG/h1T3S', 'Direktur', 'D001', 'Direktur', '14.jpeg', 'Jakarta', '0821232984614'),
 (17, 'Alexandro Gabriel Pratama Pangaribuan', 'alex@gmail.com', '$2y$10$CcJN.H771OhAREtfP0HxWOGqXXM73sNeY4pqvC2IuHrsYMwvAdNRu', 'Management', 'M001', 'Management', '15.jpeg', 'Jakarta', '0821232984615'),
-(23, 'Muhammad Hanif Arafi', 'hanifarafi7@gmail.com', '$2y$10$kkvaabkXYcyvEdRce5xBuOaX3XRO1g3pjQxwLJT18tB9HQq/ChsqG', 'Admin Pusat', 'AP001', 'Admin Pusat', '1670579842_ba6ce808d6910d573098.jpg', 'Jakarta', '082123298461');
+(23, 'Muhammad Hanif Arafi', 'hanifarafi7@gmail.com', '$2y$10$asLYtxqbGjfimZdR.PzX1ONBUTg4QbThThwd7o7//xHXc57QJzEEG', 'Admin Pusat', 'AP001', 'Admin Pusat', '1671424646_8d36d58fbca4dca0446e.jpg', 'Jakarta', '082123298461');
 
 --
 -- Indexes for dumped tables
@@ -464,19 +578,19 @@ ALTER TABLE `detail_kabel_keluar`
 -- AUTO_INCREMENT for table `detail_material_keluar`
 --
 ALTER TABLE `detail_material_keluar`
-  MODIFY `id_detail_material_keluar` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_detail_material_keluar` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `detail_permintaan_kabel`
 --
 ALTER TABLE `detail_permintaan_kabel`
-  MODIFY `id_detail_permintaan_kabel` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_detail_permintaan_kabel` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `detail_permintaan_material`
 --
 ALTER TABLE `detail_permintaan_material`
-  MODIFY `id_detail_permintaan_material` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_detail_permintaan_material` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `history_permintaan_kabel`
@@ -488,7 +602,7 @@ ALTER TABLE `history_permintaan_kabel`
 -- AUTO_INCREMENT for table `history_permintaan_material`
 --
 ALTER TABLE `history_permintaan_material`
-  MODIFY `id_history_permintaan_material` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_history_permintaan_material` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kabel`
@@ -500,7 +614,7 @@ ALTER TABLE `kabel`
 -- AUTO_INCREMENT for table `kabel_keluar`
 --
 ALTER TABLE `kabel_keluar`
-  MODIFY `id_kabel_keluar` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_kabel_keluar` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `kabel_masuk`
@@ -512,19 +626,19 @@ ALTER TABLE `kabel_masuk`
 -- AUTO_INCREMENT for table `material`
 --
 ALTER TABLE `material`
-  MODIFY `id_material` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_material` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `material_keluar`
 --
 ALTER TABLE `material_keluar`
-  MODIFY `id_material_keluar` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_material_keluar` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `material_masuk`
 --
 ALTER TABLE `material_masuk`
-  MODIFY `id_material_masuk` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_material_masuk` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -542,13 +656,13 @@ ALTER TABLE `permintaan_kabel`
 -- AUTO_INCREMENT for table `permintaan_material`
 --
 ALTER TABLE `permintaan_material`
-  MODIFY `id_permintaan_material` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_permintaan_material` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `satuan`
 --
 ALTER TABLE `satuan`
-  MODIFY `id_satuan` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_satuan` int(12) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user`
